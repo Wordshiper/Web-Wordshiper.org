@@ -1,0 +1,103 @@
+✅ 제작 목적
+WordShiper 웹사이트는 성경 암송 기반의 AI 사역 플랫폼을 소개하고,
+기부자, 사용자, 자원봉사자, 선교 파트너가 즉시 동참할 수 있도록 유도하는 웹사이트입니다.
+
+사용자의 신앙 성장을 위한 TTS 기반 암송 데모 체험
+
+Stripe 연동 기부
+
+Shorts, 챌린지, AI 비서 기능 소개
+
+앱 출시 전, 이메일 알림 구독, 자원봉사자 모집 등
+
+✅ 사용 환경
+플랫폼: Replit (HTML/CSS/JavaScript)
+
+호스팅: Replit 내 배포 or Firebase Hosting으로 연동 가능
+
+도구 연동:
+
+Google Cloud TTS API (암송 음성 재생용)
+
+Stripe Donation Link
+
+이메일 구독 (Mailchimp 또는 Google Form)
+
+✅ 전체 사이트 구성
+🏠 홈 (index.html)
+섹션	기능
+Hero	WordShiper 로고, "Memorize the Word. Change the World." 슬로건 + CTA 버튼
+소개	앱 미션, 영적 영향력, AI 암송 사역의 필요성 설명
+기능 설명	
+
+AI 음성 암송
+
+테스트 모드
+
+Shorts 제작 및 공유
+
+랭킹 시스템
+
+프랭클린 플래너 기반 루틴 기능
+| 기부 유도 (도네이션) | Stripe 버튼 5단계: $3 / $7 / $12 / $50 / Custom |
+| 자원봉사 참여 | “Join Us” 버튼 → 이메일 or Google Form 연결 |
+| 뉴스레터 구독 | 이메일 입력창 → Mailchimp or Google Form |
+| Footer | 로고, SNS, 저작권, 연락처, 링크 |
+
+🔈 체험 섹션 (demo.html 또는 index.html 내 포함)
+사용자가 드롭다운에서 성경 구절과 언어를 선택하고
+Google Cloud TTS로 음성을 들을 수 있는 “암송 데모 기능”
+
+기능	구현 방식
+구절 선택	셀렉트 박스로 100개 중 5개 정도 표시01_WordShiper_100_Verse…
+언어/음성 선택	en-US-Wavenet-D, ko-KR-Wavenet-B 등 10개 음성 드롭다운04_Developer_Starter_Pa…
+재생	JavaScript Fetch → Google TTS API 호출 → AudioPlayer 재생
+반복 재생	“3회 / 7회 / 12회” 버튼으로 제어
+텍스트 하이라이트	구절 텍스트를 재생 구간에 맞춰 span 색상 변경
+
+❤️ 기부 시스템 (donate.html 또는 stripe 버튼만 연결)
+Stripe Checkout 링크 삽입
+
+기부 유형: 일시불, 정기 (선택 옵션 제공)
+
+영수증은 Stripe 자동 발송
+
+상장 미리보기 이미지 포함 (“100구절 암송 시 발급”)
+
+05_Stripe_Donation_Guid…
+
+📱 앱 기능 소개
+기능 영역	설명 요약
+데일리 말씀 루틴	AI 추천, TTS 암송, 오늘의 푸시 메시지03_MVP_Feature_Plan_Bil…
+AI 성경 음성 코치	Google TTS + WorBee 피드백 + 루프 암송 시스템
+암송 테스트 모드	음성 입력 후 정확도 평가 & 자동 피드백
+Shorts & 채널 기능	개인/교회 암송 채널 생성 + Shorts 공유 + 구독/좋아요/랭킹
+프랭클린 플래너 연동	디지털 목표 설정, 미션 기반 루틴, 실행 통계
+PDF 상장 + 도네이션	암송 목표 달성 시 자동 발급 + 기부 유도01_WordShiper_100_Verse…03_MVP_Feature_Plan_Bil…
+
+📋 개발자 메모
+Google TTS API는 JSON 요청으로 구성
+
+음성 데이터는 실시간 스트리밍 (mp3 저장 X)
+
+Stripe 버튼은 Stripe Dashboard에서 직접 생성한 Payment Link 사용
+
+h1~h3 태그 및 <section>으로 구분된 구조
+
+style.css는 모던하고 따뜻한 신앙 기반 UI로 구성 (흰색, 오렌지, 차분한 블루 계열)
+
+✅ 제작 후 예상 결과물
+index.html
+
+style.css
+
+script.js
+
+구절 리스트 (verses.json)
+
+Stripe 도네이션 링크 삽입
+
+/images/ 폴더에 배경 이미지, 로고
+
+배포용 Firebase Hosting 설정 (선택 시)
+

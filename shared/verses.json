@@ -1,0 +1,60 @@
+{
+  "verses": [
+    {
+      "id": "john3-16",
+      "reference": "John 3:16",
+      "text": "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life.",
+      "korean": "하나님이 세상을 이처럼 사랑하사 독생자를 주셨으니 이는 그를 믿는 자마다 멸망하지 않고 영생을 얻게 하려 하심이라",
+      "category": "salvation"
+    },
+    {
+      "id": "phil4-13",
+      "reference": "Philippians 4:13",
+      "text": "I can do all this through him who gives me strength.",
+      "korean": "내게 능력 주시는 자 안에서 내가 모든 것을 할 수 있느니라",
+      "category": "strength"
+    },
+    {
+      "id": "jer29-11",
+      "reference": "Jeremiah 29:11",
+      "text": "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.",
+      "korean": "여호와의 말씀이니라 너희를 향한 나의 생각을 내가 아나니 평안이요 재앙이 아니니라 너희에게 미래와 희망을 주는 것이니라",
+      "category": "hope"
+    },
+    {
+      "id": "ps23-1",
+      "reference": "Psalm 23:1",
+      "text": "The Lord is my shepherd, I lack nothing.",
+      "korean": "여호와는 나의 목자시니 내게 부족함이 없으리로다",
+      "category": "peace"
+    },
+    {
+      "id": "prov3-5-6",
+      "reference": "Proverbs 3:5-6",
+      "text": "Trust in the Lord with all your heart and lean not on your own understanding; in all your ways submit to him, and he will make your paths straight.",
+      "korean": "너는 마음을 다하여 여호와를 신뢰하고 네 명철을 의지하지 말라 너는 범사에 그를 인정하라 그리하면 네 길을 지도하시리라",
+      "category": "guidance"
+    },
+    {
+      "id": "rom8-28",
+      "reference": "Romans 8:28",
+      "text": "And we know that in all things God works for the good of those who love him, who have been called according to his purpose.",
+      "korean": "우리가 알거니와 하나님을 사랑하는 자 곧 그의 뜻대로 부르심을 입은 자들에게는 모든 것이 합력하여 선을 이루느니라",
+      "category": "faith"
+    },
+    {
+      "id": "matt11-28",
+      "reference": "Matthew 11:28",
+      "text": "Come to me, all you who are weary and burdened, and I will give you rest.",
+      "korean": "수고하고 무거운 짐 진 자들아 다 내게로 오라 내가 너희를 쉬게 하리라",
+      "category": "rest"
+    },
+    {
+      "id": "isa41-10",
+      "reference": "Isaiah 41:10",
+      "text": "So do not fear, for I am with you; do not be dismayed, for I am your God. I will strengthen you and help you; I will uphold you with my righteous right hand.",
+      "korean": "두려워하지 말라 내가 너와 함께 함이라 놀라지 말라 나는 네 하나님이 됨이라 내가 너를 굳세게 하리라 참으로 너를 도와 주리라 참으로 나의 의로운 오른손으로 너를 붙들리라",
+      "category": "courage"
+    }
+  ]
+}

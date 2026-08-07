@@ -1,0 +1,266 @@
+import { useLanguage } from "@/hooks/use-language";
+
+// New site copy — Korean & English first (other languages fall back to English)
+const copy = {
+  ko: {
+    nav: { product: "제품", routine: "루틴", movement: "무브먼트", roadmap: "로드맵", about: "소개", investors: "투자자", preregister: "사전등록" },
+    hero: {
+      badge: "2026년 12월 정식 출시",
+      title1: "말씀으로 하루를 살아가는",
+      title2: "예배자를 세웁니다",
+      slogan: "One verse a day. A life of worship.",
+      sub: "Wordshiper는 하루 한 구절의 말씀과 세 번의 짧은 기도로 영적·신체적·정서적 루틴을 세우는 데일리 영성 앱입니다. 흐트러진 하루의 우선순위를 말씀 중심으로 다시 정렬하세요.",
+      cta1: "첫 1,000명 사전등록",
+      cta2: "무브먼트 보기",
+      lineageNote: "사전등록하시면 계보 번호가 부여됩니다",
+    },
+    problem: {
+      label: "왜 지금인가",
+      title: "더 많이 연결되어 있지만, 더 깊이 흩어진 시대",
+      cards: [
+        { t: "넘치는 정보", d: "매일 수많은 소리와 메시지가 마음을 흔들고, 진리 안에 머무는 시간은 점점 줄어듭니다." },
+        { t: "분주한 일상", d: "하나님을 알고 싶고 진실한 예배자가 되기를 소망하지만, 일상의 속도가 그 길을 가로막습니다." },
+        { t: "무너진 루틴", d: "영적 우선순위가 흐트러질 때 신체와 정서의 리듬도 함께 무너집니다." },
+      ],
+      answer: "단 한 구절의 말씀이 한 사람의 마음에 깊이 심기면, 그 말씀은 두려움을 이기게 하고 삶의 우선순위를 다시 하나님께로 돌이키는 능력이 됩니다.",
+      answerRef: "— Wordshiper의 시작이 된 질문에 대한 대답",
+    },
+    routine: {
+      label: "핵심 루틴",
+      title: "하루 세 번, 각 5분",
+      sub: "아침에 말씀을 받고, 점심에 되새기고, 저녁에 확인합니다. 부담 없는 15분의 반복이 한 구절을 삶에 스며들게 합니다.",
+      sessions: [
+        { time: "아침 5분", when: "기상 시", items: ["기도 1분 — 아침 기도", "말씀 암송 2분 — 오늘의 한 구절", "묵상 2분 — 말씀 적용 묵상"] },
+        { time: "점심 5분", when: "식사 전", items: ["기도 1분 — 감사 기도", "암송 복습 2분 — 아침 구절 반복", "동행 점검 2분 — 오늘의 우선순위"] },
+        { time: "저녁 5분", when: "취침 전", items: ["기도 1분 — 하루 회고 기도", "암송 확인 2분 — Hide & Test", "감사 기록 2분 — 오늘의 감사"] },
+      ],
+      sum: "하루 3회 × 5분 = 15분",
+      sumSub: "영적 우선순위로 하루를 살다",
+      balance: [
+        { t: "영적 루틴", d: "말씀·기도·묵상으로 하나님과 동행" },
+        { t: "신체적 리듬", d: "일출·일몰에 맞춘 하루의 사이클" },
+        { t: "정서적 회복", d: "정죄 없는 격려와 감사의 기록" },
+      ],
+    },
+    product: {
+      label: "제품",
+      title: "Word → Worship → Walk",
+      sub: "다섯 개의 탭이 하나의 영적 흐름을 이룹니다. 말씀을 받고, 마음에 새기고, 흘려보내고, 기도로 응답하고, 삶으로 동행합니다.",
+      tabs: [
+        { t: "Today", d: "오늘의 말씀을 받는 자리 — 전 세계가 같은 순간, 같은 구절을 받는 Manna Moment" },
+        { t: "Word", d: "말씀을 마음에 새기는 자리 — 5단계 Hide & Test 암송 엔진" },
+        { t: "Create", d: "말씀과 기도를 나의 목소리와 카드로 흘려보내는 자리" },
+        { t: "Pray", d: "말씀으로 하나님께 응답하는 자리 — 하루 세 번의 짧은 기도" },
+        { t: "Walk", d: "말씀대로 하나님과 동행하는 자리 — 사명에서 일일 실천까지 잇는 플래너" },
+      ],
+      features: [
+        { t: "Worvi — 영적 AI 동반자", d: "루틴이 끊어져도 정죄하지 않고 다시 말씀 앞으로 초대하는 하늘색 비둘기. 수치심이 아닌 은혜와 회복으로 다시 시작하게 합니다." },
+        { t: "조그 휠 — 1.5초 성경 도달", d: "예배 중에도 단 1.5초 만에 성경 본문에 도달하는 원형 퀵 메뉴. 31,111절 전체를 오프라인에서도 읽고 검색합니다." },
+        { t: "Verse Card — 흘러가는 고백", d: "암송을 통과하면 나의 구절·계보 번호·목소리 QR이 담긴 카드가 만들어져 세상으로 흘러갑니다." },
+        { t: "듀얼 · 트리플 언어", d: "17개 언어를 지원하며 모국어와 함께 두세 언어로 말씀을 암송할 수 있습니다." },
+      ],
+      demoNote: "실제 앱 화면",
+    },
+    movement: {
+      label: "무브먼트",
+      subtitle: "우리는 앱을 만들지 않습니다. 우리는 운동을 일으킵니다.",
+      title: "한 구절이 이어지는 영적 계보",
+      lineageLead: "당신은",
+      lineageNum: "14,207",
+      lineageTail: "번째로 이 구절을 마음에 새긴 Wordshiper입니다",
+      lineageSub: "이 숫자는 점수가 아닙니다. 말씀의 계보 안에서 나의 위치를 보여주는 표지이며, 내가 혼자가 아니라는 증거입니다.",
+      engines: [
+        { t: "동시성", e: "Synchronicity", d: "\u201c나는 혼자가 아니다\u201d — 전 세계가 같은 순간 같은 말씀을 받습니다. Living Globe에 지금 만나를 받은 사람들의 불빛이 켜집니다." },
+        { t: "계보", e: "Lineage", d: "\u201c나는 거대한 흐름의 일부다\u201d — 암송을 통과하면 세대·언어·지역을 잇는 말씀의 계보에 합류합니다." },
+        { t: "공개 결과물", e: "Public Artifact", d: "\u201c나의 고백이 세상으로 흘러간다\u201d — Verse Card와 나의 목소리가 다음 사람을 부르는 초대장이 됩니다." },
+      ],
+      promise: "No shame. No noise. One verse. A life of worship.",
+    },
+    global: {
+      label: "글로벌 비전",
+      title: "열방으로 흘러가는 말씀",
+      stats: [
+        { n: "19억", d: "전 세계 기독교 인구 — 우리가 섬기고자 하는 사람들" },
+        { n: "17", d: "지원 언어 — 듀얼·트리플 언어 암송" },
+        { n: "3", d: "하나의 코어 엔진으로 세워지는 독립 앱" },
+      ],
+      whitelabel: "하나의 코어 디자인 시스템 위에 개신교(Wordshiper), 천주교(Verbum), 유대교(Pasuk) — 세 개의 독립 앱이 각 전통의 정통성을 지키며 같은 말씀 운동을 이룹니다.",
+    },
+    roadmap: {
+      label: "로드맵",
+      title: "운동은 이미 시작되었습니다",
+      phases: [
+        { t: "Phase 1 — MVP", d: "핵심 루프 완성: 말씀 수신 · 암송 · 계보 합류" },
+        { t: "Phase 2 — 루틴 완성", d: "하루 3회 루틴 · Walk 플래너 · Worvi 동반자" },
+        { t: "Phase 3 — 정식 출시", d: "2026년 12월 — 첫 1,000명의 씨앗 공동체와 함께" },
+        { t: "Phase 4 — 확장", d: "Voice Feed · 채널 공동체 · 화이트라벨 3앱" },
+      ],
+    },
+    cta: {
+      title: "첫 만나를 함께 받을 1,000명을 찾습니다",
+      sub: "사전등록하시면 당신의 계보 번호가 부여됩니다. 출시일, 전원이 같은 시각에 첫 만나를 받습니다.",
+      placeholder: "이메일 주소",
+      button: "사전등록하기",
+      success: "감사합니다! 계보에 합류하셨습니다.",
+      error: "등록에 실패했습니다. 다시 시도해주세요.",
+      declaration: "Yes, I am a Wordshiper!",
+    },
+    investors: {
+      navTitle: "투자자",
+      title: "말씀 운동의 다음 장을 함께 쓰실 분을 찾습니다",
+      sub: "Wordshiper는 501(c)(3) 비영리 사역(Wordshiper Ministry Inc.)과 임팩트 법인(Wordshiper PBC, Inc.)의 이중 구조로 운영됩니다. 지속 가능성과 사명을 동시에 지키는 설계입니다.",
+      points: [
+        { t: "검증된 무브먼트 설계", d: "동시성·계보·공개 결과물 — 세계적 운동이 된 제품들의 3대 엔진을 영적 의미로 재정의한 제품 설계." },
+        { t: "지속 가능한 모델", d: "개인 사용자는 영구 무료. 교회·단체를 위한 Pro Organization 구독과 자발적 후원이 운영을 지탱합니다. 광고는 없습니다." },
+        { t: "운영 가능성의 기술", d: "TTS 글로벌 캐시 아키텍처로 음성 비용을 구조적으로 절감 — 글로벌 스케일에서도 감당 가능한 유닛 이코노미." },
+        { t: "화이트라벨 확장성", d: "하나의 코어 엔진으로 개신교·천주교·유대교 3개 시장에 독립 브랜드로 진입합니다." },
+      ],
+      teamTitle: "리더십",
+      team: [
+        { n: "Jaedon Um", r: "CEO / Founder" },
+        { n: "Eunhee Kim", r: "CCO" },
+        { n: "Hyungon Kim", r: "CTO" },
+      ],
+      philosophy: "Mission before technology. Word before interface. Trust before growth.",
+      contactTitle: "IR 자료 요청 및 투자 문의",
+      contactSub: "상세한 사업 계획서, 재무 전망, 제품 데모는 문의 주시면 제공해 드립니다.",
+      contactBtn: "투자 문의하기",
+      backHome: "홈으로 돌아가기",
+    },
+    footer: { tagline: "하루 한 구절, 예배자의 삶으로.", links: "바로가기", legal: "Wordshiper Ministry Inc. · 501(c)(3) Nonprofit" },
+  },
+  en: {
+    nav: { product: "Product", routine: "Routine", movement: "Movement", roadmap: "Roadmap", about: "About", investors: "Investors", preregister: "Pre-register" },
+    hero: {
+      badge: "Launching December 2026",
+      title1: "Raising worshipers who live",
+      title2: "each day by the Word",
+      slogan: "One verse a day. A life of worship.",
+      sub: "Wordshiper is a daily spiritual app that builds your spiritual, physical, and emotional rhythm through one verse and three short prayers a day — realigning your scattered priorities around God's Word.",
+      cta1: "Join the first 1,000",
+      cta2: "See the movement",
+      lineageNote: "Pre-register and receive your lineage number",
+    },
+    problem: {
+      label: "Why now",
+      title: "More connected than ever, yet more deeply scattered",
+      cards: [
+        { t: "Information overload", d: "Countless voices shake our hearts every day, while time spent in truth keeps shrinking." },
+        { t: "Relentless busyness", d: "We long to know God and worship truly, but the pace of life stands in the way." },
+        { t: "Broken rhythms", d: "When spiritual priorities scatter, our physical and emotional rhythms collapse with them." },
+      ],
+      answer: "When a single verse is planted deep in one heart, it becomes the power to overcome fear and turn life's priorities back to God.",
+      answerRef: "— The answer to the question Wordshiper began with",
+    },
+    routine: {
+      label: "The core routine",
+      title: "Three times a day, five minutes each",
+      sub: "Receive the verse in the morning, revisit it at noon, confirm it at night. Fifteen unhurried minutes let one verse soak into your life.",
+      sessions: [
+        { time: "Morning · 5 min", when: "On waking", items: ["Prayer 1 min — morning prayer", "Memorize 2 min — today's verse", "Meditate 2 min — apply the Word"] },
+        { time: "Noon · 5 min", when: "Before lunch", items: ["Prayer 1 min — gratitude", "Review 2 min — repeat the verse", "Walk check 2 min — today's priorities"] },
+        { time: "Evening · 5 min", when: "Before sleep", items: ["Prayer 1 min — daily reflection", "Confirm 2 min — Hide & Test", "Gratitude 2 min — record today's thanks"] },
+      ],
+      sum: "3 × 5 minutes = 15 minutes a day",
+      sumSub: "Living each day by spiritual priorities",
+      balance: [
+        { t: "Spiritual routine", d: "Walking with God through Word, prayer, meditation" },
+        { t: "Physical rhythm", d: "A daily cycle synced to sunrise and sunset" },
+        { t: "Emotional recovery", d: "Encouragement without condemnation, gratitude on record" },
+      ],
+    },
+    product: {
+      label: "Product",
+      title: "Word → Worship → Walk",
+      sub: "Five tabs form one spiritual flow: receive the Word, inscribe it, let it flow, respond in prayer, and walk it out.",
+      tabs: [
+        { t: "Today", d: "Receive today's verse — the Manna Moment the whole world receives together" },
+        { t: "Word", d: "Inscribe the Word — the 5-stage Hide & Test memorization engine" },
+        { t: "Create", d: "Let the Word and prayer flow out in your own voice and cards" },
+        { t: "Pray", d: "Respond to God through the Word — three short prayers a day" },
+        { t: "Walk", d: "Walk with God by the Word — a planner from calling to daily practice" },
+      ],
+      features: [
+        { t: "Worvi — a spiritual AI companion", d: "A sky-blue dove that never condemns a broken streak, but invites you back to the Word with grace and restoration." },
+        { t: "Jog wheel — Scripture in 1.5s", d: "A circular quick menu that reaches the Bible in 1.5 seconds, even mid-worship. All 31,111 verses readable and searchable offline." },
+        { t: "Verse Card — a confession that flows", d: "Pass a verse and a card is born — your verse, lineage number, and voice QR, flowing out into the world." },
+        { t: "Dual · Triple language", d: "17 languages supported; memorize Scripture in two or three languages alongside your mother tongue." },
+      ],
+      demoNote: "Actual app screens",
+    },
+    movement: {
+      label: "The movement",
+      subtitle: "We are not building an app. We are igniting a movement.",
+      title: "A spiritual lineage carried verse by verse",
+      lineageLead: "You are the",
+      lineageNum: "14,207",
+      lineageTail: "th Wordshiper to inscribe this verse",
+      lineageSub: "This number is not a score. It marks your place in the lineage of the Word — proof that you are not alone.",
+      engines: [
+        { t: "Synchronicity", e: "Together, now", d: "\u201cI am not alone\u201d — the whole world receives the same verse at the same moment. Lights kindle on the Living Globe wherever manna is received." },
+        { t: "Lineage", e: "Part of the flow", d: "\u201cI belong to a greater stream\u201d — pass a verse and join a lineage that crosses generations, languages, and lands." },
+        { t: "Public Artifact", e: "A flowing confession", d: "\u201cMy confession flows into the world\u201d — Verse Cards and your voice become the invitation that calls the next person." },
+      ],
+      promise: "No shame. No noise. One verse. A life of worship.",
+    },
+    global: {
+      label: "Global vision",
+      title: "The Word flowing to the nations",
+      stats: [
+        { n: "1.9B", d: "Christians worldwide — the people we long to serve" },
+        { n: "17", d: "Languages supported — dual & triple memorization" },
+        { n: "3", d: "Independent apps built on one core engine" },
+      ],
+      whitelabel: "On one core design system stand three independent apps — Wordshiper (Protestant), Verbum (Catholic), and Pasuk (Jewish) — each honoring its tradition while joining one movement of the Word.",
+    },
+    roadmap: {
+      label: "Roadmap",
+      title: "The movement has already begun",
+      phases: [
+        { t: "Phase 1 — MVP", d: "The core loop: receive · memorize · join the lineage" },
+        { t: "Phase 2 — Routine", d: "Three daily sessions · Walk planner · Worvi companion" },
+        { t: "Phase 3 — Launch", d: "December 2026 — with a seed community of the first 1,000" },
+        { t: "Phase 4 — Expansion", d: "Voice Feed · community channels · three white-label apps" },
+      ],
+    },
+    cta: {
+      title: "We are looking for the first 1,000 to receive the first manna together",
+      sub: "Pre-register and receive your lineage number. On launch day, everyone receives the first manna at the same moment.",
+      placeholder: "Email address",
+      button: "Pre-register",
+      success: "Thank you! You have joined the lineage.",
+      error: "Registration failed. Please try again.",
+      declaration: "Yes, I am a Wordshiper!",
+    },
+    investors: {
+      navTitle: "Investors",
+      title: "Seeking partners to write the next chapter of the Word movement",
+      sub: "Wordshiper operates as a dual structure: Wordshiper Ministry Inc., a 501(c)(3) nonprofit, and Wordshiper PBC, Inc., an impact corporation — designed to protect both sustainability and mission.",
+      points: [
+        { t: "Proven movement design", d: "Synchronicity, lineage, and public artifacts — the three engines behind the world's great movements, redefined with spiritual meaning." },
+        { t: "A sustainable model", d: "Free forever for individuals. Pro Organization subscriptions for churches and voluntary giving sustain operations. No advertising, ever." },
+        { t: "Technology built to operate", d: "A global TTS cache architecture structurally reduces voice costs — unit economics that hold at global scale." },
+        { t: "White-label expansion", d: "One core engine enters three markets — Protestant, Catholic, and Jewish — as independent brands." },
+      ],
+      teamTitle: "Leadership",
+      team: [
+        { n: "Jaedon Um", r: "CEO / Founder" },
+        { n: "Eunhee Kim", r: "CCO" },
+        { n: "Hyungon Kim", r: "CTO" },
+      ],
+      philosophy: "Mission before technology. Word before interface. Trust before growth.",
+      contactTitle: "Request IR materials & investment inquiries",
+      contactSub: "A detailed business plan, financial projections, and product demo are available upon request.",
+      contactBtn: "Contact us",
+      backHome: "Back to home",
+    },
+    footer: { tagline: "One verse a day. A life of worship.", links: "Links", legal: "Wordshiper Ministry Inc. · 501(c)(3) Nonprofit" },
+  },
+};
+
+export type RenewalCopy = typeof copy.en;
+
+export function useCopy(): RenewalCopy {
+  const { currentLanguage } = useLanguage();
+  return (currentLanguage === "ko" ? copy.ko : copy.en) as RenewalCopy;
+}

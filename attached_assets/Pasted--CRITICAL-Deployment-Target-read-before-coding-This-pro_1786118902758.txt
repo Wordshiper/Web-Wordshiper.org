@@ -1,0 +1,120 @@
+# CRITICAL — Deployment Target (read before coding)
+
+This project is ONLY designed/prototyped on Replit.
+It will NOT stay on Replit for production.
+
+## Final operating environment (required)
+After design/build is complete, the site will be moved to:
+- Local editing in Cursor (macOS)
+- GitHub repository (source of truth)
+- Production hosting similar to existing Wordshiper sites:
+  - unitedoceanair.com → Cloudflare Pages (+ optional Cloudflare Workers / Neon Postgres)
+  - danielumart.com → GitHub + Node hosting (Hostinger-style), edited via Cursor
+
+Primary target for THIS site (default unless I say otherwise):
+→ Cloudflare Pages + GitHub + Cursor
+(same workflow as unitedoceanair.com tracker/landing)
+
+Replit is temporary. Optimize for clean export/migration, not Replit runtime features.
+
+────────────────────────────────
+## What you MUST do while building
+────────────────────────────────
+
+1) Portable stack only
+Prefer one of these (in order):
+A) Vite + React (+ TypeScript) + static build (`npm run build` → `dist/`)
+B) Next.js with static export OR Cloudflare-compatible deploy (no Replit-only adapters)
+C) Plain HTML/CSS/JS if the site is marketing-only
+
+Avoid locking us to Replit:
+- Do NOT depend on Replit Always-On / Replit DB / Replit Secrets as the only backend
+- Do NOT use Replit-specific modules, paths, or “repl.co” hardcoding
+- Do NOT require a long-running custom Node server unless absolutely necessary
+  (prefer static frontend + serverless API later)
+
+2) Standard Node project layout
+Use a normal repo root:
+- package.json with scripts: "dev", "build", "preview" (or "start" if needed)
+- README.md with local run steps
+- .env.example (never commit real secrets)
+- .gitignore (node_modules, .env, dist/build artifacts as appropriate)
+- src/ or client/ for app code; public/ for static assets
+- No absolute Replit paths
+
+3) Environment variables
+- All secrets/API keys via env vars
+- Provide `.env.example` with every required key documented
+- Code must work with Cloudflare/Hostinger env injection later
+- Never hardcode API keys, DB URLs, or Replit URLs in source
+
+4) Domain-ready
+- Use relative URLs for internal links/assets
+- No hardcoded https://xxxx.replit.app or repl.co domains
+- SEO basics: title/meta, OG tags, favicon, sitemap/robots if marketing site
+
+5) Backend (if needed)
+Prefer migration-friendly options:
+- Forms: Formspree / Resend / Cloudflare Workers / email API (document which)
+- DB: Neon Postgres or similar managed DB (not Replit DB)
+- Auth: standard OAuth/JWT approach, documented
+If you use Express/Fastify temporarily on Replit, isolate API under `/api` or `/server`
+and keep frontend portable so we can move API to Cloudflare Workers later.
+
+6) Design handoff quality
+- Mobile + desktop responsive
+- Production-ready assets (not temporary Replit CDN-only paths if avoidable)
+- Keep components/pages organized for Cursor editing later
+
+────────────────────────────────
+## What you MUST deliver at “build complete”
+────────────────────────────────
+
+Create a file: MIGRATION_TO_CURSOR.md with:
+
+1. Stack summary (framework, UI lib, build tool)
+2. Exact commands:
+   - npm install
+   - npm run dev
+   - npm run build
+3. Output folder for deploy (e.g. dist/)
+4. Full list of env vars + where used
+5. Third-party services used (forms, analytics, maps, CMS, payments…)
+6. Known Replit-only leftovers to remove
+7. Suggested Cloudflare Pages settings:
+   - Build command
+   - Output directory
+   - Node version
+8. Domain cutover checklist (DNS / custom domain)
+9. “Do not break” list (routes, forms, SEO)
+
+Also prepare the repo so I can:
+- Download / push to GitHub
+- Open in Cursor
+- Run locally
+- Deploy to Cloudflare Pages with minimal changes
+
+────────────────────────────────
+## Forbidden / high-risk choices
+────────────────────────────────
+
+- Replit Database as permanent data store
+- Hardcoded Replit URLs
+- Proprietary Replit hosting assumptions
+- Undocumented paid APIs
+- Giant single-file apps that are hard to edit in Cursor
+- Committing secrets
+
+────────────────────────────────
+## Success criteria
+────────────────────────────────
+
+When finished, I should be able to:
+1) Export project from Replit → GitHub
+2) Open in Cursor and run locally
+3) Deploy to Cloudflare Pages (or Hostinger Node if we choose that path)
+4) Connect custom domain (like unitedoceanair.com / danielumart.com)
+5) Continue editing only in Cursor afterward
+
+Confirm you understand, then proceed with design/build under these constraints.
+If a feature conflicts with portable deploy, warn me BEFORE implementing.

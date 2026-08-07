@@ -1,0 +1,98 @@
+# ✝️ About Wordshiper Ministry
+
+## 🌍 Who We Are
+
+**Wordshiper Ministry** is a **faith-based 501(c)(3) nonprofit organization**  
+dedicated to empowering believers worldwide to grow as *worshipers of the Word* —  
+those who memorize, meditate, and live out Scripture as daily worship.
+
+Through technology, creativity, and the global Church,  
+we seek to make God’s Word accessible, memorable, and alive  
+in every generation and every language.  
+
+Our core project, the **Wordshiper App**, integrates:
+- AI-powered Scripture memorization and TTS/STT voice features  
+- Daily prayer rhythm (morning, noon, evening)  
+- Global community challenges & sharing  
+- Stripe-based donation and certificate system  
+
+> **“15 Minutes. One Verse. A Life of Worship.”**
+
+---
+
+## 🔥 Our Mission
+
+To help believers restore their **divine calling and priorities**  
+through the daily discipline of Scripture memorization and prayer —  
+so that every generation may **worship through the Word**,  
+live transformed lives, and proclaim the gospel to the ends of the earth.
+
+### 🌟 Our Vision
+> To raise up a global generation of **Wordshipers** —  
+> people who love the Word, live the Word, and share the Word.
+
+---
+
+## 👤 Founder & Director
+
+**Rev. Jaedon Um (엄재돈 목사)**  
+Founder & Executive Director, *Wordshiper Ministry*  
+Ordained Pastor, **Presbyterian Church in Korea (Hapdong – Conservative General Assembly)**  
+IT Director based in **New York, USA**
+
+Rev. Jaedon Um bridges **faith and technology** to advance global missions.  
+Having served in **the United States, China, and Korea**,  
+he is committed to integrating Scripture, worship, and digital innovation  
+to reach the nations through both the **Church and the workplace**.
+
+> “My calling is to help this generation return to the Word  
+> and become worshipers who live for God’s glory in every sphere of life.”  
+> — *Rev. Jaedon Um*
+
+---
+
+## 🕊️ Legal & Organizational Information
+
+| Field | Details |
+|-------|----------|
+| **Organization Name** | Wordshiper Ministry |
+| **Status** | 501(c)(3) Nonprofit Religious Organization |
+| **Base** | New York, United States |
+| **Primary Project** | Wordshiper App (Flutter + Firebase + AI) |
+| **Languages Supported** | English / Korean / Chinese (expanding) |
+| **Mission Focus** | Scripture memorization, prayer, digital evangelism, spiritual growth |
+
+---
+
+## 💡 Get Involved
+
+- 📲 **Download the Wordshiper App** (iOS / Android / Web)  
+- 🙏 **Support the Mission** through prayer and giving  
+- 🌏 **Partner with Us** to spread God’s Word to the ends of the earth  
+
+📧 **Contact:** info@wordshiper.org  
+🌐 **Website:** [www.wordshiper.org](https://www.wordshiper.org)
+
+---
+
+## 🇰🇷 한국어 버전
+
+### 워드십퍼 미니스트리 소개
+
+**워드십퍼 미니스트리(Wordshiper Ministry)**는  
+AI 기술을 통해 전 세계 성도들이 **“말씀으로 예배하는 삶”**을 살도록 돕는  
+미국 비영리 선교단체(501(c)(3))입니다.
+
+워드십퍼 앱은  
+매일 15분 말씀 암송과 기도를 생활화하도록 설계된  
+AI 기반 성경 암송 및 기도 플랫폼으로,  
+예배 중심의 영적 루틴을 세워갑니다.
+
+**설립자 엄재돈 목사(Rev. Jaedon Um)**는  
+대한예수교장로회(보수합동) 국제총회 안수 목사로,  
+미국 뉴욕을 중심으로 IT Director로 섬기며  
+미국, 중국, 한국에서 선교와 직장사역을 병행하고 있습니다.
+
+> **워드십퍼 — 말씀으로 예배하고, 말씀으로 세상을 변화시키는 사람들.**
+
+---
