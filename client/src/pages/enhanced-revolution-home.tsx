@@ -138,7 +138,7 @@ export default function EnhancedRevolutionHome() {
     <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
       <SEO 
         title="Wordshiper - Bible Memorization Platform"
-        description="Memorize Scripture. 15 Minutes a Day. A Life Transformed! Experience daily transformation with AI-powered Bible memorization in 96 languages. 아침·점심·저녁 5분, 말씀으로 변화되는 삶."
+        description="Memorize Scripture. 15 Minutes a Day. A Life Transformed! Experience daily transformation with AI-powered Bible memorization in 24 languages. 아침·점심·저녁 5분, 말씀으로 변화되는 삶."
         url="https://www.wordshiper.org"
       />
       <Navigation />

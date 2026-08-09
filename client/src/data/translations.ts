@@ -465,8 +465,8 @@ export const translations: Translations = {
   },
 
   'tts.subtitle': {
-    'en': 'Experience accurate pronunciation and natural memorization anywhere with AI voice technology in 95 languages',
-    'ko': '95개 언어 AI 음성 기술로 어디서나 정확한 발음과 자연스러운 암송을 경험하세요',
+    'en': 'Experience accurate pronunciation and natural memorization anywhere with AI voice technology in 24 languages',
+    'ko': '24개 언어 AI 음성 기술로 어디서나 정확한 발음과 자연스러운 암송을 경험하세요',
     'es': 'Experimenta pronunciación precisa y memorización natural en cualquier lugar con tecnología de voz IA en 95 idiomas',
     'fr': 'Découvrez une prononciation précise et une mémorisation naturelle partout avec la technologie vocale IA dans 95 langues',
     'de': 'Erleben Sie überall präzise Aussprache und natürliches Auswendiglernen mit KI-Sprachtechnologie in 95 Sprachen',
@@ -1257,8 +1257,8 @@ export const translations: Translations = {
     'it': 'Sfide e condivisione della comunità globale'
   },
   'about.whoWeAre.feature4': {
-    'en': 'Available in 96 languages',
-    'ko': '96개 언어 지원',
+    'en': 'Available in 24 languages',
+    'ko': '24개 언어 지원',
     'es': 'Disponible en 96 idiomas',
     'fr': 'Disponible en 96 langues',
     'de': 'Verfügbar in 96 Sprachen',

@@ -42,7 +42,7 @@ export default function SimpleRevolutionHome() {
     {
       icon: <Volume2 className="w-8 h-8" />,
       title: "AI 음성 학습",
-      description: "95개 언어 AI 음성으로 정확한 발음과 암송",
+      description: "24개 언어 AI 음성으로 정확한 발음과 암송",
       color: "bg-green-50 border-green-200"
     },
     {
@@ -61,7 +61,7 @@ export default function SimpleRevolutionHome() {
 
   const impactStats = [
     { number: "15분", label: "Daily Investment", color: "text-blue-600" },
-    { number: "95개", label: "Languages", color: "text-green-600" },
+    { number: "24개", label: "Languages", color: "text-green-600" },
     { number: "365일", label: "Consistency", color: "text-purple-600" },
     { number: "∞", label: "Eternal Impact", color: "text-pink-600" }
   ];
@@ -174,7 +174,7 @@ export default function SimpleRevolutionHome() {
               AI 음성으로 성경 암송 체험
             </h2>
             <p className="text-xl text-gray-600">
-              95개 언어 AI 음성 기술로 정확한 발음과 자연스러운 암송을 경험하세요
+              24개 언어 AI 음성 기술로 정확한 발음과 자연스러운 암송을 경험하세요
             </p>
           </div>
           <TTSDemo />
