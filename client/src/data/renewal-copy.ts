@@ -127,7 +127,11 @@ const copy = {
       contactBtn: "투자 문의하기",
       backHome: "홈으로 돌아가기",
     },
-    footer: { tagline: "하루\u00A0한\u00A0구절, 예배자의 삶으로." },
+    footer: {
+      tagline: "하루\u00A0한\u00A0구절, 예배자의 삶으로.",
+      legal: "© 2024 Wordshiper Ministry Inc. · 미국 뉴욕 기반 · 501(c)(3) Nonprofit · EIN: 33-1561112",
+      address: "5 Union Square West FRNT 1 #1299, New York, NY 10003, U.S.A.",
+    },
   },
   en: {
     nav: { product: "Product", routine: "Routine", movement: "Movement", roadmap: "Roadmap", about: "About", investors: "Investors", preregister: "Pre-register" },
@@ -254,7 +258,11 @@ const copy = {
       contactBtn: "Contact us",
       backHome: "Back to home",
     },
-    footer: { tagline: "One\u00A0verse a day. A life of worship." },
+    footer: {
+      tagline: "One\u00A0verse a day. A life of worship.",
+      legal: "© 2024 Wordshiper Ministry Inc. · Based in New York, U.S.A. · 501(c)(3) Nonprofit · EIN: 33-1561112",
+      address: "5 Union Square West FRNT 1 #1299, New York, NY 10003, U.S.A.",
+    },
   },
 };
 

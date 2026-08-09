@@ -1059,18 +1059,18 @@ export const translations: Translations = {
   },
 
   'footer.copyright': {
-    'en': '© 2025 Wordshiper. A ministry that transforms the world with God\'s Word',
-    'ko': '© 2025 Wordshiper. 하나님의 말씀으로 세상을 변화시키는 사역',
-    'es': '© 2025 Wordshiper. Un ministerio que transforma el mundo con la Palabra de Dios',
-    'fr': '© 2025 Wordshiper. Un ministère qui transforme le monde avec la Parole de Dieu',
-    'de': '© 2025 Wordshiper. Ein Dienst, der die Welt mit Gottes Wort verwandelt',
-    'ja': '© 2025 Wordshiper. 神の御言葉で世界を変える働き',
-    'zh': '© 2025 Wordshiper. 用神的话语改变世界的事工',
-    'ar': '© 2025 Wordshiper. خدمة تحول العالم بكلمة الله',
-    'hi': '© 2025 Wordshiper. एक सेवकाई जो परमेश्वर के वचन से दुनिया को बदलती है',
-    'pt': '© 2025 Wordshiper. Um ministério que transforma o mundo com a Palavra de Deus',
-    'ru': '© 2025 Wordshiper. Служение, которое преобразует мир Словом Божьим',
-    'it': '© 2025 Wordshiper. Un ministero che trasforma il mondo con la Parola di Dio'
+    'en': '© 2024 Wordshiper. A ministry that transforms the world with God\'s Word',
+    'ko': '© 2024 Wordshiper. 하나님의 말씀으로 세상을 변화시키는 사역',
+    'es': '© 2024 Wordshiper. Un ministerio que transforma el mundo con la Palabra de Dios',
+    'fr': '© 2024 Wordshiper. Un ministère qui transforme le monde avec la Parole de Dieu',
+    'de': '© 2024 Wordshiper. Ein Dienst, der die Welt mit Gottes Wort verwandelt',
+    'ja': '© 2024 Wordshiper. 神の御言葉で世界を変える働き',
+    'zh': '© 2024 Wordshiper. 用神的话语改变世界的事工',
+    'ar': '© 2024 Wordshiper. خدمة تحول العالم بكلمة الله',
+    'hi': '© 2024 Wordshiper. एक सेवकाई जो परमेश्वर के वचन से दुनिया को बदलती है',
+    'pt': '© 2024 Wordshiper. Um ministério que transforma o mundo com a Palavra de Deus',
+    'ru': '© 2024 Wordshiper. Служение, которое преобразует мир Словом Божьим',
+    'it': '© 2024 Wordshiper. Un ministero che trasforma il mondo con la Parola di Dio'
   },
 
   // About Page

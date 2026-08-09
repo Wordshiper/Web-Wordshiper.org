@@ -275,7 +275,7 @@ export default function RevolutionHome() {
           </div>
           
           <div className="text-gray-500 text-sm">
-            © 2025 Wordshiper. 하나님의 말씀으로 세상을 변화시키는 사역
+            © 2024 Wordshiper. 하나님의 말씀으로 세상을 변화시키는 사역
           </div>
         </div>
       </footer>

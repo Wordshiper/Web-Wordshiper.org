@@ -64,10 +64,8 @@ export default function RenewalFooter() {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-xs text-gray-400">
-        <p>
-          © {new Date().getFullYear()} Wordshiper Ministry Inc. · 501(c)(3) · EIN 33-1561112
-        </p>
-        <p className="text-gray-400/90">5 Union Square West FRNT 1 #1299, New York, NY 10003</p>
+        <p className="ws-text-pretty">{c.footer.legal}</p>
+        <p className="text-gray-400/90">{c.footer.address}</p>
       </div>
     </footer>
   );
