@@ -287,7 +287,8 @@ export const translations: Translations = {
     'fr': 'Wordshiper permet aux croyants du monde entier de mémoriser les Écritures grâce à une technologie IA innovante, favorisant la croissance spirituelle et créant une communauté mondiale unie dans la Parole de Dieu.',
     'de': 'Wordshiper befähigt Gläubige weltweit, die Schrift durch innovative KI-Technologie auswendig zu lernen, spirituelles Wachstum zu fördern und eine globale Gemeinschaft zu schaffen, die in Gottes Wort vereint ist.',
     'ja': 'Wordshiperは革新的なAI技術を通じて世界中の信者が聖書を暗記することを可能にし、霊的成長を促進し、神の言葉で結ばれたグローバルコミュニティを創造します。',
-    'zh': 'Wordshiper通过创新的AI技术帮助全球信徒背诵圣经，促进属灵成长，并创建一个在神话语中联合的全球社区。',
+    'zh': '敬拜者（Wordshiper）通过创新的AI技术帮助全球信徒背诵圣经，促进属灵成长，并创建一个在神话语中联合的全球社区。',
+    'zh-TW': '敬拜者（Wordshiper）透過創新的AI技術幫助全球信徒背誦聖經，促進屬靈成長，並創建一個在神話語中聯合的全球社區。',
     'ar': 'يمكّن Wordshiper المؤمنين في جميع أنحاء العالم من حفظ الكتاب المقدس من خلال تقنية الذكاء الاصطناعي المبتكرة، مما يعزز النمو الروحي ويخلق مجتمعًا عالميًا متحدًا في كلمة الله.',
     'hi': 'Wordshiper नवाचार AI तकनीक के माध्यम से दुनिया भर के विश्वासियों को पवित्रशास्त्र याद करने की शक्ति देता है, आध्यात्मिक विकास को बढ़ावा देता है और परमेश्वर के वचन में संयुक्त एक वैश्विक समुदाय बनाता है।',
     'pt': 'O Wordshiper capacita crentes em todo o mundo a memorizar as Escrituras através de tecnologia IA inovadora, promovendo crescimento espiritual e criando uma comunidade global unida na Palavra de Deus.',
@@ -394,7 +395,8 @@ export const translations: Translations = {
     'fr': 'Wordshiper est pour des Gens comme Vous',
     'de': 'Wordshiper ist für Menschen wie Sie',
     'ja': 'Wordshiperはこんな方のためのプラットフォームです',
-    'zh': 'Wordshiper是为像您这样的人准备的',
+    'zh': '敬拜者（Wordshiper）是为像您这样的人准备的',
+    'zh-TW': '敬拜者（Wordshiper）是為像您這樣的人準備的',
     'ar': 'Wordshiper مخصص لأشخاص مثلك',
     'hi': 'Wordshiper आपके जैसे लोगों के लिए है',
     'pt': 'Wordshiper é para Pessoas como Você',
@@ -502,7 +504,8 @@ export const translations: Translations = {
     'fr': 'Grâce à une mémorisation biblique simple mais durable, connectez-vous profondément avec Dieu, vivez la paix quotidienne à travers Sa Parole, et finalement devenez une famille Wordshiper vivant une vie missionnaire.',
     'de': 'Durch einfaches, aber nachhaltiges Schriftauswendiglernen verbinden Sie sich tief mit Gott, erleben täglich Frieden durch Sein Wort und werden schließlich eine Wordshiper-Familie, die ein missionarisches Leben führt.',
     'ja': 'シンプルでありながら持続可能な聖書暗記を通して神様と深くつながり、御言葉による平安な一日を体験し、最終的には宣教的な人生を歩むWordshiper家族になってください。',
-    'zh': '通过简单而可持续的圣经记忆，与神深度连接，通过祂的话语体验日常平安，最终成为过宣教生活的Wordshiper家庭。',
+    'zh': '通过简单而可持续的圣经记忆，与神深度连接，通过祂的话语体验日常平安，最终成为过宣教生活的敬拜者（Wordshiper）家庭。',
+    'zh-TW': '透過簡單而可持續的聖經記憶，與神深度連接，透過祂的話語體驗日常平安，最終成為過宣教生活的敬拜者（Wordshiper）家庭。',
     'ar': 'من خلال حفظ الكتاب المقدس البسيط والمستدام، تواصل بعمق مع الله، اختبر السلام اليومي من خلال كلمته، وأخيراً كن عائلة Wordshiper تعيش حياة تبشيرية.',
     'hi': 'सरल लेकिन टिकाऊ शास्त्र स्मरण के माध्यम से परमेश्वर से गहराई से जुड़ें, उसके वचन के माध्यम से दैनिक शांति का अनुभव करें, और अंततः एक मिशनरी जीवन जीने वाला Wordshiper परिवार बनें।',
     'pt': 'Através da memorização bíblica simples mas sustentável, conecte-se profundamente com Deus, experimente a paz diária através de Sua Palavra, e finalmente torne-se uma família Wordshiper vivendo uma vida missionária.',
@@ -1065,7 +1068,8 @@ export const translations: Translations = {
     'fr': '© 2024 Wordshiper. Un ministère qui transforme le monde avec la Parole de Dieu',
     'de': '© 2024 Wordshiper. Ein Dienst, der die Welt mit Gottes Wort verwandelt',
     'ja': '© 2024 Wordshiper. 神の御言葉で世界を変える働き',
-    'zh': '© 2024 Wordshiper. 用神的话语改变世界的事工',
+    'zh': '© 2024 敬拜者（Wordshiper）. 用神的话语改变世界的事工',
+    'zh-TW': '© 2024 敬拜者（Wordshiper）. 用神的話語改變世界的事工',
     'ar': '© 2024 Wordshiper. خدمة تحول العالم بكلمة الله',
     'hi': '© 2024 Wordshiper. एक सेवकाई जो परमेश्वर के वचन से दुनिया को बदलती है',
     'pt': '© 2024 Wordshiper. Um ministério que transforma o mundo com a Palavra de Deus',
@@ -1081,7 +1085,8 @@ export const translations: Translations = {
     'fr': 'À Propos de Wordshiper',
     'de': 'Über Wordshiper',
     'ja': 'Wordshiperについて',
-    'zh': '关于Wordshiper',
+    'zh': '关于敬拜者（Wordshiper）',
+    'zh-TW': '關於敬拜者（Wordshiper）',
     'ar': 'حول Wordshiper',
     'hi': 'Wordshiper के बारे में',
     'pt': 'Sobre Wordshiper',
@@ -1165,7 +1170,8 @@ export const translations: Translations = {
     'fr': 'Wordshiper Ministry',
     'de': 'Wordshiper Ministry',
     'ja': 'Wordshiper Ministry',
-    'zh': 'Wordshiper Ministry',
+    'zh': '敬拜者事工（Wordshiper Ministry）',
+    'zh-TW': '敬拜者事工（Wordshiper Ministry）',
     'ar': 'Wordshiper Ministry',
     'hi': 'Wordshiper Ministry',
     'pt': 'Wordshiper Ministry',
@@ -1180,6 +1186,7 @@ export const translations: Translations = {
     'de': ' ist eine glaubensbasierte gemeinnützige 501(c)(3)-Organisation, die sich der Befähigung von Gläubigen weltweit widmet, als Anbeter des Wortes zu wachsen — diejenigen, die die Schrift als tägliche Anbetung auswendig lernen, meditieren und leben.',
     'ja': 'は、信仰に基づいた501(c)(3)非営利組織であり、世界中の信者が御言葉の礼拝者として成長することを支援します。聖書を暗記し、瞑想し、毎日の礼拝として生きることを目指します。',
     'zh': '是一个基于信仰的501(c)(3)非营利组织，致力于帮助全球信徒成长为圣道的敬拜者——那些背诵、默想并将圣经作为日常敬拜来生活的人。',
+    'zh-TW': '是一個基於信仰的501(c)(3)非營利組織，致力於幫助全球信徒成長為聖道的敬拜者——那些背誦、默想並將聖經作為日常敬拜來生活的人。',
     'ar': ' هي منظمة غير ربحية 501(c)(3) قائمة على الإيمان، مكرسة لتمكين المؤمنين في جميع أنحاء العالم للنمو كعبّاد للكلمة — أولئك الذين يحفظون ويتأملون ويعيشون الكتاب المقدس كعبادة يومية.',
     'hi': ' एक विश्वास-आधारित 501(c)(3) गैर-लाभकारी संगठन है जो दुनिया भर के विश्वासियों को वचन के उपासकों के रूप में बढ़ने के लिए सशक्त बनाने के लिए समर्पित है — वे जो पवित्रशास्त्र को दैनिक आराधना के रूप में याद करते हैं, ध्यान करते हैं और जीते हैं।',
     'pt': ' é uma organização sem fins lucrativos 501(c)(3) baseada na fé, dedicada a capacitar crentes em todo o mundo a crescer como adoradores da Palavra — aqueles que memorizam, meditam e vivem as Escrituras como adoração diária.',
@@ -1207,7 +1214,8 @@ export const translations: Translations = {
     'fr': 'L\'Application Wordshiper',
     'de': 'Die Wordshiper App',
     'ja': 'Wordshiperアプリ',
-    'zh': 'Wordshiper应用',
+    'zh': '敬拜者应用',
+    'zh-TW': '敬拜者應用',
     'ar': 'تطبيق Wordshiper',
     'hi': 'Wordshiper ऐप',
     'pt': 'O Aplicativo Wordshiper',
@@ -1319,7 +1327,8 @@ export const translations: Translations = {
     'fr': 'Pasteur ordonné et directeur informatique basé à New York, reliant foi et technologie pour faire progresser les missions mondiales. Engagé à aider les croyants à vivre en tant qu\'adorateurs de la Parole grâce à des plateformes numériques innovantes.',
     'de': 'Ordinierter Pastor und IT-Direktor mit Sitz in New York, der Glaube und Technologie verbindet, um globale Missionen voranzutreiben. Engagiert, Gläubigen zu helfen, als Anbeter des Wortes durch innovative digitale Plattformen zu leben.',
     'ja': 'ニューヨークを拠点とする叙任された牧師兼ITディレクター。信仰とテクノロジーを結びつけ、世界宣教を推進しています。革新的なデジタルプラットフォームを通じて信者が御言葉の礼拝者として生きるのを助けることに専念しています。',
-    'zh': '驻纽约的ordained牧师和IT主管，将信仰与技术相结合，推进全球宣教。致力于通过创新的数字平台帮助信徒作为圣道的敬拜者生活。',
+    'zh': '驻纽约的按立牧师和IT主管，将信仰与技术相结合，推进全球宣教。致力于通过创新的数字平台帮助信徒作为圣道的敬拜者生活，投身于敬拜者（Wordshiper）运动。',
+    'zh-TW': '駐紐約的按立牧師和IT主管，將信仰與技術相結合，推進全球宣教。致力於透過創新的數位平台幫助信徒作為聖道的敬拜者生活，投身於敬拜者（Wordshiper）運動。',
     'ar': 'قس مُرسَم ومدير تكنولوجيا المعلومات مقره نيويورك، يربط بين الإيمان والتكنولوجيا لتطوير البعثات العالمية. ملتزم بمساعدة المؤمنين على العيش كعبّاد للكلمة من خلال منصات رقمية مبتكرة.',
     'hi': 'न्यूयॉर्क स्थित ordained पादरी और IT निदेशक, विश्वास और प्रौद्योगिकी को जोड़कर वैश्विक मिशनों को आगे बढ़ा रहे हैं। नवीन डिजिटल प्लेटफार्मों के माध्यम से विश्वासियों को वचन के उपासकों के रूप में जीने में मदद करने के लिए प्रतिबद्ध।',
     'pt': 'Pastor ordenado e diretor de TI baseado em Nova York, conectando fé e tecnologia para avançar missões globais. Comprometido em ajudar crentes a viver como adoradores da Palavra através de plataformas digitais inovadoras.',
@@ -1496,8 +1505,18 @@ export const translations: Translations = {
   }
 };
 
+function resolveTranslationLocale(language: string): string {
+  const raw = (language || 'en').trim();
+  if (raw === 'zh-Hant' || raw === 'zh-HK') return 'zh-TW';
+  if (raw === 'zh-Hans' || raw === 'zh-CN') return 'zh';
+  return raw;
+}
+
 export const getTranslation = (key: string, language: string = 'en'): string => {
-  return translations[key]?.[language] || translations[key]?.['en'] || key;
+  const locale = resolveTranslationLocale(language);
+  const set = translations[key];
+  if (!set) return key;
+  return set[locale] || (locale === 'zh-TW' ? set['zh'] : undefined) || set['en'] || key;
 };
 
 export const getSupportedLanguages = (): string[] => {

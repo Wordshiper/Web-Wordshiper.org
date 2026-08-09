@@ -12,30 +12,48 @@ import {
   type Donation,
   type InsertDonation,
 } from "@shared/schema";
-import { db } from "./db";
+import { db, pool } from "./db";
 import { eq } from "drizzle-orm";
 
 export interface IStorage {
-  // User operations - Required for Replit Auth
   getUser(id: string): Promise<User | undefined>;
   upsertUser(user: UpsertUser): Promise<User>;
-  
-  // Volunteer operations
   createVolunteer(volunteer: InsertVolunteer): Promise<Volunteer>;
   getVolunteers(): Promise<Volunteer[]>;
-  
-  // Newsletter operations
   subscribeNewsletter(subscriber: InsertNewsletterSubscriber): Promise<NewsletterSubscriber>;
   getSubscribers(): Promise<NewsletterSubscriber[]>;
-  
-  // Donation operations
   createDonation(donation: InsertDonation): Promise<Donation>;
   updateDonationStatus(id: string, status: string, stripeSessionId?: string): Promise<Donation | undefined>;
   getDonations(): Promise<Donation[]>;
+  ensureLineageSchema(): Promise<void>;
+}
+
+function mapSubscriberRow(r: Record<string, unknown>): NewsletterSubscriber {
+  return {
+    id: String(r.id),
+    email: String(r.email),
+    lineageNumber:
+      r.lineage_number == null && r.lineageNumber == null
+        ? null
+        : Number(r.lineage_number ?? r.lineageNumber),
+    subscribed: Boolean(r.subscribed ?? true),
+    createdAt: (r.created_at ?? r.createdAt ?? null) as Date | null,
+  };
 }
 
 export class DatabaseStorage implements IStorage {
-  // User operations - Required for Replit Auth
+  async ensureLineageSchema(): Promise<void> {
+    await pool.query(`CREATE SEQUENCE IF NOT EXISTS pre_register_lineage_seq START WITH 1`);
+    await pool.query(
+      `ALTER TABLE newsletter_subscribers ADD COLUMN IF NOT EXISTS lineage_number integer`,
+    );
+    await pool.query(`
+      CREATE UNIQUE INDEX IF NOT EXISTS newsletter_subscribers_lineage_number_uidx
+      ON newsletter_subscribers (lineage_number)
+      WHERE lineage_number IS NOT NULL
+    `);
+  }
+
   async getUser(id: string): Promise<User | undefined> {
     const [user] = await db.select().from(users).where(eq(users.id, id));
     return user;
@@ -68,16 +86,52 @@ export class DatabaseStorage implements IStorage {
     return await db.select().from(volunteers);
   }
 
-  async subscribeNewsletter(insertSubscriber: InsertNewsletterSubscriber): Promise<NewsletterSubscriber> {
-    const [subscriber] = await db
-      .insert(newsletter_subscribers)
-      .values(insertSubscriber)
-      .onConflictDoUpdate({
-        target: newsletter_subscribers.email,
-        set: { subscribed: true },
-      })
-      .returning();
-    return subscriber;
+  async subscribeNewsletter(
+    insertSubscriber: InsertNewsletterSubscriber,
+  ): Promise<NewsletterSubscriber> {
+    await this.ensureLineageSchema();
+    const email = insertSubscriber.email.trim().toLowerCase();
+
+    const existingRes = await pool.query(
+      `SELECT id, email, lineage_number, subscribed, created_at
+       FROM newsletter_subscribers WHERE lower(email) = $1 LIMIT 1`,
+      [email],
+    );
+    const existing = existingRes.rows[0] as Record<string, unknown> | undefined;
+
+    if (existing?.lineage_number != null) {
+      if (existing.subscribed === false) {
+        await pool.query(
+          `UPDATE newsletter_subscribers SET subscribed = true WHERE id = $1`,
+          [existing.id],
+        );
+      }
+      return mapSubscriberRow(existing);
+    }
+
+    if (existing) {
+      const updated = await pool.query(
+        `UPDATE newsletter_subscribers
+         SET lineage_number = nextval('pre_register_lineage_seq'), subscribed = true
+         WHERE id = $1 AND lineage_number IS NULL
+         RETURNING id, email, lineage_number, subscribed, created_at`,
+        [existing.id],
+      );
+      if (updated.rows[0]) return mapSubscriberRow(updated.rows[0]);
+      const again = await pool.query(
+        `SELECT id, email, lineage_number, subscribed, created_at FROM newsletter_subscribers WHERE id = $1`,
+        [existing.id],
+      );
+      return mapSubscriberRow(again.rows[0]);
+    }
+
+    const inserted = await pool.query(
+      `INSERT INTO newsletter_subscribers (email, lineage_number, subscribed)
+       VALUES ($1, nextval('pre_register_lineage_seq'), true)
+       RETURNING id, email, lineage_number, subscribed, created_at`,
+      [email],
+    );
+    return mapSubscriberRow(inserted.rows[0]);
   }
 
   async getSubscribers(): Promise<NewsletterSubscriber[]> {
@@ -92,12 +146,18 @@ export class DatabaseStorage implements IStorage {
     return donation;
   }
 
-  async updateDonationStatus(id: string, status: string, stripeSessionId?: string): Promise<Donation | undefined> {
-    const updateData: any = { status };
+  async updateDonationStatus(
+    id: string,
+    status: string,
+    stripeSessionId?: string,
+  ): Promise<Donation | undefined> {
+    const updateData: Partial<{ status: string; stripeSessionId: string }> = {
+      status,
+    };
     if (stripeSessionId) {
       updateData.stripeSessionId = stripeSessionId;
     }
-    
+
     const [donation] = await db
       .update(donations)
       .set(updateData)

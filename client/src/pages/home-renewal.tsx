@@ -2,13 +2,14 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "wouter";
 import { useCopy } from "@/data/renewal-copy";
 import { useLanguage } from "@/hooks/use-language";
+import { brandDisplayForLanguage } from "@/data/brand";
 import ExpandedLanguageSwitcher from "@/components/expanded-language-switcher";
 import SEO from "@/components/seo";
 import Footer from "@/components/renewal-footer";
 import { useToast } from "@/hooks/use-toast";
 import {
-  BookOpen, Sun, UtensilsCrossed, Moon, Sparkles, Globe2, Users,
-  HeartHandshake, Menu, X, ArrowRight, Bird, CircleDot, Share2, Languages,
+  BookOpen, Sun, UtensilsCrossed, Moon, Globe2, Users,
+  HeartHandshake, Menu, X, ArrowRight, Bird, Share2, Languages, CircleDot,
 } from "lucide-react";
 import logoPrimary from "@assets/wordshiper_logo_lockup_primary_E_1786117649532.svg";
 import iconMark from "@assets/wordshiper_icon_favicon_1786117649531.svg";
@@ -64,6 +65,8 @@ function PhoneFrame({ src, alt, className = "" }: { src: string; alt: string; cl
 
 function Header() {
   const c = useCopy();
+  const { currentLanguage } = useLanguage();
+  const brandAlt = brandDisplayForLanguage(currentLanguage);
   const [open, setOpen] = useState(false);
   const links = [
     { href: "#routine", label: c.nav.routine },
@@ -72,12 +75,12 @@ function Header() {
     { href: "#roadmap", label: c.nav.roadmap },
   ];
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-white/85 backdrop-blur-md border-b border-[#E6F7FC]">
+    <header className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#E6F7FC]/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
         <a href="#top" className="flex items-center p-1 -m-1" data-testid="link-logo-home">
-          <img src={logoPrimary} alt="Wordshiper" className="h-8 w-auto" width={180} height={40} />
+          <img src={logoPrimary} alt={brandAlt} className="h-8 w-auto" width={180} height={40} />
         </a>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-5">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors">
               {l.label}
@@ -85,6 +88,9 @@ function Header() {
           ))}
           <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors">
             {c.nav.about}
+          </Link>
+          <Link href="/donate" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors" data-testid="link-donate">
+            {c.nav.donate}
           </Link>
           <Link href="/investors" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors" data-testid="link-investors">
             {c.nav.investors}
@@ -114,6 +120,7 @@ function Header() {
             </a>
           ))}
           <Link href="/about" className="block text-gray-700 font-medium py-1">{c.nav.about}</Link>
+          <Link href="/donate" className="block text-gray-700 font-medium py-1">{c.nav.donate}</Link>
           <Link href="/investors" className="block text-gray-700 font-medium py-1">{c.nav.investors}</Link>
           <a href="#preregister" onClick={() => setOpen(false)} className="block text-center px-4 py-2 rounded-full font-semibold text-white" style={{ background: CYAN }}>
             {c.nav.preregister}
@@ -126,45 +133,90 @@ function Header() {
 
 function Hero() {
   const c = useCopy();
+  const { currentLanguage } = useLanguage();
+  const brandAlt = brandDisplayForLanguage(currentLanguage);
+  const isKo = currentLanguage === "ko";
+
   return (
-    <section id="top" className="relative pt-28 pb-20 overflow-hidden" style={{ background: "linear-gradient(180deg,#F8FCFE 0%,#E6F7FC 100%)" }}>
-      <div className="absolute -top-32 -right-32 w-[480px] h-[480px] rounded-full opacity-20 blur-3xl" style={{ background: CYAN }} />
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
-        <div className="ws-fade-up">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold bg-white border border-[#99E0F5] text-[#0090B8] shadow-sm">
-            <Sparkles className="w-4 h-4" /> {c.hero.badge}
-          </span>
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-tight text-[#201E1F] ws-text-balance">
+    <section
+      id="top"
+      className="relative min-h-[100svh] flex items-end sm:items-center overflow-hidden"
+    >
+      {/* Full-bleed atmospheric plane */}
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "linear-gradient(165deg, #003D4F 0%, #0C1519 38%, #0A2A36 72%, #001820 100%)",
+        }}
+      />
+      <div
+        className="absolute inset-0 -z-10 opacity-40"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 50% at 70% 40%, rgba(0,179,228,0.45) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 15% 80%, rgba(44,197,242,0.2) 0%, transparent 55%)",
+        }}
+      />
+      <div
+        className="absolute inset-0 -z-10 opacity-[0.07]"
+        style={{
+          backgroundImage:
+            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
+        }}
+      />
+
+      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 pt-28 pb-16 sm:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="lg:col-span-6 ws-fade-up text-center lg:text-left">
+          <img
+            src={logoPrimary}
+            alt={brandAlt}
+            className="h-10 sm:h-12 w-auto mx-auto lg:mx-0 brightness-0 invert opacity-95 ws-hero-brand"
+            width={240}
+            height={53}
+          />
+          <h1
+            className={`mt-8 text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.15] text-white ws-text-balance ${
+              isKo ? "font-scripture font-bold" : "font-scripture"
+            }`}
+          >
             {c.hero.title1}
             <br />
-            <span style={{ color: CYAN }}>{c.hero.title2}</span>
+            <span className="text-[#2CC5F2]">{c.hero.title2}</span>
           </h1>
-          <p className="font-scripture-italic text-2xl mt-5 text-[#003D4F] ws-text-pretty">{c.hero.slogan}</p>
-          <p className="mt-5 text-lg text-gray-600 leading-relaxed max-w-xl ws-text-pretty">{c.hero.sub}</p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4">
+          <p className="font-scripture-italic text-xl sm:text-2xl mt-5 text-[#ECEAE0]/95 ws-text-pretty">
+            {c.hero.slogan}
+          </p>
+          <p className="mt-5 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0 ws-text-pretty">
+            {c.hero.sub}
+          </p>
+          <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
             <a
               href="#preregister"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-white font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
-              style={{ background: CYAN }}
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-[#003D4F] font-bold text-lg bg-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
               data-testid="button-hero-preregister"
             >
               {c.hero.cta1} <ArrowRight className="w-5 h-5" />
             </a>
             <a
               href="#movement"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-lg border-2 border-[#00B3E4] text-[#0090B8] hover:bg-[#E6F7FC] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold text-lg border border-white/35 text-white/90 hover:bg-white/10 transition-colors"
               data-testid="button-hero-movement"
             >
               {c.hero.cta2}
             </a>
           </div>
-          <p className="mt-4 text-sm text-gray-500 flex items-center gap-1.5">
-            <CircleDot className="w-3.5 h-3.5" style={{ color: CYAN }} /> {c.hero.lineageNote}
-          </p>
         </div>
-        <div className="relative flex justify-center lg:justify-end">
-          <PhoneFrame src={screenHome} alt="Wordshiper app — home dashboard" className="w-64 sm:w-72 ws-float" />
-          <PhoneFrame src={screenJog} alt="Wordshiper app — jog wheel quick menu" className="w-48 sm:w-56 absolute -bottom-8 -left-2 lg:left-8 rotate-[-6deg] shadow-xl hidden sm:block" />
+
+        <div className="lg:col-span-6 relative flex justify-center lg:justify-end ws-hero-device">
+          <div
+            className="absolute -inset-8 rounded-full blur-3xl opacity-50"
+            style={{ background: "radial-gradient(circle, #00B3E4 0%, transparent 70%)" }}
+          />
+          <PhoneFrame
+            src={screenHome}
+            alt={`${brandAlt} app`}
+            className="relative w-[min(72vw,280px)] sm:w-72 ws-float"
+          />
         </div>
       </div>
     </section>
@@ -174,23 +226,39 @@ function Hero() {
 function Problem() {
   const c = useCopy();
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
+    <section className="py-24 sm:py-28 relative overflow-hidden">
+      <div
+        className="absolute inset-0 -z-10"
+        style={{
+          background:
+            "linear-gradient(180deg, #FFFFFF 0%, #F8FCFE 45%, #FFFFFF 100%)",
+        }}
+      />
+      <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <SectionLabel>{c.problem.label}</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] max-w-3xl mx-auto whitespace-pre-line ws-text-balance">{c.problem.title}</h2>
-        <div className="grid md:grid-cols-3 gap-6 mt-12">
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+          {c.problem.title}
+        </h2>
+        <div className="mt-12 space-y-8 text-left">
           {c.problem.cards.map((card, i) => (
-            <div key={i} className="p-8 rounded-2xl bg-[#F8FCFE] border border-[#E6F7FC] text-left hover:shadow-md transition-shadow">
-              <div className="w-11 h-11 rounded-xl flex items-center justify-center mb-4" style={{ background: "#E6F7FC" }}>
-                {[<Globe2 key="g" />, <Sun key="s" />, <HeartHandshake key="h" />][i]}
+            <div key={i} className="flex gap-5 items-start">
+              <div
+                className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 text-[#0090B8]"
+                style={{ background: "#E6F7FC" }}
+              >
+                {[<Globe2 key="g" className="w-5 h-5" />, <Sun key="s" className="w-5 h-5" />, <HeartHandshake key="h" className="w-5 h-5" />][i]}
               </div>
-              <h3 className="font-bold text-lg text-[#201E1F] mb-2">{card.t}</h3>
-              <p className="text-gray-600 leading-relaxed">{card.d}</p>
+              <div>
+                <h3 className="font-bold text-lg text-[#201E1F]">{card.t}</h3>
+                <p className="mt-1.5 text-gray-600 leading-relaxed ws-text-pretty">{card.d}</p>
+              </div>
             </div>
           ))}
         </div>
-        <blockquote className="mt-16 max-w-3xl mx-auto">
-          <p className="font-scripture text-2xl sm:text-[1.7rem] leading-relaxed text-[#003D4F] ws-text-pretty">“{c.problem.answer}”</p>
+        <blockquote className="mt-16 pt-12 border-t border-[#E6F7FC]">
+          <p className="font-scripture text-2xl sm:text-[1.75rem] leading-relaxed text-[#003D4F] ws-text-pretty">
+            “{c.problem.answer}”
+          </p>
           <cite className="block mt-4 text-sm text-gray-500 not-italic">{c.problem.answerRef}</cite>
         </blockquote>
       </div>
@@ -414,9 +482,12 @@ function Roadmap() {
 
 function Preregister() {
   const c = useCopy();
+  const { currentLanguage } = useLanguage();
   const { toast } = useToast();
   const [email, setEmail] = useState("");
   const [busy, setBusy] = useState(false);
+  const [lineageNumber, setLineageNumber] = useState<number | null>(null);
+
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
@@ -425,10 +496,18 @@ function Preregister() {
       const res = await fetch("/api/newsletter/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, language: currentLanguage }),
       });
       if (!res.ok) throw new Error();
-      toast({ title: c.cta.success });
+      const data = (await res.json()) as { lineageNumber?: number };
+      const n = data.lineageNumber ?? null;
+      setLineageNumber(n);
+      toast({
+        title:
+          n != null && typeof c.cta.successWithNumber === "function"
+            ? c.cta.successWithNumber(n)
+            : c.cta.success,
+      });
       setEmail("");
     } catch {
       toast({ title: c.cta.error, variant: "destructive" });
@@ -436,35 +515,59 @@ function Preregister() {
       setBusy(false);
     }
   };
+
   return (
     <section id="preregister" className="relative py-28 overflow-hidden" style={{ background: `linear-gradient(135deg, ${CYAN} 0%, #0090B8 100%)` }}>
       <div className="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-white/10 blur-3xl" />
       <div className="relative max-w-3xl mx-auto px-4 sm:px-6 text-center">
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-lg mb-6 p-2">
-          <img src={iconMark} alt="Wordshiper icon" className="w-full h-full" />
+          <img src={iconMark} alt="" className="w-full h-full" />
         </div>
         <h2 className="text-3xl sm:text-4xl font-bold text-white leading-snug whitespace-pre-line ws-text-balance">{c.cta.title}</h2>
-        <p className="mt-4 text-white/85 text-lg">{c.cta.sub}</p>
-        <form onSubmit={submit} className="mt-9 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
-          <input
-            type="email"
-            required
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder={c.cta.placeholder}
-            className="flex-1 px-6 py-4 rounded-full text-[#201E1F] placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-white/40"
-            data-testid="input-preregister-email"
-          />
-          <button
-            type="submit"
-            disabled={busy}
-            className="px-8 py-4 rounded-full font-bold text-[#0090B8] bg-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all disabled:opacity-60"
-            data-testid="button-preregister-submit"
-          >
-            {c.cta.button}
-          </button>
-        </form>
-        <p className="font-scripture-italic mt-10 text-2xl text-white">{c.cta.declaration}</p>
+        <p className="mt-4 text-white/85 text-lg ws-text-pretty">{c.cta.sub}</p>
+
+        {lineageNumber != null ? (
+          <div className="mt-10 rounded-3xl bg-white/15 border border-white/25 backdrop-blur-sm px-8 py-10 ws-lineage-reveal">
+            <p className="text-white/80 text-sm tracking-widest uppercase font-semibold">
+              {currentLanguage === "ko" ? "당신의 계보 번호" : "Your lineage number"}
+            </p>
+            <p className="font-scripture mt-3 text-6xl sm:text-7xl text-white font-bold tracking-tight">
+              #{lineageNumber}
+            </p>
+            <p className="font-scripture-italic mt-6 text-xl text-white">
+              {c.cta.declaration}
+            </p>
+            <p className="mt-3 text-white/75 text-sm">
+              {currentLanguage === "ko"
+                ? "확인 이메일을 보내드렸습니다. 받은편지함을 확인해 주세요."
+                : "We sent a confirmation email — please check your inbox."}
+            </p>
+          </div>
+        ) : (
+          <form onSubmit={submit} className="mt-9 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
+            <input
+              type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder={c.cta.placeholder}
+              className="flex-1 px-6 py-4 rounded-full text-[#201E1F] placeholder-gray-400 focus:outline-none focus:ring-4 focus:ring-white/40"
+              data-testid="input-preregister-email"
+            />
+            <button
+              type="submit"
+              disabled={busy}
+              className="px-8 py-4 rounded-full font-bold text-[#0090B8] bg-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all disabled:opacity-60"
+              data-testid="button-preregister-submit"
+            >
+              {c.cta.button}
+            </button>
+          </form>
+        )}
+
+        {lineageNumber == null && (
+          <p className="font-scripture-italic mt-10 text-2xl text-white">{c.cta.declaration}</p>
+        )}
       </div>
     </section>
   );

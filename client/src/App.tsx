@@ -8,6 +8,7 @@ import { LanguageProvider } from "@/components/expanded-language-switcher";
 import HomeRenewal from "@/pages/home-renewal";
 import InvestorsPage from "@/pages/investors";
 import AboutPage from "@/pages/about";
+import DonatePage from "@/pages/donate";
 import NotFound from "@/pages/not-found";
 
 function Router() {
@@ -16,6 +17,7 @@ function Router() {
       <Route path="/" component={HomeRenewal} />
       <Route path="/investors" component={InvestorsPage} />
       <Route path="/about" component={AboutPage} />
+      <Route path="/donate" component={DonatePage} />
       <Route component={NotFound} />
     </Switch>
   );

@@ -6,6 +6,7 @@ import {
   timestamp, 
   decimal, 
   boolean,
+  integer,
   index,
   jsonb 
 } from "drizzle-orm/pg-core";
@@ -48,6 +49,8 @@ export const volunteers = pgTable("volunteers", {
 export const newsletter_subscribers = pgTable("newsletter_subscribers", {
   id: varchar("id").primaryKey().default(sql`gen_random_uuid()`),
   email: text("email").notNull().unique(),
+  /** Spiritual lineage ordinal for First 1,000 pre-registration */
+  lineageNumber: integer("lineage_number").unique(),
   subscribed: boolean("subscribed").default(true),
   createdAt: timestamp("created_at").defaultNow(),
 });

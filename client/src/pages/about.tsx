@@ -6,6 +6,8 @@ import Footer from "@/components/renewal-footer";
 import ExpandedLanguageSwitcher from "@/components/expanded-language-switcher";
 import { useLanguage } from "@/hooks/use-language";
 import { useCopy } from "@/data/renewal-copy";
+import { LEADERSHIP, getLeaderCopy } from "@/data/leadership";
+import { brandDisplayForLanguage } from "@/data/brand";
 import logoPrimary from "@assets/wordshiper_logo_lockup_primary_E_1786117649532.svg";
 
 const CYAN = "#00B3E4";
@@ -13,6 +15,7 @@ const CYAN = "#00B3E4";
 export default function AboutPage() {
   const { t, currentLanguage } = useLanguage();
   const nav = useCopy().nav;
+  const brandAlt = brandDisplayForLanguage(currentLanguage);
 
   return (
     <div className="min-h-screen bg-white">
@@ -25,7 +28,7 @@ export default function AboutPage() {
       <header className="fixed top-0 inset-x-0 z-50 bg-white/85 backdrop-blur-md border-b border-[#E6F7FC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center" data-testid="link-logo-home">
-            <img src={logoPrimary} alt="Wordshiper" className="h-8 w-auto" width={180} height={40} />
+            <img src={logoPrimary} alt={brandAlt} className="h-8 w-auto" width={180} height={40} />
           </Link>
           <div className="flex items-center gap-4">
             <ExpandedLanguageSwitcher compact />
@@ -52,7 +55,7 @@ export default function AboutPage() {
           <div className="flex justify-center mb-10">
             <img
               src={logoPrimary}
-              alt="Wordshiper"
+              alt={brandAlt}
               className="h-16 sm:h-20 w-auto"
               width={320}
               height={71}
@@ -125,25 +128,41 @@ export default function AboutPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F]">{t("about.leadership.title")}</h2>
           </div>
 
-          <Card className="border border-[#E6F7FC] shadow-sm bg-white">
-            <CardContent className="p-10">
-              <div className="flex items-start gap-6">
-                <div className="flex-shrink-0">
-                  <div
-                    className="w-20 h-20 rounded-full flex items-center justify-center text-white"
-                    style={{ background: CYAN }}
-                  >
-                    <Users className="w-10 h-10" />
-                  </div>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-2xl font-bold text-[#201E1F] mb-2">{t("about.leadership.name")}</h3>
-                  <p className="text-[#0090B8] font-medium mb-4">{t("about.leadership.role")}</p>
-                  <p className="text-gray-600 leading-relaxed ws-text-pretty">{t("about.leadership.bio")}</p>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+          <div className="space-y-5">
+            {LEADERSHIP.map((leader) => {
+              const copy = getLeaderCopy(leader, currentLanguage);
+              return (
+                <Card key={leader.id} className="border border-[#E6F7FC] shadow-sm bg-white">
+                  <CardContent className="p-6 sm:p-8">
+                    <div className="flex items-start gap-5 sm:gap-6">
+                      <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden ring-2 ring-[#E6F7FC] bg-[#E6F7FC]">
+                        <img
+                          src={leader.photo}
+                          alt={copy.name}
+                          width={96}
+                          height={96}
+                          className="w-full h-full object-cover"
+                          style={{
+                            objectPosition: leader.objectPosition,
+                            transform: `scale(${leader.faceScale ?? 1})`,
+                            transformOrigin: "center 30%",
+                          }}
+                          loading="lazy"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0 pt-0.5">
+                        <h3 className="text-xl sm:text-2xl font-bold text-[#201E1F]">{copy.name}</h3>
+                        <p className="text-[#0090B8] font-medium mt-1">{copy.role}</p>
+                        <p className="text-gray-600 leading-relaxed mt-3 text-sm sm:text-base ws-text-pretty">
+                          {copy.bio}
+                        </p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
         </div>
       </section>
 

@@ -7,7 +7,7 @@ import { z } from "zod";
 import { synthesizeText, recognizeSpeech, generateScriptureAudio } from "./gemini-api";
 import memorizeRouter from "./routes/memorize";
 import { sendEmail } from "./email/sendgridMailer";
-import { createNewsletterNotification, createVolunteerNotification } from "./email/templates";
+import { createVolunteerNotification } from "./email/templates";
 
 export async function registerRoutes(app: Express): Promise<Server> {
   // Setup authentication
@@ -65,27 +65,60 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Newsletter subscription endpoint
+  // Newsletter / lineage pre-registration
   app.post("/api/newsletter/subscribe", async (req, res) => {
     try {
-      const subscriberData = insertNewsletterSchema.parse(req.body);
+      const subscriberData = insertNewsletterSchema.parse({
+        ...req.body,
+        email: String(req.body?.email || "").trim().toLowerCase(),
+      });
+      const language = String(req.body?.language || "en");
       const subscriber = await storage.subscribeNewsletter(subscriberData);
-      
-      // Send email notification to admin (non-blocking)
+      const lineageNumber = subscriber.lineageNumber;
+
       let emailSent = false;
-      try {
-        const emailTemplate = createNewsletterNotification({ email: subscriberData.email });
-        emailSent = await sendEmail({
-          to: 'info@wordshiper.org',
-          subject: emailTemplate.subject,
-          text: emailTemplate.text,
-          html: emailTemplate.html,
-        });
-      } catch (emailError) {
-        console.error("Email notification failed:", emailError);
+      let adminEmailSent = false;
+
+      if (lineageNumber != null) {
+        try {
+          const {
+            createLineageWelcomeEmail,
+            createAdminLineageNotification,
+          } = await import("@shared/lineage-email");
+
+          const welcome = createLineageWelcomeEmail({
+            email: subscriberData.email,
+            lineageNumber,
+            language,
+          });
+          emailSent = await sendEmail({
+            to: subscriberData.email,
+            subject: welcome.subject,
+            text: welcome.text,
+            html: welcome.html,
+          });
+
+          const admin = createAdminLineageNotification({
+            email: subscriberData.email,
+            lineageNumber,
+          });
+          adminEmailSent = await sendEmail({
+            to: process.env.ADMIN_NOTIFY_EMAIL || "info@wordshiper.org",
+            subject: admin.subject,
+            text: admin.text,
+            html: admin.html,
+          });
+        } catch (emailError) {
+          console.error("Lineage email failed:", emailError);
+        }
       }
-      
-      res.json({ ...subscriber, emailSent });
+
+      res.json({
+        ...subscriber,
+        lineageNumber,
+        emailSent,
+        adminEmailSent,
+      });
     } catch (error) {
       if (error instanceof z.ZodError) {
         res.status(400).json({ error: "Invalid subscription data", details: error.errors });
@@ -209,22 +242,86 @@ export async function registerRoutes(app: Express): Promise<Server> {
     }
   });
 
-  // Donation creation endpoint
+  // Donation checkout — Stripe session or payment-link redirect
+  app.post("/api/donations/checkout", async (req, res) => {
+    try {
+      const amount = Math.max(1, Number(req.body?.amount) || 50);
+      const type = req.body?.type === "monthly" ? "monthly" : "oneTime";
+      const site = (process.env.PUBLIC_SITE_URL || "https://www.wordshiper.org").replace(/\/$/, "");
+      const paymentLink =
+        process.env.STRIPE_PAYMENT_LINK || process.env.DONATION_URL;
+
+      if (process.env.STRIPE_SECRET_KEY) {
+        const params = new URLSearchParams();
+        params.set("mode", type === "monthly" ? "subscription" : "payment");
+        params.set("success_url", `${site}/donate?success=1`);
+        params.set("cancel_url", `${site}/donate?canceled=1`);
+        params.set("line_items[0][price_data][currency]", "usd");
+        params.set(
+          "line_items[0][price_data][product_data][name]",
+          "Wordshiper Ministry Donation",
+        );
+        params.set(
+          "line_items[0][price_data][unit_amount]",
+          String(Math.round(amount * 100)),
+        );
+        if (type === "monthly") {
+          params.set("line_items[0][price_data][recurring][interval]", "month");
+        }
+        params.set("line_items[0][quantity]", "1");
+        params.set("submit_type", "donate");
+
+        const stripeRes = await fetch(
+          "https://api.stripe.com/v1/checkout/sessions",
+          {
+            method: "POST",
+            headers: {
+              Authorization: `Bearer ${process.env.STRIPE_SECRET_KEY}`,
+              "Content-Type": "application/x-www-form-urlencoded",
+            },
+            body: params.toString(),
+          },
+        );
+        const session = await stripeRes.json();
+        if (!stripeRes.ok || !session.url) {
+          return res.status(502).json({
+            error: session.error?.message || "Stripe Checkout failed",
+            fallbackUrl: paymentLink || null,
+          });
+        }
+        await storage.createDonation({
+          amount: String(amount),
+          currency: "USD",
+          type,
+        });
+        return res.json({ url: session.url, sessionId: session.id });
+      }
+
+      if (paymentLink) {
+        return res.json({ url: paymentLink });
+      }
+
+      return res.status(503).json({
+        error: "Donation payments are not configured yet.",
+        mailto: "mailto:info@wordshiper.org?subject=Wordshiper%20Donation",
+      });
+    } catch (error) {
+      console.error("Donation checkout error:", error);
+      res.status(500).json({ error: "Failed to create donation checkout" });
+    }
+  });
+
+  // Donation creation endpoint (legacy record)
   app.post("/api/donations", async (req, res) => {
     try {
       const donationData = insertDonationSchema.parse(req.body);
       const donation = await storage.createDonation(donationData);
-      
-      // In a real implementation, you would create a Stripe checkout session here
-      // For now, we'll just return the donation record
       const stripePublishableKey = process.env.STRIPE_PUBLISHABLE_KEY || process.env.STRIPE_PK || "";
-      
       res.json({ 
         donation,
         stripePublishableKey,
-        message: "Donation record created. In production, this would redirect to Stripe Checkout."
+        checkout: "/api/donations/checkout",
       });
-      
     } catch (error) {
       if (error instanceof z.ZodError) {
         res.status(400).json({ error: "Invalid donation data", details: error.errors });

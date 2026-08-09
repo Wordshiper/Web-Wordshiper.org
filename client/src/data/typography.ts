@@ -52,6 +52,10 @@ function latin(id: string): LocaleTypography {
     ui: LATIN_UI,
     script: "latin",
     dir: "ltr",
+    google: [
+      "EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,500",
+      "Inter:wght@400;500;700",
+    ],
   };
 }
 

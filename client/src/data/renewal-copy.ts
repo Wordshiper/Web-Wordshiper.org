@@ -3,7 +3,7 @@ import { useLanguage } from "@/hooks/use-language";
 // New site copy — Korean & English first (other languages fall back to English)
 const copy = {
   ko: {
-    nav: { product: "제품", routine: "루틴", movement: "무브먼트", roadmap: "로드맵", about: "소개", investors: "투자자", preregister: "사전등록" },
+    nav: { product: "제품", routine: "루틴", movement: "무브먼트", roadmap: "로드맵", about: "소개", investors: "투자자", donate: "후원", preregister: "사전등록" },
     hero: {
       badge: "2026년\u00A012월 정식\u00A0출시",
       title1: "말씀으로 하루를 살아가는",
@@ -102,8 +102,26 @@ const copy = {
       placeholder: "이메일 주소",
       button: "사전등록하기",
       success: "감사합니다! 계보에 합류하셨습니다.",
+      successWithNumber: (n: number) =>
+        `감사합니다! 당신은 ${n}번째로 이 구절을 마음에 새길 Wordshiper입니다. 이메일을 확인해 주세요.`,
       error: "등록에 실패했습니다. 다시 시도해주세요.",
       declaration: "Yes, I am a Wordshiper!",
+    },
+    donate: {
+      eyebrow: "하루 한 구절이 열방으로 흘러가도록",
+      title: "말씀 운동에 동참해 주세요",
+      sub: "Wordshiper Ministry Inc.는 미국 501(c)(3) 비영리 사역입니다. 여러분의 후원은 성경 암송·기도 루틴을 전 세계에 전하는 일에 쓰입니다.",
+      oneTime: "일시 후원",
+      monthly: "매월 후원",
+      custom: "다른 금액",
+      customPlaceholder: "금액 입력",
+      give: "후원하기",
+      processing: "연결 중…",
+      taxNote: "미국 세법상 공제 가능 기부입니다 · EIN 33-1561112 · 영수증은 Stripe에서 제공됩니다.",
+      successTitle: "감사드립니다",
+      successSub: "당신의 후원이 말씀의 계보를 이어갑니다.",
+      error: "결제 연결에 실패했습니다. info@wordshiper.org로 문의해 주세요.",
+      backHome: "홈으로",
     },
     investors: {
       navTitle: "투자자",
@@ -134,7 +152,7 @@ const copy = {
     },
   },
   en: {
-    nav: { product: "Product", routine: "Routine", movement: "Movement", roadmap: "Roadmap", about: "About", investors: "Investors", preregister: "Pre-register" },
+    nav: { product: "Product", routine: "Routine", movement: "Movement", roadmap: "Roadmap", about: "About", investors: "Investors", donate: "Donate", preregister: "Pre-register" },
     hero: {
       badge: "Launching December\u00A02026",
       title1: "Raising worshipers who live",
@@ -233,8 +251,26 @@ const copy = {
       placeholder: "Email address",
       button: "Pre-register",
       success: "Thank you! You have joined the lineage.",
+      successWithNumber: (n: number) =>
+        `Thank you! You are Wordshiper #${n}. Please check your email for your lineage confirmation.`,
       error: "Registration failed. Please try again.",
       declaration: "Yes, I am a Wordshiper!",
+    },
+    donate: {
+      eyebrow: "So one verse a day can reach the nations",
+      title: "Partner with the Word movement",
+      sub: "Wordshiper Ministry Inc. is a U.S. 501(c)(3) nonprofit. Your gift fuels Scripture memorization and prayer rhythms for believers worldwide.",
+      oneTime: "One-time",
+      monthly: "Monthly",
+      custom: "Custom amount",
+      customPlaceholder: "Enter amount",
+      give: "Give",
+      processing: "Connecting…",
+      taxNote: "Tax-deductible in the U.S. · EIN 33-1561112 · Receipts provided by Stripe.",
+      successTitle: "Thank you",
+      successSub: "Your gift helps the lineage of the Word keep flowing.",
+      error: "Could not start checkout. Please email info@wordshiper.org.",
+      backHome: "Back home",
     },
     investors: {
       navTitle: "Investors",

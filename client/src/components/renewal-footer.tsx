@@ -1,5 +1,7 @@
 import { Link } from "wouter";
 import { useCopy } from "@/data/renewal-copy";
+import { useLanguage } from "@/hooks/use-language";
+import { brandDisplayForLanguage } from "@/data/brand";
 import logoPrimary from "@assets/wordshiper_logo_lockup_primary_E_1786117649532.svg";
 
 /**
@@ -10,6 +12,8 @@ import logoPrimary from "@assets/wordshiper_logo_lockup_primary_E_1786117649532.
  */
 export default function RenewalFooter() {
   const c = useCopy();
+  const { currentLanguage } = useLanguage();
+  const brandAlt = brandDisplayForLanguage(currentLanguage);
   return (
     <footer className="bg-white border-t border-[#E6F7FC] py-14" data-testid="footer-renewal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row md:items-start justify-between gap-10">
@@ -21,7 +25,7 @@ export default function RenewalFooter() {
           >
             <img
               src={logoPrimary}
-              alt="Wordshiper"
+              alt={brandAlt}
               className="h-10 sm:h-11 w-auto"
               width={220}
               height={49}
@@ -53,6 +57,9 @@ export default function RenewalFooter() {
           </a>
           <Link href="/about" className="hover:text-[#0090B8] transition-colors">
             {c.nav.about}
+          </Link>
+          <Link href="/donate" className="hover:text-[#0090B8] transition-colors">
+            {c.nav.donate}
           </Link>
           <Link href="/investors" className="hover:text-[#0090B8] transition-colors">
             {c.nav.investors}
