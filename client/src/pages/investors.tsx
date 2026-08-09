@@ -16,8 +16,8 @@ export default function InvestorsPage() {
       <SEO title="Wordshiper — Investors" description={c.sub} />
       <header className="fixed top-0 inset-x-0 z-50 bg-white/85 backdrop-blur-md border-b border-[#E6F7FC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center" data-testid="link-logo-home">
-            <img src={logoPrimary} alt="Wordshiper" className="h-8 w-auto" />
+          <Link href="/" className="flex items-center p-1 -m-1" data-testid="link-logo-home">
+            <img src={logoPrimary} alt="Wordshiper" className="h-8 w-auto" width={180} height={40} />
           </Link>
           <div className="flex items-center gap-4">
             <ExpandedLanguageSwitcher compact />
@@ -31,8 +31,8 @@ export default function InvestorsPage() {
       <main className="pt-28 pb-24">
         <section className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-[#E6F7FC] text-[#0090B8]">{c.navTitle}</span>
-          <h1 className="mt-6 text-3xl sm:text-5xl font-bold text-[#201E1F] leading-tight">{c.title}</h1>
-          <p className="mt-6 text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">{c.sub}</p>
+          <h1 className="mt-6 text-3xl sm:text-5xl font-bold text-[#201E1F] leading-tight whitespace-pre-line ws-text-balance">{c.title}</h1>
+          <p className="mt-6 text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto ws-text-pretty">{c.sub}</p>
         </section>
 
         <section className="max-w-5xl mx-auto px-4 sm:px-6 mt-16 grid sm:grid-cols-2 gap-6">

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Noto+Serif+KR:wght@400;500;600;700&display=swap');
 @tailwind base;
 
-/* ---- Wordshiper Brand Fonts (Brand Guide v1.1) ---- */
+/* ---- Wordshiper Brand Fonts (Brand Guide v1.1 + 24-locale dual-font) ---- */
 @font-face {
   font-family: 'EB Garamond Italic Var';
   src: url('/fonts/EBGaramond-Italic.ttf') format('truetype');
@@ -26,18 +26,91 @@
   --ws-night-card: #16242B;
   --ws-night-primary: #2CC5F2;
   --ws-scripture-dark: #ECEAE0;
+
+  /* Dual-font defaults (locale override via applyTypographyToDocument) */
+  --font-ui-fallback: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-word-fallback: "EB Garamond", "Noto Serif KR", Georgia, "Times New Roman", serif;
+  --font-ui: var(--font-ui-fallback);
+  --font-word: var(--font-word-fallback);
+  --font-word-italic: "EB Garamond Italic Var", "EB Garamond", var(--font-word-fallback);
+  --lh-ui: 1.65;
+  --lh-word: 1.7;
+  --tracking-ui: 0;
+  --tracking-word: 0.01em;
 }
 
-/* Scripture / lineage serif — the protagonist */
+/* Scripture / lineage — Word Card layer */
 .font-scripture {
-  font-family: 'EB Garamond', 'Noto Serif KR', Georgia, serif;
+  font-family: var(--font-word);
+  line-height: var(--lh-word);
+  letter-spacing: var(--tracking-word);
+  text-wrap: pretty;
 }
 .font-scripture-italic {
-  font-family: 'EB Garamond Italic Var', 'EB Garamond', 'Noto Serif KR', Georgia, serif;
+  font-family: var(--font-word-italic);
   font-style: italic;
+  line-height: var(--lh-word);
+  letter-spacing: var(--tracking-word);
+  text-wrap: pretty;
 }
 .font-taom {
-  font-family: 'Binggrae Taom', 'Inter', sans-serif;
+  font-family: "Binggrae Taom", var(--font-ui);
+}
+.font-ui {
+  font-family: var(--font-ui);
+  line-height: var(--lh-ui);
+}
+
+/* Script-aware metrics & wrapping (human-edited feel) */
+html[data-script="cjk"] {
+  --lh-ui: 1.75;
+  --lh-word: 1.85;
+  --tracking-word: 0.02em;
+}
+html[data-script="cjk"] body,
+html[data-script="cjk"] .font-ui,
+html[data-script="cjk"] p,
+html[data-script="cjk"] li {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+html[data-typo="ko"] {
+  --lh-ui: 1.8;
+  --lh-word: 1.9;
+}
+html[data-script="arabic"] {
+  --lh-ui: 1.8;
+  --lh-word: 1.95;
+  --tracking-word: 0;
+}
+html[data-script="thai"] {
+  --lh-ui: 1.85;
+  --lh-word: 2;
+  word-break: normal;
+  line-break: auto;
+}
+html[data-script="tamil"],
+html[data-script="devanagari"],
+html[data-script="ethiopic"] {
+  --lh-ui: 1.8;
+  --lh-word: 1.9;
+}
+html[data-script="cyrillic"] {
+  --lh-word: 1.75;
+}
+
+html[dir="rtl"] body {
+  text-align: start;
+}
+
+/* Headings & long copy: prefer balanced / pretty wraps */
+h1, h2, h3,
+.ws-text-balance {
+  text-wrap: balance;
+}
+p, blockquote, .ws-text-pretty {
+  text-wrap: pretty;
 }
 
 @keyframes ws-float {
@@ -189,7 +262,9 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: var(--font-ui);
+    line-height: var(--lh-ui);
+    letter-spacing: var(--tracking-ui);
   }
 }
 

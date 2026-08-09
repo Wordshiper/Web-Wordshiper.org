@@ -10,7 +10,6 @@ import {
   BookOpen, Sun, UtensilsCrossed, Moon, Sparkles, Globe2, Users,
   HeartHandshake, Menu, X, ArrowRight, Bird, CircleDot, Share2, Languages,
 } from "lucide-react";
-import logoFull from "@assets/wordshiper_logo_lockup_full_E_1786117649532.svg";
 import logoPrimary from "@assets/wordshiper_logo_lockup_primary_E_1786117649532.svg";
 import iconMark from "@assets/wordshiper_icon_favicon_1786117649531.svg";
 import screenHome from "@assets/ws_home_dashboard.png";
@@ -75,8 +74,8 @@ function Header() {
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-white/85 backdrop-blur-md border-b border-[#E6F7FC]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-center" data-testid="link-logo-home">
-          <img src={logoPrimary} alt="Wordshiper" className="h-8 w-auto" />
+        <a href="#top" className="flex items-center p-1 -m-1" data-testid="link-logo-home">
+          <img src={logoPrimary} alt="Wordshiper" className="h-8 w-auto" width={180} height={40} />
         </a>
         <nav className="hidden md:flex items-center gap-6">
           {links.map((l) => (
@@ -135,13 +134,13 @@ function Hero() {
           <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-semibold bg-white border border-[#99E0F5] text-[#0090B8] shadow-sm">
             <Sparkles className="w-4 h-4" /> {c.hero.badge}
           </span>
-          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-tight text-[#201E1F]">
+          <h1 className="mt-6 text-4xl sm:text-5xl lg:text-[3.4rem] font-bold leading-tight text-[#201E1F] ws-text-balance">
             {c.hero.title1}
             <br />
             <span style={{ color: CYAN }}>{c.hero.title2}</span>
           </h1>
-          <p className="font-scripture-italic text-2xl mt-5 text-[#003D4F]">{c.hero.slogan}</p>
-          <p className="mt-5 text-lg text-gray-600 leading-relaxed max-w-xl">{c.hero.sub}</p>
+          <p className="font-scripture-italic text-2xl mt-5 text-[#003D4F] ws-text-pretty">{c.hero.slogan}</p>
+          <p className="mt-5 text-lg text-gray-600 leading-relaxed max-w-xl ws-text-pretty">{c.hero.sub}</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4">
             <a
               href="#preregister"
@@ -178,7 +177,7 @@ function Problem() {
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <SectionLabel>{c.problem.label}</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] max-w-3xl mx-auto">{c.problem.title}</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] max-w-3xl mx-auto whitespace-pre-line ws-text-balance">{c.problem.title}</h2>
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           {c.problem.cards.map((card, i) => (
             <div key={i} className="p-8 rounded-2xl bg-[#F8FCFE] border border-[#E6F7FC] text-left hover:shadow-md transition-shadow">
@@ -191,7 +190,7 @@ function Problem() {
           ))}
         </div>
         <blockquote className="mt-16 max-w-3xl mx-auto">
-          <p className="font-scripture text-2xl sm:text-[1.7rem] leading-relaxed text-[#003D4F]">“{c.problem.answer}”</p>
+          <p className="font-scripture text-2xl sm:text-[1.7rem] leading-relaxed text-[#003D4F] ws-text-pretty">“{c.problem.answer}”</p>
           <cite className="block mt-4 text-sm text-gray-500 not-italic">{c.problem.answerRef}</cite>
         </blockquote>
       </div>
@@ -206,8 +205,8 @@ function Routine() {
     <section id="routine" className="py-24" style={{ background: "linear-gradient(180deg,#E6F7FC 0%,#F8FCFE 100%)" }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <SectionLabel>{c.routine.label}</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F]">{c.routine.title}</h2>
-        <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">{c.routine.sub}</p>
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">{c.routine.title}</h2>
+        <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto ws-text-pretty leading-relaxed">{c.routine.sub}</p>
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           {c.routine.sessions.map((s, i) => {
             const Icon = icons[i];
@@ -259,7 +258,7 @@ function Product() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center">
           <SectionLabel>{c.product.label}</SectionLabel>
-          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F]">{c.product.title}</h2>
+          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] ws-text-balance">{c.product.title}</h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">{c.product.sub}</p>
         </div>
         <div className="grid lg:grid-cols-2 gap-14 mt-14 items-center">
@@ -332,18 +331,18 @@ function Movement() {
       <GlobeDots />
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <SectionLabel dark>{c.movement.label}</SectionLabel>
-        <p className="font-scripture-italic text-xl text-[#ECEAE0]/80">{c.movement.subtitle}</p>
-        <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white">{c.movement.title}</h2>
+        <p className="font-scripture-italic text-xl text-[#ECEAE0]/80 whitespace-pre-line ws-text-balance">{c.movement.subtitle}</p>
+        <h2 className="mt-3 text-3xl sm:text-4xl font-bold text-white ws-text-balance">{c.movement.title}</h2>
 
         <div className="mt-14 max-w-3xl mx-auto p-10 rounded-3xl border border-[#2CC5F2]/25" style={{ background: "rgba(30,47,55,0.6)", backdropFilter: "blur(8px)" }}>
-          <p className="font-scripture text-2xl sm:text-3xl leading-snug text-[#ECEAE0]">
+          <p className="font-scripture text-2xl sm:text-3xl leading-snug text-[#ECEAE0] ws-text-pretty">
             {c.movement.lineageLead}{" "}
-            <span ref={ref} className="font-bold text-4xl sm:text-5xl" style={{ color: "#2CC5F2" }} data-testid="text-lineage-counter">
+            <span ref={ref} className="font-bold text-4xl sm:text-5xl inline-block" style={{ color: "#2CC5F2" }} data-testid="text-lineage-counter">
               {value.toLocaleString()}
             </span>
             {c.movement.lineageTail}
           </p>
-          <p className="mt-5 text-[#ECEAE0]/60 leading-relaxed">{c.movement.lineageSub}</p>
+          <p className="mt-5 text-[#ECEAE0]/60 leading-relaxed ws-text-pretty">{c.movement.lineageSub}</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6 mt-14 text-left">
@@ -444,7 +443,7 @@ function Preregister() {
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-lg mb-6 p-2">
           <img src={iconMark} alt="Wordshiper icon" className="w-full h-full" />
         </div>
-        <h2 className="text-3xl sm:text-4xl font-bold text-white leading-snug">{c.cta.title}</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-white leading-snug whitespace-pre-line ws-text-balance">{c.cta.title}</h2>
         <p className="mt-4 text-white/85 text-lg">{c.cta.sub}</p>
         <form onSubmit={submit} className="mt-9 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
           <input

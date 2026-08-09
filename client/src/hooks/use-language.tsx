@@ -1,6 +1,7 @@
 import { useState, createContext, useContext, useEffect } from "react";
 import { expandedLanguages } from "@/data/expanded-languages";
 import { getTranslation } from "@/data/translations";
+import { applyTypographyToDocument } from "@/data/typography";
 
 interface LanguageContextType {
   currentLanguage: string;
@@ -9,7 +10,7 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType>({
-  currentLanguage: 'en',
+  currentLanguage: "en",
   setLanguage: () => {},
   t: (key: string) => key,
 });
@@ -21,18 +22,22 @@ interface LanguageProviderProps {
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [currentLanguage, setCurrentLanguage] = useState('en');
+  const [currentLanguage, setCurrentLanguage] = useState("en");
 
   useEffect(() => {
-    const saved = localStorage.getItem('wordshiper-language-v2');
-    if (saved && expandedLanguages.find(lang => lang.code === saved)) {
+    const saved = localStorage.getItem("wordshiper-language-v2");
+    if (saved && expandedLanguages.find((lang) => lang.code === saved)) {
       setCurrentLanguage(saved);
     }
   }, []);
 
+  useEffect(() => {
+    applyTypographyToDocument(currentLanguage);
+  }, [currentLanguage]);
+
   const setLanguage = (lang: string) => {
     setCurrentLanguage(lang);
-    localStorage.setItem('wordshiper-language-v2', lang);
+    localStorage.setItem("wordshiper-language-v2", lang);
   };
 
   const t = (key: string) => getTranslation(key, currentLanguage);

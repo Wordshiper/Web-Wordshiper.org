@@ -1,27 +1,73 @@
 import { Link } from "wouter";
 import { useCopy } from "@/data/renewal-copy";
-import logoFull from "@assets/wordshiper_logo_lockup_full_E_1786117649532.svg";
+import logoPrimary from "@assets/wordshiper_logo_lockup_primary_E_1786117649532.svg";
 
+/**
+ * Footer uses Primary lockup (icon + wordmark, no baked-in English slogan)
+ * so the localized tagline below stays the single slogan layer.
+ * Full lockup already embeds "One verse a day…" — pairing it with copy.tagline
+ * duplicated the English line and fought Korean localization.
+ */
 export default function RenewalFooter() {
   const c = useCopy();
   return (
-    <footer className="bg-white border-t border-[#E6F7FC] py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="text-center md:text-left">
-          <div className="inline-block bg-white rounded-lg">
-            <img src={logoFull} alt="Wordshiper — One verse a day. A life of worship." className="h-12 w-auto" />
-          </div>
-          <p className="font-scripture-italic mt-3 text-[#003D4F]">{c.footer.tagline}</p>
+    <footer className="bg-white border-t border-[#E6F7FC] py-14" data-testid="footer-renewal">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row md:items-start justify-between gap-10">
+        <div className="text-center md:text-left max-w-md mx-auto md:mx-0">
+          <Link
+            href="/"
+            className="inline-flex items-center justify-center md:justify-start p-2 -m-2 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#00B3E4]"
+            data-testid="link-footer-logo"
+          >
+            <img
+              src={logoPrimary}
+              alt="Wordshiper"
+              className="h-10 sm:h-11 w-auto"
+              width={220}
+              height={49}
+            />
+          </Link>
+          <p className="font-scripture-italic mt-4 text-lg text-[#003D4F] ws-text-pretty">
+            {c.footer.tagline}
+          </p>
+          <a
+            href="mailto:info@wordshiper.org"
+            className="mt-3 inline-block text-sm text-gray-500 hover:text-[#0090B8] transition-colors"
+          >
+            info@wordshiper.org
+          </a>
         </div>
-        <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-gray-600">
-          <Link href="/" className="hover:text-[#0090B8]">{c.nav.routine}</Link>
-          <Link href="/about" className="hover:text-[#0090B8]">{c.nav.about}</Link>
-          <Link href="/investors" className="hover:text-[#0090B8]">{c.nav.investors}</Link>
-          <a href="/#preregister" className="hover:text-[#0090B8]">{c.nav.preregister}</a>
+
+        <nav
+          aria-label="Footer"
+          className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-2 text-sm text-gray-600"
+        >
+          <a href="/#routine" className="hover:text-[#0090B8] transition-colors">
+            {c.nav.routine}
+          </a>
+          <a href="/#product" className="hover:text-[#0090B8] transition-colors">
+            {c.nav.product}
+          </a>
+          <a href="/#movement" className="hover:text-[#0090B8] transition-colors">
+            {c.nav.movement}
+          </a>
+          <Link href="/about" className="hover:text-[#0090B8] transition-colors">
+            {c.nav.about}
+          </Link>
+          <Link href="/investors" className="hover:text-[#0090B8] transition-colors">
+            {c.nav.investors}
+          </Link>
+          <a href="/#preregister" className="hover:text-[#0090B8] transition-colors font-semibold text-[#0090B8]">
+            {c.nav.preregister}
+          </a>
         </nav>
       </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-8 pt-6 border-t border-gray-100 text-center text-xs text-gray-400">
-        © {new Date().getFullYear()} {c.footer.legal} · EIN: 33-1561112
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mt-10 pt-6 border-t border-gray-100 flex flex-col sm:flex-row items-center justify-between gap-3 text-center sm:text-left text-xs text-gray-400">
+        <p>
+          © {new Date().getFullYear()} Wordshiper Ministry Inc. · 501(c)(3) · EIN 33-1561112
+        </p>
+        <p className="text-gray-400/90">5 Union Square West FRNT 1 #1299, New York, NY 10003</p>
       </div>
     </footer>
   );
