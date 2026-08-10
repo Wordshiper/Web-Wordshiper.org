@@ -64,6 +64,52 @@ export function isSiteLocale(code: string): boolean {
   );
 }
 
+/**
+ * Map a BCP-47 tag (browser/OS) onto a supported site locale.
+ * Tries the full tag, then Chinese script/region heuristics, then the primary subtag.
+ */
+export function matchSiteLocale(tag: string): SiteLocaleCode | null {
+  const raw = (tag || "").trim();
+  if (!raw) return null;
+  if (isSiteLocale(raw)) return normalizeSiteLocale(raw);
+
+  const lower = raw.replace(/_/g, "-").toLowerCase();
+  const primary = lower.split("-")[0] || "";
+
+  if (primary === "zh") {
+    if (
+      lower.includes("tw") ||
+      lower.includes("hk") ||
+      lower.includes("mo") ||
+      lower.includes("hant")
+    ) {
+      return "zh-TW";
+    }
+    return "zh";
+  }
+
+  if (primary === "fil" || primary === "tl") return "tl";
+  if (SITE_SET.has(primary)) return primary as SiteLocaleCode;
+  return null;
+}
+
+/**
+ * Prefer the visitor's browser/OS language list (navigator.languages),
+ * then navigator.language. Falls back to English when unsupported.
+ */
+export function detectBrowserLocale(): SiteLocaleCode {
+  if (typeof navigator === "undefined") return "en";
+  const candidates = [
+    ...(navigator.languages ?? []),
+    navigator.language,
+  ].filter(Boolean);
+  for (const tag of candidates) {
+    const matched = matchSiteLocale(tag);
+    if (matched) return matched;
+  }
+  return "en";
+}
+
 /** Languages shown in the site picker (metadata from expanded list). */
 export function getSiteLanguages(): Language[] {
   const byCode = new Map(expandedLanguages.map((l) => [l.code, l]));

@@ -12,6 +12,20 @@ const locale: RenewalCopy = {
     slideSelectorAria: "Pemilih slide",
     lineageNumber: "Nomor garis keturunan Anda",
     lineageEmailNote: "Kami telah mengirim email konfirmasi — silakan periksa kotak masuk Anda.",
+    donatePreparingEyebrow: "Segera hadir",
+    donatePreparingTitle: "Donasi sedang disiapkan",
+    donatePreparingBody:
+      "Tautan donasi sedang disiapkan.\n" +
+      "Kami akan membukanya kembali begitu kami punya\n" +
+      "pengalaman memberi yang lebih aman dan lancar.",
+    donatePreparingCta: "Mengerti",
+    preregisterOpensEyebrow: "Dibuka 1\u00A0Desember\u00A02026",
+    preregisterOpensTitle: "Pra-daftar dibuka 1\u00A0Desember",
+    preregisterOpensBody:
+      "Pra-daftar garis keturunan dibuka pada 1\u00A0Desember\u00A02026.\n" +
+      "Hari itu, alur pendaftaran yang baru dibangun dengan teknologi terbaru\n" +
+      "akan menyambut\u00A01.000 Wordshiper pertama.",
+    preregisterOpensCta: "Mengerti",
   },
   nav: {
     product: "Aliran",
@@ -36,7 +50,7 @@ const locale: RenewalCopy = {
       {
         label: "Apa itu Wordshiper?",
         title1: "Hafalkan satu ayat.",
-        title2: "Susun ulang seluruh hari Anda.",
+        title2: "Susun ulang hari Anda.",
         body: "Aplikasi yang membantu Anda merenungkan dan menghafal satu ayat Kitab Suci, mengulang tiga doa singkat setiap hari, memulihkan prioritas rohani · jasmani · emosional, dan hidup dalam panggilan.",
         visual: "home" as const,
       },
@@ -59,7 +73,9 @@ const locale: RenewalCopy = {
   why: {
     label: "Mengapa Wordshiper",
     title: "Lebih terhubung dari sebelumnya,\nnamun lebih dalam tercerai-berai",
-    lead: "Kita hidup dalam banjir informasi dan kesibukan yang tak henti. Suara tanpa jumlah mengguncang hati kita setiap hari, dan prioritas hidup mudah tercerai-berai.",
+    lead:
+      "Kita hidup dalam banjir informasi dan kesibukan yang tak henti.\n" +
+      "Suara tanpa jumlah mengguncang hati kita setiap hari, dan prioritas hidup mudah tercerai-berai.",
     points: [
       {
         t: "Kebisingan dan tergesa-gesa",
@@ -75,7 +91,13 @@ const locale: RenewalCopy = {
       },
     ],
     answer:
-      "Ketika bahkan satu ayat ditanam dalam-dalam di satu hati, itu menjadi kuasa untuk mengalahkan ketakutan, melewati kesulitan, dan mengarahkan prioritas rohani yang tercerai-berai kembali kepada Allah.",
+      "Ketika satu ayat Kitab Suci ditanam dalam-dalam di sebuah hati,\n" +
+      "Firman itu menjadi kuasa untuk mengalahkan ketakutan, untuk melewati kesulitan,\n" +
+      "dan untuk mengarahkan prioritas rohani yang tercerai-berai kembali kepada Allah.\n\n" +
+      "Wariskanlah itu sebagai pusaka Firman —\n" +
+      "kepada anak-anak terkasih Anda, dan kepada orang tua Anda.\n\n" +
+      "Hari demi hari kita akan dibarui\n" +
+      "menjadi penyembah yang berkenan kepada Allah.",
     answerRef: "— Mengapa Wordshiper dimulai",
   },
   identity: {
@@ -96,7 +118,7 @@ const locale: RenewalCopy = {
       },
       {
         t: "OS Rohani Harian",
-        d: "Menyusun ulang prioritas hari seputar Firman Allah melalui Kitab Suci, doa, dan Walk planner.",
+        d: "Menyusun ulang prioritas hari seputar Firman Allah melalui Kitab Suci, doa, dan perencana Walk.",
       },
       {
         t: "Gerakan Hafalan Kitab Suci Global",
@@ -130,14 +152,14 @@ const locale: RenewalCopy = {
   routine: {
     label: "Rutinitas inti",
     title: "Tiga kali sehari,\nlima menit setiap kali",
-    sub: "Setiap sesi dipicu otomatis oleh alarm Walk planner, sehingga tiga kali sehari menjadi ritme hidup. Terima di pagi hari, tinjau di siang hari, tegaskan di malam hari — hingga satu ayat meresap ke dalam hidup Anda.",
-    alarmNote: "Alarm Walk planner",
+    sub: "Setiap sesi dipicu otomatis oleh alarm perencana Walk, sehingga tiga kali sehari menjadi ritme hidup. Terima di pagi hari, tinjau di siang hari, tegaskan di malam hari — hingga satu ayat meresap ke dalam hidup Anda.",
+    alarmNote: "Alarm perencana Walk",
     principle:
       "Tiny Habits — lima menit setiap kali membuatnya cukup ringan untuk diulang setiap hari, sambil menjaga retensi dan kedalaman rohani.",
     sessions: [
       {
         time: "Pagi\u00A0·\u00A05\u00A0menit",
-        when: "Saat bangun · Alarm Walk planner",
+        when: "Saat bangun · Alarm perencana Walk",
         items: [
           "Doa 1\u00A0menit — doa pagi",
           "Hafalan 2\u00A0menit — ayat hari ini",
@@ -146,7 +168,7 @@ const locale: RenewalCopy = {
       },
       {
         time: "Siang\u00A0·\u00A05\u00A0menit",
-        when: "Sebelum makan siang · Alarm Walk planner",
+        when: "Sebelum makan siang · Alarm perencana Walk",
         items: [
           "Doa 1\u00A0menit — syukur",
           "Ulangan 2\u00A0menit — ulangi ayat pagi",
@@ -155,7 +177,7 @@ const locale: RenewalCopy = {
       },
       {
         time: "Malam\u00A0·\u00A05\u00A0menit",
-        when: "Sebelum tidur · Alarm Walk planner",
+        when: "Sebelum tidur · Alarm perencana Walk",
         items: [
           "Doa 1\u00A0menit — refleksi harian",
           "Tegaskan 2\u00A0menit — Hide\u00A0&\u00A0Test",
@@ -182,7 +204,7 @@ const locale: RenewalCopy = {
       },
       {
         t: "Sistem Operasi Rohani Harian",
-        d: "Menyusun ulang prioritas hari seputar Firman Allah melalui Kitab Suci, doa, dan Walk planner.",
+        d: "Menyusun ulang prioritas hari seputar Firman Allah melalui Kitab Suci, doa, dan perencana Walk.",
       },
       {
         t: "Gerakan Hafalan Kitab Suci Global",
@@ -202,8 +224,8 @@ const locale: RenewalCopy = {
         d: "Tidak pernah menghukum rangkaian yang terputus; mengundang Anda kembali ke Firman dengan kasih karunia.",
       },
       {
-        t: "Jog wheel — Kitab Suci dalam 1,5 dtk",
-        d: "Jangkau Alkitab dalam 1,5\u00A0detik, bahkan di tengah penyembahan. 31.112 ayat offline.",
+        t: "Roda jog — Kitab Suci dalam 1,5 dtk",
+        d: "Jangkau Alkitab dalam 1,5\u00A0detik, bahkan di tengah penyembahan. 31.112 ayat tersedia luring.",
       },
       {
         t: "Verse\u00A0Card — pengakuan yang mengalir",
@@ -220,9 +242,9 @@ const locale: RenewalCopy = {
     label: "Gerakan",
     subtitle: "Kami tidak sedang membangun aplikasi.\nKami sedang menyalakan gerakan.",
     title: "Garis keturunan rohani,\nayat demi ayat",
-    lineageLead: "Anda adalah",
+    lineageLead: "Anda adalah Wordshiper nomor",
     lineageNum: "14,207",
-    lineageTail: "Wordshiper yang menuliskan ayat ini",
+    lineageTail: " yang menuliskan ayat ini",
     lineageSub: "Angka ini bukan skor. Ini menandai tempat Anda dalam garis keturunan Firman — bukti bahwa Anda tidak sendirian.",
     engines: [
       {
@@ -248,9 +270,9 @@ const locale: RenewalCopy = {
     title: "Penyembahan yang mengalir ke rumah,\ngereja, kota, dan bangsa-bangsa",
     body: "Kami bermimpi orang yang mengingat Firman menjadi Wordshipers sejati — melakukan keadilan, mengasihi belas kasihan, dan berjalan dengan rendah hati bersama Allah di tempat mereka berdiri.",
     stats: [
-      { n: "1.9B", d: "Orang Kristen di seluruh dunia — mereka yang kami rindukan untuk dilayani" },
-      { n: "24", d: "Bahasa — hafalan ganda & tiga" },
-      { n: "3", d: "Aplikasi independen pada satu inti (Wordshiper · Verbum · Pasuk)" },
+      { n: "1.9B", d: "Orang Kristen di seluruh dunia\nmereka yang kami rindukan untuk dilayani" },
+      { n: "24", d: "Bahasa\nhafalan ganda & tiga" },
+      { n: "3", d: "Aplikasi independen pada satu inti\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:
       "Pada satu sistem desain inti: Wordshiper (Protestan), Verbum (Katolik), Pasuk (Yahudi) — masing-masing menghormati tradisinya dalam satu gerakan Firman.",
@@ -259,10 +281,10 @@ const locale: RenewalCopy = {
     label: "Peta jalan",
     title: "Gerakan telah dimulai",
     phases: [
-      { t: "Fase\u00A01 — MVP", d: "Loop inti: terima · hafalkan · bergabung dalam garis keturunan" },
-      { t: "Fase\u00A02 — Rutinitas", d: "Tiga sesi harian · Walk planner · Worvi" },
-      { t: "Fase\u00A03 — Peluncuran", d: "Desember\u00A02026 — komunitas benih\u00A01.000 pertama" },
-      { t: "Fase\u00A04 — Perluasan", d: "Voice\u00A0Feed · saluran · tiga aplikasi white-label" },
+      { t: "Phase\u00A01 — MVP", d: "Loop inti: terima · hafalkan · bergabung dalam garis keturunan" },
+      { t: "Phase\u00A02 — Rutinitas", d: "Tiga sesi harian · perencana Walk · Worvi" },
+      { t: "Phase\u00A03 — Peluncuran", d: "Desember\u00A02026 — komunitas benih\u00A01.000 pertama" },
+      { t: "Phase\u00A04 — Perluasan", d: "Voice\u00A0Feed · saluran · tiga aplikasi white-label" },
     ],
   },
   cta: {
@@ -289,7 +311,7 @@ const locale: RenewalCopy = {
     taxNote: "Dapat dikurangi pajak di AS · EIN 33-1561112 · Tanda terima disediakan oleh Stripe.",
     successTitle: "Terima kasih",
     successSub: "Pemberian Anda membantu garis keturunan Firman terus mengalir.",
-    error: "Tidak dapat memulai checkout. Silakan email info@wordshiper.org.",
+    error: "Tidak dapat memulai pembayaran. Silakan email info@wordshiper.org.",
     backHome: "Kembali ke beranda",
   },
   investors: {
@@ -389,7 +411,7 @@ const locale: RenewalCopy = {
         },
         {
           t: "OS Rohani Harian",
-          d: "Menyusun ulang prioritas hari seputar Firman Allah melalui Kitab Suci, doa, dan Walk planner.",
+          d: "Menyusun ulang prioritas hari seputar Firman Allah melalui Kitab Suci, doa, dan perencana Walk.",
         },
         {
           t: "Gerakan Hafalan Kitab Suci Global",

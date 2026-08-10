@@ -12,6 +12,20 @@ const locale: RenewalCopy = {
     slideSelectorAria: "Selector de diapositivas",
     lineageNumber: "Tu número de linaje",
     lineageEmailNote: "Te enviamos un correo de confirmación — revisa tu bandeja de entrada.",
+    donatePreparingEyebrow: "Próximamente",
+    donatePreparingTitle: "La donación se está preparando",
+    donatePreparingBody:
+      "El enlace de donación se está preparando.\n" +
+      "Lo volveremos a abrir cuando tengamos\n" +
+      "una experiencia de donación más segura y fluida.",
+    donatePreparingCta: "Entendido",
+    preregisterOpensEyebrow: "Abre el 1\u00A0de\u00A0diciembre\u00A02026",
+    preregisterOpensTitle: "El prerregistro abre el 1\u00A0de\u00A0diciembre",
+    preregisterOpensBody:
+      "El prerregistro de linaje abre el 1\u00A0de\u00A0diciembre\u00A0de\u00A02026.\n" +
+      "Ese día, un flujo de registro de última tecnología\n" +
+      "dará la bienvenida a los primeros\u00A01.000 Wordshipers.",
+    preregisterOpensCta: "Entendido",
   },
   nav: {
     product: "Flujo",
@@ -59,7 +73,9 @@ const locale: RenewalCopy = {
   why: {
     label: "Por qué Wordshiper",
     title: "Más conectados que nunca,\ny más profundamente dispersos",
-    lead: "Vivimos en un diluvio de información y una prisa sin tregua. Incontables voces sacuden nuestros corazones cada día, y las prioridades de la vida se dispersan con facilidad.",
+    lead:
+      "Vivimos en un diluvio de información y una prisa sin tregua.\n" +
+      "Incontables voces sacuden nuestros corazones cada día, y las prioridades de la vida se dispersan con facilidad.",
     points: [
       {
         t: "Ruido y prisa",
@@ -75,7 +91,13 @@ const locale: RenewalCopy = {
       },
     ],
     answer:
-      "Cuando siquiera un solo versículo se planta profundo en un corazón, se convierte en poder para vencer el miedo, atravesar la dificultad y volver a Dios las prioridades espirituales dispersas.",
+      "Cuando un versículo de la Escritura se planta hondo en un corazón,\n" +
+      "esa Palabra se vuelve poder para vencer el miedo y atravesar la dificultad,\n" +
+      "y para volver a Dios las prioridades espirituales dispersas.\n\n" +
+      "Déjala como herencia de la Palabra —\n" +
+      "a tus hijos amados, y a tus padres.\n\n" +
+      "Día tras día seremos renovados\n" +
+      "como adoradores en quienes Dios se deleita.",
     answerRef: "— Por qué nació Wordshiper",
   },
   identity: {
@@ -91,15 +113,15 @@ const locale: RenewalCopy = {
     result: "Ayudar a las personas a vivir como adoradores que inscriben la Palabra — Wordshipers",
     layers: [
       {
-        t: "Scripture Memory App",
+        t: "App de memorización bíblica",
         d: "Ayuda a recibir, oír, hablar y memorizar un versículo cada día.",
       },
       {
-        t: "Daily Spiritual OS",
+        t: "OS espiritual diario",
         d: "Reordena las prioridades del día en torno a la Palabra de Dios mediante Escritura, oración y el planificador Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
+        t: "Movimiento global de memorización bíblica",
         d: "Pasa un versículo y únete al linaje como el N.º Wordshiper — luego invita a la siguiente persona con una Verse\u00A0Card y tu voz.",
       },
     ],
@@ -195,15 +217,15 @@ const locale: RenewalCopy = {
     sub: "Una app de memoria de Escritura, un SO espiritual diario y un movimiento global de la Palabra — diseñados como uno.",
     thesis: [
       {
-        t: "Scripture Memory App",
+        t: "App de memorización bíblica",
         d: "Ayuda a recibir, oír, hablar y memorizar un versículo cada día.",
       },
       {
-        t: "Daily Spiritual Operating System",
+        t: "Sistema operativo espiritual diario",
         d: "Reordena las prioridades del día en torno a la Palabra de Dios mediante Escritura, oración y el planificador Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
+        t: "Movimiento global de memorización bíblica",
         d: "Pasa un versículo y únete al linaje como el N.º Wordshiper — luego invita a la siguiente persona con una Verse\u00A0Card y tu voz.",
       },
     ],
@@ -260,17 +282,17 @@ const locale: RenewalCopy = {
       "Este número no es un puntaje. Marca tu lugar en el linaje de la Palabra — prueba de que no estás solo.",
     engines: [
       {
-        t: "Synchronicity",
+        t: "Sincronía",
         e: "Juntos, ahora",
         d: "“No estoy solo” — el mundo entero recibe el mismo versículo en el mismo momento.",
       },
       {
-        t: "Lineage",
+        t: "Linaje",
         e: "Parte del flujo",
         d: "“Pertenezco a una corriente mayor” — únete a un linaje a través de generaciones, idiomas y tierras.",
       },
       {
-        t: "Public Artifact",
+        t: "Artefacto público",
         e: "Una confesión que fluye",
         d: "“Mi confesión fluye al mundo” — Verse\u00A0Cards y tu voz invitan a la siguiente persona.",
       },
@@ -284,15 +306,15 @@ const locale: RenewalCopy = {
     stats: [
       {
         n: "1.9B",
-        d: "Cristianos en el mundo — el pueblo al que anhelamos servir",
+        d: "Cristianos en el mundo\nel pueblo al que anhelamos servir",
       },
       {
         n: "24",
-        d: "Idiomas — memorización dual y triple",
+        d: "Idiomas\nmemorización dual y triple",
       },
       {
         n: "3",
-        d: "Apps independientes sobre un mismo núcleo (Wordshiper · Verbum · Pasuk)",
+        d: "Apps independientes sobre un mismo núcleo\nWordshiper · Verbum · Pasuk",
       },
     ],
     whitelabel:
@@ -354,7 +376,7 @@ const locale: RenewalCopy = {
     points: [
       {
         t: "Diseño de movimiento probado",
-        d: "Synchronicity, lineage, public artifacts — tres motores redefinidos con significado espiritual.",
+        d: "Sincronía, linaje, artefactos públicos — tres motores redefinidos con significado espiritual.",
       },
       {
         t: "Un modelo sostenible",
@@ -469,15 +491,15 @@ const locale: RenewalCopy = {
       lead: "Wordshiper es una app de memoria de Escritura, un SO espiritual diario que reordena el día y un movimiento global de memoria de las Escrituras — diseñados como uno.",
       layers: [
         {
-          t: "Scripture Memory App",
+          t: "App de memorización bíblica",
           d: "Te ayuda a recibir, oír, hablar y memorizar un versículo cada día.",
         },
         {
-          t: "Daily Spiritual OS",
+          t: "OS espiritual diario",
           d: "Reordena las prioridades del día en torno a la Palabra de Dios mediante Escritura, oración y el planificador Walk.",
         },
         {
-          t: "Global Scripture Memory Movement",
+          t: "Movimiento global de memorización bíblica",
           d: "Pasa un versículo y únete al linaje como el N.º Wordshiper — luego invita a la siguiente persona con una Verse\u00A0Card y tu voz.",
         },
       ],

@@ -10,8 +10,22 @@ const locale: RenewalCopy = {
     all: "Alles",
     heroSlidesAria: "Wordshiper introductieslides",
     slideSelectorAria: "Slidekiezer",
-    lineageNumber: "Jouw lineage-nummer",
-    lineageEmailNote: "We hebben een bevestigingsmail gestuurd — controleer je inbox.",
+    lineageNumber: "Jouw geslachtslijnnummer",
+    lineageEmailNote: "We hebben een bevestigingsmail gestuurd — controleer je postvak IN.",
+    donatePreparingEyebrow: "Binnenkort",
+    donatePreparingTitle: "Doneren wordt voorbereid",
+    donatePreparingBody:
+      "De donatielink wordt momenteel voorbereid.\n" +
+      "Zodra we een veiliger, soepeler donatie-ervaring hebben,\n" +
+      "openen we die weer.",
+    donatePreparingCta: "Begrepen",
+    preregisterOpensEyebrow: "Opent 1\u00A0december\u00A02026",
+    preregisterOpensTitle: "Voorregistratie opent op 1\u00A0december",
+    preregisterOpensBody:
+      "Geslachtslijn-voorregistratie opent op 1\u00A0december\u00A02026.\n" +
+      "Die dag verwelkomt een nieuw gebouwd aanmeldproces\n" +
+      "de eerste\u00A01.000 Wordshipers.",
+    preregisterOpensCta: "Begrepen",
   },
   nav: {
     product: "Stroom",
@@ -31,12 +45,12 @@ const locale: RenewalCopy = {
     declaration: "Ik ben een Wordshiper.",
     cta1: "Sluit je aan bij de eerste\u00A01.000",
     cta2: "Waarom Wordshiper",
-    lineageNote: "Registreer vooraf en ontvang je lineage\u00A0nummer",
+    lineageNote: "Registreer vooraf en ontvang je geslachtslijnnummer",
     slides: [
       {
         label: "Wat is Wordshiper?",
         title1: "Memoriseer één vers.",
-        title2: "Richt je hele dag opnieuw.",
+        title2: "Richt je dag opnieuw.",
         body: "Een app die je helpt één Schriftvers te overdenken en te memoriseren, drie korte gebeden per dag te herhalen, geestelijke · lichamelijke · emotionele prioriteiten te herstellen, en een leven van roeping te leven.",
         visual: "home" as const,
       },
@@ -49,9 +63,9 @@ const locale: RenewalCopy = {
       },
       {
         label: "Drievoudige identiteit",
-        title1: "Memory-app · Spiritual OS ·",
+        title1: "Memorisatie-app · Geestelijk OS ·",
         title2: "Wereldwijde Woordbeweging",
-        body: "Ontvang, hoor, spreek en memoriseer één vers per dag. Richt je dag opnieuw in vijftien minuten. Haal een vers en sluit je aan bij de lineage als de Nde Wordshiper — nodig dan de volgende persoon uit met een Verse\u00A0Card en je stem.",
+        body: "Ontvang, hoor, spreek en memoriseer één vers per dag. Richt je dag opnieuw in vijftien minuten. Haal een vers en sluit je aan bij de geslachtslijn als de Nde Wordshiper — nodig dan de volgende persoon uit met een Verse\u00A0Card en je stem.",
         visual: "home" as const,
       },
     ],
@@ -59,7 +73,9 @@ const locale: RenewalCopy = {
   why: {
     label: "Waarom Wordshiper",
     title: "Meer verbonden dan ooit,\ntoch dieper verstrooid",
-    lead: "We leven in een vloed van informatie en onophoudelijke drukte. Ontelbare stemmen schudden ons hart elke dag, en de prioriteiten van het leven raken gemakkelijk verstrooid.",
+    lead:
+      "We leven in een vloed van informatie en onophoudelijke drukte.\n" +
+      "Ontelbare stemmen schudden ons hart elke dag, en de prioriteiten van het leven raken gemakkelijk verstrooid.",
     points: [
       {
         t: "Lawaai en haast",
@@ -75,7 +91,13 @@ const locale: RenewalCopy = {
       },
     ],
     answer:
-      "Wanneer zelfs één vers diep in één hart wordt geplant, wordt het de kracht om angst te overwinnen, door moeilijkheden heen te gaan, en verstrooide geestelijke prioriteiten weer naar God te keren.",
+      "Wanneer één vers uit de Schrift diep in een hart wordt geplant,\n" +
+      "wordt dat Woord de kracht om angst te overwinnen, om door moeite heen te gaan,\n" +
+      "en om verstrooide geestelijke prioriteiten weer naar God te keren.\n\n" +
+      "Laat het na als een erfenis van het Woord —\n" +
+      "aan je geliefde kinderen, en aan je ouders.\n\n" +
+      "Dag na dag zullen wij vernieuwd worden\n" +
+      "tot aanbidders in wie God vreugde vindt.",
     answerRef: "— Waarom Wordshiper begon",
   },
   identity: {
@@ -91,16 +113,16 @@ const locale: RenewalCopy = {
     result: "Mensen helpen leven als aanbidders die het Woord inschrijven — Wordshipers",
     layers: [
       {
-        t: "Scripture Memory App",
+        t: "Bijbelmemorisatie-app",
         d: "Helpt gebruikers één vers per dag te ontvangen, horen, spreken en memoriseren.",
       },
       {
-        t: "Daily Spiritual OS",
-        d: "Richt de prioriteiten van de dag opnieuw rond Gods Woord door Schrift, gebed en de Walk planner.",
+        t: "Dagelijks geestelijk OS",
+        d: "Richt de prioriteiten van de dag opnieuw rond Gods Woord door Schrift, gebed en de Walk-planner.",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "Haal een vers en sluit je aan bij de lineage als de Nde Wordshiper — nodig dan de volgende persoon uit met een Verse\u00A0Card en je stem.",
+        t: "Wereldwijde Bijbelmemorisatie-beweging",
+        d: "Haal een vers en sluit je aan bij de geslachtslijn als de Nde Wordshiper — nodig dan de volgende persoon uit met een Verse\u00A0Card en je stem.",
       },
     ],
     notOnly:
@@ -130,14 +152,14 @@ const locale: RenewalCopy = {
   routine: {
     label: "Kernroutine",
     title: "Drie keer per dag,\nvijf minuten elk",
-    sub: "Elke sessie wordt automatisch geactiveerd door het Walk planner-alarm, zodat drie keer per dag een levensritme wordt. Ontvang 's ochtends, herhaal 's middags, bevestig 's avonds — totdat één vers in je leven doordringt.",
-    alarmNote: "Walk planner-alarm",
+    sub: "Elke sessie wordt automatisch geactiveerd door het alarm van de Walk-planner, zodat drie keer per dag een levensritme wordt. Ontvang 's ochtends, herhaal 's middags, bevestig 's avonds — totdat één vers in je leven doordringt.",
+    alarmNote: "Alarm van de Walk-planner",
     principle:
       "Tiny Habits — vijf minuten elk houdt het licht genoeg om dagelijks te herhalen, terwijl zowel retentie als geestelijke diepte worden gewaarborgd.",
     sessions: [
       {
         time: "Ochtend\u00A0·\u00A05\u00A0min",
-        when: "Bij het ontwaken · Walk planner-alarm",
+        when: "Bij het ontwaken · Alarm van de Walk-planner",
         items: [
           "Gebed 1\u00A0min — ochtendgebed",
           "Memoriseren 2\u00A0min — vers van vandaag",
@@ -146,16 +168,16 @@ const locale: RenewalCopy = {
       },
       {
         time: "Middag\u00A0·\u00A05\u00A0min",
-        when: "Voor de lunch · Walk planner-alarm",
+        when: "Voor de lunch · Alarm van de Walk-planner",
         items: [
           "Gebed 1\u00A0min — dankbaarheid",
           "Herhalen 2\u00A0min — herhaal het ochtendvers",
-          "Walk check 2\u00A0min — prioriteiten van vandaag",
+          "Walk-check 2\u00A0min — prioriteiten van vandaag",
         ],
       },
       {
         time: "Avond\u00A0·\u00A05\u00A0min",
-        when: "Voor het slapen · Walk planner-alarm",
+        when: "Voor het slapen · Alarm van de Walk-planner",
         items: [
           "Gebed 1\u00A0min — dagelijkse reflectie",
           "Bevestigen 2\u00A0min — Hide\u00A0&\u00A0Test",
@@ -174,19 +196,19 @@ const locale: RenewalCopy = {
   product: {
     label: "Productidentiteit",
     title: "Eén platform,\ndrie lagen",
-    sub: "Een Scripture memory-app, een dagelijks spiritual OS, en een wereldwijde Woordbeweging — ontworpen als één.",
+    sub: "Een Schriftmemorisatie-app, een dagelijks geestelijk OS, en een wereldwijde Woordbeweging — ontworpen als één.",
     thesis: [
       {
-        t: "Scripture Memory App",
+        t: "Bijbelmemorisatie-app",
         d: "Helpt gebruikers één vers per dag te ontvangen, horen, spreken en memoriseren.",
       },
       {
-        t: "Daily Spiritual Operating System",
-        d: "Richt de prioriteiten van de dag opnieuw rond Gods Woord door Schrift, gebed en de Walk planner.",
+        t: "Dagelijks geestelijk besturingssysteem",
+        d: "Richt de prioriteiten van de dag opnieuw rond Gods Woord door Schrift, gebed en de Walk-planner.",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "Haal een vers en sluit je aan bij de lineage als de Nde Wordshiper — nodig dan de volgende persoon uit met een Verse\u00A0Card en je stem.",
+        t: "Wereldwijde Bijbelmemorisatie-beweging",
+        d: "Haal een vers en sluit je aan bij de geslachtslijn als de Nde Wordshiper — nodig dan de volgende persoon uit met een Verse\u00A0Card en je stem.",
       },
     ],
     tabs: [
@@ -197,9 +219,9 @@ const locale: RenewalCopy = {
       { t: "Walk", d: "Wandelen door het Woord — van roeping tot dagelijkse praktijk" },
     ],
     features: [
-      { t: "Worvi — geestelijke AI-metgezel", d: "Veroordeelt nooit een gebroken streak; nodigt je genadig terug naar het Woord." },
-      { t: "Jog wheel — Schrift in 1,5s", d: "Bereik de Bijbel in 1,5\u00A0seconden, zelfs midden in de aanbidding. 31.112 verzen offline." },
-      { t: "Verse\u00A0Card — een stromende belijdenis", d: "Haal een vers en een kaart wordt geboren — vers, lineage-nummer, voice QR." },
+      { t: "Worvi — geestelijke AI-metgezel", d: "Veroordeelt je nooit als je routine wordt onderbroken; nodigt je genadig terug naar het Woord." },
+      { t: "Jog-wiel — Schrift in 1,5s", d: "Bereik de Bijbel in 1,5\u00A0seconden, zelfs midden in de aanbidding. 31.112 verzen offline." },
+      { t: "Verse\u00A0Card — een stromende belijdenis", d: "Haal een vers en een kaart wordt geboren — vers, geslachtslijnnummer, stem-QR." },
       { t: "24 talen", d: "Memoriseer in twee of drie talen naast je moedertaal." },
     ],
     demoNote: "Echte app-schermen",
@@ -207,15 +229,15 @@ const locale: RenewalCopy = {
   movement: {
     label: "Beweging",
     subtitle: "We bouwen geen app.\nWe ontsteken een beweging.",
-    title: "Een geestelijke lineage,\nvers voor vers",
+    title: "Een geestelijke geslachtslijn,\nvers voor vers",
     lineageLead: "Jij bent de",
-    lineageNum: "14,207",
+    lineageNum: "14.207",
     lineageTail: "e Wordshiper die dit vers inschrijft",
-    lineageSub: "Dit nummer is geen score. Het markeert jouw plaats in de lineage van het Woord — bewijs dat je niet alleen bent.",
+    lineageSub: "Dit nummer is geen score. Het markeert jouw plaats in de geslachtslijn van het Woord — bewijs dat je niet alleen bent.",
     engines: [
-      { t: "Synchronicity", e: "Samen, nu", d: "\u201cIk ben niet alleen\u201d — de hele wereld ontvangt hetzelfde vers op hetzelfde moment." },
-      { t: "Lineage", e: "Deel van de stroom", d: "\u201cIk behoor tot een grotere stroom\u201d — sluit je aan bij een lineage over generaties, talen en landen." },
-      { t: "Public Artifact", e: "Een stromende belijdenis", d: "\u201cMijn belijdenis stroomt de wereld in\u201d — Verse\u00A0Cards en je stem nodigen de volgende persoon uit." },
+      { t: "Synchroniciteit", e: "Samen, nu", d: "\u201cIk ben niet alleen\u201d — de hele wereld ontvangt hetzelfde vers op hetzelfde moment." },
+      { t: "Geslachtslijn", e: "Deel van de stroom", d: "\u201cIk behoor tot een grotere stroom\u201d — sluit je aan bij een geslachtslijn over generaties, talen en landen." },
+      { t: "Publiek artefact", e: "Een stromende belijdenis", d: "\u201cMijn belijdenis stroomt de wereld in\u201d — Verse\u00A0Cards en je stem nodigen de volgende persoon uit." },
     ],
     promise: "Geen schaamte. Geen lawaai. Eén\u00A0vers. Een leven van aanbidding.",
   },
@@ -224,38 +246,38 @@ const locale: RenewalCopy = {
     title: "Aanbidding die stroomt naar huizen,\nkerken, steden en de volken",
     body: "We dromen van mensen die het Woord gedenken en ware Wordshipers worden — die recht doen, goedheid liefhebben, en nederig met God wandelen waar ze staan.",
     stats: [
-      { n: "1.9B", d: "Christenen wereldwijd — de mensen die we verlangen te dienen" },
-      { n: "24", d: "Talen — dual & triple memoriseren" },
-      { n: "3", d: "Onafhankelijke apps op één kern (Wordshiper · Verbum · Pasuk)" },
+      { n: "1.9B", d: "Christenen wereldwijd\nde mensen die we verlangen te dienen" },
+      { n: "24", d: "Talen\ndual & triple memoriseren" },
+      { n: "3", d: "Onafhankelijke apps op één kern\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:
-      "Op één core design system: Wordshiper (Protestant), Verbum (Catholic), Pasuk (Jewish) — elk eert zijn traditie in één beweging van het Woord.",
+      "Op één kernontwerpsysteem: Wordshiper (protestants), Verbum (katholiek), Pasuk (joods) — elk eert zijn traditie in één beweging van het Woord.",
   },
   roadmap: {
     label: "Roadmap",
     title: "De beweging is al begonnen",
     phases: [
-      { t: "Phase\u00A01 — MVP", d: "Kernlus: ontvangen · memoriseren · aansluiten bij de lineage" },
-      { t: "Phase\u00A02 — Routine", d: "Drie dagelijkse sessies · Walk planner · Worvi" },
-      { t: "Phase\u00A03 — Launch", d: "December\u00A02026 — zaadgemeenschap van de eerste\u00A01.000" },
-      { t: "Phase\u00A04 — Expansion", d: "Voice\u00A0Feed · kanalen · drie white-label apps" },
+      { t: "Phase\u00A01 — MVP", d: "Kernlus: ontvangen · memoriseren · aansluiten bij de geslachtslijn" },
+      { t: "Phase\u00A02 — Routine", d: "Drie dagelijkse sessies · Walk-planner · Worvi" },
+      { t: "Phase\u00A03 — Lancering", d: "December\u00A02026 — zaadgemeenschap van de eerste\u00A01.000" },
+      { t: "Phase\u00A04 — Uitbreiding", d: "Voice\u00A0Feed · kanalen · drie white-label apps" },
     ],
   },
   cta: {
     title: "We zoeken de eerste\u00A01.000\nom samen het eerste manna te ontvangen",
-    sub: "Registreer vooraf en ontvang je lineage\u00A0nummer. Op de lanceringdag ontvangt iedereen het eerste manna op hetzelfde moment.",
+    sub: "Registreer vooraf en ontvang je geslachtslijnnummer. Op de lanceringdag ontvangt iedereen het eerste manna op hetzelfde moment.",
     placeholder: "E-mailadres",
     button: "Voorregistreren",
-    success: "Dank je! Je bent toegetreden tot de lineage.",
+    success: "Dank je! Je bent toegetreden tot de geslachtslijn.",
     successWithNumber: (n: number) =>
-      `Dank je! Je bent Wordshiper #${n}. Controleer je e-mail voor je lineage-bevestiging.`,
+      `Dank je! Je bent Wordshiper #${n}. Controleer je e-mail voor je bevestiging van de geslachtslijn.`,
     error: "Registratie mislukt. Probeer het opnieuw.",
     declaration: "Ja, ik ben een Wordshiper!",
   },
   donate: {
     eyebrow: "Zodat één vers per dag de volken kan bereiken",
     title: "Word partner van de Woordbeweging",
-    sub: "Wordshiper Ministry Inc. is een Amerikaanse 501(c)(3) nonprofit. Jouw gift voedt Schriftmemoriseren en gebedsritmes wereldwijd.",
+    sub: "Wordshiper Ministry Inc. is een Amerikaanse 501(c)(3) non-profitorganisatie. Jouw gift voedt Schriftmemoriseren en gebedsritmes wereldwijd.",
     oneTime: "Eenmalig",
     monthly: "Maandelijks",
     custom: "Aangepast bedrag",
@@ -264,17 +286,17 @@ const locale: RenewalCopy = {
     processing: "Verbinden…",
     taxNote: "Belastingaftrekbaar in de U.S. · EIN 33-1561112 · Bonnen verstrekt door Stripe.",
     successTitle: "Dank je",
-    successSub: "Jouw gift helpt de lineage van het Woord te blijven stromen.",
-    error: "Checkout kon niet starten. Mail naar info@wordshiper.org.",
-    backHome: "Terug naar home",
+    successSub: "Jouw gift helpt de geslachtslijn van het Woord te blijven stromen.",
+    error: "De betaling kon niet worden gestart. Mail naar info@wordshiper.org.",
+    backHome: "Terug naar start",
   },
   investors: {
     navTitle: "Investeerders",
     title: "Op zoek naar partners om\nhet volgende hoofdstuk van de Woordbeweging te schrijven",
     sub: "Wordshiper opereert als Wordshiper Ministry Inc. (501(c)(3)) en Wordshiper PBC, Inc. — duurzaamheid en missie samen beschermend.",
     points: [
-      { t: "Bewezen bewegingsontwerp", d: "Synchronicity, lineage, public artifacts — drie engines opnieuw gedefinieerd met geestelijke betekenis." },
-      { t: "Een duurzaam model", d: "Voor altijd gratis voor individuen. Pro\u00A0Organization en vrijwillig geven houden de operatie in stand. Geen ads." },
+      { t: "Bewezen bewegingsontwerp", d: "Synchroniciteit, geslachtslijn, publieke artefacten — drie engines opnieuw gedefinieerd met geestelijke betekenis." },
+      { t: "Een duurzaam model", d: "Voor altijd gratis voor individuen. Pro\u00A0Organization en vrijwillig geven houden de operatie in stand. Geen advertenties." },
       { t: "Technologie gebouwd om te werken", d: "Globale TTS-cache vermindert structureel stemkosten op schaal." },
       { t: "White-label expansie", d: "Eén kernengine betreedt protestantse, katholieke en joodse markten." },
     ],
@@ -288,7 +310,7 @@ const locale: RenewalCopy = {
     contactTitle: "Vraag IR-materialen & investeringsvragen",
     contactSub: "Businessplan, financiële prognoses en productdemo beschikbaar op verzoek.",
     contactBtn: "Neem contact op",
-    backHome: "Terug naar home",
+    backHome: "Terug naar start",
   },
   aboutPage: {
     title: "Over Wordshiper",
@@ -352,24 +374,24 @@ const locale: RenewalCopy = {
       label: "Thesis",
       title: "Eén platform,\ndrie lagen",
       lead:
-        "Wordshiper is een Scripture memory-app, een dagelijks spiritual OS dat de dag opnieuw richt, en een wereldwijde Schriftmemoriseringsbeweging — ontworpen als één.",
+        "Wordshiper is een Schriftmemorisatie-app, een dagelijks geestelijk OS dat de dag opnieuw richt, en een wereldwijde Schriftmemoriseringsbeweging — ontworpen als één.",
       layers: [
         {
-          t: "Scripture Memory App",
+          t: "Bijbelmemorisatie-app",
           d: "Helpt je één vers per dag te ontvangen, horen, spreken en memoriseren.",
         },
         {
-          t: "Daily Spiritual OS",
-          d: "Richt de prioriteiten van de dag opnieuw rond Gods Woord door Schrift, gebed en de Walk planner.",
+          t: "Dagelijks geestelijk OS",
+          d: "Richt de prioriteiten van de dag opnieuw rond Gods Woord door Schrift, gebed en de Walk-planner.",
         },
         {
-          t: "Global Scripture Memory Movement",
-          d: "Haal een vers en sluit je aan bij de lineage als de Nde Wordshiper — nodig dan de volgende persoon uit met een Verse\u00A0Card en je stem.",
+          t: "Wereldwijde Bijbelmemorisatie-beweging",
+          d: "Haal een vers en sluit je aan bij de geslachtslijn als de Nde Wordshiper — nodig dan de volgende persoon uit met een Verse\u00A0Card en je stem.",
         },
       ],
     },
     orgNote:
-      "Wordshiper Ministry is een Amerikaanse 501(c)(3) nonprofit. Individueel gebruik is voor altijd gratis. Giften en partnerschappen houden de beweging in stand.",
+      "Wordshiper Ministry is een Amerikaanse 501(c)(3) non-profitorganisatie. Individueel gebruik is voor altijd gratis. Giften en partnerschappen houden de beweging in stand.",
   },
   footer: {
     tagline: "Eén\u00A0vers per dag. Een leven van aanbidding.",

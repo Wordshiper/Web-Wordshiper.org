@@ -4,6 +4,7 @@ import { useCopy } from "@/data/renewal-copy";
 import { useLanguage } from "@/hooks/use-language";
 import { brandDisplayForLanguage } from "@/data/brand";
 import ExpandedLanguageSwitcher from "@/components/expanded-language-switcher";
+import StatusNoticeDialog from "@/components/status-notice-dialog";
 import SEO from "@/components/seo";
 import Footer from "@/components/renewal-footer";
 import { Heart, ShieldCheck, ArrowLeft, CheckCircle2 } from "lucide-react";
@@ -12,9 +13,13 @@ import logoPrimary from "@assets/wordshiper_logo_lockup_primary_E_1786117649532.
 const CYAN = "#00B3E4";
 const PRESETS = [25, 50, 100, 250];
 
+/** Flip to false when Stripe checkout is ready to accept live gifts. */
+const DONATE_PREPARING = true;
+
 export default function DonatePage() {
   const copy = useCopy();
   const d = copy.donate;
+  const chrome = copy.chrome;
   const { currentLanguage } = useLanguage();
   const brandAlt = brandDisplayForLanguage(currentLanguage);
   const [amount, setAmount] = useState(50);
@@ -23,6 +28,7 @@ export default function DonatePage() {
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [success, setSuccess] = useState(false);
+  const [preparingOpen, setPreparingOpen] = useState(false);
 
   useEffect(() => {
     const q = new URLSearchParams(window.location.search);
@@ -32,6 +38,11 @@ export default function DonatePage() {
   const resolvedAmount = custom ? Math.max(1, Number(custom) || 0) : amount;
 
   const startCheckout = async () => {
+    if (DONATE_PREPARING) {
+      setPreparingOpen(true);
+      return;
+    }
+
     setBusy(true);
     setError(null);
     try {
@@ -214,6 +225,15 @@ export default function DonatePage() {
       </main>
 
       <Footer />
+
+      <StatusNoticeDialog
+        open={preparingOpen}
+        onOpenChange={setPreparingOpen}
+        eyebrow={chrome.donatePreparingEyebrow}
+        title={chrome.donatePreparingTitle}
+        body={chrome.donatePreparingBody}
+        cta={chrome.donatePreparingCta}
+      />
     </div>
   );
 }

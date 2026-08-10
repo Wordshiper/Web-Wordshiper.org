@@ -12,6 +12,20 @@ const locale: RenewalCopy = {
     slideSelectorAria: "Bộ chọn slide",
     lineageNumber: "Số dòng dõi của bạn",
     lineageEmailNote: "Chúng tôi đã gửi email xác nhận — vui lòng kiểm tra hộp thư.",
+    donatePreparingEyebrow: "Sắp ra mắt",
+    donatePreparingTitle: "Đang chuẩn bị quyên góp",
+    donatePreparingBody:
+      "Liên kết quyên góp hiện đang được chuẩn bị.\n" +
+      "Chúng tôi sẽ mở lại ngay khi có trải nghiệm quyên góp\n" +
+      "an toàn và mượt mà hơn.",
+    donatePreparingCta: "Đã hiểu",
+    preregisterOpensEyebrow: "Mở ngày\u00A01 tháng\u00A012\u00A02026",
+    preregisterOpensTitle: "Đăng ký trước mở ngày\u00A01 tháng\u00A012",
+    preregisterOpensBody:
+      "Đăng ký trước dòng dõi mở vào ngày\u00A01 tháng\u00A012\u00A02026.\n" +
+      "Ngày hôm đó, quy trình đăng ký mới xây với công nghệ mới nhất\n" +
+      "sẽ chào đón\u00A01.000 Wordshiper đầu tiên.",
+    preregisterOpensCta: "Đã hiểu",
   },
   nav: {
     product: "Dòng chảy",
@@ -59,7 +73,9 @@ const locale: RenewalCopy = {
   why: {
     label: "Vì sao Wordshiper",
     title: "Kết nối hơn bao giờ hết,\nnhưng phân tán sâu hơn",
-    lead: "Chúng ta sống trong cơn lũ thông tin và sự bận rộn không ngừng. Vô số tiếng nói lay động lòng mỗi ngày, và các ưu tiên cuộc sống dễ bị phân tán.",
+    lead:
+      "Chúng ta sống trong cơn lũ thông tin và sự bận rộn không ngừng.\n" +
+      "Vô số tiếng nói lay động lòng mỗi ngày, và các ưu tiên cuộc sống dễ bị phân tán.",
     points: [
       {
         t: "Tiếng ồn và vội vàng",
@@ -75,7 +91,13 @@ const locale: RenewalCopy = {
       },
     ],
     answer:
-      "Khi chỉ một câu được trồng sâu trong một tấm lòng, nó trở thành sức mạnh để vượt qua sợ hãi, đi qua gian khó, và quay các ưu tiên thuộc linh phân tán trở về với Đức Chúa Trời.",
+      "Khi một câu Kinh Thánh được trồng sâu trong một tấm lòng,\n" +
+      "Lời ấy trở thành sức mạnh để thắng nỗi sợ, để đi qua gian khó,\n" +
+      "và để đưa những ưu tiên thuộc linh phân tán trở về với Đức Chúa Trời.\n\n" +
+      "Hãy để lại điều đó như cơ nghiệp của Lời —\n" +
+      "cho con cái yêu dấu của bạn, và cho cha mẹ của bạn.\n\n" +
+      "Mỗi ngày chúng ta sẽ được đổi mới\n" +
+      "thành người thờ phượng đẹp lòng Đức Chúa Trời.",
     answerRef: "— Vì sao Wordshiper bắt đầu",
   },
   identity: {
@@ -96,7 +118,7 @@ const locale: RenewalCopy = {
       },
       {
         t: "Hệ điều hành thuộc linh hàng ngày",
-        d: "Sắp xếp lại các ưu tiên trong ngày quanh Lời Đức Chúa Trời qua Kinh Thánh, cầu nguyện và Walk planner.",
+        d: "Sắp xếp lại các ưu tiên trong ngày quanh Lời Đức Chúa Trời qua Kinh Thánh, cầu nguyện và trình lập kế hoạch Walk.",
       },
       {
         t: "Phong trào thuộc lòng Kinh Thánh toàn cầu",
@@ -130,14 +152,14 @@ const locale: RenewalCopy = {
   routine: {
     label: "Nhịp sống cốt lõi",
     title: "Ba lần mỗi ngày,\nmỗi lần năm phút",
-    sub: "Mỗi phiên được kích hoạt tự động bằng báo thức Walk planner, nên ba lần mỗi ngày trở thành nhịp sống. Nhận buổi sáng, ôn buổi trưa, xác nhận buổi tối — cho đến khi một câu thấm vào đời bạn.",
-    alarmNote: "Báo thức Walk planner",
+    sub: "Mỗi phiên được kích hoạt tự động bằng báo thức trình lập kế hoạch Walk, nên ba lần mỗi ngày trở thành nhịp sống. Nhận buổi sáng, ôn buổi trưa, xác nhận buổi tối — cho đến khi một câu thấm vào đời bạn.",
+    alarmNote: "Báo thức trình lập kế hoạch Walk",
     principle:
       "Tiny Habits — năm phút mỗi lần đủ nhẹ để lặp lại hàng ngày, vừa giữ được trí nhớ lẫn chiều sâu thuộc linh.",
     sessions: [
       {
         time: "Sáng\u00A0·\u00A05\u00A0phút",
-        when: "Khi thức dậy · Báo thức Walk planner",
+        when: "Khi thức dậy · Báo thức trình lập kế hoạch Walk",
         items: [
           "Cầu nguyện 1\u00A0phút — lời cầu buổi sáng",
           "Thuộc lòng 2\u00A0phút — câu hôm nay",
@@ -146,7 +168,7 @@ const locale: RenewalCopy = {
       },
       {
         time: "Trưa\u00A0·\u00A05\u00A0phút",
-        when: "Trước bữa trưa · Báo thức Walk planner",
+        when: "Trước bữa trưa · Báo thức trình lập kế hoạch Walk",
         items: [
           "Cầu nguyện 1\u00A0phút — tạ ơn",
           "Ôn 2\u00A0phút — nhắc lại câu buổi sáng",
@@ -155,7 +177,7 @@ const locale: RenewalCopy = {
       },
       {
         time: "Tối\u00A0·\u00A05\u00A0phút",
-        when: "Trước khi ngủ · Báo thức Walk planner",
+        when: "Trước khi ngủ · Báo thức trình lập kế hoạch Walk",
         items: [
           "Cầu nguyện 1\u00A0phút — suy xét ngày",
           "Xác nhận 2\u00A0phút — Hide\u00A0&\u00A0Test",
@@ -182,7 +204,7 @@ const locale: RenewalCopy = {
       },
       {
         t: "Hệ điều hành thuộc linh hàng ngày",
-        d: "Sắp xếp lại các ưu tiên trong ngày quanh Lời Đức Chúa Trời qua Kinh Thánh, cầu nguyện và Walk planner.",
+        d: "Sắp xếp lại các ưu tiên trong ngày quanh Lời Đức Chúa Trời qua Kinh Thánh, cầu nguyện và trình lập kế hoạch Walk.",
       },
       {
         t: "Phong trào thuộc lòng Kinh Thánh toàn cầu",
@@ -202,7 +224,7 @@ const locale: RenewalCopy = {
         d: "Không bao giờ lên án chuỗi bị đứt; mời bạn trở lại Lời bằng ân điển.",
       },
       {
-        t: "Jog wheel — Kinh Thánh trong 1,5 giây",
+        t: "Bánh xe jog — Kinh Thánh trong 1,5 giây",
         d: "Đến Kinh Thánh trong 1,5\u00A0giây, ngay cả giữa thờ phượng. 31.112 câu ngoại tuyến.",
       },
       {
@@ -220,9 +242,9 @@ const locale: RenewalCopy = {
     label: "Phong trào",
     subtitle: "Chúng tôi không xây ứng dụng.\nChúng tôi đang thắp một phong trào.",
     title: "Một dòng dõi thuộc linh,\ntừng câu một",
-    lineageLead: "Bạn là",
+    lineageLead: "Bạn là Wordshiper thứ",
     lineageNum: "14,207",
-    lineageTail: "Wordshiper thứ đã khắc câu này",
+    lineageTail: " đã khắc câu này",
     lineageSub: "Con số này không phải điểm số. Nó đánh dấu vị trí của bạn trong dòng dõi của Lời — bằng chứng bạn không đơn độc.",
     engines: [
       {
@@ -248,9 +270,9 @@ const locale: RenewalCopy = {
     title: "Sự thờ phượng chảy vào nhà,\nhội thánh, thành phố và các dân tộc",
     body: "Chúng tôi mơ về những người nhớ Lời trở thành Wordshipers thật — làm sự công bình, yêu thương sự nhân từ, và bước đi khiêm nhường với Đức Chúa Trời nơi họ đứng.",
     stats: [
-      { n: "1.9B", d: "Cơ Đốc nhân trên thế giới — những người chúng tôi khao khát phục vụ" },
-      { n: "24", d: "Ngôn ngữ — thuộc lòng kép & ba" },
-      { n: "3", d: "Ứng dụng độc lập trên một lõi (Wordshiper · Verbum · Pasuk)" },
+      { n: "1.9B", d: "Cơ Đốc nhân trên thế giới\nnhững người chúng tôi khao khát phục vụ" },
+      { n: "24", d: "Ngôn ngữ\nthuộc lòng kép & ba" },
+      { n: "3", d: "Ứng dụng độc lập trên một lõi\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:
       "Trên một hệ thống thiết kế lõi: Wordshiper (Tin Lành), Verbum (Công giáo), Pasuk (Do Thái) — mỗi bên tôn trọng truyền thống của mình trong một phong trào của Lời.",
@@ -259,10 +281,10 @@ const locale: RenewalCopy = {
     label: "Lộ trình",
     title: "Phong trào đã bắt đầu",
     phases: [
-      { t: "Giai đoạn\u00A01 — MVP", d: "Vòng lõi: nhận · thuộc lòng · gia nhập dòng dõi" },
-      { t: "Giai đoạn\u00A02 — Nhịp sống", d: "Ba phiên mỗi ngày · Walk planner · Worvi" },
-      { t: "Giai đoạn\u00A03 — Ra mắt", d: "Tháng 12\u00A02026 — cộng đồng hạt giống 1.000 người đầu tiên" },
-      { t: "Giai đoạn\u00A04 — Mở rộng", d: "Voice\u00A0Feed · kênh · ba ứng dụng white-label" },
+      { t: "Phase\u00A01 — MVP", d: "Vòng lõi: nhận · thuộc lòng · gia nhập dòng dõi" },
+      { t: "Phase\u00A02 — Nhịp sống", d: "Ba phiên mỗi ngày · trình lập kế hoạch Walk · Worvi" },
+      { t: "Phase\u00A03 — Ra mắt", d: "Tháng 12\u00A02026 — cộng đồng hạt giống 1.000 người đầu tiên" },
+      { t: "Phase\u00A04 — Mở rộng", d: "Voice\u00A0Feed · kênh · ba ứng dụng white-label" },
     ],
   },
   cta: {
@@ -389,7 +411,7 @@ const locale: RenewalCopy = {
         },
         {
           t: "Hệ điều hành thuộc linh hàng ngày",
-          d: "Sắp xếp lại các ưu tiên trong ngày quanh Lời Đức Chúa Trời qua Kinh Thánh, cầu nguyện và Walk planner.",
+          d: "Sắp xếp lại các ưu tiên trong ngày quanh Lời Đức Chúa Trời qua Kinh Thánh, cầu nguyện và trình lập kế hoạch Walk.",
         },
         {
           t: "Phong trào thuộc lòng Kinh Thánh toàn cầu",

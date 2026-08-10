@@ -12,6 +12,20 @@ const locale: RenewalCopy = {
     slideSelectorAria: "投影片選擇",
     lineageNumber: "你的譜系編號",
     lineageEmailNote: "我們已寄出確認郵件——請查看收件匣。",
+    donatePreparingEyebrow: "即將推出",
+    donatePreparingTitle: "奉獻功能準備中",
+    donatePreparingBody:
+      "奉獻連結目前正在準備中。\n" +
+      "我們會在更安全、更順暢的奉獻體驗就緒後，\n" +
+      "重新開放。",
+    donatePreparingCta: "知道了",
+    preregisterOpensEyebrow: "2026年\u00A012月\u00A01日開放",
+    preregisterOpensTitle: "預登記於12月\u00A01日開啟",
+    preregisterOpensBody:
+      "譜系預登記將於2026年\u00A012月\u00A01日開啟。\n" +
+      "當天，以最新技術全新打造的報名入口，\n" +
+      "將迎接首批\u00A01,000位 Wordshiper。",
+    preregisterOpensCta: "知道了",
   },
   nav: {
     product: "流轉",
@@ -26,18 +40,18 @@ const locale: RenewalCopy = {
     identity: "身分",
   },
   hero: {
-    badge: "將於\u00A02026年\u00A012月發布",
-    slogan: "一天\u00A0一節。敬拜的一生。",
+    badge: "將於\u00A02026年12月發布",
+    slogan: "一天一節。敬拜的一生。",
     declaration: "我是 Wordshiper。",
     cta1: "加入首批\u00A01,000\u00A0人",
     cta2: "為何選擇 Wordshiper",
-    lineageNote: "預登記即可獲得你的譜系\u00A0編號",
+    lineageNote: "預登記即可獲得你的譜系編號",
     slides: [
       {
         label: "什麼是 Wordshiper？",
-        title1: "背誦一\u00A0節經文，",
+        title1: "背誦一節經文，",
         title2: "重整你的整天。",
-        body: "一款幫助你默想並背誦一\u00A0節聖經、每天重複三次短禱、恢復屬靈·身體·情感的優先次序，並活出呼召人生的應用程式。",
+        body: "一款幫助你默想並背誦一節聖經、每天重複三次短禱、恢復屬靈·身體·情感的優先次序，並活出呼召人生的應用程式。",
         visual: "home" as const,
       },
       {
@@ -51,7 +65,7 @@ const locale: RenewalCopy = {
         label: "三重身分",
         title1: "背誦應用 · 屬靈 OS ·",
         title2: "全球神話語運動",
-        body: "每天領受、聆聽、開口、背誦一\u00A0節經文。用十五分鐘重整一天。通過一\u00A0節經文，以第\u00A0N\u00A0位 Wordshiper 加入譜系——再用 Verse\u00A0Card 與你的聲音邀請下一個人。",
+        body: "每天領受、聆聽、開口、背誦一節經文。用十五分鐘重整一天。通過一節經文，以第\u00A0N\u00A0位 Wordshiper 加入譜系——再用 Verse\u00A0Card 與你的聲音邀請下一個人。",
         visual: "home" as const,
       },
     ],
@@ -59,7 +73,9 @@ const locale: RenewalCopy = {
   why: {
     label: "為何是 Wordshiper",
     title: "連結從未如此緊密，\n心靈卻更加分散",
-    lead: "我們活在資訊的洪流與不息的忙碌之中。無數聲音每天搖動我們的心，人生的優先次序也輕易散落。",
+    lead:
+      "我們活在資訊的洪流與不息的忙碌之中。\n" +
+      "無數聲音每天搖動我們的心，人生的優先次序也輕易散落。",
     points: [
       {
         t: "噪音與匆忙",
@@ -75,14 +91,20 @@ const locale: RenewalCopy = {
       },
     ],
     answer:
-      "即使只是一\u00A0節經文，深深種在一顆心裡，也能成為勝過恐懼、穿越艱難、把散落的屬靈優先次序轉回神那裡的力量。",
+      "當一節經文深深種在一顆心裡，\n" +
+      "那話語便成為勝過恐懼、穿越艱難的力量，\n" +
+      "也把散落的屬靈優先次序重新轉回神那裡。\n\n" +
+      "請把這話語作為產業留下——\n" +
+      "留給你所愛的兒女，也留給你的父母。\n\n" +
+      "我們要日復一日地被更新，\n" +
+      "成為神所喜悅的敬拜者。",
     answerRef: "— Wordshiper 開始的原因",
   },
   identity: {
     label: "什麼是 Wordshiper",
     title: "以神話語為中心的\n生活平台",
     definition:
-      "一款幫助你默想並背誦一\u00A0節聖經、每天重複三次短禱、恢復散落人生的屬靈·身體·情感優先次序，並活出呼召的應用程式。",
+      "一款幫助你默想並背誦一節聖經、每天重複三次短禱、恢復散落人生的屬靈·身體·情感優先次序，並活出呼召的應用程式。",
     sub: "Word\u00A0+\u00A0Worshiper。藉著銘記並活出神的話語來敬拜神的人。",
     word: "Word",
     wordD: "神活潑的話語",
@@ -91,16 +113,16 @@ const locale: RenewalCopy = {
     result: "幫助人們成為銘記神話語的敬拜者——Wordshiper",
     layers: [
       {
-        t: "Scripture Memory App",
-        d: "幫助使用者每天領受、聆聽、開口並背誦一\u00A0節經文。",
+        t: "聖經背誦應用",
+        d: "幫助使用者每天領受、聆聽、開口並背誦一節經文。",
       },
       {
-        t: "Daily Spiritual OS",
+        t: "每日屬靈 OS",
         d: "藉著聖經、禱告與 Walk 規劃器，圍繞神的話語重整一天的優先次序。",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "通過一\u00A0節經文，以第\u00A0N\u00A0位 Wordshiper 加入譜系——再用 Verse\u00A0Card 與你的聲音邀請下一個人。",
+        t: "全球聖經背誦運動",
+        d: "通過一節經文，以第\u00A0N\u00A0位 Wordshiper 加入譜系——再用 Verse\u00A0Card 與你的聲音邀請下一個人。",
       },
     ],
     notOnly:
@@ -111,10 +133,10 @@ const locale: RenewalCopy = {
   mission: {
     label: "使命",
     title: "恢復屬靈優先次序。\n重獲與神同行的喜樂。",
-    body: "Wordshiper 幫助世界各地的人每天銘記並背誦神話語的一\u00A0節——好叫他們在資訊過載與忙碌中，擺正屬靈優先次序，並享受與神同行。",
+    body: "Wordshiper 幫助世界各地的人每天銘記並背誦神話語的一節——好叫他們在資訊過載與忙碌中，擺正屬靈優先次序，並享受與神同行。",
     habits: [
       {
-        t: "一天\u00A0一節",
+        t: "一天一節",
         d: "聽 · 說 · 背",
       },
       {
@@ -134,12 +156,12 @@ const locale: RenewalCopy = {
     title: "藉著神話語的\n全球敬拜運動",
     body: "Wordshiper 的異象，是興起藉著神話語敬拜神的 Worshiper。",
     detail:
-      "世界各地的人領受同一\u00A0節經文，用自己的語言與聲音告白，並在所處之地活出來——敬拜流入家庭、教會、城市與萬國的全球聖經背誦運動。",
+      "世界各地的人領受同一節經文，用自己的語言與聲音告白，並在所處之地活出來——敬拜流入家庭、教會、城市與萬國的全球聖經背誦運動。",
   },
   routine: {
     label: "核心日常",
     title: "一天三次，\n每次五分鐘",
-    sub: "每次會話由 Walk 規劃器鬧鐘自動觸發，使一天三次成為生命節奏。早晨領受，中午回顧，夜晚確認——直到一\u00A0節經文滲入生命。",
+    sub: "每次會話由 Walk 規劃器鬧鐘自動觸發，使一天三次成為生命節奏。早晨領受，中午回顧，夜晚確認——直到一節經文滲入生命。",
     alarmNote: "Walk 規劃器鬧鐘",
     principle:
       "Tiny Habits——每次五分鐘輕到足以每天重複，同時兼顧記憶留存與屬靈深度。",
@@ -195,16 +217,16 @@ const locale: RenewalCopy = {
     sub: "聖經背誦應用、每日屬靈 OS、全球神話語運動——合而為一地設計。",
     thesis: [
       {
-        t: "Scripture Memory App",
-        d: "幫助使用者每天領受、聆聽、開口並背誦一\u00A0節經文。",
+        t: "聖經背誦應用",
+        d: "幫助使用者每天領受、聆聽、開口並背誦一節經文。",
       },
       {
-        t: "Daily Spiritual Operating System",
+        t: "每日屬靈作業系統",
         d: "藉著聖經、禱告與 Walk 規劃器，圍繞神的話語重整一天的優先次序。",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "通過一\u00A0節經文，以第\u00A0N\u00A0位 Wordshiper 加入譜系——再用 Verse\u00A0Card 與你的聲音邀請下一個人。",
+        t: "全球聖經背誦運動",
+        d: "通過一節經文，以第\u00A0N\u00A0位 Wordshiper 加入譜系——再用 Verse\u00A0Card 與你的聲音邀請下一個人。",
       },
     ],
     tabs: [
@@ -240,7 +262,7 @@ const locale: RenewalCopy = {
       },
       {
         t: "Verse\u00A0Card — 流動的告白",
-        d: "通過一\u00A0節經文，卡片便誕生——經文、譜系編號、聲音 QR。",
+        d: "通過一節經文，卡片便誕生——經文、譜系編號、聲音 QR。",
       },
       {
         t: "24\u00A0種語言",
@@ -252,29 +274,29 @@ const locale: RenewalCopy = {
   movement: {
     label: "運動",
     subtitle: "我們不是在做一個應用。\n我們在點燃一場運動。",
-    title: "一\u00A0節一\u00A0節的\n屬靈譜系",
+    title: "一節一節的\n屬靈譜系",
     lineageLead: "你是",
     lineageNum: "14,207",
     lineageTail: "位銘記這節經文的 Wordshiper",
     lineageSub: "這個數字不是分數。它標明你在神話語譜系中的位置——證明你並不孤單。",
     engines: [
       {
-        t: "Synchronicity",
+        t: "同步性",
         e: "此刻，一起",
-        d: "「我並不孤單」——全世界在同一時刻領受同一\u00A0節經文。",
+        d: "「我並不孤單」——全世界在同一時刻領受同一節經文。",
       },
       {
-        t: "Lineage",
+        t: "譜系",
         e: "成為流淌的一部分",
         d: "「我屬於更宏大的河流」——加入跨越世代、語言與土地的譜系。",
       },
       {
-        t: "Public Artifact",
+        t: "公開成果",
         e: "流動的告白",
         d: "「我的告白流向世界」——Verse\u00A0Card 與你的聲音邀請下一個人。",
       },
     ],
-    promise: "沒有羞恥。沒有噪音。一\u00A0節經文。敬拜的一生。",
+    promise: "沒有羞恥。沒有噪音。一節經文。敬拜的一生。",
   },
   global: {
     label: "直到萬國",
@@ -283,15 +305,15 @@ const locale: RenewalCopy = {
     stats: [
       {
         n: "1.9B",
-        d: "全球基督徒——我們渴望服事的人群",
+        d: "全球基督徒\n我們渴望服事的人群",
       },
       {
         n: "24",
-        d: "種語言——雙語與三語背誦",
+        d: "種語言\n雙語與三語背誦",
       },
       {
         n: "3",
-        d: "同一核心上的獨立應用（Wordshiper · Verbum · Pasuk）",
+        d: "同一核心上的獨立應用\nWordshiper · Verbum · Pasuk",
       },
     ],
     whitelabel:
@@ -311,7 +333,7 @@ const locale: RenewalCopy = {
       },
       {
         t: "Phase\u00A03 — Launch",
-        d: "2026年\u00A012月 — 首批\u00A01,000\u00A0人種子社群",
+        d: "2026年12月 — 首批\u00A01,000\u00A0人種子社群",
       },
       {
         t: "Phase\u00A04 — Expansion",
@@ -321,7 +343,7 @@ const locale: RenewalCopy = {
   },
   cta: {
     title: "我們正在尋找首批\u00A01,000\u00A0人\n一同領受第一份嗎哪",
-    sub: "預登記即可獲得你的譜系\u00A0編號。上線之日，所有人在同一時刻領受第一份嗎哪。",
+    sub: "預登記即可獲得你的譜系編號。上線之日，所有人在同一時刻領受第一份嗎哪。",
     placeholder: "電子信箱",
     button: "預登記",
     success: "謝謝你！你已加入譜系。",
@@ -331,7 +353,7 @@ const locale: RenewalCopy = {
     declaration: "是的，我是 Wordshiper！",
   },
   donate: {
-    eyebrow: "好叫一天\u00A0一節抵達萬國",
+    eyebrow: "好叫一天一節抵達萬國",
     title: "與神話語運動同行",
     sub: "Wordshiper Ministry Inc. 是美國 501(c)(3) 非營利組織。你的奉獻推動全球聖經背誦與禱告節奏。",
     oneTime: "一次性",
@@ -353,7 +375,7 @@ const locale: RenewalCopy = {
     points: [
       {
         t: "經過驗證的運動設計",
-        d: "Synchronicity、lineage、public artifacts——以屬靈意義重塑三大引擎。",
+        d: "同步性·譜系·公開成果——以屬靈意義重塑三大引擎。",
       },
       {
         t: "永續模式",
@@ -391,7 +413,7 @@ const locale: RenewalCopy = {
   },
   aboutPage: {
     title: "關於 Wordshiper",
-    subtitle: "好叫一天\u00A0一節，成為敬拜的一生。",
+    subtitle: "好叫一天一節，成為敬拜的一生。",
     toc: [
       {
         id: "what",
@@ -417,17 +439,17 @@ const locale: RenewalCopy = {
     what: {
       label: "什麼是 Wordshiper？",
       title: "把話語寫在心上，\n並重整一天的應用",
-      lead: "Wordshiper 幫助世界各地的人每天銘記並背誦神話語的一\u00A0節——好叫他們在資訊過載與忙碌中，擺正屬靈優先次序，並享受與神同行。",
-      body: "我們不止於幫助使用者「背一\u00A0節經文」。Wordshiper 提供每日屬靈日常，引導你聆聽、開口、背誦、禱告，並把一\u00A0節經文實踐為人生優先。",
+      lead: "Wordshiper 幫助世界各地的人每天銘記並背誦神話語的一節——好叫他們在資訊過載與忙碌中，擺正屬靈優先次序，並享受與神同行。",
+      body: "我們不止於幫助使用者「背一節經文」。Wordshiper 提供每日屬靈日常，引導你聆聽、開口、背誦、禱告，並把一節經文實踐為人生優先。",
     },
     mission: {
       label: "使命",
       title: "好叫小小習慣\n流向萬國",
-      lead: "Wordshiper 幫助世界各地的人每天銘記並背誦神話語的一\u00A0節——好叫他們在資訊過載與忙碌中，擺正屬靈優先次序，並享受與神同行。",
+      lead: "Wordshiper 幫助世界各地的人每天銘記並背誦神話語的一節——好叫他們在資訊過載與忙碌中，擺正屬靈優先次序，並享受與神同行。",
       habitsTitle: "三項每日習慣",
       habits: [
         {
-          t: "一天\u00A0一節",
+          t: "一天一節",
           d: "聽它、說它、寫在心上。",
         },
         {
@@ -448,7 +470,7 @@ const locale: RenewalCopy = {
       lead: "Wordshiper 的異象，是興起藉著神話語敬拜神的 Worshiper。",
       body: "我們夢想人們藉著聽、說、記、活出話語的小小習慣——在人生各處成為討神喜悅的真正敬拜者。",
       close:
-        "世界各地的人領受同一\u00A0節經文，用自己的語言與聲音告白，並在所處之地活出來——全球聖經背誦運動。這就是我們的異象。",
+        "世界各地的人領受同一節經文，用自己的語言與聲音告白，並在所處之地活出來——全球聖經背誦運動。這就是我們的異象。",
     },
     identity: {
       label: "身分",
@@ -468,16 +490,16 @@ const locale: RenewalCopy = {
       lead: "Wordshiper 是聖經背誦應用、重整一天的每日屬靈 OS，以及全球聖經背誦運動——合而為一地設計。",
       layers: [
         {
-          t: "Scripture Memory App",
-          d: "幫助你每天領受、聆聽、開口並背誦一\u00A0節經文。",
+          t: "聖經背誦應用",
+          d: "幫助你每天領受、聆聽、開口並背誦一節經文。",
         },
         {
-          t: "Daily Spiritual OS",
+          t: "每日屬靈 OS",
           d: "藉著聖經、禱告與 Walk 規劃器，圍繞神的話語重整一天的優先次序。",
         },
         {
-          t: "Global Scripture Memory Movement",
-          d: "通過一\u00A0節經文，以第\u00A0N\u00A0位 Wordshiper 加入譜系——再用 Verse\u00A0Card 與你的聲音邀請下一個人。",
+          t: "全球聖經背誦運動",
+          d: "通過一節經文，以第\u00A0N\u00A0位 Wordshiper 加入譜系——再用 Verse\u00A0Card 與你的聲音邀請下一個人。",
         },
       ],
     },
@@ -485,7 +507,7 @@ const locale: RenewalCopy = {
       "Wordshiper Ministry 是美國 501(c)(3) 非營利組織。個人使用永久免費。奉獻與夥伴關係支撐這場運動。",
   },
   footer: {
-    tagline: "一天\u00A0一節。敬拜的一生。",
+    tagline: "一天一節。敬拜的一生。",
     legal:
       "© 2024 Wordshiper Ministry Inc. · Based in New York, U.S.A. · 501(c)(3) Nonprofit · EIN: 33-1561112",
     address: "5 Union Square West FRNT 1 #1299, New York, NY 10003, U.S.A.",

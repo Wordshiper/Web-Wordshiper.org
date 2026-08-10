@@ -10,14 +10,28 @@ const locale: RenewalCopy = {
     all: "Wszystkie",
     heroSlidesAria: "Slajdy wprowadzające Wordshiper",
     slideSelectorAria: "Wybór slajdu",
-    lineageNumber: "Twój numer lineage",
+    lineageNumber: "Twój numer w rodowodzie",
     lineageEmailNote: "Wysłaliśmy e-mail potwierdzający — sprawdź skrzynkę odbiorczą.",
+    donatePreparingEyebrow: "Wkrótce",
+    donatePreparingTitle: "Przygotowujemy wsparcie",
+    donatePreparingBody:
+      "Link do wsparcia jest obecnie przygotowywany.\n" +
+      "Otworzymy go ponownie, gdy będziemy mieli\n" +
+      "bezpieczniejsze i płynniejsze doświadczenie dawania.",
+    donatePreparingCta: "Rozumiem",
+    preregisterOpensEyebrow: "Start 1\u00A0grudnia\u00A02026",
+    preregisterOpensTitle: "Wstępna rejestracja startuje 1\u00A0grudnia",
+    preregisterOpensBody:
+      "Wstępna rejestracja do rodowodu startuje 1\u00A0grudnia\u00A02026.\n" +
+      "Tego dnia nowo zbudowany przepływ rejestracji\n" +
+      "powita pierwszych\u00A01\u00A0000 Wordshipers.",
+    preregisterOpensCta: "Rozumiem",
   },
   nav: {
     product: "Przepływ",
     routine: "Rutyna",
     movement: "Ruch",
-    roadmap: "Roadmap",
+    roadmap: "Mapa drogowa",
     about: "O nas",
     investors: "Inwestorzy",
     donate: "Wesprzyj",
@@ -31,12 +45,12 @@ const locale: RenewalCopy = {
     declaration: "Jestem Wordshiper.",
     cta1: "Dołącz do pierwszych\u00A01 000",
     cta2: "Dlaczego Wordshiper",
-    lineageNote: "Zarejestruj się wstępnie i otrzymaj swój numer lineage",
+    lineageNote: "Zarejestruj się wstępnie i otrzymaj swój numer w rodowodzie",
     slides: [
       {
         label: "Czym jest Wordshiper?",
         title1: "Zapamiętaj jeden werset.",
-        title2: "Uporządkuj cały swój dzień.",
+        title2: "Uporządkuj cały dzień.",
         body: "Aplikacja, która pomaga medytować i zapamiętywać jeden werset Pisma, powtarzać trzy krótkie modlitwy każdego dnia, przywracać duchowe · fizyczne · emocjonalne priorytety i żyć życiem powołania.",
         visual: "home" as const,
       },
@@ -49,9 +63,9 @@ const locale: RenewalCopy = {
       },
       {
         label: "Potrójna tożsamość",
-        title1: "Aplikacja pamięci · Spiritual OS ·",
+        title1: "Aplikacja pamięci · Duchowy OS ·",
         title2: "Globalny ruch Słowa",
-        body: "Przyjmuj, słuchaj, wypowiadaj i zapamiętuj jeden werset dziennie. Uporządkuj swój dzień w piętnaście minut. Zaliczenie wersetu dołącza Cię do lineage jako N-tego Wordshiper — potem zaproś kolejną osobę przez Verse\u00A0Card i swój głos.",
+        body: "Przyjmuj, słuchaj, wypowiadaj i zapamiętuj jeden werset dziennie. Uporządkuj swój dzień w piętnaście minut. Zaliczenie wersetu dołącza Cię do rodowodu jako N-tego Wordshiper — potem zaproś kolejną osobę przez Verse\u00A0Card i swój głos.",
         visual: "home" as const,
       },
     ],
@@ -59,7 +73,9 @@ const locale: RenewalCopy = {
   why: {
     label: "Dlaczego Wordshiper",
     title: "Bardziej połączeni niż kiedykolwiek,\na jednak głębiej rozproszeni",
-    lead: "Żyjemy w powodzi informacji i nieustannym zabieganiu. Niezliczone głosy codziennie wstrząsają naszymi sercami, a priorytety życia łatwo się rozpraszają.",
+    lead:
+      "Żyjemy w powodzi informacji i nieustannym zabieganiu.\n" +
+      "Niezliczone głosy codziennie wstrząsają naszymi sercami, a priorytety życia łatwo się rozpraszają.",
     points: [
       {
         t: "Hałas i pośpiech",
@@ -75,7 +91,13 @@ const locale: RenewalCopy = {
       },
     ],
     answer:
-      "Gdy nawet jeden werset zostanie głęboko zasadzony w jednym sercu, staje się mocą, by pokonać lęk, przejść przez trudności i zwrócić rozproszone duchowe priorytety z powrotem ku Bogu.",
+      "Gdy jeden werset Pisma zostanie głęboko zasadzony w sercu,\n" +
+      "to Słowo staje się mocą, by pokonać lęk, by przejść przez trudności\n" +
+      "i by zwrócić rozproszone duchowe priorytety z powrotem ku Bogu.\n\n" +
+      "Zostaw je jako dziedzictwo Słowa —\n" +
+      "swoim ukochanym dzieciom i swoim rodzicom.\n\n" +
+      "Dzień po dniu będziemy odnawiani\n" +
+      "jako czciciele, w których Bóg ma upodobanie.",
     answerRef: "— Dlaczego powstał Wordshiper",
   },
   identity: {
@@ -91,16 +113,16 @@ const locale: RenewalCopy = {
     result: "Pomagamy ludziom żyć jako czciciele, którzy wpisują Słowo — Wordshipers",
     layers: [
       {
-        t: "Scripture Memory App",
+        t: "Aplikacja do zapamiętywania Pisma",
         d: "Pomaga użytkownikom przyjmować, słuchać, wypowiadać i zapamiętywać jeden werset każdego dnia.",
       },
       {
-        t: "Daily Spiritual OS",
-        d: "Uporządkowuje priorytety dnia wokół Słowa Bożego przez Pismo, modlitwę i Walk planner.",
+        t: "Codzienny duchowy OS",
+        d: "Uporządkowuje priorytety dnia wokół Słowa Bożego przez Pismo, modlitwę i planer Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "Zaliczenie wersetu dołącza Cię do lineage jako N-tego Wordshiper — potem zaproś kolejną osobę przez Verse\u00A0Card i swój głos.",
+        t: "Globalny ruch zapamiętywania Pisma",
+        d: "Zaliczenie wersetu dołącza Cię do rodowodu jako N-tego Wordshiper — potem zaproś kolejną osobę przez Verse\u00A0Card i swój głos.",
       },
     ],
     notOnly:
@@ -130,14 +152,14 @@ const locale: RenewalCopy = {
   routine: {
     label: "Główna rutyna",
     title: "Trzy razy dziennie,\npo pięć minut",
-    sub: "Każda sesja jest automatycznie uruchamiana przez alarm Walk planner, więc trzy razy dziennie stają się rytmem życia. Przyjmij rano, wróć w południe, potwierdź wieczorem — aż jeden werset wsiąknie w Twoje życie.",
-    alarmNote: "Alarm Walk planner",
+    sub: "Każda sesja jest automatycznie uruchamiana przez alarm planera Walk, więc trzy razy dziennie stają się rytmem życia. Przyjmij rano, wróć w południe, potwierdź wieczorem — aż jeden werset wsiąknie w Twoje życie.",
+    alarmNote: "Alarm planera Walk",
     principle:
       "Tiny Habits — pięć minut każda sprawia, że jest lekko wystarczająco, by powtarzać codziennie, zapewniając zarówno zapamiętanie, jak i duchową głębię.",
     sessions: [
       {
         time: "Poranek\u00A0·\u00A05\u00A0min",
-        when: "Po przebudzeniu · Alarm Walk planner",
+        when: "Po przebudzeniu · Alarm planera Walk",
         items: [
           "Modlitwa 1\u00A0min — modlitwa poranna",
           "Zapamiętywanie 2\u00A0min — dzisiejszy werset",
@@ -146,16 +168,16 @@ const locale: RenewalCopy = {
       },
       {
         time: "Południe\u00A0·\u00A05\u00A0min",
-        when: "Przed obiadem · Alarm Walk planner",
+        when: "Przed obiadem · Alarm planera Walk",
         items: [
           "Modlitwa 1\u00A0min — wdzięczność",
           "Powtórka 2\u00A0min — powtórz poranny werset",
-          "Walk check 2\u00A0min — dzisiejsze priorytety",
+          "Sprawdzenie Walk 2\u00A0min — dzisiejsze priorytety",
         ],
       },
       {
         time: "Wieczór\u00A0·\u00A05\u00A0min",
-        when: "Przed snem · Alarm Walk planner",
+        when: "Przed snem · Alarm planera Walk",
         items: [
           "Modlitwa 1\u00A0min — refleksja dnia",
           "Potwierdzenie 2\u00A0min — Hide\u00A0&\u00A0Test",
@@ -174,19 +196,19 @@ const locale: RenewalCopy = {
   product: {
     label: "Tożsamość produktu",
     title: "Jedna platforma,\ntrzy warstwy",
-    sub: "Aplikacja zapamiętywania Pisma, codzienny spiritual OS i globalny ruch Słowa — zaprojektowane jako jedno.",
+    sub: "Aplikacja zapamiętywania Pisma, codzienny duchowy OS i globalny ruch Słowa — zaprojektowane jako jedno.",
     thesis: [
       {
-        t: "Scripture Memory App",
+        t: "Aplikacja do zapamiętywania Pisma",
         d: "Pomaga użytkownikom przyjmować, słuchać, wypowiadać i zapamiętywać jeden werset każdego dnia.",
       },
       {
-        t: "Daily Spiritual Operating System",
-        d: "Uporządkowuje priorytety dnia wokół Słowa Bożego przez Pismo, modlitwę i Walk planner.",
+        t: "Codzienny duchowy system operacyjny",
+        d: "Uporządkowuje priorytety dnia wokół Słowa Bożego przez Pismo, modlitwę i planer Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "Zaliczenie wersetu dołącza Cię do lineage jako N-tego Wordshiper — potem zaproś kolejną osobę przez Verse\u00A0Card i swój głos.",
+        t: "Globalny ruch zapamiętywania Pisma",
+        d: "Zaliczenie wersetu dołącza Cię do rodowodu jako N-tego Wordshiper — potem zaproś kolejną osobę przez Verse\u00A0Card i swój głos.",
       },
     ],
     tabs: [
@@ -197,9 +219,9 @@ const locale: RenewalCopy = {
       { t: "Walk", d: "Chodź według Słowa — od powołania do codziennej praktyki" },
     ],
     features: [
-      { t: "Worvi — duchowy towarzysz AI", d: "Nigdy nie potępia przerwanego streaku; z łaską zaprasza Cię z powrotem do Słowa." },
-      { t: "Jog wheel — Pismo w 1,5s", d: "Sięgnij po Biblię w 1,5\u00A0sekundy, nawet w środku uwielbienia. 31 112 wersetów offline." },
-      { t: "Verse\u00A0Card — płynące wyznanie", d: "Zaliczenie wersetu rodzi kartę — werset, numer lineage, voice QR." },
+      { t: "Worvi — duchowy towarzysz AI", d: "Nigdy nie potępia, gdy rutyna zostanie przerwana; z łaską zaprasza Cię z powrotem do Słowa." },
+      { t: "Pokrętło jog — Pismo w 1,5s", d: "Sięgnij po Biblię w 1,5\u00A0sekundy, nawet w środku uwielbienia. 31 112 wersetów offline." },
+      { t: "Verse\u00A0Card — płynące wyznanie", d: "Zaliczenie wersetu rodzi kartę — werset, numer w rodowodzie, QR głosu." },
       { t: "24 języki", d: "Zapamiętuj w dwóch lub trzech językach obok języka ojczystego." },
     ],
     demoNote: "Rzeczywiste ekrany aplikacji",
@@ -207,15 +229,15 @@ const locale: RenewalCopy = {
   movement: {
     label: "Ruch",
     subtitle: "Nie budujemy aplikacji.\nRozpalamy ruch.",
-    title: "Duchowa lineage,\nwerset po wersecie",
+    title: "Duchowy rodowód,\nwerset po wersecie",
     lineageLead: "Jesteś",
     lineageNum: "14,207",
     lineageTail: ". Wordshiper, który wpisuje ten werset",
-    lineageSub: "Ten numer nie jest wynikiem. Oznacza Twoje miejsce w lineage Słowa — dowód, że nie jesteś sam.",
+    lineageSub: "Ten numer nie jest wynikiem. Oznacza Twoje miejsce w rodowodzie Słowa — dowód, że nie jesteś sam.",
     engines: [
-      { t: "Synchronicity", e: "Razem, teraz", d: "\u201cNie jestem sam\u201d — cały świat przyjmuje ten sam werset w tej samej chwili." },
-      { t: "Lineage", e: "Część przepływu", d: "\u201cNależę do większego strumienia\u201d — dołącz do lineage przez pokolenia, języki i kraje." },
-      { t: "Public Artifact", e: "Płynące wyznanie", d: "\u201cMoje wyznanie płynie w świat\u201d — Verse\u00A0Cards i Twój głos zapraszają kolejną osobę." },
+      { t: "Synchroniczność", e: "Razem, teraz", d: "\u201cNie jestem sam\u201d — cały świat przyjmuje ten sam werset w tej samej chwili." },
+      { t: "Rodowód", e: "Część przepływu", d: "\u201cNależę do większego strumienia\u201d — dołącz do rodowodu przez pokolenia, języki i kraje." },
+      { t: "Publiczny artefakt", e: "Płynące wyznanie", d: "\u201cMoje wyznanie płynie w świat\u201d — Verse\u00A0Cards i Twój głos zapraszają kolejną osobę." },
     ],
     promise: "Bez wstydu. Bez hałasu. Jeden\u00A0werset. Życie uwielbienia.",
   },
@@ -224,31 +246,31 @@ const locale: RenewalCopy = {
     title: "Uwielbienie, które płynie do domów,\nkościołów, miast i narodów",
     body: "Marzymy o ludziach, którzy pamiętają Słowo i stają się prawdziwymi Wordshipers — czyniąc sprawiedliwość, miłując miłosierdzie i pokornie chodząc z Bogiem tam, gdzie stoją.",
     stats: [
-      { n: "1.9B", d: "Chrześcijan na świecie — ludzie, którym pragniemy służyć" },
-      { n: "24", d: "Języki — dual i triple zapamiętywanie" },
-      { n: "3", d: "Niezależne aplikacje na jednym rdzeniu (Wordshiper · Verbum · Pasuk)" },
+      { n: "1.9B", d: "Chrześcijan na świecie\nludzie, którym pragniemy służyć" },
+      { n: "24", d: "Języki\ndual i triple zapamiętywanie" },
+      { n: "3", d: "Niezależne aplikacje na jednym rdzeniu\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:
-      "Na jednym core design system: Wordshiper (Protestant), Verbum (Catholic), Pasuk (Jewish) — każdy honoruje swoją tradycję w jednym ruchu Słowa.",
+      "Na jednym rdzeniowym systemie projektowym: Wordshiper (protestancki), Verbum (katolicki), Pasuk (żydowski) — każdy honoruje swoją tradycję w jednym ruchu Słowa.",
   },
   roadmap: {
-    label: "Roadmap",
+    label: "Mapa drogowa",
     title: "Ruch już się zaczął",
     phases: [
-      { t: "Phase\u00A01 — MVP", d: "Główna pętla: przyjąć · zapamiętać · dołączyć do lineage" },
-      { t: "Phase\u00A02 — Routine", d: "Trzy codzienne sesje · Walk planner · Worvi" },
-      { t: "Phase\u00A03 — Launch", d: "Grudzień\u00A02026 — społeczność nasienna pierwszych\u00A01 000" },
-      { t: "Phase\u00A04 — Expansion", d: "Voice\u00A0Feed · kanały · trzy white-label aplikacje" },
+      { t: "Phase\u00A01 — MVP", d: "Główna pętla: przyjąć · zapamiętać · dołączyć do rodowodu" },
+      { t: "Phase\u00A02 — Rutyna", d: "Trzy codzienne sesje · planer Walk · Worvi" },
+      { t: "Phase\u00A03 — Premiera", d: "Grudzień\u00A02026 — społeczność nasienna pierwszych\u00A01 000" },
+      { t: "Phase\u00A04 — Ekspansja", d: "Voice\u00A0Feed · kanały · trzy aplikacje white-label" },
     ],
   },
   cta: {
     title: "Szukamy pierwszych\u00A01 000,\nby razem przyjąć pierwsze manna",
-    sub: "Zarejestruj się wstępnie i otrzymaj swój numer lineage. W dniu startu wszyscy przyjmują pierwsze manna w tej samej chwili.",
+    sub: "Zarejestruj się wstępnie i otrzymaj swój numer w rodowodzie. W dniu startu wszyscy przyjmują pierwsze manna w tej samej chwili.",
     placeholder: "Adres e-mail",
     button: "Wstępna rejestracja",
-    success: "Dziękujemy! Dołączyłeś do lineage.",
+    success: "Dziękujemy! Dołączyłeś do rodowodu.",
     successWithNumber: (n: number) =>
-      `Dziękujemy! Jesteś Wordshiper #${n}. Sprawdź e-mail, aby potwierdzić swój lineage.`,
+      `Dziękujemy! Jesteś Wordshiper #${n}. Sprawdź e-mail, aby potwierdzić swój rodowód.`,
     error: "Rejestracja nie powiodła się. Spróbuj ponownie.",
     declaration: "Tak, jestem Wordshiper!",
   },
@@ -262,9 +284,9 @@ const locale: RenewalCopy = {
     customPlaceholder: "Wpisz kwotę",
     give: "Przekaż",
     processing: "Łączenie…",
-    taxNote: "Odliczalne od podatku w U.S. · EIN 33-1561112 · Potwierdzenia wystawia Stripe.",
+    taxNote: "Odliczalne od podatku w USA · EIN 33-1561112 · Potwierdzenia wystawia Stripe.",
     successTitle: "Dziękujemy",
-    successSub: "Twój dar pomaga lineage Słowa dalej płynąć.",
+    successSub: "Twój dar pomaga rodowodowi Słowa dalej płynąć.",
     error: "Nie udało się rozpocząć płatności. Napisz na info@wordshiper.org.",
     backHome: "Wróć do strony głównej",
   },
@@ -273,7 +295,7 @@ const locale: RenewalCopy = {
     title: "Szukamy partnerów, by napisać\nkolejny rozdział ruchu Słowa",
     sub: "Wordshiper działa jako Wordshiper Ministry Inc. (501(c)(3)) i Wordshiper PBC, Inc. — chroniąc zrównoważoność i misję razem.",
     points: [
-      { t: "Sprawdzony projekt ruchu", d: "Synchronicity, lineage, public artifacts — trzy silniki na nowo zdefiniowane z duchowym znaczeniem." },
+      { t: "Sprawdzony projekt ruchu", d: "Synchroniczność, rodowód, publiczne artefakty — trzy silniki na nowo zdefiniowane z duchowym znaczeniem." },
       { t: "Zrównoważony model", d: "Na zawsze darmowe dla osób. Pro\u00A0Organization i dobrowolne dary utrzymują działalność. Bez reklam." },
       { t: "Technologia zbudowana do działania", d: "Globalny cache TTS strukturalnie obniża koszty głosu w skali." },
       { t: "Ekspansja white-label", d: "Jeden silnik rdzeniowy wchodzi na rynki protestanckie, katolickie i żydowskie." },
@@ -352,19 +374,19 @@ const locale: RenewalCopy = {
       label: "Teza",
       title: "Jedna platforma,\ntrzy warstwy",
       lead:
-        "Wordshiper to aplikacja zapamiętywania Pisma, codzienny spiritual OS porządkujący dzień oraz globalny ruch zapamiętywania Pisma — zaprojektowane jako jedno.",
+        "Wordshiper to aplikacja zapamiętywania Pisma, codzienny duchowy OS porządkujący dzień oraz globalny ruch zapamiętywania Pisma — zaprojektowane jako jedno.",
       layers: [
         {
-          t: "Scripture Memory App",
+          t: "Aplikacja do zapamiętywania Pisma",
           d: "Pomaga Ci przyjmować, słuchać, wypowiadać i zapamiętywać jeden werset każdego dnia.",
         },
         {
-          t: "Daily Spiritual OS",
-          d: "Uporządkowuje priorytety dnia wokół Słowa Bożego przez Pismo, modlitwę i Walk planner.",
+          t: "Codzienny duchowy OS",
+          d: "Uporządkowuje priorytety dnia wokół Słowa Bożego przez Pismo, modlitwę i planer Walk.",
         },
         {
-          t: "Global Scripture Memory Movement",
-          d: "Zaliczenie wersetu dołącza Cię do lineage jako N-tego Wordshiper — potem zaproś kolejną osobę przez Verse\u00A0Card i swój głos.",
+          t: "Globalny ruch zapamiętywania Pisma",
+          d: "Zaliczenie wersetu dołącza Cię do rodowodu jako N-tego Wordshiper — potem zaproś kolejną osobę przez Verse\u00A0Card i swój głos.",
         },
       ],
     },

@@ -19,6 +19,20 @@ const copy = {
       slideSelectorAria: "슬라이드 선택",
       lineageNumber: "당신의 계보 번호",
       lineageEmailNote: "확인 이메일을 보내드렸습니다. 받은편지함을 확인해 주세요.",
+      donatePreparingEyebrow: "Coming soon",
+      donatePreparingTitle: "후원 기능 준비 중",
+      donatePreparingBody:
+        "후원 링크는 현재 준비 중입니다.\n" +
+        "더 안전하고 매끄러운 후원 경험을 갖추는 대로\n" +
+        "다시 열어드리겠습니다.",
+      donatePreparingCta: "확인",
+      preregisterOpensEyebrow: "Opens December\u00A01, 2026",
+      preregisterOpensTitle: "사전신청은 12월\u00A01일에 열립니다",
+      preregisterOpensBody:
+        "계보 사전신청은 2026년\u00A012월\u00A01일에 시작됩니다.\n" +
+        "그날, 최신 기술이 적용된 신청 창구로\n" +
+        "첫\u00A01,000명의 Wordshiper를 맞이합니다.",
+      preregisterOpensCta: "알겠습니다",
     },
     nav: {
       product: "흐름",
@@ -43,7 +57,7 @@ const copy = {
         {
           label: "Wordshiper란",
           title1: "한\u00A0구절을 암송하고,",
-          title2: "하루를 말씀으로 바로 세우는 앱",
+          title2: "하루를 말씀으로 세웁니다",
           body: "한\u00A0구절의 성경 말씀을 묵상하며 암송하고, 하루 세\u00A0번의 짧은 기도를 매일 반복하며, 흐트러진 삶의 영적·신체적·정서적 우선순위를 바로 세우고 소명의 삶을 살도록 돕는 앱입니다.",
           visual: "home" as const,
         },
@@ -66,7 +80,9 @@ const copy = {
     why: {
       label: "Why Wordshiper",
       title: "더 많이 연결되어 있지만,\n더 깊이 흩어진 시대",
-      lead: "우리는 넘치는 정보의 홍수와 끊임없는 분주함 속에서 살아갑니다. 매일 수많은 소리와 메시지가 마음을 흔들고, 삶의 우선순위는 쉽게 흐트러집니다.",
+      lead:
+        "우리는 넘치는 정보의 홍수와 끊임없는 분주함 속에서 살아갑니다.\n" +
+        "매일 수많은 소리와 메시지가 마음을 흔들고, 삶의 우선순위는 쉽게 흐트러집니다.",
       points: [
         {
           t: "정보와 분주함",
@@ -82,7 +98,13 @@ const copy = {
         },
       ],
       answer:
-        "단\u00A0한\u00A0구절의 말씀도 한 사람의 마음에 깊이 심기면, 그 말씀은 두려움을 이기게 하고, 고난을 지나가게 하며, 흐트러진 영적 우선순위를 다시 하나님께로 돌이키는 능력이 됩니다.",
+        "한\u00A0구절의 성경 말씀이 한 사람의 마음에 깊이 심기면,\n" +
+        "그 말씀은 두려움을 이기게 하고, 고난을 지나가게 하며,\n" +
+        "흐트러진 영적 우선순위를 다시 하나님께로 돌이키는 능력이 됩니다.\n\n" +
+        "사랑하는 자녀들에게, 그리고 부모님께\n" +
+        "말씀의 유산으로 남겨주세요.\n\n" +
+        "우리는 하나님이 기뻐하시는 경배자로\n" +
+        "날마다 거듭날 것입니다.",
       answerRef: "— Wordshiper가 시작된 이유",
     },
     identity: {
@@ -98,15 +120,15 @@ const copy = {
       result: "말씀을 새기는 예배자(Wordshiper)로 살아가도록 돕습니다",
       layers: [
         {
-          t: "Scripture Memory App",
+          t: "말씀 암송 앱",
           d: "매일 한\u00A0구절을 받고, 듣고, 말하고, 암송하도록 돕습니다.",
         },
         {
-          t: "Daily Spiritual OS",
+          t: "하루의 영적 OS",
           d: "말씀·기도·Walk 플래너로 하루의 우선순위를 하나님 말씀 중심으로 재정렬합니다.",
         },
         {
-          t: "Global Scripture Memory Movement",
+          t: "글로벌 말씀 암송 무브먼트",
           d: "암송을 통과하면 N번째 Wordshiper로 계보에 합류하고, Verse\u00A0Card와 목소리로 다음 사람을 초대합니다.",
         },
       ],
@@ -172,15 +194,15 @@ const copy = {
       sub: "암송 앱이면서, 하루를 재정렬하는 영적 OS이며, 동시에 글로벌 말씀 암송 무브먼트입니다.",
       thesis: [
         {
-          t: "Scripture Memory App",
+          t: "말씀 암송 앱",
           d: "사용자가 매일 한\u00A0구절을 받고, 듣고, 말하고, 암송하도록 돕습니다.",
         },
         {
-          t: "Daily Spiritual Operating System",
+          t: "하루의 영적 운영체제",
           d: "말씀·기도·Walk 플래너로 하루의 우선순위를 하나님 말씀 중심으로 재정렬합니다.",
         },
         {
-          t: "Global Scripture Memory Movement",
+          t: "글로벌 말씀 암송 무브먼트",
           d: "암송을 통과하면 N번째 Wordshiper로 계보에 합류하고, Verse\u00A0Card와 목소리로 다음 사람을 초대합니다.",
         },
       ],
@@ -219,9 +241,9 @@ const copy = {
       title: "예배의 삶이\n가정·교회·도시·열방으로",
       body: "말씀을 기억하는 사람들이 삶의 자리에서 공의를 행하고, 인자를 사랑하며, 겸손히 하나님과 동행하는 진실한 Wordshiper로 세워지기를 꿈꿉니다.",
       stats: [
-        { n: "19억", d: "전\u00A0세계 기독교 인구 — 우리가 섬기고자 하는 사람들" },
-        { n: "24", d: "지원 언어 — 듀얼·트리플 언어 암송" },
-        { n: "3", d: "하나의 코어로 세워지는 독립\u00A0앱 (Wordshiper · Verbum · Pasuk)" },
+        { n: "19억", d: "전\u00A0세계 기독교 인구\n우리가 섬기고자 하는 사람들" },
+        { n: "24", d: "지원 언어\n듀얼·트리플 언어 암송" },
+        { n: "3", d: "하나의 코어로 세워지는 독립\u00A0앱\nWordshiper · Verbum · Pasuk" },
       ],
       whitelabel:
         "하나의 코어 디자인 시스템 위에 개신교(Wordshiper), 천주교(Verbum), 유대교(Pasuk) — 각 전통의 정통성을 지키며 같은 말씀 운동을 이룹니다.",
@@ -350,15 +372,15 @@ const copy = {
           "Wordshiper는 암송 앱이면서, 하루를 재정렬하는 영적 OS이며, 동시에 글로벌 말씀 암송 무브먼트입니다.",
         layers: [
           {
-            t: "Scripture Memory App",
+            t: "말씀 암송 앱",
             d: "매일 한\u00A0구절을 받고, 듣고, 말하고, 암송하도록 돕습니다.",
           },
           {
-            t: "Daily Spiritual OS",
+            t: "하루의 영적 OS",
             d: "말씀·기도·Walk 플래너로 하루의 우선순위를 하나님 말씀 중심으로 다시 세웁니다.",
           },
           {
-            t: "Global Scripture Memory Movement",
+            t: "글로벌 말씀 암송 무브먼트",
             d: "암송을 통과하면 N번째 Wordshiper로 계보에 합류하고, Verse\u00A0Card와 목소리로 다음 사람을 초대합니다.",
           },
         ],
@@ -384,6 +406,20 @@ const copy = {
       slideSelectorAria: "Slide selector",
       lineageNumber: "Your lineage number",
       lineageEmailNote: "We sent a confirmation email — please check your inbox.",
+      donatePreparingEyebrow: "Coming soon",
+      donatePreparingTitle: "Giving is being prepared",
+      donatePreparingBody:
+        "The donation link is not open yet.\n" +
+        "We are finishing a safer, smoother giving experience\n" +
+        "and will open it as soon as it is ready.",
+      donatePreparingCta: "Got it",
+      preregisterOpensEyebrow: "Opens December\u00A01, 2026",
+      preregisterOpensTitle: "Pre-registration opens December\u00A01",
+      preregisterOpensBody:
+        "Lineage pre-registration opens on December\u00A01, 2026.\n" +
+        "That day, a newly built signup flow will welcome\n" +
+        "the first\u00A01,000 Wordshipers.",
+      preregisterOpensCta: "Got it",
     },
     nav: {
       product: "Flow",
@@ -447,7 +483,13 @@ const copy = {
         },
       ],
       answer:
-        "When even a single verse is planted deep in one heart, it becomes the power to overcome fear, pass through hardship, and turn scattered spiritual priorities back to God.",
+        "When one verse of Scripture is planted deep in a heart,\n" +
+        "that Word becomes the power to overcome fear, to walk through hardship,\n" +
+        "and to turn scattered spiritual priorities back to God.\n\n" +
+        "Leave it as an inheritance of the Word —\n" +
+        "to your beloved children, and to your parents.\n\n" +
+        "Day by day we will be made new\n" +
+        "as worshipers in whom God delights.",
       answerRef: "— Why Wordshiper began",
     },
     identity: {
@@ -584,9 +626,9 @@ const copy = {
       title: "Worship that flows into homes,\nchurches, cities, and the nations",
       body: "We dream of people who remember the Word becoming true Wordshipers — doing justice, loving kindness, and walking humbly with God where they stand.",
       stats: [
-        { n: "1.9B", d: "Christians worldwide — the people we long to serve" },
-        { n: "24", d: "Languages — dual & triple memorization" },
-        { n: "3", d: "Independent apps on one core (Wordshiper · Verbum · Pasuk)" },
+        { n: "1.9B", d: "Christians worldwide\nthe people we long to serve" },
+        { n: "24", d: "Languages\ndual & triple memorization" },
+        { n: "3", d: "Independent apps on one core\nWordshiper · Verbum · Pasuk" },
       ],
       whitelabel:
         "On one core design system: Wordshiper (Protestant), Verbum (Catholic), Pasuk (Jewish) — each honoring its tradition in one movement of the Word.",

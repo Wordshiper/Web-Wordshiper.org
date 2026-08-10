@@ -10,11 +10,25 @@ const locale: RenewalCopy = {
     all: "Tutte",
     heroSlidesAria: "Slide introduttive di Wordshiper",
     slideSelectorAria: "Selettore slide",
-    lineageNumber: "Il tuo numero di lineage",
+    lineageNumber: "Il tuo numero di lignaggio",
     lineageEmailNote: "Ti abbiamo inviato un’email di conferma — controlla la posta in arrivo.",
+    donatePreparingEyebrow: "Prossimamente",
+    donatePreparingTitle: "Le donazioni sono in preparazione",
+    donatePreparingBody:
+      "Il link per le donazioni è in preparazione.\n" +
+      "Lo riapriremo non appena avremo\n" +
+      "un’esperienza di donazione più sicura e fluida.",
+    donatePreparingCta: "Ho capito",
+    preregisterOpensEyebrow: "Apre il 1\u00A0dicembre\u00A02026",
+    preregisterOpensTitle: "La pre-registrazione apre il 1\u00A0dicembre",
+    preregisterOpensBody:
+      "La pre-registrazione al lignaggio apre il 1\u00A0dicembre\u00A02026.\n" +
+      "Quel giorno, un flusso di iscrizione di ultima generazione\n" +
+      "accoglierà i primi\u00A01.000 Wordshipers.",
+    preregisterOpensCta: "Ho capito",
   },
   nav: {
-    product: "Flow",
+    product: "Flusso",
     routine: "Routine",
     movement: "Movimento",
     roadmap: "Roadmap",
@@ -31,12 +45,12 @@ const locale: RenewalCopy = {
     declaration: "Io sono un Wordshiper.",
     cta1: "Unisciti ai primi\u00A01.000",
     cta2: "Perché Wordshiper",
-    lineageNote: "Pre-registrati e ricevi il tuo numero di lineage",
+    lineageNote: "Pre-registrati e ricevi il tuo numero di lignaggio",
     slides: [
       {
         label: "Che cos’è Wordshiper?",
         title1: "Memorizza un versetto.",
-        title2: "Riallinea tutta la giornata.",
+        title2: "Riallinea la giornata.",
         body: "Un’app che ti aiuta a meditare e memorizzare un versetto della Scrittura, ripetere tre brevi preghiere ogni giorno, ripristinare le priorità spirituali · fisiche · emotive e vivere una vita di chiamata.",
         visual: "home" as const,
       },
@@ -49,9 +63,9 @@ const locale: RenewalCopy = {
       },
       {
         label: "Triplice identità",
-        title1: "Memory app · Spiritual OS ·",
+        title1: "App di memoria · OS spirituale ·",
         title2: "Movimento globale della Parola",
-        body: "Ricevi, ascolta, parla e memorizza un versetto al giorno. Riallinea la giornata in quindici minuti. Supera un versetto e unisciti al lineage come N-esimo Wordshiper — poi invita la persona successiva con una Verse\u00A0Card e la tua voce.",
+        body: "Ricevi, ascolta, parla e memorizza un versetto al giorno. Riallinea la giornata in quindici minuti. Supera un versetto e unisciti al lignaggio come N-esimo Wordshiper — poi invita la persona successiva con una Verse\u00A0Card e la tua voce.",
         visual: "home" as const,
       },
     ],
@@ -59,7 +73,9 @@ const locale: RenewalCopy = {
   why: {
     label: "Perché Wordshiper",
     title: "Più connessi che mai,\neppure più profondamente dispersi",
-    lead: "Viviamo in un diluvio di informazioni e in una fretta incessante. Innumerevoli voci scuotono il nostro cuore ogni giorno, e le priorità della vita si disperdono facilmente.",
+    lead:
+      "Viviamo in un diluvio di informazioni e in una fretta incessante.\n" +
+      "Innumerevoli voci scuotono il nostro cuore ogni giorno, e le priorità della vita si disperdono facilmente.",
     points: [
       {
         t: "Rumore e fretta",
@@ -75,7 +91,13 @@ const locale: RenewalCopy = {
       },
     ],
     answer:
-      "Quando anche un solo versetto è piantato in profondità in un cuore, diventa la forza per superare la paura, attraversare la prova e riportare a Dio le priorità spirituali disperse.",
+      "Quando un solo versetto della Scrittura è piantato in profondità in un cuore,\n" +
+      "quella Parola diventa la forza per vincere la paura, per attraversare la prova,\n" +
+      "e per riportare a Dio le priorità spirituali disperse.\n\n" +
+      "Lasciala come eredità della Parola —\n" +
+      "ai tuoi figli amati, e ai tuoi genitori.\n\n" +
+      "Giorno dopo giorno saremo rinnovati\n" +
+      "come adoratori di cui Dio si compiace.",
     answerRef: "— Perché nacque Wordshiper",
   },
   identity: {
@@ -91,16 +113,16 @@ const locale: RenewalCopy = {
     result: "Aiutare le persone a vivere come adoratori che iscrivono la Parola — Wordshipers",
     layers: [
       {
-        t: "Scripture Memory App",
+        t: "App di memorizzazione biblica",
         d: "Aiuta gli utenti a ricevere, ascoltare, parlare e memorizzare un versetto ogni giorno.",
       },
       {
-        t: "Daily Spiritual OS",
-        d: "Riallinea le priorità della giornata intorno alla Parola di Dio attraverso Scrittura, preghiera e il planner Walk.",
+        t: "OS spirituale quotidiano",
+        d: "Riallinea le priorità della giornata intorno alla Parola di Dio attraverso Scrittura, preghiera e il pianificatore Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "Supera un versetto e unisciti al lineage come N-esimo Wordshiper — poi invita la persona successiva con una Verse\u00A0Card e la tua voce.",
+        t: "Movimento globale di memorizzazione biblica",
+        d: "Supera un versetto e unisciti al lignaggio come N-esimo Wordshiper — poi invita la persona successiva con una Verse\u00A0Card e la tua voce.",
       },
     ],
     notOnly:
@@ -139,14 +161,14 @@ const locale: RenewalCopy = {
   routine: {
     label: "Routine centrale",
     title: "Tre volte al giorno,\ncinque minuti ciascuna",
-    sub: "Ogni sessione è attivata automaticamente dall’allarme del planner Walk, così tre volte al giorno diventano un ritmo di vita. Ricevi al mattino, rivisita a mezzogiorno, conferma la sera — finché un versetto non imbeve la tua vita.",
-    alarmNote: "Allarme del planner Walk",
+    sub: "Ogni sessione è attivata automaticamente dall’allarme del pianificatore Walk, così tre volte al giorno diventano un ritmo di vita. Ricevi al mattino, rivisita a mezzogiorno, conferma la sera — finché un versetto non imbeve la tua vita.",
+    alarmNote: "Allarme del pianificatore Walk",
     principle:
       "Tiny Habits — cinque minuti ciascuna restano leggeri da ripetere ogni giorno, garantendo al tempo stesso ritenzione e profondità spirituale.",
     sessions: [
       {
         time: "Mattina\u00A0·\u00A05\u00A0min",
-        when: "Al risveglio · Allarme del planner Walk",
+        when: "Al risveglio · Allarme del pianificatore Walk",
         items: [
           "Preghiera 1\u00A0min — preghiera del mattino",
           "Memorizza 2\u00A0min — versetto di oggi",
@@ -155,16 +177,16 @@ const locale: RenewalCopy = {
       },
       {
         time: "Mezzogiorno\u00A0·\u00A05\u00A0min",
-        when: "Prima di pranzo · Allarme del planner Walk",
+        when: "Prima di pranzo · Allarme del pianificatore Walk",
         items: [
           "Preghiera 1\u00A0min — gratitudine",
           "Ripasso 2\u00A0min — ripeti il versetto del mattino",
-          "Walk check 2\u00A0min — priorità di oggi",
+          "Controllo Walk 2\u00A0min — priorità di oggi",
         ],
       },
       {
         time: "Sera\u00A0·\u00A05\u00A0min",
-        when: "Prima di dormire · Allarme del planner Walk",
+        when: "Prima di dormire · Allarme del pianificatore Walk",
         items: [
           "Preghiera 1\u00A0min — riflessione sul giorno",
           "Conferma 2\u00A0min — Hide\u00A0&\u00A0Test",
@@ -195,16 +217,16 @@ const locale: RenewalCopy = {
     sub: "Un’app di memorizzazione della Scrittura, un OS spirituale quotidiano e un movimento globale della Parola — progettati come uno.",
     thesis: [
       {
-        t: "Scripture Memory App",
+        t: "App di memorizzazione biblica",
         d: "Aiuta gli utenti a ricevere, ascoltare, parlare e memorizzare un versetto ogni giorno.",
       },
       {
-        t: "Daily Spiritual Operating System",
-        d: "Riallinea le priorità della giornata intorno alla Parola di Dio attraverso Scrittura, preghiera e il planner Walk.",
+        t: "Sistema operativo spirituale quotidiano",
+        d: "Riallinea le priorità della giornata intorno alla Parola di Dio attraverso Scrittura, preghiera e il pianificatore Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "Supera un versetto e unisciti al lineage come N-esimo Wordshiper — poi invita la persona successiva con una Verse\u00A0Card e la tua voce.",
+        t: "Movimento globale di memorizzazione biblica",
+        d: "Supera un versetto e unisciti al lignaggio come N-esimo Wordshiper — poi invita la persona successiva con una Verse\u00A0Card e la tua voce.",
       },
     ],
     tabs: [
@@ -235,12 +257,12 @@ const locale: RenewalCopy = {
         d: "Non condanna mai una serie interrotta; ti invita di nuovo alla Parola con grazia.",
       },
       {
-        t: "Jog wheel — Scrittura in 1,5\u00A0s",
+        t: "Rotella Jog — Scrittura in 1,5\u00A0s",
         d: "Raggiungi la Bibbia in 1,5\u00A0secondi, anche a metà adorazione. 31.112 versetti offline.",
       },
       {
         t: "Verse\u00A0Card — una confessione che scorre",
-        d: "Supera un versetto e nasce una card — versetto, numero di lineage, QR della voce.",
+        d: "Supera un versetto e nasce una card — versetto, numero di lignaggio, QR della voce.",
       },
       {
         t: "24 lingue",
@@ -252,25 +274,25 @@ const locale: RenewalCopy = {
   movement: {
     label: "Movimento",
     subtitle: "Non stiamo costruendo un’app.\nStiamo accendendo un movimento.",
-    title: "Un lineage spirituale,\nversetto dopo versetto",
+    title: "Un lignaggio spirituale,\nversetto dopo versetto",
     lineageLead: "Sei il",
     lineageNum: "14.207",
     lineageTail: "° Wordshiper a iscrivere questo versetto",
     lineageSub:
-      "Questo numero non è un punteggio. Segna il tuo posto nel lineage della Parola — prova che non sei solo.",
+      "Questo numero non è un punteggio. Segna il tuo posto nel lignaggio della Parola — prova che non sei solo.",
     engines: [
       {
-        t: "Synchronicity",
+        t: "Sincronia",
         e: "Insieme, ora",
         d: "«Non sono solo» — il mondo intero riceve lo stesso versetto nello stesso momento.",
       },
       {
-        t: "Lineage",
+        t: "Lignaggio",
         e: "Parte del flusso",
-        d: "«Appartengo a un flusso più grande» — unisciti a un lineage attraverso generazioni, lingue e terre.",
+        d: "«Appartengo a un flusso più grande» — unisciti a un lignaggio che attraversa generazioni, lingue e terre.",
       },
       {
-        t: "Public Artifact",
+        t: "Artefatto pubblico",
         e: "Una confessione che scorre",
         d: "«La mia confessione scorre nel mondo» — Verse\u00A0Card e la tua voce invitano la persona successiva.",
       },
@@ -284,15 +306,15 @@ const locale: RenewalCopy = {
     stats: [
       {
         n: "1,9\u00A0mld",
-        d: "Cristiani nel mondo — le persone che desideriamo servire",
+        d: "Cristiani nel mondo\nle persone che desideriamo servire",
       },
       {
         n: "24",
-        d: "Lingue — memorizzazione duale e tripla",
+        d: "Lingue\nmemorizzazione duale e tripla",
       },
       {
         n: "3",
-        d: "App indipendenti su un unico nucleo (Wordshiper · Verbum · Pasuk)",
+        d: "App indipendenti su un unico nucleo\nWordshiper · Verbum · Pasuk",
       },
     ],
     whitelabel:
@@ -303,38 +325,38 @@ const locale: RenewalCopy = {
     title: "Il movimento è già iniziato",
     phases: [
       {
-        t: "Fase\u00A01 — MVP",
-        d: "Loop centrale: ricevi · memorizza · unisciti al lineage",
+        t: "Phase\u00A01 — MVP",
+        d: "Loop centrale: ricevi · memorizza · unisciti al lignaggio",
       },
       {
-        t: "Fase\u00A02 — Routine",
-        d: "Tre sessioni giornaliere · planner Walk · Worvi",
+        t: "Phase\u00A02 — Routine",
+        d: "Tre sessioni giornaliere · pianificatore Walk · Worvi",
       },
       {
-        t: "Fase\u00A03 — Lancio",
+        t: "Phase\u00A03 — Lancio",
         d: "Dicembre\u00A02026 — comunità seme dei primi\u00A01.000",
       },
       {
-        t: "Fase\u00A04 — Espansione",
+        t: "Phase\u00A04 — Espansione",
         d: "Voice\u00A0Feed · canali · tre app white-label",
       },
     ],
   },
   cta: {
     title: "Cerchiamo i primi\u00A01.000\nper ricevere insieme la prima manna",
-    sub: "Pre-registrati e ricevi il tuo numero di lineage. Il giorno del lancio, tutti ricevono la prima manna nello stesso momento.",
+    sub: "Pre-registrati e ricevi il tuo numero di lignaggio. Il giorno del lancio, tutti ricevono la prima manna nello stesso momento.",
     placeholder: "Indirizzo email",
     button: "Pre-registrati",
-    success: "Grazie! Ti sei unito al lineage.",
+    success: "Grazie! Ti sei unito al lignaggio.",
     successWithNumber: (n: number) =>
-      `Grazie! Sei Wordshiper #${n}. Controlla la tua email per la conferma del lineage.`,
+      `Grazie! Sei Wordshiper #${n}. Controlla la tua email per la conferma del lignaggio.`,
     error: "Registrazione non riuscita. Riprova.",
     declaration: "Sì, io sono un Wordshiper!",
   },
   donate: {
     eyebrow: "Perché un versetto al giorno raggiunga le nazioni",
     title: "Diventa partner del movimento della Parola",
-    sub: "Wordshiper Ministry Inc. è una nonprofit 501(c)(3) negli Stati Uniti. Il tuo dono alimenta la memorizzazione della Scrittura e i ritmi di preghiera in tutto il mondo.",
+    sub: "Wordshiper Ministry Inc. è un’organizzazione senza scopo di lucro 501(c)(3) negli Stati Uniti. Il tuo dono alimenta la memorizzazione della Scrittura e i ritmi di preghiera in tutto il mondo.",
     oneTime: "Una tantum",
     monthly: "Mensile",
     custom: "Importo personalizzato",
@@ -343,8 +365,8 @@ const locale: RenewalCopy = {
     processing: "Connessione…",
     taxNote: "Deducibile fiscalmente negli USA · EIN 33-1561112 · Ricevute fornite da Stripe.",
     successTitle: "Grazie",
-    successSub: "Il tuo dono aiuta il lineage della Parola a continuare a scorrere.",
-    error: "Impossibile avviare il checkout. Scrivi a info@wordshiper.org.",
+    successSub: "Il tuo dono aiuta il lignaggio della Parola a continuare a scorrere.",
+    error: "Impossibile avviare il pagamento. Scrivi a info@wordshiper.org.",
     backHome: "Torna alla home",
   },
   investors: {
@@ -354,7 +376,7 @@ const locale: RenewalCopy = {
     points: [
       {
         t: "Design di movimento collaudato",
-        d: "Synchronicity, lineage, public artifacts — tre motori ridefiniti con significato spirituale.",
+        d: "Sincronicità, lignaggio, artefatti pubblici — tre motori ridefiniti con significato spirituale.",
       },
       {
         t: "Un modello sostenibile",
@@ -469,26 +491,26 @@ const locale: RenewalCopy = {
       lead: "Wordshiper è un’app di memorizzazione della Scrittura, un OS spirituale quotidiano che riallinea la giornata, e un movimento globale di memorizzazione della Scrittura — progettati come uno.",
       layers: [
         {
-          t: "Scripture Memory App",
+          t: "App di memorizzazione biblica",
           d: "Ti aiuta a ricevere, ascoltare, parlare e memorizzare un versetto ogni giorno.",
         },
         {
-          t: "Daily Spiritual OS",
-          d: "Riallinea le priorità della giornata intorno alla Parola di Dio attraverso Scrittura, preghiera e il planner Walk.",
+          t: "OS spirituale quotidiano",
+          d: "Riallinea le priorità della giornata intorno alla Parola di Dio attraverso Scrittura, preghiera e il pianificatore Walk.",
         },
         {
-          t: "Global Scripture Memory Movement",
-          d: "Supera un versetto e unisciti al lineage come N-esimo Wordshiper — poi invita la persona successiva con una Verse\u00A0Card e la tua voce.",
+          t: "Movimento globale di memorizzazione biblica",
+          d: "Supera un versetto e unisciti al lignaggio come N-esimo Wordshiper — poi invita la persona successiva con una Verse\u00A0Card e la tua voce.",
         },
       ],
     },
     orgNote:
-      "Wordshiper Ministry è una nonprofit 501(c)(3) negli Stati Uniti. L’uso individuale è gratis per sempre. Doni e partnership sostengono il movimento.",
+      "Wordshiper Ministry è un’organizzazione senza scopo di lucro 501(c)(3) negli Stati Uniti. L’uso individuale è gratis per sempre. Doni e partnership sostengono il movimento.",
   },
   footer: {
     tagline: "Un\u00A0versetto al giorno. Una vita di adorazione.",
     legal:
-      "© 2024 Wordshiper Ministry Inc. · Con sede a New York, U.S.A. · 501(c)(3) Nonprofit · EIN: 33-1561112",
+      "© 2024 Wordshiper Ministry Inc. · Based in New York, U.S.A. · 501(c)(3) Nonprofit · EIN: 33-1561112",
     address: "5 Union Square West FRNT 1 #1299, New York, NY 10003, U.S.A.",
   },
 };

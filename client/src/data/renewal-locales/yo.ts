@@ -10,8 +10,22 @@ const locale: RenewalCopy = {
     all: "Gbogbo",
     heroSlidesAria: "Àwọn slide ìfihàn Wordshiper",
     slideSelectorAria: "Olùyàn slide",
-    lineageNumber: "Nọ́mbà lineage rẹ",
-    lineageEmailNote: "A ti fi íméèlì ìmúdájú ránṣẹ́ — jọ̀wọ́ ṣàyẹ̀wò inbox rẹ.",
+    lineageNumber: "Nọ́mbà ìdílé rẹ",
+    lineageEmailNote: "A ti fi íméèlì ìmúdájú ránṣẹ́ — jọ̀wọ́ ṣàyẹ̀wò àpótí ìwọlé rẹ.",
+    donatePreparingEyebrow: "Ó ń bọ̀ láìpẹ́",
+    donatePreparingTitle: "A ń múra ìṣètọrẹ sílẹ̀",
+    donatePreparingBody:
+      "Ọ̀nà àjápọ̀ ìṣètọrẹ kò tíì ṣí sílẹ̀.\n" +
+      "A ń parí ìrírí fífúnni tó ní ààbò jù lọ, tó sì rọrùn jù lọ,\n" +
+      "a ó sì ṣí i sílẹ̀ ní kété tí ó bá ṣetán.",
+    donatePreparingCta: "Ó dára",
+    preregisterOpensEyebrow: "Yóò ṣí sílẹ̀ ní Oṣù Kejìlá\u00A01, 2026",
+    preregisterOpensTitle: "Ìforúkọsílẹ̀ tẹ́lẹ̀ yóò ṣí sílẹ̀ ní Oṣù Kejìlá\u00A01",
+    preregisterOpensBody:
+      "Ìforúkọsílẹ̀ tẹ́lẹ̀ fún ìdílé yóò ṣí sílẹ̀ ní Oṣù Kejìlá\u00A01, 2026.\n" +
+      "Ní ọjọ́ yẹn, ọ̀nà ìforúkọsílẹ̀ tuntun tí a kọ́\n" +
+      "yóò gba àwọn Wordshiper\u00A01,000 àkọ́kọ́ káàbọ̀.",
+    preregisterOpensCta: "Ó dára",
   },
   nav: {
     product: "Ṣíṣàn",
@@ -31,7 +45,7 @@ const locale: RenewalCopy = {
     declaration: "Èmi jẹ́ Wordshiper.",
     cta1: "Darapọ̀ mọ́ ẹgbẹẹgbẹ̀rún\u00A0àkọ́kọ́",
     cta2: "Kí ló dé Wordshiper",
-    lineageNote: "Forúkọsílẹ̀ tẹ́lẹ̀ kí o sì gba nọ́mbà lineage\u00A0rẹ",
+    lineageNote: "Forúkọsílẹ̀ tẹ́lẹ̀ kí o sì gba nọ́mbà ìdílé\u00A0rẹ",
     slides: [
       {
         label: "Kí ni Wordshiper?",
@@ -44,14 +58,14 @@ const locale: RenewalCopy = {
         label: "Kí ló mú kí ó yàtọ̀",
         title1: "Ìwọ kò wà nìkan.",
         title2: "Báyìí ni ìhìnrere ṣe ń ṣàn.",
-        body: "Àwọn ikanni orí ibùdó àti àgbájọ ń so ọ́ pọ̀ mọ́ àwọn onígbàgbọ́ mìíràn tó wà nítòsí. Àtìlẹ́yìn dual/triple ní èdè mẹ́rìnlélógún. Pípín, fífúnni, àti àwọn ikanni di ọ̀nà fún ìhìnrere. Wordshiper kì í ṣe ohun èlò lasan — ó jẹ́ pẹpẹ fún ìgbésí ayé tí Ọ̀rọ̀ jẹ́ àárín.",
+        body: "Àwọn ikanni orí ibùdó àti àgbájọ ń so ọ́ pọ̀ mọ́ àwọn onígbàgbọ́ mìíràn tó wà nítòsí. Àtìlẹ́yìn èdè méjì tàbí mẹ́ta nínú èdè mẹ́rìnlélógún. Pípín, fífúnni, àti àwọn ikanni di ọ̀nà fún ìhìnrere. Wordshiper kì í ṣe ohun èlò lasan — ó jẹ́ pẹpẹ fún ìgbésí ayé tí Ọ̀rọ̀ jẹ́ àárín.",
         visual: "jog" as const,
       },
       {
         label: "Ìdánimọ̀ mẹ́ta",
-        title1: "Áàpù ìrántí · Spiritual OS ·",
+        title1: "Áàpù ìrántí · OS ẹ̀mí ·",
         title2: "Ìgbésẹ̀ Ọ̀rọ̀ agbayé",
-        body: "Gba, gbọ́, sọ, kí o sì fi ẹsẹ̀ kan sọ́kàn lójúmọ́. Tún ọjọ́ rẹ ṣètò ní ìṣẹ́jú mẹ́ẹ̀ẹ́dógún. Kọjá ẹsẹ̀ kan kí o sì darapọ̀ mọ́ lineage gẹ́gẹ́ bí Wordshiper kẹN — lẹ́yìn náà pe ènìyàn tó kàn pẹ̀lú Verse\u00A0Card àti ohùn rẹ.",
+        body: "Gba, gbọ́, sọ, kí o sì fi ẹsẹ̀ kan sọ́kàn lójúmọ́. Tún ọjọ́ rẹ ṣètò ní ìṣẹ́jú mẹ́ẹ̀ẹ́dógún. Kọjá ẹsẹ̀ kan kí o sì darapọ̀ mọ́ ìdílé gẹ́gẹ́ bí Wordshiper kẹN — lẹ́yìn náà pe ènìyàn tó kàn pẹ̀lú Verse\u00A0Card àti ohùn rẹ.",
         visual: "home" as const,
       },
     ],
@@ -59,7 +73,9 @@ const locale: RenewalCopy = {
   why: {
     label: "Kí ló dé Wordshiper",
     title: "A ti so ara wa pọ̀ ju ti ìgbà kan lọ,\nsíbẹ̀ a túká jinlẹ̀ ju",
-    lead: "A ń gbé nínú ìṣàn ìsọfúnniò àti ìṣíṣe aláìsinmi. Ohùn àìmọye ń mì ọkàn wa lójúmọ́, àwọn ohun pàtàkì ìgbésí ayé sì túká ní ìrọ̀rùn.",
+    lead:
+      "A ń gbé nínú ìṣàn ìsọfúnni àti ìṣíṣe aláìsinmi.\n" +
+      "Ohùn àìmọye ń mì ọkàn wa lójúmọ́, àwọn ohun pàtàkì ìgbésí ayé sì túká ní ìrọ̀rùn.",
     points: [
       {
         t: "Ariwo àti yára",
@@ -75,7 +91,13 @@ const locale: RenewalCopy = {
       },
     ],
     answer:
-      "Nígbà tí ẹsẹ̀ kan tilẹ̀ di gbìn jinlẹ̀ nínú ọkàn kan, ó di agbára láti ṣẹ́gun ìbẹ̀rù, láti kọjá ìnira, àti láti yí àwọn ohun pàtàkì ẹ̀mí tí ó túká padà sí Ọlọ́run.",
+      "Nígbà tí ẹsẹ̀ Ìwé Mímọ́ kan bá gbìn jinlẹ̀ sínú ọkàn,\n" +
+      "Ọ̀rọ̀ náà a di agbára láti ṣẹ́gun ìbẹ̀rù, láti kọjá ìnira,\n" +
+      "àti láti yí àwọn ohun pàtàkì ẹ̀mí tí ó túká padà sí Ọlọ́run.\n\n" +
+      "Fi í sílẹ̀ gẹ́gẹ́ bí ogún Ọ̀rọ̀ —\n" +
+      "fún àwọn ọmọ rẹ àyànfẹ́, àti fún àwọn òbí rẹ.\n\n" +
+      "Lójoojúmọ́ ni a ó máa di ọ̀tun,\n" +
+      "gẹ́gẹ́ bí olùjọsìn tí inú Ọlọ́run dùn sí.",
     answerRef: "— Ìdí tí Wordshiper fi bẹ̀rẹ̀",
   },
   identity: {
@@ -91,20 +113,20 @@ const locale: RenewalCopy = {
     result: "Ríràn àwọn ènìyàn lọ́wọ́ láti gbé gẹ́gẹ́ bí olùjọsìn tí ó ń kọ Ọ̀rọ̀ — Wordshipers",
     layers: [
       {
-        t: "Scripture Memory App",
+        t: "Áàpù ìfi Ìwé Mímọ́ sọ́kàn",
         d: "Ó ń ràn àwọn olùmúlò lọ́wọ́ láti gba, gbọ́, sọ, kí wọ́n sì fi ẹsẹ̀ kan sọ́kàn lójúmọ́.",
       },
       {
-        t: "Daily Spiritual OS",
-        d: "Ó ń tún àwọn ohun pàtàkì ọjọ́ ṣètò yíká Ọ̀rọ̀ Ọlọ́run nípasẹ̀ Ìwé Mímọ́, àdúrà, àti Walk planner.",
+        t: "OS ẹ̀mí ojoojúmọ́",
+        d: "Ó ń tún àwọn ohun pàtàkì ọjọ́ ṣètò yíká Ọ̀rọ̀ Ọlọ́run nípasẹ̀ Ìwé Mímọ́, àdúrà, àti olùṣètò Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "Kọjá ẹsẹ̀ kan kí o sì darapọ̀ mọ́ lineage gẹ́gẹ́ bí Wordshiper kẹN — lẹ́yìn náà pe ènìyàn tó kàn pẹ̀lú Verse\u00A0Card àti ohùn rẹ.",
+        t: "Ìgbésẹ̀ Ọ̀rọ̀ agbayé",
+        d: "Kọjá ẹsẹ̀ kan kí o sì darapọ̀ mọ́ ìdílé gẹ́gẹ́ bí Wordshiper kẹN — lẹ́yìn náà pe ènìyàn tó kàn pẹ̀lú Verse\u00A0Card àti ohùn rẹ.",
       },
     ],
     notOnly:
-      "Àwọn ikanni orí ibùdó àti àgbájọ ń so ọ́ pọ̀ mọ́ àwọn onígbàgbọ́ mìíràn ní agbègbè rẹ. Gẹ̀ẹ́sì ní ìpìlẹ̀, pẹ̀lú àtìlẹ́yìn dual/triple ní èdè mẹ́rìnlélógún. A kì í fi Ìwé Mímọ́ sọ́kàn nìkan — a pín ín, a sì pa á mọ́ láàyè papọ̀.",
+      "Àwọn ikanni orí ibùdó àti àgbájọ ń so ọ́ pọ̀ mọ́ àwọn onígbàgbọ́ mìíràn ní agbègbè rẹ. Gẹ̀ẹ́sì ní ìpìlẹ̀, pẹ̀lú àtìlẹ́yìn èdè méjì tàbí mẹ́ta nínú èdè mẹ́rìnlélógún. A kì í fi Ìwé Mímọ́ sọ́kàn nìkan — a pín ín, a sì pa á mọ́ láàyè papọ̀.",
     forWhom:
       "Pípín, àwọn ẹ̀bùn, àti àwọn ikanni di “ọ̀nà fún ìhìnrere.” Wordshiper kì í ṣe ohun èlò áàpù lasan — ó jẹ́ pẹpẹ fún ìgbésí ayé tí Ọ̀rọ̀ jẹ́ àárín.",
   },
@@ -130,14 +152,14 @@ const locale: RenewalCopy = {
   routine: {
     label: "Ìṣe ojoojúmọ́ pàtàkì",
     title: "Ìgbà mẹ́ta lójúmọ́,\nìṣẹ́jú márùn-ún kọ̀ọ̀kan",
-    sub: "Ẹ̀kọ́ kọ̀ọ̀kan ń bẹ̀rẹ̀ fúnrarẹ̀ nípasẹ̀ alarm Walk planner, nítorí náà ìgbà mẹ́ta lójúmọ́ di ìró ìgbésí ayé. Gba ní òwúrọ̀, padà ní ọ̀sán, jẹ́rìísí ní alẹ́ — títí ẹsẹ̀ kan fi wọ inú ìgbésí ayé rẹ.",
-    alarmNote: "Alarm Walk planner",
+    sub: "Ẹ̀kọ́ kọ̀ọ̀kan ń bẹ̀rẹ̀ fúnrarẹ̀ nípasẹ̀ ìtaniji olùṣètò Walk, nítorí náà ìgbà mẹ́ta lójúmọ́ di ìró ìgbésí ayé. Gba ní òwúrọ̀, padà ní ọ̀sán, jẹ́rìísí ní alẹ́ — títí ẹsẹ̀ kan fi wọ inú ìgbésí ayé rẹ.",
+    alarmNote: "Ìtaniji olùṣètò Walk",
     principle:
       "Tiny Habits — ìṣẹ́jú márùn-ún kọ̀ọ̀kan jẹ́ kí ó fúyẹ́ tó láti tún ṣe lójúmọ́, nígbà tí ó ń dáàbò bò ìrántí àti jíjìnlẹ̀ ẹ̀mí.",
     sessions: [
       {
         time: "Òwúrọ̀\u00A0·\u00A05\u00A0ìṣẹ́jú",
-        when: "Nígbà jíjí · Alarm Walk planner",
+        when: "Nígbà jíjí · Ìtaniji olùṣètò Walk",
         items: [
           "Àdúrà 1\u00A0ìṣẹ́jú — àdúrà òwúrọ̀",
           "Fi sọ́kàn 2\u00A0ìṣẹ́jú — ẹsẹ̀ òní",
@@ -146,16 +168,16 @@ const locale: RenewalCopy = {
       },
       {
         time: "Ọ̀sán\u00A0·\u00A05\u00A0ìṣẹ́jú",
-        when: "Ṣáájú oúnjẹ ọ̀sán · Alarm Walk planner",
+        when: "Ṣáájú oúnjẹ ọ̀sán · Ìtaniji olùṣètò Walk",
         items: [
           "Àdúrà 1\u00A0ìṣẹ́jú — ọpẹ́",
           "Àtúnyẹ̀wò 2\u00A0ìṣẹ́jú — tún ẹsẹ̀ òwúrọ̀ ṣe",
-          "Walk check 2\u00A0ìṣẹ́jú — àwọn ohun pàtàkì òní",
+          "Àyẹ̀wò Walk 2\u00A0ìṣẹ́jú — àwọn ohun pàtàkì òní",
         ],
       },
       {
         time: "Alẹ́\u00A0·\u00A05\u00A0ìṣẹ́jú",
-        when: "Ṣáájú sísùn · Alarm Walk planner",
+        when: "Ṣáájú sísùn · Ìtaniji olùṣètò Walk",
         items: [
           "Àdúrà 1\u00A0ìṣẹ́jú — àgbéyẹ̀wò ọjọ́",
           "Jẹ́rìísí 2\u00A0ìṣẹ́jú — Hide\u00A0&\u00A0Test",
@@ -174,19 +196,19 @@ const locale: RenewalCopy = {
   product: {
     label: "Ìdánimọ̀ ọjà",
     title: "Pẹpẹ kan,\nìpele mẹ́ta",
-    sub: "Áàpù ìfi Ìwé Mímọ́ sọ́kàn, spiritual OS ojoojúmọ́, àti ìgbésẹ̀ Ọ̀rọ̀ agbayé — tí a ṣe gẹ́gẹ́ bí ọ̀kan.",
+    sub: "Áàpù ìfi Ìwé Mímọ́ sọ́kàn, OS ẹ̀mí ojoojúmọ́, àti ìgbésẹ̀ Ọ̀rọ̀ agbayé — tí a ṣe gẹ́gẹ́ bí ọ̀kan.",
     thesis: [
       {
-        t: "Scripture Memory App",
+        t: "Áàpù ìfi Ìwé Mímọ́ sọ́kàn",
         d: "Ó ń ràn àwọn olùmúlò lọ́wọ́ láti gba, gbọ́, sọ, kí wọ́n sì fi ẹsẹ̀ kan sọ́kàn lójúmọ́.",
       },
       {
-        t: "Daily Spiritual Operating System",
-        d: "Ó ń tún àwọn ohun pàtàkì ọjọ́ ṣètò yíká Ọ̀rọ̀ Ọlọ́run nípasẹ̀ Ìwé Mímọ́, àdúrà, àti Walk planner.",
+        t: "Ètò ìṣiṣẹ́ ẹ̀mí ojoojúmọ́",
+        d: "Ó ń tún àwọn ohun pàtàkì ọjọ́ ṣètò yíká Ọ̀rọ̀ Ọlọ́run nípasẹ̀ Ìwé Mímọ́, àdúrà, àti olùṣètò Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "Kọjá ẹsẹ̀ kan kí o sì darapọ̀ mọ́ lineage gẹ́gẹ́ bí Wordshiper kẹN — lẹ́yìn náà pe ènìyàn tó kàn pẹ̀lú Verse\u00A0Card àti ohùn rẹ.",
+        t: "Ìgbésẹ̀ Ọ̀rọ̀ agbayé",
+        d: "Kọjá ẹsẹ̀ kan kí o sì darapọ̀ mọ́ ìdílé gẹ́gẹ́ bí Wordshiper kẹN — lẹ́yìn náà pe ènìyàn tó kàn pẹ̀lú Verse\u00A0Card àti ohùn rẹ.",
       },
     ],
     tabs: [
@@ -197,9 +219,9 @@ const locale: RenewalCopy = {
       { t: "Walk", d: "Rìn nípasẹ̀ Ọ̀rọ̀ — láti ìpè dé ìṣe ojoojúmọ́" },
     ],
     features: [
-      { t: "Worvi — ẹlẹgbẹ́ AI ẹ̀mí", d: "Kì í dálẹ́bi streak tí ó fọ́; ó ń pe ọ padà sí Ọ̀rọ̀ pẹ̀lú oore-ọ̀fẹ́." },
-      { t: "Jog wheel — Ìwé Mímọ́ ní 1.5s", d: "Dé Bíbéèlì ní ìṣẹ́jú-àáyá 1.5\u00A0, àní ní àárín ìjọsìn. Ẹsẹ̀ 31,112 offline." },
-      { t: "Verse\u00A0Card — ìjẹ́wọ́ tó ń ṣàn", d: "Kọjá ẹsẹ̀ kan, káàdì a sì bíbí — ẹsẹ̀, nọ́mbà lineage, voice QR." },
+      { t: "Worvi — ẹlẹgbẹ́ AI ẹ̀mí", d: "Kì í dálẹ́bi nígbà tí ìṣe ojoojúmọ́ rẹ bá dá dúró; ó ń pe ọ padà sí Ọ̀rọ̀ pẹ̀lú oore-ọ̀fẹ́." },
+      { t: "Kẹ̀kẹ́ Jog — Ìwé Mímọ́ ní 1.5s", d: "Dé Bíbéèlì ní ìṣẹ́jú-àáyá 1.5, àní ní àárín ìjọsìn. Ẹsẹ̀ 31,112 láìsí Íńtánẹ́ẹ̀tì." },
+      { t: "Verse\u00A0Card — ìjẹ́wọ́ tó ń ṣàn", d: "Kọjá ẹsẹ̀ kan, káàdì a sì bíbí — ẹsẹ̀, nọ́mbà ìdílé, QR ohùn." },
       { t: "Èdè mẹ́rìnlélógún", d: "Fi sọ́kàn ní èdè méjì tàbí mẹ́ta pẹ̀lú èdè abínibí rẹ." },
     ],
     demoNote: "Àwọn ojú-ìwé áàpù gidi",
@@ -207,15 +229,15 @@ const locale: RenewalCopy = {
   movement: {
     label: "Ìgbésẹ̀",
     subtitle: "A kò ń kọ́ áàpù.\nA ń dá ìgbésẹ̀ kan lóró.",
-    title: "Lineage ẹ̀mí,\nẹsẹ̀ lẹ́yìn ẹsẹ̀",
-    lineageLead: "Ìwọ ni",
+    title: "Ìdílé ẹ̀mí,\nẹsẹ̀ lẹ́yìn ẹsẹ̀",
+    lineageLead: "Ìwọ ni Wordshiper kẹ́",
     lineageNum: "14,207",
-    lineageTail: "Wordshiper tí ó ń kọ ẹsẹ̀ yìí",
-    lineageSub: "Nọ́mbà yìí kì í ṣe àmì. Ó fi ibi rẹ hàn nínú lineage Ọ̀rọ̀ — ẹ̀rí pé ìwọ kò wà nìkan.",
+    lineageTail: " tí ó ń kọ ẹsẹ̀ yìí",
+    lineageSub: "Nọ́mbà yìí kì í ṣe àmì. Ó fi ibi rẹ hàn nínú ìdílé Ọ̀rọ̀ — ẹ̀rí pé ìwọ kò wà nìkan.",
     engines: [
-      { t: "Synchronicity", e: "Papọ̀, nísinsinyìí", d: "\u201cÈmi kò wà nìkan\u201d — gbogbo ayé ń gba ẹsẹ̀ kan náà ní àkókò kan náà." },
-      { t: "Lineage", e: "Apá kan ti ṣíṣàn", d: "\u201cMo jẹ́ ti odò ńlá\u201d — darapọ̀ mọ́ lineage kọjá ìran, èdè, àti orílẹ̀-èdè." },
-      { t: "Public Artifact", e: "Ìjẹ́wọ́ tó ń ṣàn", d: "\u201cÌjẹ́wọ́ mi ń ṣàn sí ayé\u201d — Verse\u00A0Cards àti ohùn rẹ ń pe ènìyàn tó kàn." },
+      { t: "Àkókò kan náà", e: "Papọ̀, nísinsinyìí", d: "\u201cÈmi kò wà nìkan\u201d — gbogbo ayé ń gba ẹsẹ̀ kan náà ní àkókò kan náà." },
+      { t: "Ìdílé", e: "Apá kan ti ṣíṣàn", d: "\u201cMo jẹ́ ti odò ńlá\u201d — darapọ̀ mọ́ ìdílé kọjá ìran, èdè, àti orílẹ̀-èdè." },
+      { t: "Àbájáde gbangba", e: "Ìjẹ́wọ́ tó ń ṣàn", d: "\u201cÌjẹ́wọ́ mi ń ṣàn sí ayé\u201d — Verse\u00A0Cards àti ohùn rẹ ń pe ènìyàn tó kàn." },
     ],
     promise: "Kò sí ìtìjú. Kò sí ariwo. Ẹsẹ̀\u00A0kan. Ìgbésí ayé ìjọsìn.",
   },
@@ -224,31 +246,31 @@ const locale: RenewalCopy = {
     title: "Ìjọsìn tó ń ṣàn sí àwọn ilé,\nṣọ́ọ̀ṣì, ìlú, àti àwọn orílẹ̀-èdè",
     body: "A ń lá àlá pé àwọn tí ó ń rántí Ọ̀rọ̀ yóò di Wordshipers tòótọ́ — ṣíṣe òdodo, nífẹ̀ẹ́ àánú, àti rírá pẹ̀lú Ọlọ́run ní ìrẹ̀lẹ̀ níbi tí wọ́n wà.",
     stats: [
-      { n: "1.9B", d: "Kristẹni káàkiri ayé — àwọn ènìyàn tí a ń fẹ́ sìn" },
-      { n: "24", d: "Èdè — ìfi sọ́kàn dual àti triple" },
-      { n: "3", d: "Áàpù òmìnira lórí ìpìlẹ̀ kan (Wordshiper · Verbum · Pasuk)" },
+      { n: "1.9B", d: "Kristẹni káàkiri ayé\nàwọn ènìyàn tí a ń fẹ́ sìn" },
+      { n: "24", d: "Èdè\nìfi sọ́kàn dual àti triple" },
+      { n: "3", d: "Áàpù òmìnira lórí ìpìlẹ̀ kan\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:
-      "Lórí core design system kan: Wordshiper (Protestant), Verbum (Catholic), Pasuk (Jewish) — ọ̀kọ̀ọ̀kan ń bu ọlá fún àṣà rẹ̀ nínú ìgbésẹ̀ Ọ̀rọ̀ kan.",
+      "Lórí ètò àpẹrẹ ìpìlẹ̀ kan: Wordshiper (Pùròtẹ́stáǹtì), Verbum (Kátólíìkì), Pasuk (Júù) — ọ̀kọ̀ọ̀kan ń bu ọlá fún àṣà rẹ̀ nínú ìgbésẹ̀ Ọ̀rọ̀ kan.",
   },
   roadmap: {
     label: "Àtẹ̀jáde ọ̀nà",
     title: "Ìgbésẹ̀ ti bẹ̀rẹ̀ tẹ́lẹ̀",
     phases: [
-      { t: "Phase\u00A01 — MVP", d: "Yíyí pàtàkì: gba · fi sọ́kàn · darapọ̀ mọ́ lineage" },
-      { t: "Phase\u00A02 — Routine", d: "Ẹ̀kọ́ mẹ́ta lójúmọ́ · Walk planner · Worvi" },
-      { t: "Phase\u00A03 — Launch", d: "Oṣù Kejìlá\u00A02026 — àgbájọ irúgbìn ti ẹgbẹẹgbẹ̀rún\u00A0àkọ́kọ́" },
-      { t: "Phase\u00A04 — Expansion", d: "Voice\u00A0Feed · àwọn ikanni · áàpù white-label mẹ́ta" },
+      { t: "Phase\u00A01 — MVP", d: "Yíyí pàtàkì: gba · fi sọ́kàn · darapọ̀ mọ́ ìdílé" },
+      { t: "Phase\u00A02 — Ìṣe ojoojúmọ́", d: "Ẹ̀kọ́ mẹ́ta lójúmọ́ · olùṣètò Walk · Worvi" },
+      { t: "Phase\u00A03 — Ìfilọ́lẹ̀", d: "Oṣù Kejìlá\u00A02026 — àgbájọ irúgbìn ti ẹgbẹẹgbẹ̀rún\u00A0àkọ́kọ́" },
+      { t: "Phase\u00A04 — Ìmúgbòòrò", d: "Voice\u00A0Feed · àwọn ikanni · áàpù white-label mẹ́ta" },
     ],
   },
   cta: {
     title: "A ń wá ẹgbẹẹgbẹ̀rún\u00A0àkọ́kọ́\nláti gba manna àkọ́kọ́ papọ̀",
-    sub: "Forúkọsílẹ̀ tẹ́lẹ̀ kí o sì gba nọ́mbà lineage\u00A0rẹ. Ní ọjọ́ ìfilọ́lẹ̀, gbogbo ènìyàn ń gba manna àkọ́kọ́ ní àkókò kan náà.",
+    sub: "Forúkọsílẹ̀ tẹ́lẹ̀ kí o sì gba nọ́mbà ìdílé\u00A0rẹ. Ní ọjọ́ ìfilọ́lẹ̀, gbogbo ènìyàn ń gba manna àkọ́kọ́ ní àkókò kan náà.",
     placeholder: "Àdírẹ́sì íméèlì",
     button: "Ìforúkọsílẹ̀ tẹ́lẹ̀",
-    success: "O ṣeun! O ti darapọ̀ mọ́ lineage.",
+    success: "O ṣeun! O ti darapọ̀ mọ́ ìdílé.",
     successWithNumber: (n: number) =>
-      `O ṣeun! Ìwọ ni Wordshiper #${n}. Jọ̀wọ́ ṣàyẹ̀wò íméèlì rẹ fún ìmúdájú lineage.`,
+      `O ṣeun! Ìwọ ni Wordshiper #${n}. Jọ̀wọ́ ṣàyẹ̀wò íméèlì rẹ fún ìmúdájú ìdílé.`,
     error: "Ìforúkọsílẹ̀ kùnà. Jọ̀wọ́ gbìyànjú lẹ́ẹ̀kan sí i.",
     declaration: "Bẹ́ẹ̀ni, èmi jẹ́ Wordshiper!",
   },
@@ -264,8 +286,8 @@ const locale: RenewalCopy = {
     processing: "Ó ń so pọ̀…",
     taxNote: "Ó ṣeé dín owó-orí kù ní U.S. · EIN 33-1561112 · Stripe ń pèsè àwọn ìwé-ẹ̀rí.",
     successTitle: "O ṣeun",
-    successSub: "Ẹ̀bùn rẹ ń ràn lineage Ọ̀rọ̀ lọ́wọ́ láti máa ṣàn.",
-    error: "Kò ṣeé bẹ̀rẹ̀ checkout. Jọ̀wọ́ fi íméèlì ránṣẹ́ sí info@wordshiper.org.",
+    successSub: "Ẹ̀bùn rẹ ń ràn ìdílé Ọ̀rọ̀ lọ́wọ́ láti máa ṣàn.",
+    error: "Kò ṣeé bẹ̀rẹ̀ ìsanwó. Jọ̀wọ́ fi íméèlì ránṣẹ́ sí info@wordshiper.org.",
     backHome: "Padà sí ilé",
   },
   investors: {
@@ -273,10 +295,10 @@ const locale: RenewalCopy = {
     title: "A ń wá àwọn alábàáṣiṣẹ́ láti kọ\norí tó kàn ti ìgbésẹ̀ Ọ̀rọ̀",
     sub: "Wordshiper ń ṣiṣẹ́ gẹ́gẹ́ bí Wordshiper Ministry Inc. (501(c)(3)) àti Wordshiper PBC, Inc. — tí ń dáàbò bò ìdúróṣinṣin àti iṣẹ́-àṣẹ papọ̀.",
     points: [
-      { t: "Àpẹẹrẹ ìgbésẹ̀ tí a ti fidi múlẹ̀", d: "Synchronicity, lineage, public artifacts — ẹ̀rọ mẹ́ta tí a tún ṣàlàyé pẹ̀lú ìtumọ̀ ẹ̀mí." },
+      { t: "Àpẹẹrẹ ìgbésẹ̀ tí a ti fidi múlẹ̀", d: "Ìṣẹ̀lẹ̀ pọ̀ọ̀kan, ìdílé, ẹ̀rí gbangba — ẹ̀rọ mẹ́ta tí a tún ṣàlàyé pẹ̀lú ìtumọ̀ ẹ̀mí." },
       { t: "Àwòṣe aláìnípadà", d: "Ọ̀fẹ́ títí ayé fún àwọn ẹni kọ̀ọ̀kan. Pro\u00A0Organization àti fífúnni onífẹ̀ẹ́ ń gbé iṣẹ́ dúró. Kò sí ìpolówó." },
       { t: "Ìmọ̀-ẹ̀rọ tí a kọ́ láti ṣiṣẹ́", d: "Cache TTS agbayé ń dín owó ohùn kù ní ìṣètò nígbà tí ó tóbi." },
-      { t: "Ìmúgbòòrò white-label", d: "Ẹ̀rọ ìpìlẹ̀ kan ń wọ ọjà Protestant, Catholic, àti Jewish." },
+      { t: "Ìmúgbòòrò white-label", d: "Ẹ̀rọ ìpìlẹ̀ kan ń wọ ọjà Pùròtẹ́stáǹtì, Kátólíìkì, àti Júù." },
     ],
     teamTitle: "Aṣáájú",
     team: [
@@ -284,7 +306,7 @@ const locale: RenewalCopy = {
       { n: "Eunhee Kim", r: "CCO" },
       { n: "Hyungon Kim", r: "CTO" },
     ],
-    philosophy: "Iṣẹ́-àṣẹ ṣáájú ìmọ̀-ẹ̀rọ. Ọ̀rọ̀ ṣáájú interface. Ìgbẹ́kẹ̀lé ṣáájú ìdàgbàsókè.",
+    philosophy: "Iṣẹ́-àṣẹ ṣáájú ìmọ̀-ẹ̀rọ. Ọ̀rọ̀ ṣáájú ojú-iṣẹ́. Ìgbẹ́kẹ̀lé ṣáájú ìdàgbàsókè.",
     contactTitle: "Béèrè ohun èlò IR & ìbéèrè ìdókòwò",
     contactSub: "Ètò iṣẹ́, àwọn àsọtẹ́lẹ̀ owó, àti àfihàn ọjà wà ní ìbéèrè.",
     contactBtn: "Kàn sí wa",
@@ -352,19 +374,19 @@ const locale: RenewalCopy = {
       label: "Èrò-ìpilẹ̀",
       title: "Pẹpẹ kan,\nìpele mẹ́ta",
       lead:
-        "Wordshiper jẹ́ áàpù ìfi Ìwé Mímọ́ sọ́kàn, spiritual OS ojoojúmọ́ tí ó ń tún ọjọ́ ṣètò, àti ìgbésẹ̀ ìfi Ìwé Mímọ́ sọ́kàn agbayé — tí a ṣe gẹ́gẹ́ bí ọ̀kan.",
+        "Wordshiper jẹ́ áàpù ìfi Ìwé Mímọ́ sọ́kàn, OS ẹ̀mí ojoojúmọ́ tí ó ń tún ọjọ́ ṣètò, àti ìgbésẹ̀ ìfi Ìwé Mímọ́ sọ́kàn agbayé — tí a ṣe gẹ́gẹ́ bí ọ̀kan.",
       layers: [
         {
-          t: "Scripture Memory App",
+          t: "Áàpù ìfi Ìwé Mímọ́ sọ́kàn",
           d: "Ó ń ràn ọ́ lọ́wọ́ láti gba, gbọ́, sọ, kí o sì fi ẹsẹ̀ kan sọ́kàn lójúmọ́.",
         },
         {
-          t: "Daily Spiritual OS",
-          d: "Ó ń tún àwọn ohun pàtàkì ọjọ́ ṣètò yíká Ọ̀rọ̀ Ọlọ́run nípasẹ̀ Ìwé Mímọ́, àdúrà, àti Walk planner.",
+          t: "OS ẹ̀mí ojoojúmọ́",
+          d: "Ó ń tún àwọn ohun pàtàkì ọjọ́ ṣètò yíká Ọ̀rọ̀ Ọlọ́run nípasẹ̀ Ìwé Mímọ́, àdúrà, àti olùṣètò Walk.",
         },
         {
-          t: "Global Scripture Memory Movement",
-          d: "Kọjá ẹsẹ̀ kan kí o sì darapọ̀ mọ́ lineage gẹ́gẹ́ bí Wordshiper kẹN — lẹ́yìn náà pe ènìyàn tó kàn pẹ̀lú Verse\u00A0Card àti ohùn rẹ.",
+          t: "Ìgbésẹ̀ Ọ̀rọ̀ agbayé",
+          d: "Kọjá ẹsẹ̀ kan kí o sì darapọ̀ mọ́ ìdílé gẹ́gẹ́ bí Wordshiper kẹN — lẹ́yìn náà pe ènìyàn tó kàn pẹ̀lú Verse\u00A0Card àti ohùn rẹ.",
         },
       ],
     },

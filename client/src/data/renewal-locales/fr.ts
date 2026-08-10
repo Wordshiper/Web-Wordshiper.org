@@ -12,6 +12,20 @@ const locale: RenewalCopy = {
     slideSelectorAria: "Sélecteur de diapositives",
     lineageNumber: "Votre numéro de lignée",
     lineageEmailNote: "Nous avons envoyé un e-mail de confirmation — veuillez vérifier votre boîte de réception.",
+    donatePreparingEyebrow: "Bientôt",
+    donatePreparingTitle: "Le don est en préparation",
+    donatePreparingBody:
+      "Le lien de don est actuellement en préparation.\n" +
+      "Nous le rouvrirons dès que nous aurons\n" +
+      "une expérience de don plus sûre et plus fluide.",
+    donatePreparingCta: "Compris",
+    preregisterOpensEyebrow: "Ouvre le 1\u00A0décembre\u00A02026",
+    preregisterOpensTitle: "La préinscription ouvre le 1\u00A0décembre",
+    preregisterOpensBody:
+      "La préinscription à la lignée ouvre le 1\u00A0décembre\u00A02026.\n" +
+      "Ce jour-là, un parcours d’inscription tout nouveau\n" +
+      "accueillera les premiers\u00A01\u00A0000 Wordshipers.",
+    preregisterOpensCta: "Compris",
   },
   nav: {
     product: "Flux",
@@ -36,7 +50,7 @@ const locale: RenewalCopy = {
       {
         label: "Qu’est-ce que Wordshiper ?",
         title1: "Mémorisez un verset.",
-        title2: "Réalignez toute votre journée.",
+        title2: "Réalignez votre journée.",
         body: "Une application qui vous aide à méditer et mémoriser un verset des Écritures, répéter trois courtes prières chaque jour, restaurer les priorités spirituelles · physiques · émotionnelles, et vivre une vie d’appel.",
         visual: "home" as const,
       },
@@ -59,7 +73,9 @@ const locale: RenewalCopy = {
   why: {
     label: "Pourquoi Wordshiper",
     title: "Plus connectés que jamais,\ncependant plus profondément dispersés",
-    lead: "Nous vivons dans un déluge d’informations et une agitation sans relâche. D’innombrables voix ébranlent nos cœurs chaque jour, et les priorités de la vie se dispersent facilement.",
+    lead:
+      "Nous vivons dans un déluge d’informations et une agitation sans relâche.\n" +
+      "D’innombrables voix ébranlent nos cœurs chaque jour, et les priorités de la vie se dispersent facilement.",
     points: [
       {
         t: "Bruit et précipitation",
@@ -75,7 +91,13 @@ const locale: RenewalCopy = {
       },
     ],
     answer:
-      "Quand même un seul verset est planté profondément dans un cœur, il devient la force de vaincre la peur, de traverser l’épreuve et de ramener à Dieu les priorités spirituelles dispersées.",
+      "Quand un verset de l’Écriture est planté au profond d’un cœur,\n" +
+      "cette Parole devient la force de vaincre la peur, de traverser l’épreuve,\n" +
+      "et de ramener à Dieu les priorités spirituelles dispersées.\n\n" +
+      "Laissez-la en héritage de la Parole —\n" +
+      "à vos enfants bien-aimés, et à vos parents.\n\n" +
+      "Jour après jour nous serons renouvelés,\n" +
+      "adorateurs en qui Dieu prend plaisir.",
     answerRef: "— Pourquoi Wordshiper a commencé",
   },
   identity: {
@@ -91,15 +113,15 @@ const locale: RenewalCopy = {
     result: "Aider les gens à vivre comme des adorateurs qui inscrivent la Parole — des Wordshipers",
     layers: [
       {
-        t: "Scripture Memory App",
+        t: "Appli de mémorisation biblique",
         d: "Aide à recevoir, écouter, parler et mémoriser un verset chaque jour.",
       },
       {
-        t: "Daily Spiritual OS",
+        t: "OS spirituel quotidien",
         d: "Réaligne les priorités du jour autour de la Parole de Dieu par l’Écriture, la prière et le planificateur Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
+        t: "Mouvement mondial de mémorisation biblique",
         d: "Passez un verset et rejoignez la lignée en tant que Nᵉ Wordshiper — puis invitez la personne suivante avec une Verse\u00A0Card et votre voix.",
       },
     ],
@@ -195,15 +217,15 @@ const locale: RenewalCopy = {
     sub: "Une app de mémorisation des Écritures, un OS spirituel quotidien et un mouvement mondial de la Parole — conçus comme un seul tout.",
     thesis: [
       {
-        t: "Scripture Memory App",
+        t: "Appli de mémorisation biblique",
         d: "Aide à recevoir, écouter, parler et mémoriser un verset chaque jour.",
       },
       {
-        t: "Daily Spiritual Operating System",
+        t: "Système d'exploitation spirituel quotidien",
         d: "Réaligne les priorités du jour autour de la Parole de Dieu par l’Écriture, la prière et le planificateur Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
+        t: "Mouvement mondial de mémorisation biblique",
         d: "Passez un verset et rejoignez la lignée en tant que Nᵉ Wordshiper — puis invitez la personne suivante avec une Verse\u00A0Card et votre voix.",
       },
     ],
@@ -260,17 +282,17 @@ const locale: RenewalCopy = {
       "Ce numéro n’est pas un score. Il marque votre place dans la lignée de la Parole — la preuve que vous n’êtes pas seul.",
     engines: [
       {
-        t: "Synchronicity",
+        t: "Synchronicité",
         e: "Ensemble, maintenant",
         d: "« Je ne suis pas seul » — le monde entier reçoit le même verset au même moment.",
       },
       {
-        t: "Lineage",
+        t: "Lignée",
         e: "Partie du flux",
         d: "« J’appartiens à un plus grand courant » — rejoignez une lignée à travers les générations, les langues et les terres.",
       },
       {
-        t: "Public Artifact",
+        t: "Artefact public",
         e: "Une confession qui circule",
         d: "« Ma confession circule dans le monde » — les Verse\u00A0Cards et votre voix invitent la personne suivante.",
       },
@@ -284,15 +306,15 @@ const locale: RenewalCopy = {
     stats: [
       {
         n: "1.9B",
-        d: "Chrétiens dans le monde — le peuple que nous aspirons à servir",
+        d: "Chrétiens dans le monde\nle peuple que nous aspirons à servir",
       },
       {
         n: "24",
-        d: "Langues — mémorisation duale et triple",
+        d: "Langues\nmémorisation duale et triple",
       },
       {
         n: "3",
-        d: "Applications indépendantes sur un même noyau (Wordshiper · Verbum · Pasuk)",
+        d: "Applications indépendantes sur un même noyau\nWordshiper · Verbum · Pasuk",
       },
     ],
     whitelabel:
@@ -354,7 +376,7 @@ const locale: RenewalCopy = {
     points: [
       {
         t: "Conception de mouvement éprouvée",
-        d: "Synchronicity, lineage, public artifacts — trois moteurs redéfinis avec un sens spirituel.",
+        d: "Synchronicité, lignée, artefacts publics — trois moteurs redéfinis avec un sens spirituel.",
       },
       {
         t: "Un modèle durable",
@@ -469,15 +491,15 @@ const locale: RenewalCopy = {
       lead: "Wordshiper est une app de mémorisation des Écritures, un OS spirituel quotidien qui réaligne la journée, et un mouvement mondial de mémorisation des Écritures — conçus comme un seul tout.",
       layers: [
         {
-          t: "Scripture Memory App",
+          t: "Appli de mémorisation biblique",
           d: "Vous aide à recevoir, écouter, parler et mémoriser un verset chaque jour.",
         },
         {
-          t: "Daily Spiritual OS",
+          t: "OS spirituel quotidien",
           d: "Réaligne les priorités du jour autour de la Parole de Dieu par l’Écriture, la prière et le planificateur Walk.",
         },
         {
-          t: "Global Scripture Memory Movement",
+          t: "Mouvement mondial de mémorisation biblique",
           d: "Passez un verset et rejoignez la lignée en tant que Nᵉ Wordshiper — puis invitez la personne suivante avec une Verse\u00A0Card et votre voix.",
         },
       ],

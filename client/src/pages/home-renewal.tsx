@@ -4,6 +4,7 @@ import { useCopy } from "@/data/renewal-copy";
 import { useLanguage } from "@/hooks/use-language";
 import { brandDisplayForLanguage } from "@/data/brand";
 import ExpandedLanguageSwitcher from "@/components/expanded-language-switcher";
+import StatusNoticeDialog from "@/components/status-notice-dialog";
 import SEO from "@/components/seo";
 import Footer from "@/components/renewal-footer";
 import { useToast } from "@/hooks/use-toast";
@@ -205,10 +206,12 @@ function Hero() {
             <p className="mt-1 text-sm font-semibold tracking-[0.12em] uppercase text-[#0090B8]">
               {slide.label}
             </p>
-            <h1 className="font-scripture font-bold mt-3 text-4xl sm:text-5xl lg:text-[3.05rem] leading-[1.12] text-[#201E1F] ws-text-balance">
-              {slide.title1}
-              <br />
-              <span style={{ color: CYAN }}>{slide.title2}</span>
+            {/* Each line balances on its own so long locales never orphan a word */}
+            <h1 className="font-scripture font-bold mt-3 text-4xl sm:text-5xl lg:text-[3.05rem] leading-[1.12] text-[#201E1F]">
+              <span className="block ws-text-balance">{slide.title1}</span>
+              <span className="block ws-text-balance" style={{ color: CYAN }}>
+                {slide.title2}
+              </span>
             </h1>
             <p className="font-scripture-italic text-xl sm:text-2xl mt-5 text-[#003D4F] ws-text-pretty">
               {c.hero.slogan}
@@ -308,7 +311,7 @@ function Why() {
           <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
             {c.why.title}
           </h2>
-          <p className="mt-6 text-lg text-gray-600 leading-relaxed ws-text-pretty">
+          <p className="mt-6 text-lg text-gray-600 leading-relaxed whitespace-pre-line ws-text-pretty">
             {c.why.lead}
           </p>
         </div>
@@ -333,10 +336,10 @@ function Why() {
           ))}
         </div>
         <blockquote className="mt-16 pt-12 border-t border-[#E6F7FC] text-center">
-          <p className="font-scripture text-2xl sm:text-[1.75rem] leading-relaxed text-[#003D4F] ws-text-pretty">
-            “{c.why.answer}”
+          <p className="font-scripture text-2xl sm:text-[1.75rem] leading-relaxed text-[#003D4F] whitespace-pre-line ws-text-pretty">
+            {c.why.answer}
           </p>
-          <cite className="block mt-4 text-sm text-gray-500 not-italic">{c.why.answerRef}</cite>
+          <cite className="block mt-6 text-sm text-gray-500 not-italic">{c.why.answerRef}</cite>
         </blockquote>
       </div>
     </section>
@@ -612,17 +615,19 @@ function GlobalVision() {
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <SectionLabel>{c.global.label}</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+        <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
           {c.global.title}
         </h2>
-        <p className="mt-5 max-w-2xl mx-auto text-lg text-gray-600 leading-relaxed ws-text-pretty">
+        <p className="mt-5 max-w-2xl mx-auto text-lg text-gray-600 leading-relaxed whitespace-pre-line ws-text-pretty">
           {c.global.body}
         </p>
         <div className="grid sm:grid-cols-3 gap-6 mt-12">
           {c.global.stats.map((s, i) => (
             <div key={i} className="p-8 rounded-2xl bg-[#F8FCFE] border border-[#E6F7FC]">
               <div className="font-scripture font-bold text-5xl" style={{ color: CYAN }}>{s.n}</div>
-              <p className="mt-3 text-gray-600 text-sm leading-relaxed ws-text-pretty">{s.d}</p>
+              <p className="mt-3 text-gray-600 text-sm leading-relaxed whitespace-pre-line ws-text-pretty">
+                {s.d}
+              </p>
             </div>
           ))}
         </div>
@@ -642,7 +647,9 @@ function Roadmap() {
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="text-center">
           <SectionLabel>{c.roadmap.label}</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F]">{c.roadmap.title}</h2>
+          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+            {c.roadmap.title}
+          </h2>
         </div>
         <div className="mt-14 relative">
           <div className="absolute left-5 sm:left-1/2 top-0 bottom-0 w-px bg-[#99E0F5]" />
@@ -663,6 +670,9 @@ function Roadmap() {
   );
 }
 
+/** Flip to false when lineage pre-registration should accept live signups. */
+const PREREGISTER_OPENS_DEC_1 = true;
+
 function Preregister() {
   const c = useCopy();
   const { currentLanguage } = useLanguage();
@@ -670,9 +680,14 @@ function Preregister() {
   const [email, setEmail] = useState("");
   const [busy, setBusy] = useState(false);
   const [lineageNumber, setLineageNumber] = useState<number | null>(null);
+  const [noticeOpen, setNoticeOpen] = useState(false);
 
   const submit = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (PREREGISTER_OPENS_DEC_1) {
+      setNoticeOpen(true);
+      return;
+    }
     if (!email) return;
     setBusy(true);
     try {
@@ -711,6 +726,17 @@ function Preregister() {
         </h2>
         <p className="mt-4 text-white/85 text-lg ws-text-pretty">{c.cta.sub}</p>
 
+        {PREREGISTER_OPENS_DEC_1 && (
+          <button
+            type="button"
+            onClick={() => setNoticeOpen(true)}
+            className="mt-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/15 border border-white/30 text-white text-sm font-semibold tracking-wide backdrop-blur-sm hover:bg-white/25 transition-colors"
+          >
+            <span className="inline-block w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
+            {c.chrome.preregisterOpensEyebrow}
+          </button>
+        )}
+
         {lineageNumber != null ? (
           <div className="mt-10 rounded-3xl bg-white/15 border border-white/25 backdrop-blur-sm px-8 py-10 ws-lineage-reveal">
             <p className="text-white/80 text-sm tracking-widest uppercase font-semibold">
@@ -728,7 +754,7 @@ function Preregister() {
           <form onSubmit={submit} className="mt-9 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
             <input
               type="email"
-              required
+              required={!PREREGISTER_OPENS_DEC_1}
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder={c.cta.placeholder}
@@ -750,6 +776,15 @@ function Preregister() {
           <p className="font-scripture-italic mt-10 text-2xl text-white">{c.cta.declaration}</p>
         )}
       </div>
+
+      <StatusNoticeDialog
+        open={noticeOpen}
+        onOpenChange={setNoticeOpen}
+        eyebrow={c.chrome.preregisterOpensEyebrow}
+        title={c.chrome.preregisterOpensTitle}
+        body={c.chrome.preregisterOpensBody}
+        cta={c.chrome.preregisterOpensCta}
+      />
     </section>
   );
 }

@@ -2,6 +2,7 @@ import { useState, createContext, useContext, useEffect, type ReactNode } from "
 import { getTranslation } from "@/data/translations";
 import { applyTypographyToDocument } from "@/data/typography";
 import {
+  detectBrowserLocale,
   getSiteLanguages,
   isSiteLocale,
   normalizeSiteLocale,
@@ -25,13 +26,22 @@ interface LanguageProviderProps {
   children: ReactNode;
 }
 
+/**
+ * Decision order on first paint:
+ * 1. Saved picker choice (localStorage)
+ * 2. Browser / OS language list (navigator.languages → navigator.language)
+ * 3. English
+ *
+ * Windows, macOS, iOS, and Android all surface their UI language through
+ * the browser's navigator APIs — there is no separate mobile-app bridge.
+ */
 function readInitialLanguage(): string {
   if (typeof window === "undefined") return "en";
   const saved = localStorage.getItem("wordshiper-language-v2");
   if (saved && isSiteLocale(saved)) {
     return normalizeSiteLocale(saved);
   }
-  return "en";
+  return detectBrowserLocale();
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {

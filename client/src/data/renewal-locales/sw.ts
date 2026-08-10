@@ -10,8 +10,22 @@ const locale: RenewalCopy = {
     all: "Zote",
     heroSlidesAria: "Slaidi za utangulizi za Wordshiper",
     slideSelectorAria: "Kichaguaji cha slaidi",
-    lineageNumber: "Nambari yako ya lineage",
+    lineageNumber: "Nambari yako ya nasaba",
     lineageEmailNote: "Tumekutumia barua pepe ya uthibitisho — tafadhali angalia kikasha chako.",
+    donatePreparingEyebrow: "Inakuja hivi karibuni",
+    donatePreparingTitle: "Michango inatayarishwa",
+    donatePreparingBody:
+      "Kiungo cha michango bado hakijafunguliwa.\n" +
+      "Tunakamilisha uzoefu salama na laini zaidi wa kutoa\n" +
+      "na tutaufungua mara tu utakapokuwa tayari.",
+    donatePreparingCta: "Sawa",
+    preregisterOpensEyebrow: "Inafunguliwa Desemba\u00A01, 2026",
+    preregisterOpensTitle: "Usajili mapema unafunguliwa Desemba\u00A01",
+    preregisterOpensBody:
+      "Usajili mapema wa nasaba unafunguliwa Desemba\u00A01, 2026.\n" +
+      "Siku hiyo, mtiririko mpya wa kujisajili utakaribisha\n" +
+      "Wordshipers\u00A01,000 wa kwanza.",
+    preregisterOpensCta: "Sawa",
   },
   nav: {
     product: "Mtiririko",
@@ -31,7 +45,7 @@ const locale: RenewalCopy = {
     declaration: "Mimi ni Wordshiper.",
     cta1: "Jiunge na\u00A01,000\u00A0wa kwanza",
     cta2: "Kwa nini Wordshiper",
-    lineageNote: "Jisajili mapema na upokee nambari yako ya lineage",
+    lineageNote: "Jisajili mapema na upokee nambari yako ya nasaba",
     slides: [
       {
         label: "Wordshiper ni nini?",
@@ -44,14 +58,14 @@ const locale: RenewalCopy = {
         label: "Kinachofanya iwe tofauti",
         title1: "Si peke yako.",
         title2: "Hivi ndivyo injili inavyotiririka.",
-        body: "Vituo vinavyotegemea mahali na jamii vinakuunganisha na waumini wenzako karibu. Msaada wa dual/triple katika lugha 24. Kushiriki, kutoa, na vituo vinakuwa njia za injili. Wordshiper si chombo tu — ni jukwaa la maisha yanayozingatia Neno.",
+        body: "Vituo vinavyotegemea mahali na jamii vinakuunganisha na waumini wenzako karibu. Msaada wa lugha mbili au tatu kati ya lugha 24. Kushiriki, kutoa, na vituo vinakuwa njia za injili. Wordshiper si chombo tu — ni jukwaa la maisha yanayozingatia Neno.",
         visual: "jog" as const,
       },
       {
         label: "Utambulisho wa mara tatu",
-        title1: "Programu ya kumbukumbu · Spiritual OS ·",
+        title1: "Programu ya kumbukumbu · OS ya kiroho ·",
         title2: "Harakati ya kimataifa ya Neno",
-        body: "Pokea, sikia, sema, na uhifadhi aya moja kwa siku. Panga upya siku yako katika dakika kumi na tano. Pitisha aya na ujiunge na lineage kama Wordshiper wa N — kisha mwalike mtu anayefuata kwa Verse\u00A0Card na sauti yako.",
+        body: "Pokea, sikia, sema, na uhifadhi aya moja kwa siku. Panga upya siku yako katika dakika kumi na tano. Pitisha aya na ujiunge na nasaba kama Wordshiper wa N — kisha mwalike mtu anayefuata kwa Verse\u00A0Card na sauti yako.",
         visual: "home" as const,
       },
     ],
@@ -59,7 +73,9 @@ const locale: RenewalCopy = {
   why: {
     label: "Kwa nini Wordshiper",
     title: "Tumeunganishwa zaidi kuliko hapo awali,\nlakini tumetawanyika zaidi",
-    lead: "Tunaishi katika mafuriko ya habari na shughuli zisizoisha. Sauti nyingi zinatikisa mioyo yetu kila siku, na vipaumbele vya maisha hutawanyika kwa urahisi.",
+    lead:
+      "Tunaishi katika mafuriko ya habari na shughuli zisizoisha.\n" +
+      "Sauti nyingi zinatikisa mioyo yetu kila siku, na vipaumbele vya maisha hutawanyika kwa urahisi.",
     points: [
       {
         t: "Kelele na haraka",
@@ -75,7 +91,13 @@ const locale: RenewalCopy = {
       },
     ],
     answer:
-      "Hata aya moja ikipandwa kwa undani katika moyo mmoja, inakuwa nguvu ya kushinda hofu, kupita magumu, na kugeuza vipaumbele vya kiroho vilivyotawanyika kurudi kwa Mungu.",
+      "Aya moja ya Maandiko ikipandwa kwa kina moyoni,\n" +
+      "Neno hilo huwa nguvu ya kushinda hofu, ya kupita magumu,\n" +
+      "na ya kugeuza vipaumbele vya kiroho vilivyotawanyika kurudi kwa Mungu.\n\n" +
+      "Liache kama urithi wa Neno —\n" +
+      "kwa watoto wako wapendwa, na kwa wazazi wako.\n\n" +
+      "Siku baada ya siku tutafanywa upya,\n" +
+      "tukiwa waabudu ambao Mungu hupendezwa nao.",
     answerRef: "— Kwa nini Wordshiper ilianza",
   },
   identity: {
@@ -91,20 +113,20 @@ const locale: RenewalCopy = {
     result: "Kuwasaidia watu kuishi kama waabudu wanaoandika Neno — Wordshipers",
     layers: [
       {
-        t: "Scripture Memory App",
+        t: "Programu ya kuhifadhi Maandiko",
         d: "Inawasaidia watumiaji kupokea, kusikia, kusema, na kuhifadhi aya moja kila siku.",
       },
       {
-        t: "Daily Spiritual OS",
-        d: "Inapanga upya vipaumbele vya siku kuzunguka Neno la Mungu kupitia Maandiko, sala, na Walk planner.",
+        t: "OS ya kiroho ya kila siku",
+        d: "Inapanga upya vipaumbele vya siku kuzunguka Neno la Mungu kupitia Maandiko, sala, na mpangaji wa Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "Pitisha aya na ujiunge na lineage kama Wordshiper wa N — kisha mwalike mtu anayefuata kwa Verse\u00A0Card na sauti yako.",
+        t: "Harakati ya kimataifa ya Neno",
+        d: "Pitisha aya na ujiunge na nasaba kama Wordshiper wa N — kisha mwalike mtu anayefuata kwa Verse\u00A0Card na sauti yako.",
       },
     ],
     notOnly:
-      "Vituo vinavyotegemea mahali na jamii vinakuunganisha na waumini wenzako katika eneo lako. Kiingereza kwa chaguo-msingi, na msaada wa dual/triple katika lugha 24. Maandiko hayahifadhiwi peke yake — yanashirikiwa na kuwekwa hai pamoja.",
+      "Vituo vinavyotegemea mahali na jamii vinakuunganisha na waumini wenzako katika eneo lako. Kiingereza kwa chaguo-msingi, na msaada wa lugha mbili au tatu kati ya lugha 24. Maandiko hayahifadhiwi peke yake — yanashirikiwa na kuwekwa hai pamoja.",
     forWhom:
       "Kushiriki, michango, na vituo vinakuwa “njia za injili.” Wordshiper si chombo cha programu tu — ni jukwaa la maisha yanayozingatia Neno.",
   },
@@ -130,14 +152,14 @@ const locale: RenewalCopy = {
   routine: {
     label: "Ratiba kuu",
     title: "Mara tatu kwa siku,\ndakika tano kila moja",
-    sub: "Kila kikao kinawashwa kiotomatiki na kengele ya Walk planner, hivyo mara tatu kwa siku zinakuwa mdundo wa maisha. Pokea asubuhi, rejea adhuhuri, thibitisha usiku — hadi aya moja izingie katika maisha yako.",
-    alarmNote: "Kengele ya Walk planner",
+    sub: "Kila kikao kinawashwa kiotomatiki na kengele ya mpangaji wa Walk, hivyo mara tatu kwa siku zinakuwa mdundo wa maisha. Pokea asubuhi, rejea adhuhuri, thibitisha usiku — hadi aya moja izingie katika maisha yako.",
+    alarmNote: "Kengele ya mpangaji wa Walk",
     principle:
       "Tiny Habits — dakika tano kila moja huifanya iwe nyepesi kurudiwa kila siku, huku ikilinda uhifadhi na kina cha kiroho.",
     sessions: [
       {
         time: "Asubuhi\u00A0·\u00A05\u00A0dak",
-        when: "Unapoamka · Kengele ya Walk planner",
+        when: "Unapoamka · Kengele ya mpangaji wa Walk",
         items: [
           "Sala 1\u00A0dak — sala ya asubuhi",
           "Hifadhi 2\u00A0dak — aya ya leo",
@@ -146,16 +168,16 @@ const locale: RenewalCopy = {
       },
       {
         time: "Adhuhuri\u00A0·\u00A05\u00A0dak",
-        when: "Kabla ya chakula cha mchana · Kengele ya Walk planner",
+        when: "Kabla ya chakula cha mchana · Kengele ya mpangaji wa Walk",
         items: [
           "Sala 1\u00A0dak — shukrani",
           "Pitia 2\u00A0dak — rudia aya ya asubuhi",
-          "Walk check 2\u00A0dak — vipaumbele vya leo",
+          "Ukaguzi wa Walk 2\u00A0dak — vipaumbele vya leo",
         ],
       },
       {
         time: "Jioni\u00A0·\u00A05\u00A0dak",
-        when: "Kabla ya kulala · Kengele ya Walk planner",
+        when: "Kabla ya kulala · Kengele ya mpangaji wa Walk",
         items: [
           "Sala 1\u00A0dak — tafakari ya siku",
           "Thibitisha 2\u00A0dak — Hide\u00A0&\u00A0Test",
@@ -174,19 +196,19 @@ const locale: RenewalCopy = {
   product: {
     label: "Utambulisho wa bidhaa",
     title: "Jukwaa moja,\ntabaka tatu",
-    sub: "Programu ya kuhifadhi Maandiko, Spiritual OS ya kila siku, na harakati ya kimataifa ya Neno — zimeundwa kama kitu kimoja.",
+    sub: "Programu ya kuhifadhi Maandiko, OS ya kiroho ya kila siku, na harakati ya kimataifa ya Neno — zimeundwa kama kitu kimoja.",
     thesis: [
       {
-        t: "Scripture Memory App",
+        t: "Programu ya kuhifadhi Maandiko",
         d: "Inawasaidia watumiaji kupokea, kusikia, kusema, na kuhifadhi aya moja kila siku.",
       },
       {
-        t: "Daily Spiritual Operating System",
-        d: "Inapanga upya vipaumbele vya siku kuzunguka Neno la Mungu kupitia Maandiko, sala, na Walk planner.",
+        t: "Mfumo wa uendeshaji wa kiroho wa kila siku",
+        d: "Inapanga upya vipaumbele vya siku kuzunguka Neno la Mungu kupitia Maandiko, sala, na mpangaji wa Walk.",
       },
       {
-        t: "Global Scripture Memory Movement",
-        d: "Pitisha aya na ujiunge na lineage kama Wordshiper wa N — kisha mwalike mtu anayefuata kwa Verse\u00A0Card na sauti yako.",
+        t: "Harakati ya kimataifa ya Neno",
+        d: "Pitisha aya na ujiunge na nasaba kama Wordshiper wa N — kisha mwalike mtu anayefuata kwa Verse\u00A0Card na sauti yako.",
       },
     ],
     tabs: [
@@ -197,9 +219,9 @@ const locale: RenewalCopy = {
       { t: "Walk", d: "Tembea kwa Neno — kutoka wito hadi mazoezi ya kila siku" },
     ],
     features: [
-      { t: "Worvi — mwandani wa kiroho wa AI", d: "Haikuhukumu kamwe streak iliyovunjika; inakualika kurudi kwa Neno kwa neema." },
-      { t: "Jog wheel — Maandiko katika sekunde 1.5", d: "Fikia Biblia katika sekunde 1.5\u00A0, hata katikati ya ibada. Aya 31,112 nje ya mtandao." },
-      { t: "Verse\u00A0Card — ungamo linalotiririka", d: "Pitisha aya na kadi inazaliwa — aya, nambari ya lineage, voice QR." },
+      { t: "Worvi — mwandani wa kiroho wa AI", d: "Haikuhukumu kamwe ratiba yako inapokatizwa; inakualika kurudi kwa Neno kwa neema." },
+      { t: "Gurudumu la Jog — Maandiko katika sekunde 1.5", d: "Fikia Biblia katika sekunde 1.5, hata katikati ya ibada. Aya 31,112 nje ya mtandao." },
+      { t: "Verse\u00A0Card — ungamo linalotiririka", d: "Pitisha aya na kadi inazaliwa — aya, nambari ya nasaba, QR ya sauti." },
       { t: "Lugha 24", d: "Hifadhi katika lugha mbili au tatu pamoja na lugha yako mama." },
     ],
     demoNote: "Skrini halisi za programu",
@@ -207,15 +229,15 @@ const locale: RenewalCopy = {
   movement: {
     label: "Harakati",
     subtitle: "Hatujengi programu.\nTunawasha harakati.",
-    title: "Lineage ya kiroho,\naya kwa aya",
-    lineageLead: "Wewe ni",
+    title: "Nasaba ya kiroho,\naya kwa aya",
+    lineageLead: "Wewe ni Wordshiper wa",
     lineageNum: "14,207",
-    lineageTail: "Wordshiper kuandika aya hii",
-    lineageSub: "Nambari hii si alama. Inaonyesha mahali pako katika lineage ya Neno — uthibitisho kwamba si peke yako.",
+    lineageTail: " kuandika aya hii",
+    lineageSub: "Nambari hii si alama. Inaonyesha mahali pako katika nasaba ya Neno — uthibitisho kwamba si peke yako.",
     engines: [
-      { t: "Synchronicity", e: "Pamoja, sasa", d: "\u201cSiko peke yangu\u201d — dunia nzima inapokea aya ile ile wakati ule ule." },
-      { t: "Lineage", e: "Sehemu ya mtiririko", d: "\u201cNiko katika mto mkubwa zaidi\u201d — jiunge na lineage katika vizazi, lugha, na nchi." },
-      { t: "Public Artifact", e: "Ungamo linalotiririka", d: "\u201cUngamo langu linatiririka ulimwenguni\u201d — Verse\u00A0Cards na sauti yako zinawalika mtu anayefuata." },
+      { t: "Wakati mmoja", e: "Pamoja, sasa", d: "\u201cSiko peke yangu\u201d — dunia nzima inapokea aya ile ile wakati ule ule." },
+      { t: "Nasaba", e: "Sehemu ya mtiririko", d: "\u201cNiko katika mto mkubwa zaidi\u201d — jiunge na nasaba katika vizazi, lugha, na nchi." },
+      { t: "Alama ya hadharani", e: "Ungamo linalotiririka", d: "\u201cUngamo langu linatiririka ulimwenguni\u201d — Verse\u00A0Cards na sauti yako zinawalika mtu anayefuata." },
     ],
     promise: "Hakuna aibu. Hakuna kelele. Aya\u00A0moja. Maisha ya ibada.",
   },
@@ -224,31 +246,31 @@ const locale: RenewalCopy = {
     title: "Ibada inayotiririka katika nyumba,\nmakanisa, miji, na mataifa",
     body: "Tunaota watu wanaokumbuka Neno kuwa Wordshipers wa kweli — wakifanya haki, wakipenda fadhili, na kutembea kwa unyenyekevu na Mungu pale walipo.",
     stats: [
-      { n: "1.9B", d: "Wakristo duniani kote — watu tunaotamani kuwahudumia" },
-      { n: "24", d: "Lugha — uhifadhi wa dual na triple" },
-      { n: "3", d: "Programu huru kwenye msingi mmoja (Wordshiper · Verbum · Pasuk)" },
+      { n: "1.9B", d: "Wakristo duniani kote\nwatu tunaotamani kuwahudumia" },
+      { n: "24", d: "Lugha\nuhifadhi wa dual na triple" },
+      { n: "3", d: "Programu huru kwenye msingi mmoja\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:
-      "Kwenye core design system moja: Wordshiper (Protestant), Verbum (Catholic), Pasuk (Jewish) — kila moja inaheshimu mila yake katika harakati moja ya Neno.",
+      "Kwenye mfumo mmoja mkuu wa muundo: Wordshiper (Kiprotestanti), Verbum (Kikatoliki), Pasuk (Kiyahudi) — kila moja inaheshimu mila yake katika harakati moja ya Neno.",
   },
   roadmap: {
     label: "Ramani ya njia",
     title: "Harakati tayari imeanza",
     phases: [
-      { t: "Phase\u00A01 — MVP", d: "Mzunguko mkuu: pokea · hifadhi · jiunge na lineage" },
-      { t: "Phase\u00A02 — Routine", d: "Vikao vitatu vya kila siku · Walk planner · Worvi" },
-      { t: "Phase\u00A03 — Launch", d: "Desemba\u00A02026 — jamii mbegu ya\u00A01,000\u00A0wa kwanza" },
-      { t: "Phase\u00A04 — Expansion", d: "Voice\u00A0Feed · vituo · programu tatu za white-label" },
+      { t: "Phase\u00A01 — MVP", d: "Mzunguko mkuu: pokea · hifadhi · jiunge na nasaba" },
+      { t: "Phase\u00A02 — Ratiba", d: "Vikao vitatu vya kila siku · mpangaji wa Walk · Worvi" },
+      { t: "Phase\u00A03 — Uzinduzi", d: "Desemba\u00A02026 — jamii mbegu ya\u00A01,000\u00A0wa kwanza" },
+      { t: "Phase\u00A04 — Upanuzi", d: "Voice\u00A0Feed · vituo · programu tatu za white-label" },
     ],
   },
   cta: {
     title: "Tunatafuta\u00A01,000\u00A0wa kwanza\nkupokea manna ya kwanza pamoja",
-    sub: "Jisajili mapema na upokee nambari yako ya lineage. Siku ya uzinduzi, kila mtu anapokea manna ya kwanza wakati ule ule.",
+    sub: "Jisajili mapema na upokee nambari yako ya nasaba. Siku ya uzinduzi, kila mtu anapokea manna ya kwanza wakati ule ule.",
     placeholder: "Anwani ya barua pepe",
     button: "Jisajili mapema",
-    success: "Asante! Umejiunga na lineage.",
+    success: "Asante! Umejiunga na nasaba.",
     successWithNumber: (n: number) =>
-      `Asante! Wewe ni Wordshiper #${n}. Tafadhali angalia barua pepe yako kwa uthibitisho wa lineage.`,
+      `Asante! Wewe ni Wordshiper #${n}. Tafadhali angalia barua pepe yako kwa uthibitisho wa nasaba.`,
     error: "Usajili umeshindikana. Tafadhali jaribu tena.",
     declaration: "Ndiyo, mimi ni Wordshiper!",
   },
@@ -264,7 +286,7 @@ const locale: RenewalCopy = {
     processing: "Inaunganisha…",
     taxNote: "Inakatwa kodi nchini U.S. · EIN 33-1561112 · Risiti zinatolewa na Stripe.",
     successTitle: "Asante",
-    successSub: "Zawadi yako inasaidia lineage ya Neno kuendelea kutiririka.",
+    successSub: "Zawadi yako inasaidia nasaba ya Neno kuendelea kutiririka.",
     error: "Imeshindikana kuanza malipo. Tafadhali tuma barua pepe info@wordshiper.org.",
     backHome: "Rudi nyumbani",
   },
@@ -273,10 +295,10 @@ const locale: RenewalCopy = {
     title: "Tunatafuta washirika kuandika\nsura inayofuata ya harakati ya Neno",
     sub: "Wordshiper inafanya kazi kama Wordshiper Ministry Inc. (501(c)(3)) na Wordshiper PBC, Inc. — ikilinda uendelevu na dhamira pamoja.",
     points: [
-      { t: "Ubunifu wa harakati uliothibitishwa", d: "Synchronicity, lineage, public artifacts — injini tatu zilizofafanuliwa upya kwa maana ya kiroho." },
+      { t: "Ubunifu wa harakati uliothibitishwa", d: "Ulinganifu wa wakati, nasaba, matokeo ya hadhara — injini tatu zilizofafanuliwa upya kwa maana ya kiroho." },
       { t: "Mfano endelevu", d: "Bure milele kwa watu binafsi. Pro\u00A0Organization na utoaji wa hiari vinadumisha uendeshaji. Hakuna matangazo." },
       { t: "Teknolojia iliyojengwa kufanya kazi", d: "Cache ya TTS ya kimataifa inapunguza gharama za sauti kwa kiwango kikubwa." },
-      { t: "Upanuzi wa white-label", d: "Injini moja kuu inaingia masoko ya Protestant, Catholic, na Jewish." },
+      { t: "Upanuzi wa white-label", d: "Injini moja kuu inaingia masoko ya Kiprotestanti, Kikatoliki, na Kiyahudi." },
     ],
     teamTitle: "Uongozi",
     team: [
@@ -352,19 +374,19 @@ const locale: RenewalCopy = {
       label: "Nadharia",
       title: "Jukwaa moja,\ntabaka tatu",
       lead:
-        "Wordshiper ni programu ya kuhifadhi Maandiko, Spiritual OS ya kila siku inayopanga upya siku, na harakati ya kimataifa ya kuhifadhi Maandiko — zimeundwa kama kitu kimoja.",
+        "Wordshiper ni programu ya kuhifadhi Maandiko, OS ya kiroho ya kila siku inayopanga upya siku, na harakati ya kimataifa ya kuhifadhi Maandiko — zimeundwa kama kitu kimoja.",
       layers: [
         {
-          t: "Scripture Memory App",
+          t: "Programu ya kuhifadhi Maandiko",
           d: "Inakusaidia kupokea, kusikia, kusema, na kuhifadhi aya moja kila siku.",
         },
         {
-          t: "Daily Spiritual OS",
-          d: "Inapanga upya vipaumbele vya siku kuzunguka Neno la Mungu kupitia Maandiko, sala, na Walk planner.",
+          t: "OS ya kiroho ya kila siku",
+          d: "Inapanga upya vipaumbele vya siku kuzunguka Neno la Mungu kupitia Maandiko, sala, na mpangaji wa Walk.",
         },
         {
-          t: "Global Scripture Memory Movement",
-          d: "Pitisha aya na ujiunge na lineage kama Wordshiper wa N — kisha mwalike mtu anayefuata kwa Verse\u00A0Card na sauti yako.",
+          t: "Harakati ya kimataifa ya Neno",
+          d: "Pitisha aya na ujiunge na nasaba kama Wordshiper wa N — kisha mwalike mtu anayefuata kwa Verse\u00A0Card na sauti yako.",
         },
       ],
     },
