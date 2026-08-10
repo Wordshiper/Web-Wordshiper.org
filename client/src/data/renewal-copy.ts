@@ -271,6 +271,87 @@ const copy = {
       contactBtn: "투자 문의하기",
       backHome: "홈으로 돌아가기",
     },
+    aboutPage: {
+      title: "Wordshiper 소개",
+      subtitle: "하루 한 구절이, 예배자의 삶으로 이어지도록.",
+      toc: [
+        { id: "what", label: "Wordshiper란?" },
+        { id: "mission", label: "Mission" },
+        { id: "vision", label: "Vision" },
+        { id: "identity", label: "Identity" },
+        { id: "thesis", label: "Thesis" },
+      ],
+      what: {
+        label: "Wordshiper란?",
+        title: "말씀을 마음에 새기고,\n하루를 다시 세우는 앱",
+        lead:
+          "Wordshiper는 전\u00A0세계 사람들이 매일 하나님의 말씀 한\u00A0구절을 마음에 새기고 암송함으로, 넘치는 정보와 분주한 삶 속에서도 영적 우선순위를 바로 세우고 하나님과 동행하는 기쁨을 누리도록 돕습니다.",
+        body:
+          "우리는 사용자가 성경 구절을 ‘외우는 것’에서 멈추지 않도록 돕습니다. Wordshiper는 한\u00A0구절의 말씀을 듣고, 말하고, 암송하고, 기도하고, 삶의 우선순위로 실천하도록 이끄는 매일의 영적 루틴을 제공합니다.",
+      },
+      mission: {
+        label: "Mission",
+        title: "작은 습관이 열방으로 흘러가도록",
+        lead:
+          "Wordshiper는 전\u00A0세계 사람들이 매일 하나님의 말씀 한\u00A0구절을 마음에 새기고 암송함으로, 넘치는 정보와 분주한 삶 속에서도 영적 우선순위를 바로 세우고 하나님과 동행하는 기쁨을 누리도록 돕습니다.",
+        habitsTitle: "매일의 세 가지 습관",
+        habits: [
+          { t: "하루 한 구절", d: "말씀을 듣고, 말하고, 마음에 새깁니다." },
+          { t: "하루 세 번의 짧은 기도", d: "말씀으로 하나님께 응답합니다." },
+          {
+            t: "하루를 말씀으로 정렬",
+            d: "삶의 우선순위를 말씀 중심으로 다시 세웁니다.",
+          },
+        ],
+        close:
+          "이 작은 습관이 한 사람의 마음을 바꾸고, 한 가정의 기도를 회복시키며, 한 공동체의 예배를 새롭게 하고, 마침내 열방으로 흘러가는 말씀 운동이 되도록 돕는 것이 Wordshiper의 사명입니다.",
+      },
+      vision: {
+        label: "Vision",
+        title: "Word로 Worshiper를 세웁니다",
+        lead:
+          "Wordshiper의 비전은 하나님의 말씀인 Word를 통해 하나님을 경배하는 Worshiper를 세우는 것입니다.",
+        body:
+          "우리는 사람들이 말씀을 듣고, 말하고, 기억하고, 살아내는 작은 습관을 통해, 삶의 모든 자리에서 하나님을 기쁘시게 하는 진실한 경배자로 세워지기를 꿈꿉니다.",
+        close:
+          "전\u00A0세계 사람들이 같은 말씀을 받고, 각자의 언어와 목소리로 그 말씀을 고백하며, 삶의 자리에서 그 말씀을 살아내는 글로벌 말씀\u00A0암송 무브먼트 — 그것이 우리의 비전입니다.",
+      },
+      identity: {
+        label: "Identity",
+        title: "Word + Worshiper",
+        lead: "Wordshiper는 단지 성경 앱이 아닙니다.",
+        body:
+          "Wordshiper는 하나님의 말씀을 마음에 새기고 삶으로 살아냄으로 하나님을 경배하는 사람을 의미합니다.",
+        word: "Word",
+        wordD: "하나님의 살아\u00A0있는 말씀",
+        worshiper: "Worshiper",
+        worshiperD: "그 말씀 앞에 마음을 드리고, 삶으로 응답하는 예배자",
+        result:
+          "따라서 Wordshiper는 말씀을 통해 하나님을 기억하고, 말씀으로 하나님을 경배하며, 말씀대로 하나님과 동행하는 사람입니다.",
+      },
+      thesis: {
+        label: "Thesis",
+        title: "하나의 플랫폼, 세 겹의 정체성",
+        lead:
+          "Wordshiper는 암송 앱이면서, 하루를 재정렬하는 영적 OS이며, 동시에 글로벌 말씀 암송 무브먼트입니다.",
+        layers: [
+          {
+            t: "Scripture Memory App",
+            d: "매일 한\u00A0구절을 받고, 듣고, 말하고, 암송하도록 돕습니다.",
+          },
+          {
+            t: "Daily Spiritual OS",
+            d: "말씀·기도·Walk 플래너로 하루의 우선순위를 하나님 말씀 중심으로 다시 세웁니다.",
+          },
+          {
+            t: "Global Scripture Memory Movement",
+            d: "암송을 통과하면 N번째 Wordshiper로 계보에 합류하고, Verse\u00A0Card와 목소리로 다음 사람을 초대합니다.",
+          },
+        ],
+      },
+      orgNote:
+        "Wordshiper Ministry는 미국 501(c)(3) 비영리 사역입니다. 개인 사용은 영원히 무료이며, 후원과 파트너십이 이 운동을 지탱합니다.",
+    },
     footer: {
       tagline: "하루\u00A0한\u00A0구절, 예배자의 삶으로.",
       legal: "© 2024 Wordshiper Ministry Inc. · 미국 뉴욕 기반 · 501(c)(3) Nonprofit · EIN: 33-1561112",
@@ -542,6 +623,87 @@ const copy = {
       contactSub: "Business plan, financial projections, and product demo available on request.",
       contactBtn: "Contact us",
       backHome: "Back to home",
+    },
+    aboutPage: {
+      title: "About Wordshiper",
+      subtitle: "So one verse a day becomes a life of worship.",
+      toc: [
+        { id: "what", label: "What is Wordshiper?" },
+        { id: "mission", label: "Mission" },
+        { id: "vision", label: "Vision" },
+        { id: "identity", label: "Identity" },
+        { id: "thesis", label: "Thesis" },
+      ],
+      what: {
+        label: "What is Wordshiper?",
+        title: "An app that writes the Word\non the heart — and resets the day",
+        lead:
+          "Wordshiper helps people worldwide inscribe and memorize one verse of God's Word each day — so that amid information overload and busyness, they can set spiritual priorities right and enjoy walking with God.",
+        body:
+          "We do not stop at helping users “memorize a verse.” Wordshiper offers a daily spiritual routine that leads you to hear, speak, memorize, pray, and practice one verse as the priority of life.",
+      },
+      mission: {
+        label: "Mission",
+        title: "So a small habit flows to the nations",
+        lead:
+          "Wordshiper helps people worldwide inscribe and memorize one verse of God's Word each day — so that amid information overload and busyness, they can set spiritual priorities right and enjoy walking with God.",
+        habitsTitle: "Three daily habits",
+        habits: [
+          { t: "One verse a day", d: "Hear it, speak it, write it on the heart." },
+          { t: "Three short prayers", d: "Respond to God through the Word." },
+          {
+            t: "Realign the day by the Word",
+            d: "Reset life's priorities around Scripture.",
+          },
+        ],
+        close:
+          "This small habit changes one heart, restores one family's prayer, renews one community's worship — and finally becomes a Word movement flowing to the nations. That is Wordshiper's mission.",
+      },
+      vision: {
+        label: "Vision",
+        title: "Raise Worshipers through the Word",
+        lead:
+          "Wordshiper's vision is to raise Worshipers who worship God through His Word.",
+        body:
+          "We dream of people becoming true worshipers who please God in every place of life — through the small habit of hearing, speaking, remembering, and living out the Word.",
+        close:
+          "People worldwide receive the same verse, confess it in their own language and voice, and live it where they stand — a global Scripture-memory movement. That is our vision.",
+      },
+      identity: {
+        label: "Identity",
+        title: "Word + Worshiper",
+        lead: "Wordshiper is not merely a Bible app.",
+        body:
+          "Wordshiper means a person who worships God by writing His Word on the heart and living it out.",
+        word: "Word",
+        wordD: "The living Word of God",
+        worshiper: "Worshiper",
+        worshiperD: "One who offers the heart before that Word and answers with a life",
+        result:
+          "So a Wordshiper is someone who remembers God through the Word, worships God with the Word, and walks with God according to the Word.",
+      },
+      thesis: {
+        label: "Thesis",
+        title: "One platform, three layers",
+        lead:
+          "Wordshiper is a Scripture memory app, a daily spiritual OS that realigns the day, and a global Scripture-memory movement — designed as one.",
+        layers: [
+          {
+            t: "Scripture Memory App",
+            d: "Helps you receive, hear, speak, and memorize one verse each day.",
+          },
+          {
+            t: "Daily Spiritual OS",
+            d: "Realigns the day's priorities around God's Word through Scripture, prayer, and the Walk planner.",
+          },
+          {
+            t: "Global Scripture Memory Movement",
+            d: "Pass a verse and join the lineage as the Nth Wordshiper — then invite the next person with a Verse\u00A0Card and your voice.",
+          },
+        ],
+      },
+      orgNote:
+        "Wordshiper Ministry is a U.S. 501(c)(3) nonprofit. Individual use is free forever. Gifts and partnerships sustain the movement.",
     },
     footer: {
       tagline: "One\u00A0verse a day. A life of worship.",

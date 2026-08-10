@@ -1,6 +1,7 @@
+import type { ReactNode } from "react";
 import { Link } from "wouter";
 import { Card, CardContent } from "@/components/ui/card";
-import { Globe, Heart, Users, BookOpen, Mail, MapPin, Award, Target } from "lucide-react";
+import { Heart, Users, BookOpen, Mail, MapPin, Award } from "lucide-react";
 import SEO from "@/components/seo";
 import Footer from "@/components/renewal-footer";
 import ExpandedLanguageSwitcher from "@/components/expanded-language-switcher";
@@ -12,16 +13,30 @@ import logoPrimary from "@assets/wordshiper_logo_lockup_primary_E_1786117649532.
 
 const CYAN = "#00B3E4";
 
+function SectionLabel({ children }: { children: ReactNode }) {
+  return (
+    <p
+      className="font-ui text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase mb-4"
+      style={{ color: CYAN }}
+    >
+      {children}
+    </p>
+  );
+}
+
 export default function AboutPage() {
   const { t, currentLanguage } = useLanguage();
-  const nav = useCopy().nav;
+  const c = useCopy();
+  const a = c.aboutPage;
+  const nav = c.nav;
   const brandAlt = brandDisplayForLanguage(currentLanguage);
+  const isKo = currentLanguage === "ko";
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-ui">
       <SEO
-        title="About Wordshiper - Our Mission & Story"
-        description="Learn about Wordshiper Ministry, a 501(c)(3) nonprofit dedicated to Bible memorization. Our mission: 15 Minutes. One Verse. A Life of Worship."
+        title="About Wordshiper — Mission, Vision & Identity"
+        description="What Wordshiper is: Mission, Vision, Identity, and Product Thesis. One verse a day. A life of worship."
         url="https://www.wordshiper.org/about"
       />
 
@@ -36,7 +51,7 @@ export default function AboutPage() {
               href="/"
               className="hidden sm:inline-flex text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors"
             >
-              {currentLanguage === "ko" ? "홈" : "Home"}
+              {isKo ? "홈" : "Home"}
             </Link>
             <a
               href="/#preregister"
@@ -49,83 +64,213 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* Hero — brand mark + clear space */}
-      <section className="pt-32 pb-20 px-4" style={{ background: "linear-gradient(180deg,#F8FCFE 0%,#FFFFFF 100%)" }}>
-        <div className="max-w-5xl mx-auto text-center">
-          <div className="flex justify-center mb-10">
+      {/* Hero */}
+      <section
+        className="pt-32 pb-16 px-4"
+        style={{ background: "linear-gradient(180deg,#F8FCFE 0%,#FFFFFF 100%)" }}
+      >
+        <div className="max-w-3xl mx-auto text-center">
+          <div className="flex justify-center mb-8">
             <img
               src={logoPrimary}
               alt={brandAlt}
-              className="h-16 sm:h-20 w-auto"
-              width={320}
-              height={71}
+              className="h-14 sm:h-16 w-auto"
+              width={280}
+              height={62}
             />
           </div>
 
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#201E1F] mb-6 tracking-tight ws-text-balance">
-            {t("about.title")}
+          <h1
+            className={`text-4xl sm:text-5xl font-bold text-[#201E1F] mb-5 tracking-tight ws-text-balance ${
+              isKo ? "font-scripture" : "font-ui"
+            }`}
+          >
+            {a.title}
           </h1>
 
-          <p className="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed ws-text-pretty">
-            {t("about.subtitle")}
+          <p className="font-scripture-italic text-xl sm:text-2xl text-[#003D4F] mb-8 ws-text-pretty">
+            {a.subtitle}
           </p>
 
           <div className="inline-flex items-center gap-2 px-6 py-2 bg-[#E6F7FC] text-[#0090B8] rounded-full text-sm font-semibold">
             <Award className="w-4 h-4" />
             {t("about.nonprofitBadge")} · EIN 33-1561112
           </div>
+
+          <nav
+            aria-label="About sections"
+            className="mt-12 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm font-medium text-gray-500"
+          >
+            {a.toc.map((item) => (
+              <a
+                key={item.id}
+                href={`#${item.id}`}
+                className="hover:text-[#0090B8] transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </section>
+
+      {/* What is Wordshiper */}
+      <section id="what" className="py-20 px-4 bg-white scroll-mt-20">
+        <div className="max-w-3xl mx-auto">
+          <SectionLabel>{a.what.label}</SectionLabel>
+          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance mb-8">
+            {a.what.title}
+          </h2>
+          <p className="font-scripture text-xl sm:text-2xl leading-relaxed text-[#003D4F] ws-text-pretty mb-6">
+            {a.what.lead}
+          </p>
+          <p className="font-ui text-lg leading-relaxed text-gray-600 ws-text-pretty">
+            {a.what.body}
+          </p>
         </div>
       </section>
 
       {/* Mission */}
-      <section className="py-20 px-4" style={{ background: "linear-gradient(135deg,#0C1519 0%,#16242B 100%)" }}>
-        <div className="max-w-4xl mx-auto text-center text-white">
-          <Target className="w-14 h-14 mx-auto mb-8" style={{ color: "#2CC5F2" }} />
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 ws-text-balance">{t("about.mission.title")}</h2>
-          <p className="font-scripture text-2xl md:text-3xl leading-relaxed text-[#ECEAE0] ws-text-pretty">
-            {t("about.mission.tagline")}
+      <section
+        id="mission"
+        className="py-20 px-4 scroll-mt-20"
+        style={{ background: "linear-gradient(135deg,#0C1519 0%,#16242B 100%)" }}
+      >
+        <div className="max-w-3xl mx-auto text-white">
+          <p
+            className="font-ui text-xs sm:text-sm font-semibold tracking-[0.14em] uppercase mb-4"
+            style={{ color: "#2CC5F2" }}
+          >
+            {a.mission.label}
           </p>
-          <div className="mt-12 pt-8 border-t border-white/15">
-            <p className="text-lg md:text-xl leading-relaxed text-[#ECEAE0]/80 ws-text-pretty">
-              {t("about.mission.description")}
-            </p>
-          </div>
+          <h2 className="font-scripture text-3xl sm:text-4xl font-bold mb-8 ws-text-balance">
+            {a.mission.title}
+          </h2>
+          <p className="font-scripture text-xl sm:text-2xl leading-relaxed text-[#ECEAE0] ws-text-pretty mb-12">
+            {a.mission.lead}
+          </p>
+
+          <p className="font-ui text-sm font-semibold tracking-wide text-[#2CC5F2]/90 mb-5">
+            {a.mission.habitsTitle}
+          </p>
+          <ul className="space-y-5 mb-12">
+            {a.mission.habits.map((h) => (
+              <li
+                key={h.t}
+                className="border-l-2 pl-5"
+                style={{ borderColor: "rgba(44,197,242,0.45)" }}
+              >
+                <p className="font-scripture text-xl font-bold text-white">{h.t}</p>
+                <p className="font-ui text-base text-[#ECEAE0]/75 mt-1">{h.d}</p>
+              </li>
+            ))}
+          </ul>
+
+          <p className="font-scripture-italic text-lg sm:text-xl leading-relaxed text-[#ECEAE0]/90 ws-text-pretty border-t border-white/15 pt-10">
+            {a.mission.close}
+          </p>
         </div>
       </section>
 
-      {/* Who We Are */}
-      <section className="py-20 px-4 bg-white">
-        <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-14">
-            <Globe className="w-11 h-11 mx-auto mb-5" style={{ color: CYAN }} />
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F]">{t("about.whoWeAre.title")}</h2>
-          </div>
+      {/* Vision */}
+      <section id="vision" className="py-20 px-4 bg-[#F8FCFE] scroll-mt-20">
+        <div className="max-w-3xl mx-auto">
+          <SectionLabel>{a.vision.label}</SectionLabel>
+          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] ws-text-balance mb-8">
+            {a.vision.title}
+          </h2>
+          <p className="font-scripture text-xl sm:text-2xl leading-relaxed text-[#003D4F] ws-text-pretty mb-6">
+            {a.vision.lead}
+          </p>
+          <p className="font-ui text-lg leading-relaxed text-gray-600 ws-text-pretty mb-8">
+            {a.vision.body}
+          </p>
+          <p className="font-scripture-italic text-lg sm:text-xl leading-relaxed text-[#003D4F] ws-text-pretty">
+            {a.vision.close}
+          </p>
+        </div>
+      </section>
 
-          <div className="max-w-none text-gray-600">
-            <p className="text-lg leading-relaxed mb-6 ws-text-pretty">
-              <strong className="text-[#201E1F]">{t("about.whoWeAre.orgName")}</strong>
-              {t("about.whoWeAre.description1")}
+      {/* Identity */}
+      <section id="identity" className="py-20 px-4 bg-white scroll-mt-20">
+        <div className="max-w-3xl mx-auto">
+          <SectionLabel>{a.identity.label}</SectionLabel>
+          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] ws-text-balance mb-6">
+            {a.identity.title}
+          </h2>
+          <p className="font-ui text-lg text-gray-600 mb-2">{a.identity.lead}</p>
+          <p className="font-ui text-lg leading-relaxed text-gray-600 ws-text-pretty mb-12">
+            {a.identity.body}
+          </p>
+
+          <div className="grid sm:grid-cols-[1fr_auto_1fr] gap-6 items-start mb-12">
+            <div className="text-center sm:text-left">
+              <p className="font-scripture text-3xl font-bold" style={{ color: CYAN }}>
+                {a.identity.word}
+              </p>
+              <p className="font-ui mt-2 text-gray-600">{a.identity.wordD}</p>
+            </div>
+            <p className="font-scripture text-3xl font-bold text-[#201E1F] text-center self-center">
+              +
             </p>
-            <p className="text-lg leading-relaxed mb-6 ws-text-pretty">{t("about.whoWeAre.description2")}</p>
-            <div className="bg-[#F8FCFE] border-l-4 border-[#00B3E4] p-8 my-8 rounded-r-2xl">
-              <p className="text-xl font-semibold text-[#201E1F] mb-4">{t("about.whoWeAre.appTitle")}</p>
-              <ul className="space-y-2 text-gray-600">
-                <li>• {t("about.whoWeAre.feature1")}</li>
-                <li>• {t("about.whoWeAre.feature2")}</li>
-                <li>• {t("about.whoWeAre.feature3")}</li>
-                <li>• {t("about.whoWeAre.feature4")}</li>
-              </ul>
+            <div className="text-center sm:text-left">
+              <p className="font-scripture text-3xl font-bold" style={{ color: CYAN }}>
+                {a.identity.worshiper}
+              </p>
+              <p className="font-ui mt-2 text-gray-600">{a.identity.worshiperD}</p>
             </div>
           </div>
+
+          <p className="font-scripture text-xl sm:text-2xl leading-relaxed text-[#003D4F] ws-text-pretty">
+            {a.identity.result}
+          </p>
+        </div>
+      </section>
+
+      {/* Thesis */}
+      <section id="thesis" className="py-20 px-4 bg-[#F8FCFE] scroll-mt-20">
+        <div className="max-w-3xl mx-auto">
+          <SectionLabel>{a.thesis.label}</SectionLabel>
+          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] ws-text-balance mb-6">
+            {a.thesis.title}
+          </h2>
+          <p className="font-ui text-lg leading-relaxed text-gray-600 ws-text-pretty mb-12">
+            {a.thesis.lead}
+          </p>
+
+          <ol className="space-y-8">
+            {a.thesis.layers.map((layer, i) => (
+              <li key={layer.t} className="flex gap-5">
+                <span
+                  className="font-scripture flex-shrink-0 w-10 h-10 rounded-full flex items-center justify-center text-lg font-bold text-white"
+                  style={{ background: CYAN }}
+                >
+                  {i + 1}
+                </span>
+                <div>
+                  <p className="font-scripture text-xl font-bold text-[#201E1F]">{layer.t}</p>
+                  <p className="font-ui mt-2 text-gray-600 leading-relaxed ws-text-pretty">
+                    {layer.d}
+                  </p>
+                </div>
+              </li>
+            ))}
+          </ol>
+
+          <p className="font-ui mt-14 text-sm leading-relaxed text-gray-500 ws-text-pretty border-t border-[#E6F7FC] pt-8">
+            {a.orgNote}
+          </p>
         </div>
       </section>
 
       {/* Leadership */}
-      <section className="py-20 px-4 bg-[#F8FCFE]">
+      <section className="py-20 px-4 bg-white">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-14">
             <Users className="w-11 h-11 mx-auto mb-5" style={{ color: CYAN }} />
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F]">{t("about.leadership.title")}</h2>
+            <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F]">
+              {t("about.leadership.title")}
+            </h2>
           </div>
 
           <div className="space-y-5">
@@ -151,9 +296,11 @@ export default function AboutPage() {
                         />
                       </div>
                       <div className="flex-1 min-w-0 pt-0.5">
-                        <h3 className="text-xl sm:text-2xl font-bold text-[#201E1F]">{copy.name}</h3>
-                        <p className="text-[#0090B8] font-medium mt-1">{copy.role}</p>
-                        <p className="text-gray-600 leading-relaxed mt-3 text-sm sm:text-base ws-text-pretty">
+                        <h3 className="font-ui text-xl sm:text-2xl font-bold text-[#201E1F]">
+                          {copy.name}
+                        </h3>
+                        <p className="font-ui text-[#0090B8] font-medium mt-1">{copy.role}</p>
+                        <p className="font-ui text-gray-600 leading-relaxed mt-3 text-sm sm:text-base ws-text-pretty">
                           {copy.bio}
                         </p>
                       </div>
@@ -167,45 +314,55 @@ export default function AboutPage() {
       </section>
 
       {/* Get involved */}
-      <section className="py-20 px-4 bg-white">
+      <section className="py-20 px-4 bg-[#F8FCFE]">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12">
             <Heart className="w-11 h-11 mx-auto mb-5" style={{ color: CYAN }} />
-            <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] mb-4">{t("about.getInvolved.title")}</h2>
-            <p className="text-xl text-gray-500">{t("about.getInvolved.subtitle")}</p>
+            <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] mb-4">
+              {t("about.getInvolved.title")}
+            </h2>
+            <p className="font-ui text-xl text-gray-500">{t("about.getInvolved.subtitle")}</p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 mb-12">
-            <Card className="text-center border border-[#E6F7FC] shadow-sm bg-[#F8FCFE]" data-testid="card-download-app">
+            <Card className="text-center border border-[#E6F7FC] shadow-sm bg-white" data-testid="card-download-app">
               <CardContent className="p-8">
                 <BookOpen className="w-11 h-11 mx-auto mb-4" style={{ color: CYAN }} />
-                <h3 className="font-semibold text-lg mb-2 text-[#201E1F]">{t("about.downloadApp.title")}</h3>
-                <p className="text-gray-500 text-sm">{t("about.downloadApp.subtitle")}</p>
+                <h3 className="font-ui font-semibold text-lg mb-2 text-[#201E1F]">
+                  {t("about.downloadApp.title")}
+                </h3>
+                <p className="font-ui text-gray-500 text-sm">{t("about.downloadApp.subtitle")}</p>
               </CardContent>
             </Card>
 
-            <Card className="text-center border border-[#E6F7FC] shadow-sm bg-[#F8FCFE]" data-testid="card-support-mission">
+            <Card className="text-center border border-[#E6F7FC] shadow-sm bg-white" data-testid="card-support-mission">
               <CardContent className="p-8">
                 <Heart className="w-11 h-11 mx-auto mb-4" style={{ color: CYAN }} />
-                <h3 className="font-semibold text-lg mb-2 text-[#201E1F]">{t("about.supportMission.title")}</h3>
-                <p className="text-gray-500 text-sm">{t("about.supportMission.subtitle")}</p>
+                <h3 className="font-ui font-semibold text-lg mb-2 text-[#201E1F]">
+                  {t("about.supportMission.title")}
+                </h3>
+                <p className="font-ui text-gray-500 text-sm">{t("about.supportMission.subtitle")}</p>
               </CardContent>
             </Card>
 
-            <Card className="text-center border border-[#E6F7FC] shadow-sm bg-[#F8FCFE]" data-testid="card-partner">
+            <Card className="text-center border border-[#E6F7FC] shadow-sm bg-white" data-testid="card-partner">
               <CardContent className="p-8">
                 <Users className="w-11 h-11 mx-auto mb-4" style={{ color: CYAN }} />
-                <h3 className="font-semibold text-lg mb-2 text-[#201E1F]">{t("about.partnership.title")}</h3>
-                <p className="text-gray-500 text-sm">{t("about.partnership.subtitle")}</p>
+                <h3 className="font-ui font-semibold text-lg mb-2 text-[#201E1F]">
+                  {t("about.partnership.title")}
+                </h3>
+                <p className="font-ui text-gray-500 text-sm">{t("about.partnership.subtitle")}</p>
               </CardContent>
             </Card>
           </div>
 
-          <Card className="border border-[#E6F7FC] bg-[#F8FCFE]">
+          <Card className="border border-[#E6F7FC] bg-white">
             <CardContent className="p-8">
               <div className="text-center">
-                <h3 className="text-2xl font-bold text-[#201E1F] mb-6">{t("about.contactInfo.title")}</h3>
-                <div className="space-y-4">
+                <h3 className="font-ui text-2xl font-bold text-[#201E1F] mb-6">
+                  {t("about.contactInfo.title")}
+                </h3>
+                <div className="space-y-4 font-ui">
                   <div className="flex flex-wrap items-center justify-center gap-2 text-gray-700">
                     <Mail className="w-5 h-5" style={{ color: CYAN }} />
                     <span className="font-medium">{t("about.contactInfo.email")}:</span>

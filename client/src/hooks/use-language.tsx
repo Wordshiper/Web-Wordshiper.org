@@ -22,15 +22,16 @@ interface LanguageProviderProps {
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [currentLanguage, setCurrentLanguage] = useState("en");
-
-  useEffect(() => {
+  const [currentLanguage, setCurrentLanguage] = useState(() => {
+    if (typeof window === "undefined") return "en";
     const saved = localStorage.getItem("wordshiper-language-v2");
     if (saved && expandedLanguages.find((lang) => lang.code === saved)) {
-      setCurrentLanguage(saved);
+      return saved;
     }
-  }, []);
+    return "en";
+  });
 
+  // Apply Spec v4.0 dual-font on first paint and whenever locale changes
   useEffect(() => {
     applyTypographyToDocument(currentLanguage);
   }, [currentLanguage]);
