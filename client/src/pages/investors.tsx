@@ -17,7 +17,7 @@ export default function InvestorsPage() {
   const brandAlt = brandDisplayForLanguage(currentLanguage);
   const icons = [Compass, ShieldCheck, Cpu, Layers];
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white font-ui">
       <SEO title="Wordshiper — Investors" description={c.sub} />
       <header className="fixed top-0 inset-x-0 z-50 bg-white/85 backdrop-blur-md border-b border-[#E6F7FC]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
@@ -36,7 +36,7 @@ export default function InvestorsPage() {
       <main className="pt-28 pb-24">
         <section className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-[#E6F7FC] text-[#0090B8]">{c.navTitle}</span>
-          <h1 className="mt-6 text-3xl sm:text-5xl font-bold text-[#201E1F] leading-tight whitespace-pre-line ws-text-balance">{c.title}</h1>
+          <h1 className="font-scripture mt-6 text-3xl sm:text-5xl font-bold text-[#201E1F] leading-tight whitespace-pre-line ws-text-balance">{c.title}</h1>
           <p className="mt-6 text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto ws-text-pretty">{c.sub}</p>
         </section>
 

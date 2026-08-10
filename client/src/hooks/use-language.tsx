@@ -1,7 +1,11 @@
-import { useState, createContext, useContext, useEffect } from "react";
-import { expandedLanguages } from "@/data/expanded-languages";
+import { useState, createContext, useContext, useEffect, type ReactNode } from "react";
 import { getTranslation } from "@/data/translations";
 import { applyTypographyToDocument } from "@/data/typography";
+import {
+  getSiteLanguages,
+  isSiteLocale,
+  normalizeSiteLocale,
+} from "@/data/site-locales";
 
 interface LanguageContextType {
   currentLanguage: string;
@@ -18,27 +22,31 @@ const LanguageContext = createContext<LanguageContextType>({
 export const useLanguage = () => useContext(LanguageContext);
 
 interface LanguageProviderProps {
-  children: React.ReactNode;
+  children: ReactNode;
+}
+
+function readInitialLanguage(): string {
+  if (typeof window === "undefined") return "en";
+  const saved = localStorage.getItem("wordshiper-language-v2");
+  if (saved && isSiteLocale(saved)) {
+    return normalizeSiteLocale(saved);
+  }
+  return "en";
 }
 
 export function LanguageProvider({ children }: LanguageProviderProps) {
-  const [currentLanguage, setCurrentLanguage] = useState(() => {
-    if (typeof window === "undefined") return "en";
-    const saved = localStorage.getItem("wordshiper-language-v2");
-    if (saved && expandedLanguages.find((lang) => lang.code === saved)) {
-      return saved;
-    }
-    return "en";
-  });
+  const [currentLanguage, setCurrentLanguage] = useState(readInitialLanguage);
 
-  // Apply Spec v4.0 dual-font on first paint and whenever locale changes
+  // Spec v4.0 dual-font + dir/lang on every locale change (all pages)
   useEffect(() => {
-    applyTypographyToDocument(currentLanguage);
+    const locale = normalizeSiteLocale(currentLanguage);
+    applyTypographyToDocument(locale);
+    localStorage.setItem("wordshiper-language-v2", locale);
   }, [currentLanguage]);
 
   const setLanguage = (lang: string) => {
-    setCurrentLanguage(lang);
-    localStorage.setItem("wordshiper-language-v2", lang);
+    const locale = isSiteLocale(lang) ? normalizeSiteLocale(lang) : "en";
+    setCurrentLanguage(locale);
   };
 
   const t = (key: string) => getTranslation(key, currentLanguage);
@@ -48,4 +56,9 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
       {children}
     </LanguageContext.Provider>
   );
+}
+
+/** Site-supported languages for pickers (24). */
+export function useSiteLanguages() {
+  return getSiteLanguages();
 }

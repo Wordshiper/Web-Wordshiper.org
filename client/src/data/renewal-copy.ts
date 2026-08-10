@@ -1,4 +1,6 @@
 import { useLanguage } from "@/hooks/use-language";
+import { normalizeSiteLocale, type SiteLocaleCode } from "@/data/site-locales";
+import { extraRenewalLocales } from "@/data/renewal-locales";
 
 /**
  * Site narrative from Master Plan Opening:
@@ -6,6 +8,18 @@ import { useLanguage } from "@/hooks/use-language";
  */
 const copy = {
   ko: {
+    chrome: {
+      home: "홈",
+      searchLanguages: "언어 검색…",
+      chooseLanguage: "언어 선택",
+      languagesCount: "개 언어",
+      allRegions: "전체 지역",
+      all: "전체",
+      heroSlidesAria: "Wordshiper 소개 슬라이드",
+      slideSelectorAria: "슬라이드 선택",
+      lineageNumber: "당신의 계보 번호",
+      lineageEmailNote: "확인 이메일을 보내드렸습니다. 받은편지함을 확인해 주세요.",
+    },
     nav: {
       product: "흐름",
       routine: "루틴",
@@ -359,6 +373,18 @@ const copy = {
     },
   },
   en: {
+    chrome: {
+      home: "Home",
+      searchLanguages: "Search languages…",
+      chooseLanguage: "Choose your language",
+      languagesCount: "languages",
+      allRegions: "All regions",
+      all: "All",
+      heroSlidesAria: "Wordshiper intro slides",
+      slideSelectorAria: "Slide selector",
+      lineageNumber: "Your lineage number",
+      lineageEmailNote: "We sent a confirmation email — please check your inbox.",
+    },
     nav: {
       product: "Flow",
       routine: "Routine",
@@ -715,7 +741,25 @@ const copy = {
 
 export type RenewalCopy = typeof copy.en;
 
+/** Base packs shipped in this module; extra locales register via renewal-locales. */
+export const baseRenewalCopy = copy;
+
+const renewalByLocale: Record<string, RenewalCopy> = {
+  en: copy.en,
+  ko: copy.ko,
+  ...extraRenewalLocales,
+};
+
+export function getRenewalCopy(languageCode: string): RenewalCopy {
+  const locale = normalizeSiteLocale(languageCode);
+  return renewalByLocale[locale] ?? copy.en;
+}
+
 export function useCopy(): RenewalCopy {
   const { currentLanguage } = useLanguage();
-  return (currentLanguage === "ko" ? copy.ko : copy.en) as RenewalCopy;
+  return getRenewalCopy(currentLanguage);
+}
+
+export function listRenewalLocales(): SiteLocaleCode[] {
+  return Object.keys(renewalByLocale) as SiteLocaleCode[];
 }

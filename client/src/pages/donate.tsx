@@ -13,7 +13,8 @@ const CYAN = "#00B3E4";
 const PRESETS = [25, 50, 100, 250];
 
 export default function DonatePage() {
-  const d = useCopy().donate;
+  const copy = useCopy();
+  const d = copy.donate;
   const { currentLanguage } = useLanguage();
   const brandAlt = brandDisplayForLanguage(currentLanguage);
   const [amount, setAmount] = useState(50);
@@ -106,7 +107,7 @@ export default function DonatePage() {
             <p className="font-scripture-italic text-xl sm:text-2xl text-[#003D4F] ws-text-pretty">
               {d.eyebrow}
             </p>
-            <h1 className="mt-4 text-3xl sm:text-5xl font-bold text-[#201E1F] tracking-tight ws-text-balance">
+            <h1 className="font-scripture mt-4 text-3xl sm:text-5xl font-bold text-[#201E1F] tracking-tight ws-text-balance">
               {d.title}
             </h1>
             <p className="mt-5 text-lg text-gray-600 leading-relaxed ws-text-pretty">

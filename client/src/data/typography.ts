@@ -246,14 +246,24 @@ export function ensureTypographyAssets(typo: LocaleTypography) {
 /** Apply dual-font CSS variables + document lang/dir on <html>. */
 export function applyTypographyToDocument(languageCode: string) {
   if (typeof document === "undefined") return;
-  const typo = getTypography(languageCode);
+
+  // Align with site locale aliases (zh → zh-Hans, zh-TW → zh-Hant, fil → tl)
+  let code = (languageCode || "en").trim();
+  if (code === "zh" || code === "zh-CN") code = "zh-Hans";
+  if (code === "zh-TW" || code === "zh-HK") code = "zh-Hant";
+  if (code === "fil") code = "tl";
+
+  const typo = getTypography(code);
   ensureTypographyAssets(typo);
 
   const root = document.documentElement;
-  root.lang = languageCode;
+  // Prefer BCP47-ish lang for a11y / hyphenation
+  root.lang =
+    typo.id === "zh-Hans" ? "zh-CN" : typo.id === "zh-Hant" ? "zh-TW" : typo.id;
   root.dir = typo.dir;
   root.dataset.typo = typo.id;
   root.dataset.script = typo.script;
+  root.dataset.locale = languageCode;
 
   root.style.setProperty("--font-ui", `'${typo.ui}', var(--font-ui-fallback)`);
   root.style.setProperty(
@@ -273,4 +283,7 @@ export function applyTypographyToDocument(languageCode: string) {
       `'${typo.word}', var(--font-word-fallback)`,
     );
   }
+
+  // Force UI inheritance so every page/component picks up locale fonts
+  root.style.setProperty("font-family", `var(--font-ui)`);
 }

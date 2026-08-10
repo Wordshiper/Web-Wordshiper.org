@@ -136,7 +136,6 @@ function Hero() {
   const c = useCopy();
   const { currentLanguage } = useLanguage();
   const brandAlt = brandDisplayForLanguage(currentLanguage);
-  const isKo = currentLanguage === "ko";
   const slides = c.hero.slides;
   const [index, setIndex] = useState(0);
   const [paused, setPaused] = useState(false);
@@ -175,7 +174,7 @@ function Hero() {
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       aria-roledescription="carousel"
-      aria-label={isKo ? "Wordshiper 소개 슬라이드" : "Wordshiper intro slides"}
+      aria-label={c.chrome.heroSlidesAria}
     >
       <div
         className="absolute inset-0 -z-10"
@@ -206,11 +205,7 @@ function Hero() {
             <p className="mt-1 text-sm font-semibold tracking-[0.12em] uppercase text-[#0090B8]">
               {slide.label}
             </p>
-            <h1
-              className={`mt-3 text-4xl sm:text-5xl lg:text-[3.05rem] leading-[1.12] text-[#201E1F] ws-text-balance ${
-                isKo ? "font-scripture font-bold" : "font-bold"
-              }`}
-            >
+            <h1 className="font-scripture font-bold mt-3 text-4xl sm:text-5xl lg:text-[3.05rem] leading-[1.12] text-[#201E1F] ws-text-balance">
               {slide.title1}
               <br />
               <span style={{ color: CYAN }}>{slide.title2}</span>
@@ -245,7 +240,7 @@ function Hero() {
           <div
             className="mt-8 flex items-center justify-center lg:justify-start gap-2"
             role="tablist"
-            aria-label={isKo ? "슬라이드 선택" : "Slide selector"}
+            aria-label={c.chrome.slideSelectorAria}
           >
             {slides.map((_, i) => (
               <button
@@ -711,7 +706,7 @@ function Preregister() {
         {lineageNumber != null ? (
           <div className="mt-10 rounded-3xl bg-white/15 border border-white/25 backdrop-blur-sm px-8 py-10 ws-lineage-reveal">
             <p className="text-white/80 text-sm tracking-widest uppercase font-semibold">
-              {currentLanguage === "ko" ? "당신의 계보 번호" : "Your lineage number"}
+              {c.chrome.lineageNumber}
             </p>
             <p className="font-scripture mt-3 text-6xl sm:text-7xl text-white font-bold tracking-tight">
               #{lineageNumber}
@@ -719,11 +714,7 @@ function Preregister() {
             <p className="font-scripture-italic mt-6 text-xl text-white">
               {c.cta.declaration}
             </p>
-            <p className="mt-3 text-white/75 text-sm">
-              {currentLanguage === "ko"
-                ? "확인 이메일을 보내드렸습니다. 받은편지함을 확인해 주세요."
-                : "We sent a confirmation email — please check your inbox."}
-            </p>
+            <p className="mt-3 text-white/75 text-sm">{c.chrome.lineageEmailNote}</p>
           </div>
         ) : (
           <form onSubmit={submit} className="mt-9 flex flex-col sm:flex-row gap-3 max-w-xl mx-auto">
@@ -759,9 +750,9 @@ export default function HomeRenewal() {
   const { currentLanguage } = useLanguage();
   const c = useCopy();
   return (
-    <div className="min-h-screen bg-white" lang={currentLanguage}>
+    <div className="min-h-screen bg-white font-ui" lang={currentLanguage}>
       <SEO
-        title="Wordshiper — One verse a day. A life of worship."
+        title={`Wordshiper — ${c.hero.slogan}`}
         description={c.hero.slides[0]?.body ?? c.hero.slogan}
       />
       <Header />

@@ -30,7 +30,6 @@ export default function AboutPage() {
   const a = c.aboutPage;
   const nav = c.nav;
   const brandAlt = brandDisplayForLanguage(currentLanguage);
-  const isKo = currentLanguage === "ko";
 
   return (
     <div className="min-h-screen bg-white font-ui">
@@ -51,7 +50,7 @@ export default function AboutPage() {
               href="/"
               className="hidden sm:inline-flex text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors"
             >
-              {isKo ? "홈" : "Home"}
+              {c.chrome.home}
             </Link>
             <a
               href="/#preregister"
@@ -80,11 +79,7 @@ export default function AboutPage() {
             />
           </div>
 
-          <h1
-            className={`text-4xl sm:text-5xl font-bold text-[#201E1F] mb-5 tracking-tight ws-text-balance ${
-              isKo ? "font-scripture" : "font-ui"
-            }`}
-          >
+          <h1 className="font-scripture text-4xl sm:text-5xl font-bold text-[#201E1F] mb-5 tracking-tight ws-text-balance">
             {a.title}
           </h1>
 
