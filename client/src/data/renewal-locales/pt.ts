@@ -80,7 +80,7 @@ const locale: RenewalCopy = {
   },
   identity: {
     label: "O que é o Wordshiper",
-    title: "Uma plataforma para uma vida centrada na Palavra",
+    title: "Uma plataforma para uma\nvida centrada na Palavra",
     definition:
       "Uma app que o ajuda a meditar e memorizar um versículo das Escrituras, repetir três orações curtas todos os dias, restaurar as prioridades espirituais · físicas · emocionais de uma vida dispersa e viver o seu chamado.",
     sub: "Word\u00A0+\u00A0Worshiper. Uma pessoa que adora Deus ao inscrever a Sua Palavra e vivê-la.",
@@ -191,7 +191,7 @@ const locale: RenewalCopy = {
   },
   product: {
     label: "Identidade do produto",
-    title: "Uma plataforma, três camadas",
+    title: "Uma plataforma,\ntrês camadas",
     sub: "Uma app de memorização das Escrituras, um OS espiritual diário e um movimento global da Palavra — concebidos como um só.",
     thesis: [
       {
@@ -252,7 +252,7 @@ const locale: RenewalCopy = {
   movement: {
     label: "Movimento",
     subtitle: "Não estamos a construir uma app.\nEstamos a acender um movimento.",
-    title: "Um lineage espiritual, versículo a versículo",
+    title: "Um lineage espiritual,\nversículo a versículo",
     lineageLead: "Você é o",
     lineageNum: "14.207",
     lineageTail: ".º Wordshiper a inscrever este versículo",
@@ -423,7 +423,7 @@ const locale: RenewalCopy = {
     },
     mission: {
       label: "Missão",
-      title: "Para que um pequeno hábito flua até às nações",
+      title: "Para que um pequeno hábito\nflua até às nações",
       lead: "O Wordshiper ajuda pessoas em todo o mundo a inscrever e memorizar um versículo da Palavra de Deus todos os dias — para que, no meio da sobrecarga de informação e da correria, possam colocar as prioridades espirituais no lugar certo e gozar de andar com Deus.",
       habitsTitle: "Três hábitos diários",
       habits: [
@@ -445,7 +445,7 @@ const locale: RenewalCopy = {
     },
     vision: {
       label: "Visão",
-      title: "Levantar Worshipers através da Palavra",
+      title: "Levantar Worshipers\natravés da Palavra",
       lead: "A visão do Wordshiper é levantar Worshipers que adoram Deus através da Sua Palavra.",
       body: "Sonhamos com pessoas que se tornem verdadeiros adoradores que agradam a Deus em cada lugar da vida — através do pequeno hábito de ouvir, falar, lembrar e viver a Palavra.",
       close:
@@ -453,7 +453,7 @@ const locale: RenewalCopy = {
     },
     identity: {
       label: "Identidade",
-      title: "Word + Worshiper",
+      title: "Word\u00A0+\u00A0Worshiper",
       lead: "O Wordshiper não é meramente uma app bíblica.",
       body: "Wordshiper significa uma pessoa que adora Deus ao escrever a Sua Palavra no coração e vivê-la.",
       word: "Word",
@@ -465,7 +465,7 @@ const locale: RenewalCopy = {
     },
     thesis: {
       label: "Tese",
-      title: "Uma plataforma, três camadas",
+      title: "Uma plataforma,\ntrês camadas",
       lead: "O Wordshiper é uma app de memorização das Escrituras, um OS espiritual diário que realinha o dia, e um movimento global de memorização das Escrituras — concebidos como um só.",
       layers: [
         {

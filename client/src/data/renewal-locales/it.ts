@@ -2,7 +2,7 @@ import type { RenewalCopy } from "@/data/renewal-copy";
 
 const locale: RenewalCopy = {
   chrome: {
-    home: "Home",
+    home: "Inizio",
     searchLanguages: "Cerca lingue…",
     chooseLanguage: "Scegli la lingua",
     languagesCount: "lingue",
@@ -80,7 +80,7 @@ const locale: RenewalCopy = {
   },
   identity: {
     label: "Che cos’è Wordshiper",
-    title: "Una piattaforma per una vita centrata sulla Parola",
+    title: "Una piattaforma per una\nvita centrata sulla Parola",
     definition:
       "Un’app che ti aiuta a meditare e memorizzare un versetto della Scrittura, ripetere tre brevi preghiere ogni giorno, ripristinare le priorità spirituali · fisiche · emotive di una vita dispersa e vivere la tua chiamata.",
     sub: "Word\u00A0+\u00A0Worshiper. Una persona che adora Dio iscrivendo la Sua Parola e vivendola.",
@@ -191,7 +191,7 @@ const locale: RenewalCopy = {
   },
   product: {
     label: "Identità del prodotto",
-    title: "Una piattaforma, tre livelli",
+    title: "Una piattaforma,\ntre livelli",
     sub: "Un’app di memorizzazione della Scrittura, un OS spirituale quotidiano e un movimento globale della Parola — progettati come uno.",
     thesis: [
       {
@@ -252,7 +252,7 @@ const locale: RenewalCopy = {
   movement: {
     label: "Movimento",
     subtitle: "Non stiamo costruendo un’app.\nStiamo accendendo un movimento.",
-    title: "Un lineage spirituale, versetto dopo versetto",
+    title: "Un lineage spirituale,\nversetto dopo versetto",
     lineageLead: "Sei il",
     lineageNum: "14.207",
     lineageTail: "° Wordshiper a iscrivere questo versetto",
@@ -423,7 +423,7 @@ const locale: RenewalCopy = {
     },
     mission: {
       label: "Missione",
-      title: "Perché una piccola abitudine scorra fino alle nazioni",
+      title: "Perché una piccola abitudine\nscorra fino alle nazioni",
       lead: "Wordshiper aiuta le persone in tutto il mondo a iscrivere e memorizzare ogni giorno un versetto della Parola di Dio — così che, in mezzo al sovraccarico di informazioni e alla fretta, possano mettere a posto le priorità spirituali e gioire nel camminare con Dio.",
       habitsTitle: "Tre abitudini quotidiane",
       habits: [
@@ -445,7 +445,7 @@ const locale: RenewalCopy = {
     },
     vision: {
       label: "Visione",
-      title: "Suscitare Worshipers attraverso la Parola",
+      title: "Suscitare Worshipers\nattraverso la Parola",
       lead: "La visione di Wordshiper è suscitare Worshipers che adorano Dio attraverso la Sua Parola.",
       body: "Sogniamo persone che diventino veri adoratori che piacciono a Dio in ogni luogo della vita — attraverso la piccola abitudine di ascoltare, parlare, ricordare e vivere la Parola.",
       close:
@@ -453,7 +453,7 @@ const locale: RenewalCopy = {
     },
     identity: {
       label: "Identità",
-      title: "Word + Worshiper",
+      title: "Word\u00A0+\u00A0Worshiper",
       lead: "Wordshiper non è soltanto un’app biblica.",
       body: "Wordshiper significa una persona che adora Dio scrivendo la Sua Parola sul cuore e vivendola.",
       word: "Word",
@@ -465,7 +465,7 @@ const locale: RenewalCopy = {
     },
     thesis: {
       label: "Tesi",
-      title: "Una piattaforma, tre livelli",
+      title: "Una piattaforma,\ntre livelli",
       lead: "Wordshiper è un’app di memorizzazione della Scrittura, un OS spirituale quotidiano che riallinea la giornata, e un movimento globale di memorizzazione della Scrittura — progettati come uno.",
       layers: [
         {

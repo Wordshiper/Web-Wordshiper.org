@@ -80,7 +80,7 @@ const locale: RenewalCopy = {
   },
   identity: {
     label: "Kí ni Wordshiper",
-    title: "Pẹpẹ fún ìgbésí ayé tí Ọ̀rọ̀ jẹ́ àárín",
+    title: "Pẹpẹ fún ìgbésí ayé\ntí Ọ̀rọ̀ jẹ́ àárín",
     definition:
       "Áàpù kan tí ó ń ràn ọ́ lọ́wọ́ láti ṣàgbéyẹ̀wò àti láti fi ẹsẹ̀ Ìwé Mímọ́ kan sọ́kàn, láti tún àdúrà mẹ́ta kékeré ṣe lójúmọ́, láti mú àwọn ohun pàtàkì ẹ̀mí · ti ara · ìmọ̀lára ti ìgbésí ayé tí ó túká padà, àti láti gbé ìpè rẹ.",
     sub: "Word\u00A0+\u00A0Worshiper. Ẹni tí ó jọ́sìn Ọlọ́run nípasẹ̀ kíkọ Ọ̀rọ̀ Rẹ̀ àti gígba á gbé.",
@@ -173,7 +173,7 @@ const locale: RenewalCopy = {
   },
   product: {
     label: "Ìdánimọ̀ ọjà",
-    title: "Pẹpẹ kan, ìpele mẹ́ta",
+    title: "Pẹpẹ kan,\nìpele mẹ́ta",
     sub: "Áàpù ìfi Ìwé Mímọ́ sọ́kàn, spiritual OS ojoojúmọ́, àti ìgbésẹ̀ Ọ̀rọ̀ agbayé — tí a ṣe gẹ́gẹ́ bí ọ̀kan.",
     thesis: [
       {
@@ -207,7 +207,7 @@ const locale: RenewalCopy = {
   movement: {
     label: "Ìgbésẹ̀",
     subtitle: "A kò ń kọ́ áàpù.\nA ń dá ìgbésẹ̀ kan lóró.",
-    title: "Lineage ẹ̀mí, ẹsẹ̀ lẹ́yìn ẹsẹ̀",
+    title: "Lineage ẹ̀mí,\nẹsẹ̀ lẹ́yìn ẹsẹ̀",
     lineageLead: "Ìwọ ni",
     lineageNum: "14,207",
     lineageTail: "Wordshiper tí ó ń kọ ẹsẹ̀ yìí",
@@ -310,7 +310,7 @@ const locale: RenewalCopy = {
     },
     mission: {
       label: "Iṣẹ́-àṣẹ",
-      title: "Kí ìṣe kékeré lè ṣàn sí àwọn orílẹ̀-èdè",
+      title: "Kí ìṣe kékeré\nlè ṣàn sí àwọn orílẹ̀-èdè",
       lead:
         "Wordshiper ń ràn àwọn ènìyàn káàkiri ayé lọ́wọ́ láti kọ àti láti fi ẹsẹ̀ kan ti Ọ̀rọ̀ Ọlọ́run sọ́kàn lójúmọ́ — kí wọ́n lè fi àwọn ohun pàtàkì ẹ̀mí sí ibìkan tó tọ́ nínú ẹrù ìsọfúnniò àti ìṣíṣe, kí wọ́n sì gbádùn rírá pẹ̀lú Ọlọ́run.",
       habitsTitle: "Ìṣe mẹ́ta lójúmọ́",
@@ -327,7 +327,7 @@ const locale: RenewalCopy = {
     },
     vision: {
       label: "Ìran",
-      title: "Tọ́ àwọn Worshiper nípasẹ̀ Ọ̀rọ̀",
+      title: "Tọ́ àwọn Worshiper\nnípasẹ̀ Ọ̀rọ̀",
       lead:
         "Ìran Wordshiper ni láti tọ́ àwọn Worshiper tí wọ́n ń jọ́sìn Ọlọ́run nípasẹ̀ Ọ̀rọ̀ Rẹ̀.",
       body:
@@ -337,7 +337,7 @@ const locale: RenewalCopy = {
     },
     identity: {
       label: "Ìdánimọ̀",
-      title: "Word + Worshiper",
+      title: "Word\u00A0+\u00A0Worshiper",
       lead: "Wordshiper kì í ṣe áàpù Bíbéèlì lasan.",
       body:
         "Wordshiper túmọ̀ sí ẹni tí ó jọ́sìn Ọlọ́run nípasẹ̀ kíkọ Ọ̀rọ̀ Rẹ̀ sórí ọkàn àti gígba á gbé.",
@@ -350,7 +350,7 @@ const locale: RenewalCopy = {
     },
     thesis: {
       label: "Èrò-ìpilẹ̀",
-      title: "Pẹpẹ kan, ìpele mẹ́ta",
+      title: "Pẹpẹ kan,\nìpele mẹ́ta",
       lead:
         "Wordshiper jẹ́ áàpù ìfi Ìwé Mímọ́ sọ́kàn, spiritual OS ojoojúmọ́ tí ó ń tún ọjọ́ ṣètò, àti ìgbésẹ̀ ìfi Ìwé Mímọ́ sọ́kàn agbayé — tí a ṣe gẹ́gẹ́ bí ọ̀kan.",
       layers: [

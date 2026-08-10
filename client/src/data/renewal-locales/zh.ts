@@ -29,29 +29,29 @@ const locale: RenewalCopy = {
     badge: "将于\u00A02026年\u00A012月发布",
     slogan: "一天\u00A0一节。敬拜的一生。",
     declaration: "我是 Wordshiper。",
-    cta1: "加入首批\u00A01,000人",
+    cta1: "加入首批\u00A01,000\u00A0人",
     cta2: "为何选择 Wordshiper",
     lineageNote: "预登记即可获得你的谱系\u00A0编号",
     slides: [
       {
         label: "什么是 Wordshiper？",
-        title1: "背诵一节经文，",
+        title1: "背诵一\u00A0节经文，",
         title2: "重整你的整天。",
-        body: "一款帮助你默想并背诵一节圣经、每天重复三次短祷、恢复属灵·身体·情感的优先次序，并活出呼召人生的应用。",
+        body: "一款帮助你默想并背诵一\u00A0节圣经、每天重复三次短祷、恢复属灵·身体·情感的优先次序，并活出呼召人生的应用。",
         visual: "home" as const,
       },
       {
         label: "独特之处",
         title1: "你并不孤单。",
         title2: "这就是福音流淌的方式。",
-        body: "基于位置与群体的频道，把你与附近的同路人连接起来。24种语言的双语／三语支持。分享、奉献与频道成为福音的道路。Wordshiper 不只是工具——它是以神话语为中心的生活平台。",
+        body: "基于位置与群体的频道，把你与附近的同路人连接起来。24\u00A0种语言的双语／三语支持。分享、奉献与频道成为福音的道路。Wordshiper 不只是工具——它是以神话语为中心的生活平台。",
         visual: "jog" as const,
       },
       {
         label: "三重身份",
         title1: "背诵应用 · 属灵 OS ·",
         title2: "全球神话语运动",
-        body: "每天领受、聆听、开口、背诵一节经文。用十五分钟重整一天。通过一节经文，以第 N 位 Wordshiper 加入谱系——再用 Verse\u00A0Card 与你的声音邀请下一个人。",
+        body: "每天领受、聆听、开口、背诵一\u00A0节经文。用十五分钟重整一天。通过一\u00A0节经文，以第\u00A0N\u00A0位 Wordshiper 加入谱系——再用 Verse\u00A0Card 与你的声音邀请下一个人。",
         visual: "home" as const,
       },
     ],
@@ -75,14 +75,14 @@ const locale: RenewalCopy = {
       },
     ],
     answer:
-      "即使只是一节经文，深深种在一颗心里，也能成为胜过恐惧、穿越艰难、把散落的属灵优先次序转回神那里的力量。",
+      "即使只是一\u00A0节经文，深深种在一颗心里，也能成为胜过恐惧、穿越艰难、把散落的属灵优先次序转回神那里的力量。",
     answerRef: "— Wordshiper 开始的原因",
   },
   identity: {
     label: "什么是 Wordshiper",
-    title: "以神话语为中心的生活平台",
+    title: "以神话语为中心的\n生活平台",
     definition:
-      "一款帮助你默想并背诵一节圣经、每天重复三次短祷、恢复散落人生的属灵·身体·情感优先次序，并活出呼召的应用。",
+      "一款帮助你默想并背诵一\u00A0节圣经、每天重复三次短祷、恢复散落人生的属灵·身体·情感优先次序，并活出呼召的应用。",
     sub: "Word\u00A0+\u00A0Worshiper。藉着铭记并活出神的话语来敬拜神的人。",
     word: "Word",
     wordD: "神活泼的话语",
@@ -92,7 +92,7 @@ const locale: RenewalCopy = {
     layers: [
       {
         t: "Scripture Memory App",
-        d: "帮助用户每天领受、聆听、开口并背诵一节经文。",
+        d: "帮助用户每天领受、聆听、开口并背诵一\u00A0节经文。",
       },
       {
         t: "Daily Spiritual OS",
@@ -100,21 +100,21 @@ const locale: RenewalCopy = {
       },
       {
         t: "Global Scripture Memory Movement",
-        d: "通过一节经文，以第 N 位 Wordshiper 加入谱系——再用 Verse\u00A0Card 与你的声音邀请下一个人。",
+        d: "通过一\u00A0节经文，以第\u00A0N\u00A0位 Wordshiper 加入谱系——再用 Verse\u00A0Card 与你的声音邀请下一个人。",
       },
     ],
     notOnly:
-      "基于位置与群体的频道，把你与当地同路人连接起来。默认英语，并提供 24 种语言的双语／三语支持。经文不是独自背诵——而是一起分享、一起活着。",
+      "基于位置与群体的频道，把你与当地同路人连接起来。默认英语，并提供 24\u00A0种语言的双语／三语支持。经文不是独自背诵——而是一起分享、一起活着。",
     forWhom:
       "分享、奉献与频道成为“福音的道路”。Wordshiper 不只是应用工具——它是以神话语为中心的生活平台。",
   },
   mission: {
     label: "使命",
     title: "恢复属灵优先次序。\n重获与神同行的喜乐。",
-    body: "Wordshiper 帮助世界各地的人每天铭记并背诵神话语的一节——好叫他们在信息过载与忙碌中，摆正属灵优先次序，并享受与神同行。",
+    body: "Wordshiper 帮助世界各地的人每天铭记并背诵神话语的一\u00A0节——好叫他们在信息过载与忙碌中，摆正属灵优先次序，并享受与神同行。",
     habits: [
       {
-        t: "一天一节",
+        t: "一天\u00A0一节",
         d: "听 · 说 · 背",
       },
       {
@@ -134,12 +134,12 @@ const locale: RenewalCopy = {
     title: "藉着神话语的\n全球敬拜运动",
     body: "Wordshiper 的异象，是兴起藉着神话语敬拜神的 Worshiper。",
     detail:
-      "世界各地的人领受同一节经文，用自己的语言与声音告白，并在所处之地活出来——敬拜流入家庭、教会、城市与万国的全球圣经背诵运动。",
+      "世界各地的人领受同一\u00A0节经文，用自己的语言与声音告白，并在所处之地活出来——敬拜流入家庭、教会、城市与万国的全球圣经背诵运动。",
   },
   routine: {
     label: "核心日常",
     title: "一天三次，\n每次五分钟",
-    sub: "每次会话由 Walk 规划器闹钟自动触发，使一天三次成为生命节奏。早晨领受，中午回顾，夜晚确认——直到一节经文渗入生命。",
+    sub: "每次会话由 Walk 规划器闹钟自动触发，使一天三次成为生命节奏。早晨领受，中午回顾，夜晚确认——直到一\u00A0节经文渗入生命。",
     alarmNote: "Walk 规划器闹钟",
     principle:
       "Tiny Habits——每次五分钟轻到足以每天重复，同时兼顾记忆留存与属灵深度。",
@@ -191,12 +191,12 @@ const locale: RenewalCopy = {
   },
   product: {
     label: "产品身份",
-    title: "一个平台，三层结构",
+    title: "一个平台，\n三层结构",
     sub: "圣经背诵应用、每日属灵 OS、全球神话语运动——合而为一地设计。",
     thesis: [
       {
         t: "Scripture Memory App",
-        d: "帮助用户每天领受、聆听、开口并背诵一节经文。",
+        d: "帮助用户每天领受、聆听、开口并背诵一\u00A0节经文。",
       },
       {
         t: "Daily Spiritual Operating System",
@@ -204,7 +204,7 @@ const locale: RenewalCopy = {
       },
       {
         t: "Global Scripture Memory Movement",
-        d: "通过一节经文，以第 N 位 Wordshiper 加入谱系——再用 Verse\u00A0Card 与你的声音邀请下一个人。",
+        d: "通过一\u00A0节经文，以第\u00A0N\u00A0位 Wordshiper 加入谱系——再用 Verse\u00A0Card 与你的声音邀请下一个人。",
       },
     ],
     tabs: [
@@ -214,7 +214,7 @@ const locale: RenewalCopy = {
       },
       {
         t: "背诵",
-        d: "铭记话语——五阶段 Hide & Test 引擎",
+        d: "铭记话语——五阶段 Hide\u00A0&\u00A0Test 引擎",
       },
       {
         t: "祷告",
@@ -235,15 +235,15 @@ const locale: RenewalCopy = {
         d: "从不因中断连续而定罪；以恩典邀请你回到话语。",
       },
       {
-        t: "Jog 滚轮 — 1.5秒读经",
-        d: "即使在敬拜中，也能在 1.5 秒内打开圣经。离线 31,112 节。",
+        t: "Jog 滚轮 — 1.5\u00A0秒读经",
+        d: "即使在敬拜中，也能在 1.5\u00A0秒内打开圣经。离线 31,112\u00A0节。",
       },
       {
         t: "Verse\u00A0Card — 流动的告白",
-        d: "通过一节经文，卡片便诞生——经文、谱系编号、声音 QR。",
+        d: "通过一\u00A0节经文，卡片便诞生——经文、谱系编号、声音 QR。",
       },
       {
-        t: "24种语言",
+        t: "24\u00A0种语言",
         d: "可在母语之外，以双语或三语背诵。",
       },
     ],
@@ -252,7 +252,7 @@ const locale: RenewalCopy = {
   movement: {
     label: "运动",
     subtitle: "我们不是在做一个应用。\n我们在点燃一场运动。",
-    title: "一节一节的属灵谱系",
+    title: "一\u00A0节一\u00A0节的\n属灵谱系",
     lineageLead: "你是",
     lineageNum: "14,207",
     lineageTail: "位铭记这节经文的 Wordshiper",
@@ -261,7 +261,7 @@ const locale: RenewalCopy = {
       {
         t: "Synchronicity",
         e: "此刻，一起",
-        d: "“我并不孤单”——全世界在同一时刻领受同一节经文。",
+        d: "“我并不孤单”——全世界在同一时刻领受同一\u00A0节经文。",
       },
       {
         t: "Lineage",
@@ -311,7 +311,7 @@ const locale: RenewalCopy = {
       },
       {
         t: "Phase\u00A03 — Launch",
-        d: "2026年\u00A012月 — 首批\u00A01,000人种子社群",
+        d: "2026年\u00A012月 — 首批\u00A01,000\u00A0人种子社群",
       },
       {
         t: "Phase\u00A04 — Expansion",
@@ -320,7 +320,7 @@ const locale: RenewalCopy = {
     ],
   },
   cta: {
-    title: "我们正在寻找首批\u00A01,000人\n一同领受第一份吗哪",
+    title: "我们正在寻找首批\u00A01,000\u00A0人\n一同领受第一份吗哪",
     sub: "预登记即可获得你的谱系\u00A0编号。上线之日，所有人在同一时刻领受第一份吗哪。",
     placeholder: "电子邮箱",
     button: "预登记",
@@ -331,7 +331,7 @@ const locale: RenewalCopy = {
     declaration: "是的，我是 Wordshiper！",
   },
   donate: {
-    eyebrow: "好叫一天一节抵达万国",
+    eyebrow: "好叫一天\u00A0一节抵达万国",
     title: "与神话语运动同行",
     sub: "Wordshiper Ministry Inc. 是美国 501(c)(3) 非营利组织。你的奉献推动全球圣经背诵与祷告节奏。",
     oneTime: "一次性",
@@ -348,7 +348,7 @@ const locale: RenewalCopy = {
   },
   investors: {
     navTitle: "投资者",
-    title: "寻找伙伴，共同书写\n神话语运动的下一章",
+    title: "寻找伙伴，共同书写神话语运动的\n下一章",
     sub: "Wordshiper 以 Wordshiper Ministry Inc.（501(c)(3)）与 Wordshiper PBC, Inc. 运营——共同守护可持续性与使命。",
     points: [
       {
@@ -391,7 +391,7 @@ const locale: RenewalCopy = {
   },
   aboutPage: {
     title: "关于 Wordshiper",
-    subtitle: "好叫一天一节，成为敬拜的一生。",
+    subtitle: "好叫一天\u00A0一节，成为敬拜的一生。",
     toc: [
       {
         id: "what",
@@ -416,18 +416,18 @@ const locale: RenewalCopy = {
     ],
     what: {
       label: "什么是 Wordshiper？",
-      title: "把话语写在心上\n并重整一天的应用",
-      lead: "Wordshiper 帮助世界各地的人每天铭记并背诵神话语的一节——好叫他们在信息过载与忙碌中，摆正属灵优先次序，并享受与神同行。",
-      body: "我们不止于帮助用户“背一节经文”。Wordshiper 提供每日属灵日常，引导你聆听、开口、背诵、祷告，并把一节经文实践为人生优先。",
+      title: "把话语写在心上，\n并重整一天的应用",
+      lead: "Wordshiper 帮助世界各地的人每天铭记并背诵神话语的一\u00A0节——好叫他们在信息过载与忙碌中，摆正属灵优先次序，并享受与神同行。",
+      body: "我们不止于帮助用户“背一\u00A0节经文”。Wordshiper 提供每日属灵日常，引导你聆听、开口、背诵、祷告，并把一\u00A0节经文实践为人生优先。",
     },
     mission: {
       label: "使命",
-      title: "好叫小小习惯流向万国",
-      lead: "Wordshiper 帮助世界各地的人每天铭记并背诵神话语的一节——好叫他们在信息过载与忙碌中，摆正属灵优先次序，并享受与神同行。",
+      title: "好叫小小习惯\n流向万国",
+      lead: "Wordshiper 帮助世界各地的人每天铭记并背诵神话语的一\u00A0节——好叫他们在信息过载与忙碌中，摆正属灵优先次序，并享受与神同行。",
       habitsTitle: "三项每日习惯",
       habits: [
         {
-          t: "一天一节",
+          t: "一天\u00A0一节",
           d: "听它、说它、写在心上。",
         },
         {
@@ -444,15 +444,15 @@ const locale: RenewalCopy = {
     },
     vision: {
       label: "异象",
-      title: "藉着神话语兴起 Worshiper",
+      title: "藉着神话语\n兴起 Worshiper",
       lead: "Wordshiper 的异象，是兴起藉着神话语敬拜神的 Worshiper。",
       body: "我们梦想人们藉着听、说、记、活出话语的小小习惯——在人生各处成为讨神喜悦的真正敬拜者。",
       close:
-        "世界各地的人领受同一节经文，用自己的语言与声音告白，并在所处之地活出来——全球圣经背诵运动。这就是我们的异象。",
+        "世界各地的人领受同一\u00A0节经文，用自己的语言与声音告白，并在所处之地活出来——全球圣经背诵运动。这就是我们的异象。",
     },
     identity: {
       label: "身份",
-      title: "Word + Worshiper",
+      title: "Word\u00A0+\u00A0Worshiper",
       lead: "Wordshiper 不只是一款圣经应用。",
       body: "Wordshiper 意味着：把神的话语写在心上并活出来，以此敬拜神的人。",
       word: "Word",
@@ -464,12 +464,12 @@ const locale: RenewalCopy = {
     },
     thesis: {
       label: "主张",
-      title: "一个平台，三层结构",
+      title: "一个平台，\n三层结构",
       lead: "Wordshiper 是圣经背诵应用、重整一天的每日属灵 OS，以及全球圣经背诵运动——合而为一地设计。",
       layers: [
         {
           t: "Scripture Memory App",
-          d: "帮助你每天领受、聆听、开口并背诵一节经文。",
+          d: "帮助你每天领受、聆听、开口并背诵一\u00A0节经文。",
         },
         {
           t: "Daily Spiritual OS",
@@ -477,7 +477,7 @@ const locale: RenewalCopy = {
         },
         {
           t: "Global Scripture Memory Movement",
-          d: "通过一节经文，以第 N 位 Wordshiper 加入谱系——再用 Verse\u00A0Card 与你的声音邀请下一个人。",
+          d: "通过一\u00A0节经文，以第\u00A0N\u00A0位 Wordshiper 加入谱系——再用 Verse\u00A0Card 与你的声音邀请下一个人。",
         },
       ],
     },

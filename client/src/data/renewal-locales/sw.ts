@@ -29,7 +29,7 @@ const locale: RenewalCopy = {
     badge: "Itazinduliwa Desemba\u00A02026",
     slogan: "Aya\u00A0moja kwa siku. Maisha ya ibada.",
     declaration: "Mimi ni Wordshiper.",
-    cta1: "Jiunge na 1,000\u00A0wa kwanza",
+    cta1: "Jiunge na\u00A01,000\u00A0wa kwanza",
     cta2: "Kwa nini Wordshiper",
     lineageNote: "Jisajili mapema na upokee nambari yako ya lineage",
     slides: [
@@ -80,7 +80,7 @@ const locale: RenewalCopy = {
   },
   identity: {
     label: "Wordshiper ni nini",
-    title: "Jukwaa la maisha yanayozingatia Neno",
+    title: "Jukwaa la maisha\nyanayozingatia Neno",
     definition:
       "Programu inayokusaidia kutafakari na kuhifadhi aya moja ya Maandiko, kurudia sala tatu fupi kila siku, kurejesha vipaumbele vya kiroho · kimwili · kihisia vya maisha yaliyotawanyika, na kuishi wito wako.",
     sub: "Word\u00A0+\u00A0Worshiper. Mtu anayemwabudu Mungu kwa kuandika Neno Lake na kuliishi.",
@@ -173,7 +173,7 @@ const locale: RenewalCopy = {
   },
   product: {
     label: "Utambulisho wa bidhaa",
-    title: "Jukwaa moja, tabaka tatu",
+    title: "Jukwaa moja,\ntabaka tatu",
     sub: "Programu ya kuhifadhi Maandiko, Spiritual OS ya kila siku, na harakati ya kimataifa ya Neno — zimeundwa kama kitu kimoja.",
     thesis: [
       {
@@ -207,7 +207,7 @@ const locale: RenewalCopy = {
   movement: {
     label: "Harakati",
     subtitle: "Hatujengi programu.\nTunawasha harakati.",
-    title: "Lineage ya kiroho, aya kwa aya",
+    title: "Lineage ya kiroho,\naya kwa aya",
     lineageLead: "Wewe ni",
     lineageNum: "14,207",
     lineageTail: "Wordshiper kuandika aya hii",
@@ -237,12 +237,12 @@ const locale: RenewalCopy = {
     phases: [
       { t: "Phase\u00A01 — MVP", d: "Mzunguko mkuu: pokea · hifadhi · jiunge na lineage" },
       { t: "Phase\u00A02 — Routine", d: "Vikao vitatu vya kila siku · Walk planner · Worvi" },
-      { t: "Phase\u00A03 — Launch", d: "Desemba\u00A02026 — jamii mbegu ya 1,000\u00A0wa kwanza" },
+      { t: "Phase\u00A03 — Launch", d: "Desemba\u00A02026 — jamii mbegu ya\u00A01,000\u00A0wa kwanza" },
       { t: "Phase\u00A04 — Expansion", d: "Voice\u00A0Feed · vituo · programu tatu za white-label" },
     ],
   },
   cta: {
-    title: "Tunatafuta 1,000\u00A0wa kwanza\nkupokea manna ya kwanza pamoja",
+    title: "Tunatafuta\u00A01,000\u00A0wa kwanza\nkupokea manna ya kwanza pamoja",
     sub: "Jisajili mapema na upokee nambari yako ya lineage. Siku ya uzinduzi, kila mtu anapokea manna ya kwanza wakati ule ule.",
     placeholder: "Anwani ya barua pepe",
     button: "Jisajili mapema",
@@ -310,7 +310,7 @@ const locale: RenewalCopy = {
     },
     mission: {
       label: "Dhamira",
-      title: "Ili tabia ndogo itiririke kwa mataifa",
+      title: "Ili tabia ndogo\nitiririke kwa mataifa",
       lead:
         "Wordshiper inawasaidia watu duniani kote kuandika na kuhifadhi aya moja ya Neno la Mungu kila siku — ili katikati ya mzigo wa habari na shughuli, waweze kuweka vipaumbele vya kiroho sawa na kufurahia kutembea na Mungu.",
       habitsTitle: "Tabia tatu za kila siku",
@@ -327,7 +327,7 @@ const locale: RenewalCopy = {
     },
     vision: {
       label: "Maono",
-      title: "Lea Worshipers kupitia Neno",
+      title: "Lea Worshipers\nkupitia Neno",
       lead:
         "Maono ya Wordshiper ni kulea Worshipers wanaomwabudu Mungu kupitia Neno Lake.",
       body:
@@ -337,7 +337,7 @@ const locale: RenewalCopy = {
     },
     identity: {
       label: "Utambulisho",
-      title: "Word + Worshiper",
+      title: "Word\u00A0+\u00A0Worshiper",
       lead: "Wordshiper si programu ya Biblia tu.",
       body:
         "Wordshiper inamaanisha mtu anayemwabudu Mungu kwa kuandika Neno Lake moyoni na kuliishi.",
@@ -350,7 +350,7 @@ const locale: RenewalCopy = {
     },
     thesis: {
       label: "Nadharia",
-      title: "Jukwaa moja, tabaka tatu",
+      title: "Jukwaa moja,\ntabaka tatu",
       lead:
         "Wordshiper ni programu ya kuhifadhi Maandiko, Spiritual OS ya kila siku inayopanga upya siku, na harakati ya kimataifa ya kuhifadhi Maandiko — zimeundwa kama kitu kimoja.",
       layers: [

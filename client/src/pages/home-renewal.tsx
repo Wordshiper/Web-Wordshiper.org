@@ -305,7 +305,7 @@ function Why() {
       <div className="max-w-3xl mx-auto px-4 sm:px-6">
         <div className="text-center">
           <SectionLabel>{c.why.label}</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
             {c.why.title}
           </h2>
           <p className="mt-6 text-lg text-gray-600 leading-relaxed ws-text-pretty">
@@ -349,7 +349,9 @@ function Identity() {
     <section id="identity" className="py-24 sm:py-28" style={{ background: "linear-gradient(180deg,#E6F7FC 0%,#FFFFFF 100%)" }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
         <SectionLabel>{c.identity.label}</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] ws-text-balance">{c.identity.title}</h2>
+        <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+          {c.identity.title}
+        </h2>
         <p className="mt-6 text-lg sm:text-xl text-[#003D4F] font-medium leading-relaxed ws-text-pretty max-w-3xl mx-auto">
           {c.identity.definition}
         </p>
@@ -395,7 +397,7 @@ function MissionVision() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="max-w-3xl mx-auto text-center">
           <SectionLabel>{c.mission.label}</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
             {c.mission.title}
           </h2>
           <p className="mt-6 text-lg text-gray-600 leading-relaxed ws-text-pretty">{c.mission.body}</p>
@@ -415,7 +417,7 @@ function MissionVision() {
 
         <div className="mt-20 pt-16 border-t border-[#E6F7FC] max-w-3xl mx-auto text-center">
           <SectionLabel>{c.vision.label}</SectionLabel>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
             {c.vision.title}
           </h2>
           <p className="mt-5 text-lg font-medium text-[#003D4F] leading-relaxed ws-text-pretty">{c.vision.body}</p>
@@ -433,7 +435,9 @@ function Routine() {
     <section id="routine" className="py-24" style={{ background: "linear-gradient(180deg,#E6F7FC 0%,#F8FCFE 100%)" }}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <SectionLabel>{c.routine.label}</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">{c.routine.title}</h2>
+        <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+          {c.routine.title}
+        </h2>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto ws-text-pretty leading-relaxed">{c.routine.sub}</p>
         <p className="mt-3 text-sm font-medium text-[#0090B8]">{c.routine.principle}</p>
         <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -487,7 +491,9 @@ function Product() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="text-center">
           <SectionLabel>{c.product.label}</SectionLabel>
-          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] ws-text-balance">{c.product.title}</h2>
+          <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+            {c.product.title}
+          </h2>
           <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto ws-text-pretty">{c.product.sub}</p>
         </div>
 
@@ -700,7 +706,9 @@ function Preregister() {
         <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-white shadow-lg mb-6 p-2">
           <img src={iconMark} alt="" className="w-full h-full" />
         </div>
-        <h2 className="text-3xl sm:text-4xl font-bold text-white leading-snug whitespace-pre-line ws-text-balance">{c.cta.title}</h2>
+        <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-white leading-snug whitespace-pre-line ws-text-balance">
+          {c.cta.title}
+        </h2>
         <p className="mt-4 text-white/85 text-lg ws-text-pretty">{c.cta.sub}</p>
 
         {lineageNumber != null ? (

@@ -29,7 +29,7 @@ const locale: RenewalCopy = {
     badge: "Ra mắt tháng 12\u00A02026",
     slogan: "Một\u00A0câu mỗi ngày. Một đời thờ phượng.",
     declaration: "Tôi là một Wordshiper.",
-    cta1: "Tham gia 1.000 người đầu tiên",
+    cta1: "Tham gia\u00A01.000 người đầu tiên",
     cta2: "Vì sao Wordshiper",
     lineageNote: "Đăng ký trước và nhận số dòng\u00A0dõi của bạn",
     slides: [
@@ -80,7 +80,7 @@ const locale: RenewalCopy = {
   },
   identity: {
     label: "Wordshiper là gì",
-    title: "Nền tảng cho đời sống lấy Lời làm trung tâm",
+    title: "Nền tảng cho đời sống\nlấy Lời làm trung tâm",
     definition:
       "Ứng dụng giúp bạn suy ngẫm và thuộc lòng một câu Kinh Thánh, lặp lại ba lời cầu nguyện ngắn mỗi ngày, khôi phục các ưu tiên thuộc linh · thể chất · cảm xúc của đời sống phân tán, và sống theo sự gọi.",
     sub: "Word\u00A0+\u00A0Worshiper. Người thờ phượng Đức Chúa Trời bằng cách khắc Lời Ngài và sống theo Lời đó.",
@@ -173,7 +173,7 @@ const locale: RenewalCopy = {
   },
   product: {
     label: "Bản sắc sản phẩm",
-    title: "Một nền tảng, ba lớp",
+    title: "Một nền tảng,\nba lớp",
     sub: "Ứng dụng thuộc lòng Kinh Thánh, hệ điều hành thuộc linh hàng ngày, và phong trào Lời toàn cầu — được thiết kế thành một.",
     thesis: [
       {
@@ -219,7 +219,7 @@ const locale: RenewalCopy = {
   movement: {
     label: "Phong trào",
     subtitle: "Chúng tôi không xây ứng dụng.\nChúng tôi đang thắp một phong trào.",
-    title: "Một dòng dõi thuộc linh, từng câu một",
+    title: "Một dòng dõi thuộc linh,\ntừng câu một",
     lineageLead: "Bạn là",
     lineageNum: "14,207",
     lineageTail: "Wordshiper thứ đã khắc câu này",
@@ -266,7 +266,7 @@ const locale: RenewalCopy = {
     ],
   },
   cta: {
-    title: "Chúng tôi tìm 1.000 người đầu tiên\nđể cùng nhận manna đầu tiên",
+    title: "Chúng tôi tìm\u00A01.000 người đầu tiên\nđể cùng nhận manna đầu tiên",
     sub: "Đăng ký trước và nhận số dòng\u00A0dõi của bạn. Ngày ra mắt, mọi người nhận manna đầu tiên cùng một lúc.",
     placeholder: "Địa chỉ email",
     button: "Đăng ký trước",
@@ -344,7 +344,7 @@ const locale: RenewalCopy = {
     },
     mission: {
       label: "Sứ mệnh",
-      title: "Để một thói quen nhỏ chảy đến các dân tộc",
+      title: "Để một thói quen nhỏ\nchảy đến các dân tộc",
       lead: "Wordshiper giúp mọi người trên thế giới khắc và thuộc lòng một câu Lời Đức Chúa Trời mỗi ngày — để giữa quá tải thông tin và bận rộn, họ có thể đặt đúng các ưu tiên thuộc linh và vui hưởng sự đồng hành với Đức Chúa Trời.",
       habitsTitle: "Ba thói quen hàng ngày",
       habits: [
@@ -360,7 +360,7 @@ const locale: RenewalCopy = {
     },
     vision: {
       label: "Tầm nhìn",
-      title: "Dấy lên người thờ phượng qua Lời",
+      title: "Dấy lên người thờ phượng\nqua Lời",
       lead: "Tầm nhìn của Wordshiper là dấy lên những người thờ phượng Đức Chúa Trời qua Lời Ngài.",
       body: "Chúng tôi mơ về mọi người trở thành người thờ phượng thật làm đẹp lòng Đức Chúa Trời ở mọi nơi của đời sống — qua thói quen nhỏ của việc nghe, nói, nhớ và sống Lời.",
       close:
@@ -368,7 +368,7 @@ const locale: RenewalCopy = {
     },
     identity: {
       label: "Bản sắc",
-      title: "Word + Worshiper",
+      title: "Word\u00A0+\u00A0Worshiper",
       lead: "Wordshiper không chỉ là một ứng dụng Kinh Thánh.",
       body: "Wordshiper nghĩa là người thờ phượng Đức Chúa Trời bằng cách viết Lời Ngài lên tấm lòng và sống theo Lời đó.",
       word: "Word",
@@ -380,7 +380,7 @@ const locale: RenewalCopy = {
     },
     thesis: {
       label: "Luận đề",
-      title: "Một nền tảng, ba lớp",
+      title: "Một nền tảng,\nba lớp",
       lead: "Wordshiper là ứng dụng thuộc lòng Kinh Thánh, hệ điều hành thuộc linh hàng ngày sắp xếp lại ngày, và phong trào thuộc lòng Kinh Thánh toàn cầu — được thiết kế thành một.",
       layers: [
         {

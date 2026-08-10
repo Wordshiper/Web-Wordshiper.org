@@ -2,7 +2,7 @@ import type { RenewalCopy } from "@/data/renewal-copy";
 
 const locale: RenewalCopy = {
   chrome: {
-    home: "Home",
+    home: "Pangunahin",
     searchLanguages: "Maghanap ng wika…",
     chooseLanguage: "Piliin ang iyong wika",
     languagesCount: "mga wika",
@@ -80,7 +80,7 @@ const locale: RenewalCopy = {
   },
   identity: {
     label: "Ano ang Wordshiper",
-    title: "Isang plataporma para sa buhay na nakasentro sa Salita",
+    title: "Isang plataporma para sa buhay\nna nakasentro sa Salita",
     definition:
       "Isang app na tumutulong sa iyo magmuni at isaulo ang isang talata ng Kasulatan, ulitin ang tatlong maikling panalangin araw-araw, ibalik ang espirituwal · pisikal · emosyonal na priyoridad ng nakakalat na buhay, at isabuhay ang iyong bokasyon.",
     sub: "Word\u00A0+\u00A0Worshiper. Isang taong sumasamba sa Diyos sa pamamagitan ng pagsulat ng Kanyang Salita at pagsasabuhay nito.",
@@ -173,7 +173,7 @@ const locale: RenewalCopy = {
   },
   product: {
     label: "Pagkakakilanlan ng produkto",
-    title: "Isang plataporma, tatlong layer",
+    title: "Isang plataporma,\ntatlong layer",
     sub: "Isang Scripture memory app, isang araw-araw na spiritual OS, at isang pandaigdigang kilusan ng Salita — dinisenyo bilang isa.",
     thesis: [
       {
@@ -207,7 +207,7 @@ const locale: RenewalCopy = {
   movement: {
     label: "Kilusan",
     subtitle: "Hindi kami gumagawa ng app.\nNagsisindi kami ng kilusan.",
-    title: "Isang espirituwal na lineage, talata sa talata",
+    title: "Isang espirituwal na lineage,\ntalata sa talata",
     lineageLead: "Ikaw ang",
     lineageNum: "14,207",
     lineageTail: "th Wordshiper na nagsulat ng talatang ito",
@@ -310,7 +310,7 @@ const locale: RenewalCopy = {
     },
     mission: {
       label: "Misyon",
-      title: "Upang ang maliit na ugaliin ay dumaloy sa mga bansa",
+      title: "Upang ang maliit na ugaliin\nay dumaloy sa mga bansa",
       lead:
         "Tinutulungan ng Wordshiper ang mga tao sa buong mundo na isulat at isaulo ang isang talata ng Salita ng Diyos araw-araw — upang sa gitna ng sobrang impormasyon at pagmamadali, maituwid nila ang espirituwal na priyoridad at matamasa ang paglakad kasama ang Diyos.",
       habitsTitle: "Tatlong araw-araw na ugaliin",
@@ -327,7 +327,7 @@ const locale: RenewalCopy = {
     },
     vision: {
       label: "Bisyon",
-      title: "Palakihin ang mga Worshiper sa pamamagitan ng Salita",
+      title: "Palakihin ang mga Worshiper\nsa pamamagitan ng Salita",
       lead:
         "Ang bisyon ng Wordshiper ay palakihin ang mga Worshiper na sumasamba sa Diyos sa pamamagitan ng Kanyang Salita.",
       body:
@@ -337,7 +337,7 @@ const locale: RenewalCopy = {
     },
     identity: {
       label: "Pagkakakilanlan",
-      title: "Word + Worshiper",
+      title: "Word\u00A0+\u00A0Worshiper",
       lead: "Ang Wordshiper ay hindi simpleng Bible app.",
       body:
         "Ang Wordshiper ay nangangahulugang isang taong sumasamba sa Diyos sa pamamagitan ng pagsulat ng Kanyang Salita sa puso at pagsasabuhay nito.",
@@ -350,7 +350,7 @@ const locale: RenewalCopy = {
     },
     thesis: {
       label: "Thesis",
-      title: "Isang plataporma, tatlong layer",
+      title: "Isang plataporma,\ntatlong layer",
       lead:
         "Ang Wordshiper ay isang Scripture memory app, isang araw-araw na spiritual OS na muling inaayos ang araw, at isang pandaigdigang kilusan ng pagsasaulo ng Kasulatan — dinisenyo bilang isa.",
       layers: [

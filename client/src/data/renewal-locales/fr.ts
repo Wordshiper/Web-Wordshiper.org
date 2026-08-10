@@ -36,7 +36,7 @@ const locale: RenewalCopy = {
       {
         label: "Qu’est-ce que Wordshiper ?",
         title1: "Mémorisez un verset.",
-        title2: "Réaligner toute votre journée.",
+        title2: "Réalignez toute votre journée.",
         body: "Une application qui vous aide à méditer et mémoriser un verset des Écritures, répéter trois courtes prières chaque jour, restaurer les priorités spirituelles · physiques · émotionnelles, et vivre une vie d’appel.",
         visual: "home" as const,
       },
@@ -51,7 +51,7 @@ const locale: RenewalCopy = {
         label: "Triple identité",
         title1: "App de mémorisation · OS spirituel ·",
         title2: "Mouvement mondial de la Parole",
-        body: "Recevez, écoutez, parlez et mémorisez un verset par jour. Réaligner votre journée en quinze minutes. Passez un verset et rejoignez la lignée en tant que Nᵉ Wordshiper — puis invitez la personne suivante avec une Verse\u00A0Card et votre voix.",
+        body: "Recevez, écoutez, parlez et mémorisez un verset par jour. Réalignez votre journée en quinze minutes. Passez un verset et rejoignez la lignée en tant que Nᵉ Wordshiper — puis invitez la personne suivante avec une Verse\u00A0Card et votre voix.",
         visual: "home" as const,
       },
     ],
@@ -80,7 +80,7 @@ const locale: RenewalCopy = {
   },
   identity: {
     label: "Qu’est-ce que Wordshiper",
-    title: "Une plateforme pour une vie centrée sur la Parole",
+    title: "Une plateforme pour une\nvie centrée sur la Parole",
     definition:
       "Une application qui vous aide à méditer et mémoriser un verset des Écritures, répéter trois courtes prières chaque jour, restaurer les priorités spirituelles · physiques · émotionnelles d’une vie dispersée, et vivre votre appel.",
     sub: "Word\u00A0+\u00A0Worshiper. Une personne qui adore Dieu en inscrivant Sa Parole et en la vivant.",
@@ -191,7 +191,7 @@ const locale: RenewalCopy = {
   },
   product: {
     label: "Identité du produit",
-    title: "Une plateforme, trois couches",
+    title: "Une plateforme,\ntrois couches",
     sub: "Une app de mémorisation des Écritures, un OS spirituel quotidien et un mouvement mondial de la Parole — conçus comme un seul tout.",
     thesis: [
       {
@@ -252,7 +252,7 @@ const locale: RenewalCopy = {
   movement: {
     label: "Mouvement",
     subtitle: "Nous ne construisons pas une application.\nNous allumons un mouvement.",
-    title: "Une lignée spirituelle, verset après verset",
+    title: "Une lignée spirituelle,\nverset après verset",
     lineageLead: "Vous êtes le",
     lineageNum: "14 207",
     lineageTail: "ᵉ Wordshiper à inscrire ce verset",
@@ -423,7 +423,7 @@ const locale: RenewalCopy = {
     },
     mission: {
       label: "Mission",
-      title: "Pour qu’une petite habitude circule vers les nations",
+      title: "Pour qu’une petite habitude\ncircule vers les nations",
       lead: "Wordshiper aide les gens du monde entier à inscrire et mémoriser un verset de la Parole de Dieu chaque jour — afin qu’au milieu de la surcharge d’information et de l’agitation, ils puissent remettre les priorités spirituelles à leur place et goûter la marche avec Dieu.",
       habitsTitle: "Trois habitudes quotidiennes",
       habits: [
@@ -445,7 +445,7 @@ const locale: RenewalCopy = {
     },
     vision: {
       label: "Vision",
-      title: "Élever des Worshipers par la Parole",
+      title: "Élever des Worshipers\npar la Parole",
       lead: "La vision de Wordshiper est d’élever des Worshipers qui adorent Dieu par Sa Parole.",
       body: "Nous rêvons de personnes devenant de vrais adorateurs qui plaisent à Dieu en tout lieu de vie — par la petite habitude d’écouter, parler, se souvenir et vivre la Parole.",
       close:
@@ -453,7 +453,7 @@ const locale: RenewalCopy = {
     },
     identity: {
       label: "Identité",
-      title: "Word + Worshiper",
+      title: "Word\u00A0+\u00A0Worshiper",
       lead: "Wordshiper n’est pas simplement une application biblique.",
       body: "Wordshiper désigne une personne qui adore Dieu en écrivant Sa Parole sur le cœur et en la vivant.",
       word: "Word",
@@ -465,7 +465,7 @@ const locale: RenewalCopy = {
     },
     thesis: {
       label: "Thèse",
-      title: "Une plateforme, trois couches",
+      title: "Une plateforme,\ntrois couches",
       lead: "Wordshiper est une app de mémorisation des Écritures, un OS spirituel quotidien qui réaligne la journée, et un mouvement mondial de mémorisation des Écritures — conçus comme un seul tout.",
       layers: [
         {

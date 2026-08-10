@@ -80,7 +80,7 @@ const locale: RenewalCopy = {
   },
   identity: {
     label: "Czym jest Wordshiper",
-    title: "Platforma życia skoncentrowanego na Słowie",
+    title: "Platforma życia skoncentrowanego\nna Słowie",
     definition:
       "Aplikacja, która pomaga medytować i zapamiętywać jeden werset Pisma, powtarzać trzy krótkie modlitwy każdego dnia, przywracać duchowe · fizyczne · emocjonalne priorytety rozproszonego życia i wypełniać swoje powołanie.",
     sub: "Word\u00A0+\u00A0Worshiper. Osoba, która czci Boga, wpisując Jego Słowo i żyjąc nim.",
@@ -173,7 +173,7 @@ const locale: RenewalCopy = {
   },
   product: {
     label: "Tożsamość produktu",
-    title: "Jedna platforma, trzy warstwy",
+    title: "Jedna platforma,\ntrzy warstwy",
     sub: "Aplikacja zapamiętywania Pisma, codzienny spiritual OS i globalny ruch Słowa — zaprojektowane jako jedno.",
     thesis: [
       {
@@ -207,7 +207,7 @@ const locale: RenewalCopy = {
   movement: {
     label: "Ruch",
     subtitle: "Nie budujemy aplikacji.\nRozpalamy ruch.",
-    title: "Duchowa lineage, werset po wersecie",
+    title: "Duchowa lineage,\nwerset po wersecie",
     lineageLead: "Jesteś",
     lineageNum: "14,207",
     lineageTail: ". Wordshiper, który wpisuje ten werset",
@@ -310,7 +310,7 @@ const locale: RenewalCopy = {
     },
     mission: {
       label: "Misja",
-      title: "Aby mały nawyk płynął do narodów",
+      title: "Aby mały nawyk\npłynął do narodów",
       lead:
         "Wordshiper pomaga ludziom na całym świecie wpisywać i zapamiętywać jeden werset Słowa Bożego każdego dnia — aby pośród przeciążenia informacją i zabiegania mogli właściwie ustawić duchowe priorytety i cieszyć się chodzeniem z Bogiem.",
       habitsTitle: "Trzy codzienne nawyki",
@@ -327,7 +327,7 @@ const locale: RenewalCopy = {
     },
     vision: {
       label: "Wizja",
-      title: "Wychowywać Worshipers przez Słowo",
+      title: "Wychowywać Worshipers\nprzez Słowo",
       lead:
         "Wizją Wordshiper jest wychowywanie Worshipers, którzy czczą Boga przez Jego Słowo.",
       body:
@@ -337,7 +337,7 @@ const locale: RenewalCopy = {
     },
     identity: {
       label: "Tożsamość",
-      title: "Word + Worshiper",
+      title: "Word\u00A0+\u00A0Worshiper",
       lead: "Wordshiper to nie tylko aplikacja biblijna.",
       body:
         "Wordshiper oznacza osobę, która czci Boga, wypisując Jego Słowo na sercu i żyjąc nim.",
@@ -350,7 +350,7 @@ const locale: RenewalCopy = {
     },
     thesis: {
       label: "Teza",
-      title: "Jedna platforma, trzy warstwy",
+      title: "Jedna platforma,\ntrzy warstwy",
       lead:
         "Wordshiper to aplikacja zapamiętywania Pisma, codzienny spiritual OS porządkujący dzień oraz globalny ruch zapamiętywania Pisma — zaprojektowane jako jedno.",
       layers: [

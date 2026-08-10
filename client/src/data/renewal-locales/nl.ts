@@ -2,7 +2,7 @@ import type { RenewalCopy } from "@/data/renewal-copy";
 
 const locale: RenewalCopy = {
   chrome: {
-    home: "Home",
+    home: "Start",
     searchLanguages: "Zoek talen…",
     chooseLanguage: "Kies je taal",
     languagesCount: "talen",
@@ -80,7 +80,7 @@ const locale: RenewalCopy = {
   },
   identity: {
     label: "Wat is Wordshiper",
-    title: "Een platform voor een op het Woord gericht leven",
+    title: "Een platform voor een\nop het Woord gericht leven",
     definition:
       "Een app die je helpt één Schriftvers te overdenken en te memoriseren, drie korte gebeden per dag te herhalen, de geestelijke · lichamelijke · emotionele prioriteiten van een verstrooid leven te herstellen, en je roeping te leven.",
     sub: "Word\u00A0+\u00A0Worshiper. Iemand die God aanbidt door Zijn Woord in te schrijven en het uit te leven.",
@@ -173,7 +173,7 @@ const locale: RenewalCopy = {
   },
   product: {
     label: "Productidentiteit",
-    title: "Eén platform, drie lagen",
+    title: "Eén platform,\ndrie lagen",
     sub: "Een Scripture memory-app, een dagelijks spiritual OS, en een wereldwijde Woordbeweging — ontworpen als één.",
     thesis: [
       {
@@ -207,7 +207,7 @@ const locale: RenewalCopy = {
   movement: {
     label: "Beweging",
     subtitle: "We bouwen geen app.\nWe ontsteken een beweging.",
-    title: "Een geestelijke lineage, vers voor vers",
+    title: "Een geestelijke lineage,\nvers voor vers",
     lineageLead: "Jij bent de",
     lineageNum: "14,207",
     lineageTail: "e Wordshiper die dit vers inschrijft",
@@ -310,7 +310,7 @@ const locale: RenewalCopy = {
     },
     mission: {
       label: "Missie",
-      title: "Zodat een kleine gewoonte naar de volken stroomt",
+      title: "Zodat een kleine gewoonte\nnaar de volken stroomt",
       lead:
         "Wordshiper helpt mensen wereldwijd één vers van Gods Woord per dag in te schrijven en te memoriseren — zodat ze te midden van informatie-overload en drukte geestelijke prioriteiten juist kunnen stellen en genieten van wandelen met God.",
       habitsTitle: "Drie dagelijkse gewoonten",
@@ -327,7 +327,7 @@ const locale: RenewalCopy = {
     },
     vision: {
       label: "Visie",
-      title: "Breng Worshipers groot door het Woord",
+      title: "Breng Worshipers groot\ndoor het Woord",
       lead:
         "De visie van Wordshiper is om Worshipers groot te brengen die God aanbidden door Zijn Woord.",
       body:
@@ -337,7 +337,7 @@ const locale: RenewalCopy = {
     },
     identity: {
       label: "Identiteit",
-      title: "Word + Worshiper",
+      title: "Word\u00A0+\u00A0Worshiper",
       lead: "Wordshiper is niet slechts een Bijbel-app.",
       body:
         "Wordshiper betekent iemand die God aanbidt door Zijn Woord op het hart te schrijven en het uit te leven.",
@@ -350,7 +350,7 @@ const locale: RenewalCopy = {
     },
     thesis: {
       label: "Thesis",
-      title: "Eén platform, drie lagen",
+      title: "Eén platform,\ndrie lagen",
       lead:
         "Wordshiper is een Scripture memory-app, een dagelijks spiritual OS dat de dag opnieuw richt, en een wereldwijde Schriftmemoriseringsbeweging — ontworpen als één.",
       layers: [

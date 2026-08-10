@@ -29,7 +29,7 @@ const locale: RenewalCopy = {
     badge: "Peluncuran Desember\u00A02026",
     slogan: "Satu\u00A0ayat sehari. Hidup penyembahan.",
     declaration: "Saya adalah Wordshiper.",
-    cta1: "Bergabung dengan 1.000 pertama",
+    cta1: "Bergabung dengan\u00A01.000 pertama",
     cta2: "Mengapa Wordshiper",
     lineageNote: "Pra-daftar dan terima nomor garis\u00A0keturunan Anda",
     slides: [
@@ -80,7 +80,7 @@ const locale: RenewalCopy = {
   },
   identity: {
     label: "Apa itu Wordshiper",
-    title: "Platform untuk hidup yang berpusat pada Firman",
+    title: "Platform untuk hidup\nyang berpusat pada Firman",
     definition:
       "Aplikasi yang membantu Anda merenungkan dan menghafal satu ayat Kitab Suci, mengulang tiga doa singkat setiap hari, memulihkan prioritas rohani · jasmani · emosional dari hidup yang tercerai-berai, dan menjalani panggilan Anda.",
     sub: "Word\u00A0+\u00A0Worshiper. Seseorang yang menyembah Allah dengan menuliskan Firman-Nya dan menghidupinya.",
@@ -173,7 +173,7 @@ const locale: RenewalCopy = {
   },
   product: {
     label: "Identitas produk",
-    title: "Satu platform, tiga lapisan",
+    title: "Satu platform,\ntiga lapisan",
     sub: "Aplikasi hafalan Kitab Suci, OS rohani harian, dan gerakan Firman global — dirancang sebagai satu.",
     thesis: [
       {
@@ -219,7 +219,7 @@ const locale: RenewalCopy = {
   movement: {
     label: "Gerakan",
     subtitle: "Kami tidak sedang membangun aplikasi.\nKami sedang menyalakan gerakan.",
-    title: "Garis keturunan rohani, ayat demi ayat",
+    title: "Garis keturunan rohani,\nayat demi ayat",
     lineageLead: "Anda adalah",
     lineageNum: "14,207",
     lineageTail: "Wordshiper yang menuliskan ayat ini",
@@ -261,12 +261,12 @@ const locale: RenewalCopy = {
     phases: [
       { t: "Fase\u00A01 — MVP", d: "Loop inti: terima · hafalkan · bergabung dalam garis keturunan" },
       { t: "Fase\u00A02 — Rutinitas", d: "Tiga sesi harian · Walk planner · Worvi" },
-      { t: "Fase\u00A03 — Peluncuran", d: "Desember\u00A02026 — komunitas benih 1.000 pertama" },
+      { t: "Fase\u00A03 — Peluncuran", d: "Desember\u00A02026 — komunitas benih\u00A01.000 pertama" },
       { t: "Fase\u00A04 — Perluasan", d: "Voice\u00A0Feed · saluran · tiga aplikasi white-label" },
     ],
   },
   cta: {
-    title: "Kami mencari 1.000 pertama\nuntuk menerima manna pertama bersama",
+    title: "Kami mencari\u00A01.000 pertama\nuntuk menerima manna pertama bersama",
     sub: "Pra-daftar dan terima nomor garis\u00A0keturunan Anda. Pada hari peluncuran, semua orang menerima manna pertama pada saat yang sama.",
     placeholder: "Alamat email",
     button: "Pra-daftar",
@@ -344,7 +344,7 @@ const locale: RenewalCopy = {
     },
     mission: {
       label: "Misi",
-      title: "Agar kebiasaan kecil mengalir ke bangsa-bangsa",
+      title: "Agar kebiasaan kecil\nmengalir ke bangsa-bangsa",
       lead: "Wordshiper membantu orang di seluruh dunia menuliskan dan menghafal satu ayat Firman Allah setiap hari — agar di tengah kelebihan informasi dan kesibukan, mereka dapat menetapkan prioritas rohani dengan benar dan menikmati berjalan bersama Allah.",
       habitsTitle: "Tiga kebiasaan harian",
       habits: [
@@ -360,7 +360,7 @@ const locale: RenewalCopy = {
     },
     vision: {
       label: "Visi",
-      title: "Bangkitkan Penyembah melalui Firman",
+      title: "Bangkitkan Penyembah\nmelalui Firman",
       lead: "Visi Wordshiper adalah membangkitkan Penyembah yang menyembah Allah melalui Firman-Nya.",
       body: "Kami bermimpi orang menjadi penyembah sejati yang berkenan kepada Allah di setiap tempat hidup — melalui kebiasaan kecil mendengar, mengucapkan, mengingat, dan menghidupi Firman.",
       close:
@@ -368,7 +368,7 @@ const locale: RenewalCopy = {
     },
     identity: {
       label: "Identitas",
-      title: "Word + Worshiper",
+      title: "Word\u00A0+\u00A0Worshiper",
       lead: "Wordshiper bukan sekadar aplikasi Alkitab.",
       body: "Wordshiper berarti seseorang yang menyembah Allah dengan menuliskan Firman-Nya di hati dan menghidupinya.",
       word: "Word",
@@ -380,7 +380,7 @@ const locale: RenewalCopy = {
     },
     thesis: {
       label: "Tesis",
-      title: "Satu platform, tiga lapisan",
+      title: "Satu platform,\ntiga lapisan",
       lead: "Wordshiper adalah aplikasi hafalan Kitab Suci, OS rohani harian yang menyusun ulang hari, dan gerakan hafalan Kitab Suci global — dirancang sebagai satu.",
       layers: [
         {

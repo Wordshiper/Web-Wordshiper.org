@@ -42,7 +42,7 @@ const copy = {
       slides: [
         {
           label: "Wordshiper란",
-          title1: "한 구절을 암송하고,",
+          title1: "한\u00A0구절을 암송하고,",
           title2: "하루를 말씀으로 바로 세우는 앱",
           body: "한\u00A0구절의 성경 말씀을 묵상하며 암송하고, 하루 세\u00A0번의 짧은 기도를 매일 반복하며, 흐트러진 삶의 영적·신체적·정서적 우선순위를 바로 세우고 소명의 삶을 살도록 돕는 앱입니다.",
           visual: "home" as const,
@@ -50,7 +50,7 @@ const copy = {
         {
           label: "무엇이 다른가",
           title1: "혼자가 아닙니다.",
-          title2: "복음이 흘러가는 길입니다",
+          title2: "복음이 흘러가는 길입니다.",
           body: "위치·공동체 기반 채널로 내 지역의 같은 신앙 동료와 연결되고, 24개 언어 듀얼/트리플로 말씀을 새깁니다. 공유·후원·채널은 복음이 흘러가는 길이 됩니다. Wordshiper는 도구가 아니라 말씀 중심 삶의 플랫폼입니다.",
           visual: "jog" as const,
         },
@@ -87,7 +87,7 @@ const copy = {
     },
     identity: {
       label: "Wordshiper란",
-      title: "말씀 중심의 삶을 위한 플랫폼",
+      title: "말씀 중심의 삶을 위한\n플랫폼",
       definition:
         "한\u00A0구절의 성경 말씀을 묵상하며 암송하고, 하루 세\u00A0번의 짧은 기도를 매일 반복하며, 흐트러진 삶의 영적·신체적·정서적 우선순위를 바로 세우도록 돕고 소명의 삶을 살도록 돕는 앱입니다.",
       sub: "Word\u00A0+\u00A0Worshiper. 하나님의 말씀을 마음에 새기고 삶으로 살아냄으로 하나님을 경배하는 사람을 의미합니다.",
@@ -120,8 +120,8 @@ const copy = {
       title: "영적 우선순위를 바로 세우고\n하나님과 동행하는 기쁨을",
       body: "Wordshiper는 전\u00A0세계 사람들이 매일 하나님의 말씀 한\u00A0구절을 마음에 새기고 암송함으로, 넘치는 정보와 분주한 삶 속에서도 영적 우선순위를 바로 세우고 하나님과 동행하는 기쁨을 누리도록 돕습니다.",
       habits: [
-        { t: "하루 한 구절", d: "듣고 · 말하고 · 암송합니다" },
-        { t: "하루 세 번의 짧은 기도", d: "말씀으로 하나님께 응답합니다" },
+        { t: "하루\u00A0한\u00A0구절", d: "듣고 · 말하고 · 암송합니다" },
+        { t: "하루 세\u00A0번의 짧은 기도", d: "말씀으로 하나님께 응답합니다" },
         { t: "말씀으로 하루를 정렬", d: "삶의 우선순위로 실천합니다" },
       ],
       close:
@@ -168,7 +168,7 @@ const copy = {
     },
     product: {
       label: "제품 정체성",
-      title: "세 겹으로 설계된 하나의 플랫폼",
+      title: "세 겹으로 설계된\n하나의 플랫폼",
       sub: "암송 앱이면서, 하루를 재정렬하는 영적 OS이며, 동시에 글로벌 말씀 암송 무브먼트입니다.",
       thesis: [
         {
@@ -202,7 +202,7 @@ const copy = {
     movement: {
       label: "Movement",
       subtitle: "우리는 앱을 만들지 않습니다.\n우리는 운동을 일으킵니다.",
-      title: "한\u00A0구절이 이어지는 영적 계보",
+      title: "한\u00A0구절이 이어지는\n영적 계보",
       lineageLead: "당신은",
       lineageNum: "14,207",
       lineageTail: "번째로 이 구절을 마음에 새긴 Wordshiper입니다",
@@ -216,7 +216,7 @@ const copy = {
     },
     global: {
       label: "열방으로",
-      title: "예배의 삶이 가정·교회·도시·열방으로",
+      title: "예배의 삶이\n가정·교회·도시·열방으로",
       body: "말씀을 기억하는 사람들이 삶의 자리에서 공의를 행하고, 인자를 사랑하며, 겸손히 하나님과 동행하는 진실한 Wordshiper로 세워지기를 꿈꿉니다.",
       stats: [
         { n: "19억", d: "전\u00A0세계 기독교 인구 — 우리가 섬기고자 하는 사람들" },
@@ -237,8 +237,8 @@ const copy = {
       ],
     },
     cta: {
-      title: "첫 만나를 함께 받을 1,000명을 찾습니다",
-      sub: "사전등록하시면 계보\u00A0번호가 부여됩니다. 출시일, 전원이 같은 시각에 첫 만나를 받습니다.",
+      title: "첫\u00A0만나를 함께 받을\n첫\u00A01,000명을 찾습니다",
+      sub: "사전등록하시면 계보\u00A0번호가 부여됩니다. 출시일, 전원이 같은 시각에 첫\u00A0만나를 받습니다.",
       placeholder: "이메일 주소",
       button: "사전등록하기",
       success: "감사합니다! 계보에 합류하셨습니다.",
@@ -248,9 +248,9 @@ const copy = {
       declaration: "Yes, I am a Wordshiper!",
     },
     donate: {
-      eyebrow: "하루 한 구절이 열방으로 흘러가도록",
+      eyebrow: "하루\u00A0한\u00A0구절이 열방으로 흘러가도록",
       title: "말씀 운동에 동참해 주세요",
-      sub: "Wordshiper Ministry Inc.는 미국 501(c)(3) 비영리 사역입니다. 여러분의 후원은 성경 암송·기도 루틴을 전 세계에 전하는 일에 쓰입니다.",
+      sub: "Wordshiper Ministry Inc.는 미국 501(c)(3) 비영리 사역입니다. 여러분의 후원은 성경 암송·기도 루틴을 전\u00A0세계에 전하는 일에 쓰입니다.",
       oneTime: "일시 후원",
       monthly: "매월 후원",
       custom: "다른 금액",
@@ -287,7 +287,7 @@ const copy = {
     },
     aboutPage: {
       title: "Wordshiper 소개",
-      subtitle: "하루 한 구절이, 예배자의 삶으로 이어지도록.",
+      subtitle: "하루\u00A0한\u00A0구절이, 예배자의 삶으로 이어지도록.",
       toc: [
         { id: "what", label: "Wordshiper란?" },
         { id: "mission", label: "Mission" },
@@ -305,13 +305,13 @@ const copy = {
       },
       mission: {
         label: "Mission",
-        title: "작은 습관이 열방으로 흘러가도록",
+        title: "작은 습관이\n열방으로 흘러가도록",
         lead:
           "Wordshiper는 전\u00A0세계 사람들이 매일 하나님의 말씀 한\u00A0구절을 마음에 새기고 암송함으로, 넘치는 정보와 분주한 삶 속에서도 영적 우선순위를 바로 세우고 하나님과 동행하는 기쁨을 누리도록 돕습니다.",
         habitsTitle: "매일의 세 가지 습관",
         habits: [
-          { t: "하루 한 구절", d: "말씀을 듣고, 말하고, 마음에 새깁니다." },
-          { t: "하루 세 번의 짧은 기도", d: "말씀으로 하나님께 응답합니다." },
+          { t: "하루\u00A0한\u00A0구절", d: "말씀을 듣고, 말하고, 마음에 새깁니다." },
+          { t: "하루 세\u00A0번의 짧은 기도", d: "말씀으로 하나님께 응답합니다." },
           {
             t: "하루를 말씀으로 정렬",
             d: "삶의 우선순위를 말씀 중심으로 다시 세웁니다.",
@@ -322,7 +322,7 @@ const copy = {
       },
       vision: {
         label: "Vision",
-        title: "Word로 Worshiper를 세웁니다",
+        title: "Word로\nWorshiper를 세웁니다",
         lead:
           "Wordshiper의 비전은 하나님의 말씀인 Word를 통해 하나님을 경배하는 Worshiper를 세우는 것입니다.",
         body:
@@ -332,7 +332,7 @@ const copy = {
       },
       identity: {
         label: "Identity",
-        title: "Word + Worshiper",
+        title: "Word\u00A0+\u00A0Worshiper",
         lead: "Wordshiper는 단지 성경 앱이 아닙니다.",
         body:
           "Wordshiper는 하나님의 말씀을 마음에 새기고 삶으로 살아냄으로 하나님을 경배하는 사람을 의미합니다.",
@@ -345,7 +345,7 @@ const copy = {
       },
       thesis: {
         label: "Thesis",
-        title: "하나의 플랫폼, 세 겹의 정체성",
+        title: "하나의 플랫폼,\n세 겹의 정체성",
         lead:
           "Wordshiper는 암송 앱이면서, 하루를 재정렬하는 영적 OS이며, 동시에 글로벌 말씀 암송 무브먼트입니다.",
         layers: [
@@ -452,7 +452,7 @@ const copy = {
     },
     identity: {
       label: "What is Wordshiper",
-      title: "A platform for a Word-centered life",
+      title: "A platform for a\nWord-centered life",
       definition:
         "An app that helps you meditate on and memorize one Scripture verse, repeat three short prayers each day, restore the spiritual · physical · emotional priorities of a scattered life, and live out your calling.",
       sub: "Word\u00A0+\u00A0Worshiper. A person who worships God by inscribing His Word and living it out.",
@@ -533,7 +533,7 @@ const copy = {
     },
     product: {
       label: "Product identity",
-      title: "One platform, three layers",
+      title: "One platform,\nthree layers",
       sub: "A Scripture memory app, a daily spiritual OS, and a global Word movement — designed as one.",
       thesis: [
         {
@@ -567,7 +567,7 @@ const copy = {
     movement: {
       label: "Movement",
       subtitle: "We are not building an app.\nWe are igniting a movement.",
-      title: "A spiritual lineage, verse by verse",
+      title: "A spiritual lineage,\nverse by verse",
       lineageLead: "You are the",
       lineageNum: "14,207",
       lineageTail: "th Wordshiper to inscribe this verse",
@@ -670,7 +670,7 @@ const copy = {
       },
       mission: {
         label: "Mission",
-        title: "So a small habit flows to the nations",
+        title: "So a small habit\nflows to the nations",
         lead:
           "Wordshiper helps people worldwide inscribe and memorize one verse of God's Word each day — so that amid information overload and busyness, they can set spiritual priorities right and enjoy walking with God.",
         habitsTitle: "Three daily habits",
@@ -687,7 +687,7 @@ const copy = {
       },
       vision: {
         label: "Vision",
-        title: "Raise Worshipers through the Word",
+        title: "Raise Worshipers\nthrough the Word",
         lead:
           "Wordshiper's vision is to raise Worshipers who worship God through His Word.",
         body:
@@ -697,7 +697,7 @@ const copy = {
       },
       identity: {
         label: "Identity",
-        title: "Word + Worshiper",
+        title: "Word\u00A0+\u00A0Worshiper",
         lead: "Wordshiper is not merely a Bible app.",
         body:
           "Wordshiper means a person who worships God by writing His Word on the heart and living it out.",
@@ -710,7 +710,7 @@ const copy = {
       },
       thesis: {
         label: "Thesis",
-        title: "One platform, three layers",
+        title: "One platform,\nthree layers",
         lead:
           "Wordshiper is a Scripture memory app, a daily spiritual OS that realigns the day, and a global Scripture-memory movement — designed as one.",
         layers: [
