@@ -46,6 +46,12 @@ export default function RenewalFooter() {
           aria-label="Footer"
           className="flex flex-wrap items-center justify-center md:justify-end gap-x-6 gap-y-2 text-sm text-gray-600"
         >
+          <a href="/#why" className="hover:text-[#0090B8] transition-colors">
+            {c.nav.why}
+          </a>
+          <a href="/#identity" className="hover:text-[#0090B8] transition-colors">
+            {c.nav.identity}
+          </a>
           <a href="/#routine" className="hover:text-[#0090B8] transition-colors">
             {c.nav.routine}
           </a>

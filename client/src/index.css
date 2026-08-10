@@ -165,12 +165,36 @@ p, blockquote, .ws-text-pretty {
 .ws-hero-device {
   animation: ws-fade-up 1s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
+@keyframes ws-hero-slide-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.ws-hero-slide {
+  animation: ws-hero-slide-in 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@keyframes ws-hero-progress {
+  from { width: 0%; }
+  to { width: 100%; }
+}
+.ws-hero-progress {
+  animation: ws-hero-progress 6.5s linear both;
+}
 @keyframes ws-lineage-reveal {
   from { opacity: 0; transform: scale(0.96); }
   to { opacity: 1; transform: scale(1); }
 }
 .ws-lineage-reveal {
   animation: ws-lineage-reveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ws-hero-slide,
+  .ws-hero-progress,
+  .ws-float,
+  .ws-fade-up,
+  .ws-hero-device {
+    animation: none !important;
+  }
 }
 
 @tailwind components;

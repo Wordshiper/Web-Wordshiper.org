@@ -69,10 +69,11 @@ function Header() {
   const brandAlt = brandDisplayForLanguage(currentLanguage);
   const [open, setOpen] = useState(false);
   const links = [
+    { href: "#why", label: c.nav.why },
+    { href: "#identity", label: c.nav.identity },
     { href: "#routine", label: c.nav.routine },
     { href: "#product", label: c.nav.product },
     { href: "#movement", label: c.nav.movement },
-    { href: "#roadmap", label: c.nav.roadmap },
   ];
   return (
     <header className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#E6F7FC]/80">
@@ -136,97 +137,169 @@ function Hero() {
   const { currentLanguage } = useLanguage();
   const brandAlt = brandDisplayForLanguage(currentLanguage);
   const isKo = currentLanguage === "ko";
+  const slides = c.hero.slides;
+  const [index, setIndex] = useState(0);
+  const [paused, setPaused] = useState(false);
+  const [animKey, setAnimKey] = useState(0);
+
+  useEffect(() => {
+    setIndex(0);
+    setAnimKey((k) => k + 1);
+  }, [currentLanguage]);
+
+  useEffect(() => {
+    if (paused || slides.length < 2) return;
+    const id = window.setInterval(() => {
+      setIndex((i) => (i + 1) % slides.length);
+      setAnimKey((k) => k + 1);
+    }, 6500);
+    return () => window.clearInterval(id);
+  }, [paused, slides.length, index]);
+
+  // Restart timer when user manually picks a slide (index already in deps above)
+  // — interval resets each index change so progress bar stays in sync.
+
+  const go = (i: number) => {
+    setIndex(i);
+    setAnimKey((k) => k + 1);
+  };
+
+  const slide = slides[index] ?? slides[0];
+  const primaryVisual = slide.visual === "jog" ? screenJog : screenHome;
+  const secondaryVisual = slide.visual === "jog" ? screenHome : screenJog;
 
   return (
     <section
       id="top"
-      className="relative min-h-[100svh] flex items-end sm:items-center overflow-hidden"
+      className="relative overflow-hidden pt-28 pb-16 sm:pb-20"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      aria-roledescription="carousel"
+      aria-label={isKo ? "Wordshiper 소개 슬라이드" : "Wordshiper intro slides"}
     >
-      {/* Full-bleed atmospheric plane */}
       <div
         className="absolute inset-0 -z-10"
         style={{
           background:
-            "linear-gradient(165deg, #003D4F 0%, #0C1519 38%, #0A2A36 72%, #001820 100%)",
+            "linear-gradient(165deg, #F8FCFE 0%, #E6F7FC 42%, #F3FBFE 78%, #FFFFFF 100%)",
         }}
       />
       <div
-        className="absolute inset-0 -z-10 opacity-40"
-        style={{
-          background:
-            "radial-gradient(ellipse 70% 50% at 70% 40%, rgba(0,179,228,0.45) 0%, transparent 60%), radial-gradient(ellipse 50% 40% at 15% 80%, rgba(44,197,242,0.2) 0%, transparent 55%)",
-        }}
+        className="absolute -top-40 -right-32 w-[520px] h-[520px] rounded-full blur-3xl opacity-35 -z-10"
+        style={{ background: CYAN }}
       />
       <div
-        className="absolute inset-0 -z-10 opacity-[0.07]"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E\")",
-        }}
+        className="absolute bottom-0 left-[-10%] w-[420px] h-[420px] rounded-full blur-3xl opacity-20 -z-10"
+        style={{ background: "#99E0F5" }}
       />
 
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 pt-28 pb-16 sm:pb-24 grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-        <div className="lg:col-span-6 ws-fade-up text-center lg:text-left">
-          <img
-            src={logoPrimary}
-            alt={brandAlt}
-            className="h-10 sm:h-12 w-auto mx-auto lg:mx-0 brightness-0 invert opacity-95 ws-hero-brand"
-            width={240}
-            height={53}
-          />
-          <h1
-            className={`mt-8 text-4xl sm:text-5xl lg:text-[3.25rem] leading-[1.15] text-white ws-text-balance ${
-              isKo ? "font-scripture font-bold" : "font-scripture"
-            }`}
-          >
-            {c.hero.title1}
-            <br />
-            <span className="text-[#2CC5F2]">{c.hero.title2}</span>
-          </h1>
-          <p className="font-scripture-italic text-xl sm:text-2xl mt-5 text-[#ECEAE0]/95 ws-text-pretty">
-            {c.hero.slogan}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
+        <div className="lg:col-span-6 text-center lg:text-left">
+          <p className="text-sm font-semibold tracking-[0.14em] uppercase text-[#0090B8]">
+            {brandAlt}
           </p>
-          <p className="mt-5 text-base sm:text-lg text-white/70 leading-relaxed max-w-xl mx-auto lg:mx-0 ws-text-pretty">
-            {c.hero.sub}
-          </p>
-          <div className="mt-9 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+
+          <div key={animKey} className="ws-hero-slide mt-5">
+            <p className="font-scripture-italic text-lg sm:text-xl text-[#003D4F] ws-text-pretty">
+              {c.hero.declaration}
+            </p>
+            <p className="mt-1 text-sm font-semibold tracking-[0.12em] uppercase text-[#0090B8]">
+              {slide.label}
+            </p>
+            <h1
+              className={`mt-3 text-4xl sm:text-5xl lg:text-[3.05rem] leading-[1.12] text-[#201E1F] ws-text-balance ${
+                isKo ? "font-scripture font-bold" : "font-bold"
+              }`}
+            >
+              {slide.title1}
+              <br />
+              <span style={{ color: CYAN }}>{slide.title2}</span>
+            </h1>
+            <p className="font-scripture-italic text-xl sm:text-2xl mt-5 text-[#003D4F] ws-text-pretty">
+              {c.hero.slogan}
+            </p>
+            <p className="mt-5 text-base sm:text-lg text-gray-600 leading-relaxed max-w-xl mx-auto lg:mx-0 ws-text-pretty">
+              {slide.body}
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
             <a
               href="#preregister"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-[#003D4F] font-bold text-lg bg-white shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-white font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+              style={{ background: CYAN }}
               data-testid="button-hero-preregister"
             >
               {c.hero.cta1} <ArrowRight className="w-5 h-5" />
             </a>
             <a
-              href="#movement"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full font-semibold text-lg border border-white/35 text-white/90 hover:bg-white/10 transition-colors"
-              data-testid="button-hero-movement"
+              href="#why"
+              className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-lg border-2 border-[#00B3E4] text-[#0090B8] hover:bg-[#E6F7FC] transition-colors"
+              data-testid="button-hero-why"
             >
               {c.hero.cta2}
             </a>
           </div>
+          <p className="mt-4 text-sm text-gray-500 ws-text-pretty">{c.hero.lineageNote}</p>
+
+          <div
+            className="mt-8 flex items-center justify-center lg:justify-start gap-2"
+            role="tablist"
+            aria-label={isKo ? "슬라이드 선택" : "Slide selector"}
+          >
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                role="tab"
+                aria-selected={i === index}
+                aria-label={slides[i].label}
+                onClick={() => go(i)}
+                className="relative h-2 rounded-full overflow-hidden transition-all duration-300"
+                style={{
+                  width: i === index ? 40 : 10,
+                  background: i === index ? "rgba(0,179,228,0.25)" : "#D7EEF7",
+                }}
+              >
+                {i === index && (
+                  <span
+                    key={`bar-${animKey}`}
+                    className="absolute inset-y-0 left-0 rounded-full ws-hero-progress"
+                    style={{ background: CYAN }}
+                  />
+                )}
+              </button>
+            ))}
+          </div>
         </div>
 
-        <div className="lg:col-span-6 relative flex justify-center lg:justify-end ws-hero-device">
+        <div className="lg:col-span-6 relative flex justify-center lg:justify-end min-h-[340px] sm:min-h-[420px]">
           <div
-            className="absolute -inset-8 rounded-full blur-3xl opacity-50"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[70%] rounded-full blur-3xl opacity-40"
             style={{ background: "radial-gradient(circle, #00B3E4 0%, transparent 70%)" }}
           />
-          <PhoneFrame
-            src={screenHome}
-            alt={`${brandAlt} app`}
-            className="relative w-[min(72vw,280px)] sm:w-72 ws-float"
-          />
+          <div key={`viz-${animKey}`} className="relative w-full max-w-md ws-hero-device">
+            <PhoneFrame
+              src={primaryVisual}
+              alt={`${brandAlt} — ${slide.label}`}
+              className="relative w-[min(58vw,260px)] sm:w-72 mx-auto lg:ml-auto lg:mr-4 z-10 ws-float"
+            />
+            <PhoneFrame
+              src={secondaryVisual}
+              alt=""
+              className="absolute w-[min(42vw,190px)] sm:w-52 bottom-[-4%] left-[4%] lg:left-0 rotate-[-7deg] z-0 opacity-95 hidden sm:block"
+            />
+          </div>
         </div>
       </div>
     </section>
   );
 }
 
-function Problem() {
+function Why() {
   const c = useCopy();
   return (
-    <section className="py-24 sm:py-28 relative overflow-hidden">
+    <section id="why" className="py-24 sm:py-28 relative overflow-hidden">
       <div
         className="absolute inset-0 -z-10"
         style={{
@@ -234,33 +307,125 @@ function Problem() {
             "linear-gradient(180deg, #FFFFFF 0%, #F8FCFE 45%, #FFFFFF 100%)",
         }}
       />
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
-        <SectionLabel>{c.problem.label}</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
-          {c.problem.title}
-        </h2>
-        <div className="mt-12 space-y-8 text-left">
-          {c.problem.cards.map((card, i) => (
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="text-center">
+          <SectionLabel>{c.why.label}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+            {c.why.title}
+          </h2>
+          <p className="mt-6 text-lg text-gray-600 leading-relaxed ws-text-pretty">
+            {c.why.lead}
+          </p>
+        </div>
+        <div className="mt-12 space-y-8">
+          {c.why.points.map((point, i) => (
             <div key={i} className="flex gap-5 items-start">
               <div
                 className="w-10 h-10 rounded-full flex items-center justify-center shrink-0 text-[#0090B8]"
                 style={{ background: "#E6F7FC" }}
               >
-                {[<Globe2 key="g" className="w-5 h-5" />, <Sun key="s" className="w-5 h-5" />, <HeartHandshake key="h" className="w-5 h-5" />][i]}
+                {[
+                  <Globe2 key="g" className="w-5 h-5" />,
+                  <HeartHandshake key="h" className="w-5 h-5" />,
+                  <BookOpen key="b" className="w-5 h-5" />,
+                ][i]}
               </div>
               <div>
-                <h3 className="font-bold text-lg text-[#201E1F]">{card.t}</h3>
-                <p className="mt-1.5 text-gray-600 leading-relaxed ws-text-pretty">{card.d}</p>
+                <h3 className="font-bold text-lg text-[#201E1F]">{point.t}</h3>
+                <p className="mt-1.5 text-gray-600 leading-relaxed ws-text-pretty">{point.d}</p>
               </div>
             </div>
           ))}
         </div>
-        <blockquote className="mt-16 pt-12 border-t border-[#E6F7FC]">
+        <blockquote className="mt-16 pt-12 border-t border-[#E6F7FC] text-center">
           <p className="font-scripture text-2xl sm:text-[1.75rem] leading-relaxed text-[#003D4F] ws-text-pretty">
-            “{c.problem.answer}”
+            “{c.why.answer}”
           </p>
-          <cite className="block mt-4 text-sm text-gray-500 not-italic">{c.problem.answerRef}</cite>
+          <cite className="block mt-4 text-sm text-gray-500 not-italic">{c.why.answerRef}</cite>
         </blockquote>
+      </div>
+    </section>
+  );
+}
+
+function Identity() {
+  const c = useCopy();
+  return (
+    <section id="identity" className="py-24 sm:py-28" style={{ background: "linear-gradient(180deg,#E6F7FC 0%,#FFFFFF 100%)" }}>
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        <SectionLabel>{c.identity.label}</SectionLabel>
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] ws-text-balance">{c.identity.title}</h2>
+        <p className="mt-6 text-lg sm:text-xl text-[#003D4F] font-medium leading-relaxed ws-text-pretty max-w-3xl mx-auto">
+          {c.identity.definition}
+        </p>
+        <p className="mt-4 text-base text-gray-600 leading-relaxed ws-text-pretty max-w-2xl mx-auto">{c.identity.sub}</p>
+
+        <div className="mt-12 grid sm:grid-cols-[1fr_auto_1fr] gap-6 sm:gap-4 items-center">
+          <div className="p-8 rounded-3xl bg-white border border-[#E6F7FC] text-left sm:text-center">
+            <p className="font-scripture text-3xl font-bold" style={{ color: CYAN }}>{c.identity.word}</p>
+            <p className="mt-3 text-gray-600 leading-relaxed ws-text-pretty">{c.identity.wordD}</p>
+          </div>
+          <p className="font-scripture text-3xl font-bold text-[#201E1F]">+</p>
+          <div className="p-8 rounded-3xl bg-white border border-[#E6F7FC] text-left sm:text-center">
+            <p className="font-scripture text-3xl font-bold" style={{ color: CYAN }}>{c.identity.worshiper}</p>
+            <p className="mt-3 text-gray-600 leading-relaxed ws-text-pretty">{c.identity.worshiperD}</p>
+          </div>
+        </div>
+
+        <p className="font-scripture-italic mt-10 text-xl sm:text-2xl text-[#003D4F] ws-text-pretty">
+          {c.identity.result}
+        </p>
+
+        <div className="mt-14 grid md:grid-cols-3 gap-5 text-left">
+          {c.identity.layers.map((layer, i) => (
+            <div key={i} className="p-6 rounded-2xl bg-white border border-[#E6F7FC]">
+              <p className="text-xs font-semibold tracking-widest uppercase text-[#0090B8]">0{i + 1}</p>
+              <h3 className="mt-2 font-bold text-[#201E1F] leading-snug">{layer.t}</h3>
+              <p className="mt-2 text-sm text-gray-600 leading-relaxed ws-text-pretty">{layer.d}</p>
+            </div>
+          ))}
+        </div>
+
+        <p className="mt-10 text-gray-600 leading-relaxed ws-text-pretty max-w-2xl mx-auto">{c.identity.notOnly}</p>
+        <p className="mt-4 text-[#201E1F] font-medium leading-relaxed ws-text-pretty max-w-2xl mx-auto">{c.identity.forWhom}</p>
+      </div>
+    </section>
+  );
+}
+
+function MissionVision() {
+  const c = useCopy();
+  return (
+    <section id="mission" className="py-24 sm:py-28 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <div className="max-w-3xl mx-auto text-center">
+          <SectionLabel>{c.mission.label}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+            {c.mission.title}
+          </h2>
+          <p className="mt-6 text-lg text-gray-600 leading-relaxed ws-text-pretty">{c.mission.body}</p>
+        </div>
+
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {c.mission.habits.map((h, i) => (
+            <div key={i} className="p-8 rounded-3xl border border-[#E6F7FC] bg-[#F8FCFE] text-center">
+              <p className="font-scripture text-xl font-bold text-[#201E1F]">{h.t}</p>
+              <p className="mt-2 text-gray-600 text-sm">{h.d}</p>
+            </div>
+          ))}
+        </div>
+        <p className="mt-10 max-w-3xl mx-auto text-center text-gray-700 leading-relaxed ws-text-pretty">
+          {c.mission.close}
+        </p>
+
+        <div className="mt-20 pt-16 border-t border-[#E6F7FC] max-w-3xl mx-auto text-center">
+          <SectionLabel>{c.vision.label}</SectionLabel>
+          <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+            {c.vision.title}
+          </h2>
+          <p className="mt-5 text-lg font-medium text-[#003D4F] leading-relaxed ws-text-pretty">{c.vision.body}</p>
+          <p className="mt-4 text-gray-600 leading-relaxed ws-text-pretty">{c.vision.detail}</p>
+        </div>
       </div>
     </section>
   );
@@ -275,6 +440,7 @@ function Routine() {
         <SectionLabel>{c.routine.label}</SectionLabel>
         <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">{c.routine.title}</h2>
         <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto ws-text-pretty leading-relaxed">{c.routine.sub}</p>
+        <p className="mt-3 text-sm font-medium text-[#0090B8]">{c.routine.principle}</p>
         <div className="grid md:grid-cols-3 gap-6 mt-12">
           {c.routine.sessions.map((s, i) => {
             const Icon = icons[i];
@@ -327,12 +493,23 @@ function Product() {
         <div className="text-center">
           <SectionLabel>{c.product.label}</SectionLabel>
           <h2 className="font-scripture text-3xl sm:text-4xl font-bold text-[#201E1F] ws-text-balance">{c.product.title}</h2>
-          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">{c.product.sub}</p>
+          <p className="mt-4 text-lg text-gray-600 max-w-2xl mx-auto ws-text-pretty">{c.product.sub}</p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-14 mt-14 items-center">
+
+        <div className="mt-12 grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+          {c.product.thesis.map((t, i) => (
+            <div key={i} className="p-7 rounded-3xl border border-[#E6F7FC] bg-[#F8FCFE] text-left">
+              <p className="text-xs font-semibold tracking-widest uppercase text-[#0090B8]">0{i + 1}</p>
+              <h3 className="mt-2 font-bold text-lg text-[#201E1F] leading-snug">{t.t}</h3>
+              <p className="mt-2 text-gray-600 text-sm leading-relaxed ws-text-pretty">{t.d}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-14 mt-16 items-center">
           <div className="flex justify-center gap-6">
-            <PhoneFrame src={screenJog} alt="Jog wheel — Bible in 1.5 seconds" className="w-56 sm:w-64 mt-10" />
-            <PhoneFrame src={screenHome} alt="Today tab — home dashboard" className="w-56 sm:w-64 hidden sm:block" />
+            <PhoneFrame src={screenJog} alt="Jog wheel" className="w-56 sm:w-64 mt-10" />
+            <PhoneFrame src={screenHome} alt="Home dashboard" className="w-56 sm:w-64 hidden sm:block" />
           </div>
           <div>
             <div className="space-y-3">
@@ -343,7 +520,7 @@ function Product() {
                   </div>
                   <div>
                     <span className="font-scripture font-bold text-lg text-[#201E1F]">{tab.t}</span>
-                    <p className="text-gray-600 text-sm mt-0.5 leading-relaxed">{tab.d}</p>
+                    <p className="text-gray-600 text-sm mt-0.5 leading-relaxed ws-text-pretty">{tab.d}</p>
                   </div>
                 </div>
               ))}
@@ -355,12 +532,12 @@ function Product() {
           {c.product.features.map((f, i) => {
             const Icon = featIcons[i];
             return (
-              <div key={i} className="p-7 rounded-2xl border border-[#E6F7FC] bg-[#F8FCFE] hover:shadow-md transition-shadow">
+              <div key={i} className="p-7 rounded-2xl border border-[#E6F7FC] bg-[#F8FCFE]">
                 <div className="w-11 h-11 rounded-xl flex items-center justify-center text-white mb-4" style={{ background: CYAN }}>
                   <Icon className="w-5 h-5" />
                 </div>
                 <h3 className="font-bold text-lg text-[#201E1F]">{f.t}</h3>
-                <p className="text-gray-600 mt-2 leading-relaxed text-sm">{f.d}</p>
+                <p className="text-gray-600 mt-2 leading-relaxed text-sm ws-text-pretty">{f.d}</p>
               </div>
             );
           })}
@@ -434,18 +611,23 @@ function GlobalVision() {
     <section className="py-24 bg-white">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center">
         <SectionLabel>{c.global.label}</SectionLabel>
-        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F]">{c.global.title}</h2>
+        <h2 className="text-3xl sm:text-4xl font-bold text-[#201E1F] whitespace-pre-line ws-text-balance">
+          {c.global.title}
+        </h2>
+        <p className="mt-5 max-w-2xl mx-auto text-lg text-gray-600 leading-relaxed ws-text-pretty">
+          {c.global.body}
+        </p>
         <div className="grid sm:grid-cols-3 gap-6 mt-12">
           {c.global.stats.map((s, i) => (
             <div key={i} className="p-8 rounded-2xl bg-[#F8FCFE] border border-[#E6F7FC]">
               <div className="font-scripture font-bold text-5xl" style={{ color: CYAN }}>{s.n}</div>
-              <p className="mt-3 text-gray-600 text-sm leading-relaxed">{s.d}</p>
+              <p className="mt-3 text-gray-600 text-sm leading-relaxed ws-text-pretty">{s.d}</p>
             </div>
           ))}
         </div>
         <div className="mt-12 max-w-3xl mx-auto flex items-start gap-4 p-6 rounded-2xl border border-[#99E0F5]/60 bg-[#E6F7FC]/50 text-left">
           <Users className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: CYAN }} />
-          <p className="text-gray-700 leading-relaxed">{c.global.whitelabel}</p>
+          <p className="text-gray-700 leading-relaxed ws-text-pretty">{c.global.whitelabel}</p>
         </div>
       </div>
     </section>
@@ -580,12 +762,14 @@ export default function HomeRenewal() {
     <div className="min-h-screen bg-white" lang={currentLanguage}>
       <SEO
         title="Wordshiper — One verse a day. A life of worship."
-        description={c.hero.sub}
+        description={c.hero.slides[0]?.body ?? c.hero.slogan}
       />
       <Header />
       <main>
         <Hero />
-        <Problem />
+        <Why />
+        <Identity />
+        <MissionVision />
         <Routine />
         <Product />
         <Movement />
