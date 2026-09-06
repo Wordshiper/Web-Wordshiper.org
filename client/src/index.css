@@ -95,7 +95,8 @@ html[data-typo="ko"] {
   --lh-ui: 1.8;
   --lh-word: 1.9;
 }
-html[data-script="arabic"] {
+html[data-script="arabic"],
+html[data-script="hebrew"] {
   --lh-ui: 1.8;
   --lh-word: 1.95;
   --tracking-word: 0;
@@ -118,6 +119,23 @@ html[data-script="cyrillic"] {
 
 html[dir="rtl"] body {
   text-align: start;
+}
+
+html[dir="rtl"] .rtl\:-scale-x-100 {
+  transform: scaleX(-1);
+}
+
+/* Keep tap targets usable on phones / iPad without 300ms delay */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+/* Phone notch / home indicator */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
 }
 
 /* Headings & long copy: prefer balanced / pretty wraps */

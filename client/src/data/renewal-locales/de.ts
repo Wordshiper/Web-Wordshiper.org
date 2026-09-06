@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "Was es anders macht",
         title1: "Du bist nicht allein.",
         title2: "So fließt das Evangelium.",
-        body: "Standort- und gemeinschaftsbasierte Kanäle verbinden dich mit Gläubigen in deiner Nähe. Dual-/Triple-Unterstützung in 24 Sprachen. Teilen, Geben und Kanäle werden Wege für das Evangelium. Wordshiper ist kein bloßes Werkzeug — es ist eine Plattform für ein wortzentriertes Leben.",
+        body: "Standort- und gemeinschaftsbasierte Kanäle verbinden dich mit Gläubigen in deiner Nähe. Dual-/Triple-Unterstützung in 25 Sprachen. Teilen, Geben und Kanäle werden Wege für das Evangelium. Wordshiper ist kein bloßes Werkzeug — es ist eine Plattform für ein wortzentriertes Leben.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Standort- und gemeinschaftsbasierte Kanäle verbinden dich mit Gläubigen in deiner Nähe. Englisch als Standard, mit Dual-/Triple-Unterstützung in 24 Sprachen. Schrift wird nicht allein auswendig gelernt — sie wird geteilt und gemeinsam lebendig gehalten.",
+      "Standort- und gemeinschaftsbasierte Kanäle verbinden dich mit Gläubigen in deiner Nähe. Englisch als Standard, mit Dual-/Triple-Unterstützung in 25 Sprachen. Schrift wird nicht allein auswendig gelernt — sie wird geteilt und gemeinsam lebendig gehalten.",
     forWhom:
       "Teilen, Spenden und Kanäle werden „Wege für das Evangelium“. Wordshiper ist kein bloßes App-Werkzeug — es ist eine Plattform für ein wortzentriertes Leben.",
   },
@@ -265,7 +265,7 @@ const locale: RenewalCopy = {
         d: "Bestehe einen Vers und eine Karte entsteht — Vers, Nummer in der Linie, Stimmen-QR.",
       },
       {
-        t: "24 Sprachen",
+        t: "25 Sprachen",
         d: "In zwei oder drei Sprachen auswendig lernen — neben deiner Muttersprache.",
       },
     ],
@@ -309,7 +309,7 @@ const locale: RenewalCopy = {
         d: "Christen weltweit\ndie Menschen, denen wir dienen wollen",
       },
       {
-        n: "24",
+        n: "25",
         d: "Sprachen\nDual- & Triple-Auswendiglernen",
       },
       {

@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "O que o torna diferente",
         title1: "Não está sozinho.",
         title2: "Assim flui o evangelho.",
-        body: "Canais baseados em localização e comunidade ligam-no a crentes próximos. Suporte dual/triplo em 24 idiomas. Partilhar, dar e canais tornam-se caminhos para o evangelho. O Wordshiper não é uma mera ferramenta — é uma plataforma para uma vida centrada na Palavra.",
+        body: "Canais baseados em localização e comunidade ligam-no a crentes próximos. Suporte dual/triplo em 25 idiomas. Partilhar, dar e canais tornam-se caminhos para o evangelho. O Wordshiper não é uma mera ferramenta — é uma plataforma para uma vida centrada na Palavra.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Canais baseados em localização e comunidade ligam-no a crentes na sua zona. Inglês por predefinição, com suporte dual/triplo em 24 idiomas. As Escrituras não se memorizam sozinho — partilham-se e mantêm-se vivas em conjunto.",
+      "Canais baseados em localização e comunidade ligam-no a crentes na sua zona. Inglês por predefinição, com suporte dual/triplo em 25 idiomas. As Escrituras não se memorizam sozinho — partilham-se e mantêm-se vivas em conjunto.",
     forWhom:
       "Partilha, doações e canais tornam-se «caminhos para o evangelho». O Wordshiper não é uma mera ferramenta-app — é uma plataforma para uma vida centrada na Palavra.",
   },
@@ -265,7 +265,7 @@ const locale: RenewalCopy = {
         d: "Passe um versículo e nasce um cartão — versículo, número de linhagem, QR da voz.",
       },
       {
-        t: "24 idiomas",
+        t: "25 idiomas",
         d: "Memorize em dois ou três idiomas a par da sua língua materna.",
       },
     ],
@@ -309,7 +309,7 @@ const locale: RenewalCopy = {
         d: "Cristãos no mundo\nas pessoas a quem anseiamos servir",
       },
       {
-        n: "24",
+        n: "25",
         d: "Idiomas\nmemorização dual e tripla",
       },
       {

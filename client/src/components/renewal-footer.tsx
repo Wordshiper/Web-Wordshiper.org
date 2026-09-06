@@ -17,7 +17,7 @@ export default function RenewalFooter() {
   return (
     <footer className="bg-white border-t border-[#E6F7FC] py-14" data-testid="footer-renewal">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col md:flex-row md:items-start justify-between gap-10">
-        <div className="text-center md:text-left max-w-md mx-auto md:mx-0">
+        <div className="text-center md:text-start max-w-md mx-auto md:mx-0">
           <Link
             href="/"
             className="inline-flex items-center justify-center md:justify-start p-2 -m-2 rounded-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#00B3E4]"

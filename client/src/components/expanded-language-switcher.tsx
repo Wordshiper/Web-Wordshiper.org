@@ -1,11 +1,16 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Check, ChevronDown, Globe, Search } from "lucide-react";
+import { Check, ChevronDown, Globe, Search, X } from "lucide-react";
 import { getLanguageByCode, type Language } from "@/data/expanded-languages";
-import { getSiteLanguages, SITE_LOCALE_CODES } from "@/data/site-locales";
+import {
+  getSiteLanguages,
+  getSiteLocaleDisplay,
+  SITE_LOCALE_CODES,
+} from "@/data/site-locales";
 import { useLanguage, LanguageProvider } from "@/hooks/use-language";
 import { useCopy } from "@/data/renewal-copy";
 import { ensureTypographyAssets, getTypography } from "@/data/typography";
@@ -31,6 +36,33 @@ function filterSiteLanguages(query: string): Language[] {
   );
 }
 
+function LanguageMark({
+  code,
+  size = "md",
+}: {
+  code: string;
+  size?: "sm" | "md";
+}) {
+  const display = getSiteLocaleDisplay(code);
+  const visual = [display.scriptLabel, display.flag].filter(Boolean).join(" ");
+  return (
+    <span
+      className={`inline-flex items-center gap-1.5 shrink-0 ${
+        size === "sm" ? "text-sm" : "text-base"
+      }`}
+    >
+      {visual ? (
+        <span className="leading-none" aria-hidden="true">
+          {visual}
+        </span>
+      ) : null}
+      <span className="font-semibold tracking-wide text-[11px] text-gray-700">
+        {code.toUpperCase()}
+      </span>
+    </span>
+  );
+}
+
 /** Prefetch locale fonts so switching feels instant. */
 function prefetchLocaleFonts(code: string) {
   try {
@@ -50,8 +82,8 @@ export function GlobalReachShowcase({ className = "" }: { className?: string }) 
           const lang = getLanguageByCode(code);
           return lang ? (
             <Badge key={code} variant="outline" className="px-3 py-2 text-sm">
-              <span className="mr-2">{lang.flag}</span>
-              {lang.nativeName}
+              <LanguageMark code={code} size="sm" />
+              <span className="ms-2">{lang.nativeName}</span>
             </Badge>
           ) : null;
         })}
@@ -70,7 +102,8 @@ export function LanguageBadges({ className = "" }: { className?: string }) {
         const lang = getLanguageByCode(code);
         return lang ? (
           <Badge key={code} variant="secondary" className="text-xs">
-            {lang.flag} {lang.nativeName}
+            <LanguageMark code={code} size="sm" />
+            <span className="ms-1">{lang.nativeName}</span>
           </Badge>
         ) : null;
       })}
@@ -86,29 +119,45 @@ export default function ExpandedLanguageSwitcher({
   const chrome = useCopy().chrome;
   const [searchQuery, setSearchQuery] = useState("");
   const [isOpen, setIsOpen] = useState(false);
+  const [sheet, setSheet] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
+  const searchRef = useRef<HTMLInputElement>(null);
 
-  const currentLang = getLanguageByCode(currentLanguage);
-  const filtered = useMemo(() => {
-    const list = filterSiteLanguages(searchQuery);
-    // Current language first, then by English name
-    return [...list].sort((a, b) => {
-      if (a.code === currentLanguage) return -1;
-      if (b.code === currentLanguage) return 1;
-      return a.name.localeCompare(b.name);
-    });
-  }, [searchQuery, currentLanguage]);
+  const filtered = useMemo(
+    () => filterSiteLanguages(searchQuery),
+    [searchQuery],
+  );
+
+  useEffect(() => {
+    const mq = window.matchMedia("(max-width: 1023px)");
+    const sync = () => setSheet(mq.matches);
+    sync();
+    mq.addEventListener("change", sync);
+    return () => mq.removeEventListener("change", sync);
+  }, []);
 
   useEffect(() => {
     if (!isOpen) return;
-    // Prefetch fonts for visible locales
     filtered.forEach((l) => prefetchLocaleFonts(l.code));
     const onDoc = (e: MouseEvent) => {
+      if (sheet) return;
       if (!rootRef.current?.contains(e.target as Node)) setIsOpen(false);
     };
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
     document.addEventListener("mousedown", onDoc);
-    return () => document.removeEventListener("mousedown", onDoc);
-  }, [isOpen, filtered]);
+    document.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    if (sheet) document.body.style.overflow = "hidden";
+    const focusTimer = window.setTimeout(() => searchRef.current?.focus(), 30);
+    return () => {
+      document.removeEventListener("mousedown", onDoc);
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+      window.clearTimeout(focusTimer);
+    };
+  }, [isOpen, filtered, sheet]);
 
   const handleLanguageSelect = (langCode: string) => {
     prefetchLocaleFonts(langCode);
@@ -118,27 +167,25 @@ export default function ExpandedLanguageSwitcher({
   };
 
   const list = (
-    <div className="max-h-[min(28rem,70vh)] overflow-y-auto space-y-1 overscroll-contain">
+    <div className="max-h-[min(28rem,55dvh)] overflow-y-auto space-y-1 overscroll-contain">
       {filtered.map((lang) => (
         <button
           key={lang.code}
           type="button"
           onMouseEnter={() => prefetchLocaleFonts(lang.code)}
           onClick={() => handleLanguageSelect(lang.code)}
-          className={`w-full flex items-center space-x-3 p-2.5 rounded-lg hover:bg-[#F8FCFE] transition-colors text-left ${
+          className={`w-full flex items-center gap-3 min-h-12 px-3 py-2.5 rounded-lg hover:bg-[#F8FCFE] transition-colors text-start touch-manipulation ${
             currentLanguage === lang.code
               ? "bg-[#E6F7FC] border border-[#00B3E4]/40"
               : "border border-transparent"
           }`}
         >
-          <span className="text-lg shrink-0">{lang.flag}</span>
+          <LanguageMark code={lang.code} />
           <div className="flex-1 min-w-0">
-            <div className="text-sm font-medium text-gray-900 truncate">
+            <div className="text-sm font-medium text-gray-900 truncate" dir="auto">
               {lang.nativeName}
             </div>
-            <div className="text-xs text-gray-500 truncate">
-              {lang.name} · {lang.code.toUpperCase()}
-            </div>
+            <div className="text-xs text-gray-500 truncate">{lang.name}</div>
           </div>
           {currentLanguage === lang.code && (
             <Check className="w-4 h-4 text-[#0090B8] shrink-0" />
@@ -151,49 +198,102 @@ export default function ExpandedLanguageSwitcher({
     </div>
   );
 
+  const panelInner = (
+    <>
+      <div className="relative mb-3">
+        <Search className="absolute start-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" />
+        <Input
+          ref={searchRef}
+          placeholder={chrome.searchLanguages}
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
+          className="ps-10 h-11 text-base"
+          autoFocus={!sheet}
+        />
+      </div>
+      {list}
+      <div className="mt-3 pt-3 border-t border-[#E6F7FC] text-center text-xs text-gray-500">
+        {SITE_LOCALE_CODES.length} {chrome.languagesCount}
+      </div>
+    </>
+  );
+
   if (compact) {
+    const trigger = (
+      <Button
+        variant="outline"
+        size="sm"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex items-center gap-1.5 min-h-11 min-w-11 h-11 px-2.5 sm:px-3 font-ui touch-manipulation"
+        aria-label={chrome.chooseLanguage}
+        aria-expanded={isOpen}
+        aria-haspopup="listbox"
+        data-testid="button-language-switcher"
+      >
+        <LanguageMark code={currentLanguage} size="sm" />
+        <ChevronDown className="w-3.5 h-3.5 shrink-0" />
+      </Button>
+    );
+
+    const panelDir =
+      typeof document !== "undefined"
+        ? document.documentElement.getAttribute("dir") || "ltr"
+        : "ltr";
+
+    const desktopMenu = isOpen && !sheet && (
+      <div
+        dir={panelDir}
+        className="absolute top-12 end-0 z-50 w-[min(22rem,calc(100vw-1.5rem))] bg-white border border-[#E6F7FC] rounded-xl shadow-xl font-ui"
+        role="listbox"
+        aria-label={chrome.chooseLanguage}
+      >
+        <div className="p-3">{panelInner}</div>
+      </div>
+    );
+
+    const mobileSheet =
+      isOpen &&
+      sheet &&
+      typeof document !== "undefined" &&
+      createPortal(
+        <div className="fixed inset-0 z-[80] font-ui" role="presentation">
+          <button
+            type="button"
+            className="absolute inset-0 bg-black/40"
+            aria-label={chrome.chooseLanguage}
+            onClick={() => setIsOpen(false)}
+          />
+          <div
+            dir={panelDir}
+            role="dialog"
+            aria-modal="true"
+            aria-label={chrome.chooseLanguage}
+            className="absolute inset-x-0 bottom-0 max-h-[min(92dvh,40rem)] bg-white rounded-t-2xl shadow-2xl flex flex-col pb-[env(safe-area-inset-bottom)]"
+          >
+            <div className="flex items-center justify-between px-4 pt-3 pb-2">
+              <p className="text-sm font-semibold text-[#201E1F]">
+                {chrome.chooseLanguage}
+              </p>
+              <button
+                type="button"
+                onClick={() => setIsOpen(false)}
+                className="min-h-11 min-w-11 inline-flex items-center justify-center rounded-full hover:bg-gray-100 touch-manipulation"
+                aria-label="Close"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+            <div className="px-4 pb-4 overflow-hidden flex-1">{panelInner}</div>
+          </div>
+        </div>,
+        document.body,
+      );
+
     return (
       <div className={`relative ${className}`} ref={rootRef}>
-        <Button
-          variant="outline"
-          size="sm"
-          onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center space-x-2 h-8 px-3 font-ui"
-          aria-label={chrome.chooseLanguage}
-          aria-expanded={isOpen}
-          aria-haspopup="listbox"
-        >
-          <span className="text-lg">{currentLang?.flag || "🌐"}</span>
-          <span className="hidden sm:inline text-xs font-semibold tracking-wide">
-            {(currentLang?.code || currentLanguage).toUpperCase()}
-          </span>
-          <ChevronDown className="w-3 h-3" />
-        </Button>
-
-        {isOpen && (
-          <div
-            className="absolute top-10 right-0 z-50 w-[22rem] max-w-[calc(100vw-1.5rem)] bg-white border border-[#E6F7FC] rounded-xl shadow-xl font-ui"
-            role="listbox"
-            aria-label={chrome.chooseLanguage}
-          >
-            <div className="p-3">
-              <div className="relative mb-3">
-                <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
-                <Input
-                  placeholder={chrome.searchLanguages}
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="pl-10 h-9"
-                  autoFocus
-                />
-              </div>
-              {list}
-              <div className="mt-3 pt-3 border-t border-[#E6F7FC] text-center text-xs text-gray-500">
-                {SITE_LOCALE_CODES.length} {chrome.languagesCount}
-              </div>
-            </div>
-          </div>
-        )}
+        {trigger}
+        {desktopMenu}
+        {mobileSheet}
       </div>
     );
   }
@@ -201,7 +301,7 @@ export default function ExpandedLanguageSwitcher({
   return (
     <Card className={`w-full max-w-4xl mx-auto font-ui ${className}`}>
       <CardHeader>
-        <CardTitle className="flex items-center space-x-2">
+        <CardTitle className="flex items-center gap-2">
           <Globe className="w-6 h-6" />
           <span>{chrome.chooseLanguage}</span>
           <Badge variant="secondary">
@@ -212,12 +312,12 @@ export default function ExpandedLanguageSwitcher({
       <CardContent>
         <div className="space-y-4">
           <div className="relative">
-            <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
+            <Search className="absolute start-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" />
             <Input
               placeholder={chrome.searchLanguages}
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="pl-10"
+              className="ps-10"
             />
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 max-h-[28rem] overflow-y-auto">
@@ -227,15 +327,15 @@ export default function ExpandedLanguageSwitcher({
                 type="button"
                 onMouseEnter={() => prefetchLocaleFonts(lang.code)}
                 onClick={() => handleLanguageSelect(lang.code)}
-                className={`flex items-center space-x-3 p-3 rounded-lg border transition-all hover:shadow-sm text-left ${
+                className={`flex items-center gap-3 p-3 min-h-14 rounded-lg border transition-all hover:shadow-sm text-start touch-manipulation ${
                   currentLanguage === lang.code
                     ? "border-[#00B3E4] bg-[#E6F7FC] shadow-sm"
                     : "border-gray-200 hover:border-[#00B3E4]/40"
                 }`}
               >
-                <span className="text-2xl">{lang.flag}</span>
+                <LanguageMark code={lang.code} />
                 <div className="flex-1 min-w-0">
-                  <div className="font-medium text-gray-900 truncate">
+                  <div className="font-medium text-gray-900 truncate" dir="auto">
                     {lang.nativeName}
                   </div>
                   <div className="text-sm text-gray-600 truncate">{lang.name}</div>

@@ -68,7 +68,7 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
   );
 }
 
-/** Site-supported languages for pickers (24). */
+/** Site-supported languages for pickers (25). */
 export function useSiteLanguages() {
   return getSiteLanguages();
 }

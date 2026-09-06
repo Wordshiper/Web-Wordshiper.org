@@ -4,6 +4,7 @@ import { useCopy } from "@/data/renewal-copy";
 import { useLanguage } from "@/hooks/use-language";
 import { brandDisplayForLanguage } from "@/data/brand";
 import ExpandedLanguageSwitcher from "@/components/expanded-language-switcher";
+import SiteHeader from "@/components/site-header";
 import StatusNoticeDialog from "@/components/status-notice-dialog";
 import SEO from "@/components/seo";
 import Footer from "@/components/renewal-footer";
@@ -12,7 +13,6 @@ import {
   BookOpen, Sun, UtensilsCrossed, Moon, Globe2, Users,
   HeartHandshake, Menu, X, ArrowRight, Bird, Share2, Languages, CircleDot,
 } from "lucide-react";
-import logoPrimary from "@assets/wordshiper_logo_lockup_primary_E_1786117649532.svg";
 import iconMark from "@assets/wordshiper_icon_favicon_1786117649531.svg";
 import screenHome from "@assets/ws_home_dashboard.png";
 import screenJog from "@assets/wordshiper-jogwheel-open_1786117759624.png";
@@ -66,8 +66,6 @@ function PhoneFrame({ src, alt, className = "" }: { src: string; alt: string; cl
 
 function Header() {
   const c = useCopy();
-  const { currentLanguage } = useLanguage();
-  const brandAlt = brandDisplayForLanguage(currentLanguage);
   const [open, setOpen] = useState(false);
   const links = [
     { href: "#why", label: c.nav.why },
@@ -77,59 +75,61 @@ function Header() {
     { href: "#movement", label: c.nav.movement },
   ];
   return (
-    <header className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur-md border-b border-[#E6F7FC]/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-        <a href="#top" className="flex items-center p-1 -m-1" data-testid="link-logo-home">
-          <img src={logoPrimary} alt={brandAlt} className="h-8 w-auto" width={180} height={40} />
-        </a>
-        <nav className="hidden md:flex items-center gap-5">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors">
-              {l.label}
+    <SiteHeader
+      homeHref="#top"
+      drawer={
+        open ? (
+          <div className="xl:hidden bg-white border-t border-gray-100 px-5 py-4 space-y-1 shadow-lg max-h-[calc(100dvh-4rem)] overflow-y-auto">
+            {links.map((l) => (
+              <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-gray-700 font-medium min-h-11 py-2.5">
+                {l.label}
+              </a>
+            ))}
+            <Link href="/about" className="block text-gray-700 font-medium min-h-11 py-2.5">{c.nav.about}</Link>
+            <Link href="/donate" className="block text-gray-700 font-medium min-h-11 py-2.5">{c.nav.donate}</Link>
+            <Link href="/investors" className="block text-gray-700 font-medium min-h-11 py-2.5">{c.nav.investors}</Link>
+            <a href="#preregister" onClick={() => setOpen(false)} className="block text-center px-4 py-3 rounded-full font-semibold text-white mt-2" style={{ background: CYAN }}>
+              {c.nav.preregister}
             </a>
-          ))}
-          <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors">
-            {c.nav.about}
-          </Link>
-          <Link href="/donate" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors" data-testid="link-donate">
-            {c.nav.donate}
-          </Link>
-          <Link href="/investors" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors" data-testid="link-investors">
-            {c.nav.investors}
-          </Link>
-          <ExpandedLanguageSwitcher compact />
-          <a
-            href="#preregister"
-            className="px-4 py-2 rounded-full text-sm font-semibold text-white shadow-md hover:opacity-90 transition-opacity"
-            style={{ background: CYAN }}
-            data-testid="button-nav-preregister"
-          >
-            {c.nav.preregister}
+          </div>
+        ) : null
+      }
+    >
+      <nav className="hidden xl:flex items-center gap-4">
+        {links.map((l) => (
+          <a key={l.href} href={l.href} className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors whitespace-nowrap">
+            {l.label}
           </a>
-        </nav>
-        <div className="md:hidden flex items-center gap-2">
-          <ExpandedLanguageSwitcher compact />
-          <button onClick={() => setOpen(!open)} className="p-2 text-gray-700" data-testid="button-mobile-menu" aria-label="Menu">
-            {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-          </button>
-        </div>
-      </div>
-      {open && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 py-4 space-y-3">
-          {links.map((l) => (
-            <a key={l.href} href={l.href} onClick={() => setOpen(false)} className="block text-gray-700 font-medium py-1">
-              {l.label}
-            </a>
-          ))}
-          <Link href="/about" className="block text-gray-700 font-medium py-1">{c.nav.about}</Link>
-          <Link href="/donate" className="block text-gray-700 font-medium py-1">{c.nav.donate}</Link>
-          <Link href="/investors" className="block text-gray-700 font-medium py-1">{c.nav.investors}</Link>
-          <a href="#preregister" onClick={() => setOpen(false)} className="block text-center px-4 py-2 rounded-full font-semibold text-white" style={{ background: CYAN }}>
-            {c.nav.preregister}
-          </a>
-        </div>
-      )}
-    </header>
+        ))}
+        <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors whitespace-nowrap">
+          {c.nav.about}
+        </Link>
+        <Link href="/donate" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors whitespace-nowrap" data-testid="link-donate">
+          {c.nav.donate}
+        </Link>
+        <Link href="/investors" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors whitespace-nowrap" data-testid="link-investors">
+          {c.nav.investors}
+        </Link>
+      </nav>
+      <ExpandedLanguageSwitcher compact />
+      <a
+        href="#preregister"
+        className="hidden sm:inline-flex px-3 lg:px-4 py-2 rounded-full text-sm font-semibold text-white shadow-md hover:opacity-90 transition-opacity whitespace-nowrap"
+        style={{ background: CYAN }}
+        data-testid="button-nav-preregister"
+      >
+        {c.nav.preregister}
+      </a>
+      <button
+        onClick={() => setOpen(!open)}
+        className="xl:hidden min-h-11 min-w-11 inline-flex items-center justify-center text-gray-700 touch-manipulation"
+        data-testid="button-mobile-menu"
+        aria-label="Menu"
+        aria-expanded={open}
+      >
+        {open ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+      </button>
+    </SiteHeader>
   );
 }
 
@@ -171,7 +171,7 @@ function Hero() {
   return (
     <section
       id="top"
-      className="relative overflow-hidden pt-28 pb-16 sm:pb-20"
+      className="relative overflow-hidden pt-[calc(7rem+env(safe-area-inset-top))] pb-16 sm:pb-20"
       onMouseEnter={() => setPaused(true)}
       onMouseLeave={() => setPaused(false)}
       aria-roledescription="carousel"
@@ -194,7 +194,7 @@ function Hero() {
       />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-        <div className="lg:col-span-6 text-center lg:text-left">
+        <div className="lg:col-span-6 text-center lg:text-start">
           <p className="text-sm font-semibold tracking-[0.14em] uppercase text-[#0090B8]">
             {brandAlt}
           </p>
@@ -224,15 +224,15 @@ function Hero() {
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
             <a
               href="#preregister"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full text-white font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 min-h-12 rounded-full text-white font-bold text-lg shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all touch-manipulation"
               style={{ background: CYAN }}
               data-testid="button-hero-preregister"
             >
-              {c.hero.cta1} <ArrowRight className="w-5 h-5" />
+              {c.hero.cta1} <ArrowRight className="w-5 h-5 rtl:-scale-x-100" />
             </a>
             <a
               href="#why"
-              className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-lg border-2 border-[#00B3E4] text-[#0090B8] hover:bg-[#E6F7FC] transition-colors"
+              className="inline-flex items-center justify-center px-8 py-4 min-h-12 rounded-full font-bold text-lg border-2 border-[#00B3E4] text-[#0090B8] hover:bg-[#E6F7FC] transition-colors touch-manipulation"
               data-testid="button-hero-why"
             >
               {c.hero.cta2}
@@ -361,12 +361,12 @@ function Identity() {
         <p className="mt-4 text-base text-gray-600 leading-relaxed ws-text-pretty max-w-2xl mx-auto">{c.identity.sub}</p>
 
         <div className="mt-12 grid sm:grid-cols-[1fr_auto_1fr] gap-6 sm:gap-4 items-center">
-          <div className="p-8 rounded-3xl bg-white border border-[#E6F7FC] text-left sm:text-center">
+          <div className="p-8 rounded-3xl bg-white border border-[#E6F7FC] text-start sm:text-center">
             <p className="font-scripture text-3xl font-bold" style={{ color: CYAN }}>{c.identity.word}</p>
             <p className="mt-3 text-gray-600 leading-relaxed ws-text-pretty">{c.identity.wordD}</p>
           </div>
           <p className="font-scripture text-3xl font-bold text-[#201E1F]">+</p>
-          <div className="p-8 rounded-3xl bg-white border border-[#E6F7FC] text-left sm:text-center">
+          <div className="p-8 rounded-3xl bg-white border border-[#E6F7FC] text-start sm:text-center">
             <p className="font-scripture text-3xl font-bold" style={{ color: CYAN }}>{c.identity.worshiper}</p>
             <p className="mt-3 text-gray-600 leading-relaxed ws-text-pretty">{c.identity.worshiperD}</p>
           </div>
@@ -376,7 +376,7 @@ function Identity() {
           {c.identity.result}
         </p>
 
-        <div className="mt-14 grid md:grid-cols-3 gap-5 text-left">
+        <div className="mt-14 grid md:grid-cols-3 gap-5 text-start">
           {c.identity.layers.map((layer, i) => (
             <div key={i} className="p-6 rounded-2xl bg-white border border-[#E6F7FC]">
               <p className="text-xs font-semibold tracking-widest uppercase text-[#0090B8]">0{i + 1}</p>
@@ -447,7 +447,7 @@ function Routine() {
           {c.routine.sessions.map((s, i) => {
             const Icon = icons[i];
             return (
-              <div key={i} className="p-8 rounded-2xl bg-white shadow-sm border border-[#E6F7FC] text-left">
+              <div key={i} className="p-8 rounded-2xl bg-white shadow-sm border border-[#E6F7FC] text-start">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="w-11 h-11 rounded-full flex items-center justify-center text-white" style={{ background: CYAN }}>
                     <Icon className="w-5 h-5" />
@@ -502,7 +502,7 @@ function Product() {
 
         <div className="mt-12 grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
           {c.product.thesis.map((t, i) => (
-            <div key={i} className="p-7 rounded-3xl border border-[#E6F7FC] bg-[#F8FCFE] text-left">
+            <div key={i} className="p-7 rounded-3xl border border-[#E6F7FC] bg-[#F8FCFE] text-start">
               <p className="text-xs font-semibold tracking-widest uppercase text-[#0090B8]">0{i + 1}</p>
               <h3 className="mt-2 font-bold text-lg text-[#201E1F] leading-snug">{t.t}</h3>
               <p className="mt-2 text-gray-600 text-sm leading-relaxed ws-text-pretty">{t.d}</p>
@@ -529,7 +529,7 @@ function Product() {
                 </div>
               ))}
             </div>
-            <p className="text-xs text-gray-400 mt-4 text-center lg:text-left">{c.product.demoNote}</p>
+            <p className="text-xs text-gray-400 mt-4 text-center lg:text-start">{c.product.demoNote}</p>
           </div>
         </div>
         <div className="grid sm:grid-cols-2 gap-6 mt-16">
@@ -594,7 +594,7 @@ function Movement() {
           <p className="mt-5 text-[#ECEAE0]/60 leading-relaxed ws-text-pretty">{c.movement.lineageSub}</p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6 mt-14 text-left">
+        <div className="grid md:grid-cols-3 gap-6 mt-14 text-start">
           {c.movement.engines.map((e, i) => (
             <div key={i} className="p-7 rounded-2xl border border-white/10" style={{ background: "#16242B" }}>
               <div className="text-sm font-semibold tracking-widest uppercase" style={{ color: "#2CC5F2" }}>{e.e}</div>
@@ -631,7 +631,7 @@ function GlobalVision() {
             </div>
           ))}
         </div>
-        <div className="mt-12 max-w-3xl mx-auto flex items-start gap-4 p-6 rounded-2xl border border-[#99E0F5]/60 bg-[#E6F7FC]/50 text-left">
+        <div className="mt-12 max-w-3xl mx-auto flex items-start gap-4 p-6 rounded-2xl border border-[#99E0F5]/60 bg-[#E6F7FC]/50 text-start">
           <Users className="w-6 h-6 flex-shrink-0 mt-1" style={{ color: CYAN }} />
           <p className="text-gray-700 leading-relaxed ws-text-pretty">{c.global.whitelabel}</p>
         </div>
@@ -652,11 +652,11 @@ function Roadmap() {
           </h2>
         </div>
         <div className="mt-14 relative">
-          <div className="absolute left-5 sm:left-1/2 top-0 bottom-0 w-px bg-[#99E0F5]" />
+          <div className="absolute start-5 sm:start-1/2 top-0 bottom-0 w-px bg-[#99E0F5]" />
           {c.roadmap.phases.map((p, i) => (
             <div key={i} className={`relative flex sm:items-center mb-10 ${i % 2 ? "sm:flex-row-reverse" : ""}`}>
-              <div className="absolute left-5 sm:left-1/2 -translate-x-1/2 w-4 h-4 rounded-full border-4 border-white shadow" style={{ background: i === 2 ? "#F5C543" : CYAN }} />
-              <div className={`ml-12 sm:ml-0 sm:w-1/2 ${i % 2 ? "sm:pr-0 sm:pl-10" : "sm:pr-10"}`}>
+              <div className="absolute start-5 sm:start-1/2 -translate-x-1/2 rtl:translate-x-1/2 w-4 h-4 rounded-full border-4 border-white shadow" style={{ background: i === 2 ? "#F5C543" : CYAN }} />
+              <div className={`ms-12 sm:ms-0 sm:w-1/2 ${i % 2 ? "sm:pe-0 sm:ps-10" : "sm:pe-10"}`}>
                 <div className="p-6 rounded-2xl bg-white border border-[#E6F7FC] shadow-sm">
                   <h3 className="font-bold text-[#201E1F]">{p.t}</h3>
                   <p className="text-gray-600 text-sm mt-1.5">{p.d}</p>

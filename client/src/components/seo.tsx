@@ -11,7 +11,7 @@ interface SEOProps {
 
 export default function SEO({ 
   title = 'Wordshiper - Bible Memorization Platform',
-  description = 'Memorize Scripture. 15 Minutes a Day. A Life Transformed! Experience daily transformation with AI-powered Bible memorization in 24 languages.',
+  description = 'Memorize Scripture. 15 Minutes a Day. A Life Transformed! Experience daily transformation with AI-powered Bible memorization in 25 languages.',
   image = 'https://www.wordshiper.org/og-image.png',
   url = 'https://www.wordshiper.org',
   type = 'website'

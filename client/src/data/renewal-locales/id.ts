@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "Apa yang membuatnya berbeda",
         title1: "Anda tidak sendirian.",
         title2: "Beginilah injil mengalir.",
-        body: "Saluran berbasis lokasi dan komunitas menghubungkan Anda dengan sesama orang percaya di dekat Anda. Dukungan ganda/tiga bahasa di 24 bahasa. Berbagi, memberi, dan saluran menjadi jalur injil. Wordshiper bukan sekadar alat — ini adalah platform untuk hidup yang berpusat pada Firman.",
+        body: "Saluran berbasis lokasi dan komunitas menghubungkan Anda dengan sesama orang percaya di dekat Anda. Dukungan ganda/tiga bahasa di 25 bahasa. Berbagi, memberi, dan saluran menjadi jalur injil. Wordshiper bukan sekadar alat — ini adalah platform untuk hidup yang berpusat pada Firman.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Saluran berbasis lokasi dan komunitas menghubungkan Anda dengan sesama orang percaya di wilayah Anda. Bahasa Inggris secara bawaan, dengan dukungan ganda/tiga bahasa di 24 bahasa. Kitab Suci tidak dihafal sendirian — dibagikan dan dijaga hidup bersama.",
+      "Saluran berbasis lokasi dan komunitas menghubungkan Anda dengan sesama orang percaya di wilayah Anda. Bahasa Inggris secara bawaan, dengan dukungan ganda/tiga bahasa di 25 bahasa. Kitab Suci tidak dihafal sendirian — dibagikan dan dijaga hidup bersama.",
     forWhom:
       "Berbagi, donasi, dan saluran menjadi «jalur injil». Wordshiper bukan sekadar alat aplikasi — ini adalah platform untuk hidup yang berpusat pada Firman.",
   },
@@ -232,7 +232,7 @@ const locale: RenewalCopy = {
         d: "Lulus satu ayat dan sebuah kartu lahir — ayat, nomor garis keturunan, QR suara.",
       },
       {
-        t: "24 bahasa",
+        t: "25 bahasa",
         d: "Hafalkan dalam dua atau tiga bahasa bersama bahasa ibu Anda.",
       },
     ],
@@ -271,7 +271,7 @@ const locale: RenewalCopy = {
     body: "Kami bermimpi orang yang mengingat Firman menjadi Wordshipers sejati — melakukan keadilan, mengasihi belas kasihan, dan berjalan dengan rendah hati bersama Allah di tempat mereka berdiri.",
     stats: [
       { n: "1.9B", d: "Orang Kristen di seluruh dunia\nmereka yang kami rindukan untuk dilayani" },
-      { n: "24", d: "Bahasa\nhafalan ganda & tiga" },
+      { n: "25", d: "Bahasa\nhafalan ganda & tiga" },
       { n: "3", d: "Aplikasi independen pada satu inti\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:

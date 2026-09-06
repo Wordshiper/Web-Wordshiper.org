@@ -65,7 +65,7 @@ const copy = {
           label: "무엇이 다른가",
           title1: "혼자가 아닙니다.",
           title2: "복음이 흘러가는 길입니다.",
-          body: "위치·공동체 기반 채널로 내 지역의 같은 신앙 동료와 연결되고, 24개 언어 듀얼/트리플로 말씀을 새깁니다. 공유·후원·채널은 복음이 흘러가는 길이 됩니다. Wordshiper는 도구가 아니라 말씀 중심 삶의 플랫폼입니다.",
+          body: "위치·공동체 기반 채널로 내 지역의 같은 신앙 동료와 연결되고, 25개 언어 듀얼/트리플로 말씀을 새깁니다. 공유·후원·채널은 복음이 흘러가는 길이 됩니다. Wordshiper는 도구가 아니라 말씀 중심 삶의 플랫폼입니다.",
           visual: "jog" as const,
         },
         {
@@ -133,7 +133,7 @@ const copy = {
         },
       ],
       notOnly:
-        "위치·공동체 기반 채널로 내 지역의 같은 신앙 동료와 연결되고, 영어를 기본으로 24개 언어 듀얼/트리플을 지원합니다. 말씀은 혼자 암송하는 것이 아니라 함께 나누며 살아 움직입니다.",
+        "위치·공동체 기반 채널로 내 지역의 같은 신앙 동료와 연결되고, 영어를 기본으로 25개 언어 듀얼/트리플을 지원합니다. 말씀은 혼자 암송하는 것이 아니라 함께 나누며 살아 움직입니다.",
       forWhom:
         "공유·후원·채널 시스템은 ‘복음이 흘러가는 길’이 됩니다. Wordshiper는 단순한 앱 도구가 아니라 말씀 중심의 삶을 위한 플랫폼입니다.",
     },
@@ -217,7 +217,7 @@ const copy = {
         { t: "Worvi — 영적 AI\u00A0동반자", d: "루틴이 끊어져도 정죄하지 않고, 은혜와 회복으로 다시 말씀 앞으로 초대합니다." },
         { t: "조그 휠 — 1.5초 성경 도달", d: "예배 중에도 단\u00A01.5초 만에 본문에 도달. 31,111절을 오프라인에서도 읽고 검색합니다." },
         { t: "Verse\u00A0Card — 흘러가는 고백", d: "암송을 통과하면 구절·계보\u00A0번호·목소리 QR이 담긴 카드가 세상으로 흘러갑니다." },
-        { t: "24개 언어", d: "모국어와 함께 두세 언어로 말씀을 암송할 수 있습니다." },
+        { t: "25개 언어", d: "모국어와 함께 두세 언어로 말씀을 암송할 수 있습니다." },
       ],
       demoNote: "실제 앱 화면",
     },
@@ -242,7 +242,7 @@ const copy = {
       body: "말씀을 기억하는 사람들이 삶의 자리에서 공의를 행하고, 인자를 사랑하며, 겸손히 하나님과 동행하는 진실한 Wordshiper로 세워지기를 꿈꿉니다.",
       stats: [
         { n: "19억", d: "전\u00A0세계 기독교 인구\n우리가 섬기고자 하는 사람들" },
-        { n: "24", d: "지원 언어\n듀얼·트리플 언어 암송" },
+        { n: "25", d: "지원 언어\n듀얼·트리플 언어 암송" },
         { n: "3", d: "하나의 코어로 세워지는 독립\u00A0앱\nWordshiper · Verbum · Pasuk" },
       ],
       whitelabel:
@@ -452,7 +452,7 @@ const copy = {
           label: "What makes it different",
           title1: "You are not alone.",
           title2: "This is how the gospel flows.",
-          body: "Location- and community-based channels connect you with fellow believers nearby. Dual/triple support across 24 languages. Sharing, giving, and channels become paths for the gospel. Wordshiper is not a mere tool — it is a platform for a Word-centered life.",
+          body: "Location- and community-based channels connect you with fellow believers nearby. Dual/triple support across 25 languages. Sharing, giving, and channels become paths for the gospel. Wordshiper is not a mere tool — it is a platform for a Word-centered life.",
           visual: "jog" as const,
         },
         {
@@ -518,7 +518,7 @@ const copy = {
         },
       ],
       notOnly:
-        "Location- and community-based channels connect you with fellow believers in your area. English by default, with dual/triple support across 24 languages. Scripture is not memorized alone — it is shared and kept alive together.",
+        "Location- and community-based channels connect you with fellow believers in your area. English by default, with dual/triple support across 25 languages. Scripture is not memorized alone — it is shared and kept alive together.",
       forWhom:
         "Sharing, donations, and channels become “paths for the gospel.” Wordshiper is not a mere app tool — it is a platform for a Word-centered life.",
     },
@@ -602,7 +602,7 @@ const copy = {
         { t: "Worvi — spiritual AI companion", d: "Never condemns a broken streak; invites you back to the Word with grace." },
         { t: "Jog wheel — Scripture in 1.5s", d: "Reach the Bible in 1.5\u00A0seconds, even mid-worship. 31,112 verses offline." },
         { t: "Verse\u00A0Card — a flowing confession", d: "Pass a verse and a card is born — verse, lineage number, voice QR." },
-        { t: "24 languages", d: "Memorize in two or three languages alongside your mother tongue." },
+        { t: "25 languages", d: "Memorize in two or three languages alongside your mother tongue." },
       ],
       demoNote: "Actual app screens",
     },
@@ -627,7 +627,7 @@ const copy = {
       body: "We dream of people who remember the Word becoming true Wordshipers — doing justice, loving kindness, and walking humbly with God where they stand.",
       stats: [
         { n: "1.9B", d: "Christians worldwide\nthe people we long to serve" },
-        { n: "24", d: "Languages\ndual & triple memorization" },
+        { n: "25", d: "Languages\ndual & triple memorization" },
         { n: "3", d: "Independent apps on one core\nWordshiper · Verbum · Pasuk" },
       ],
       whitelabel:

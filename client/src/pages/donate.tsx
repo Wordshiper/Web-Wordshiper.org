@@ -4,11 +4,11 @@ import { useCopy } from "@/data/renewal-copy";
 import { useLanguage } from "@/hooks/use-language";
 import { brandDisplayForLanguage } from "@/data/brand";
 import ExpandedLanguageSwitcher from "@/components/expanded-language-switcher";
+import SiteHeader from "@/components/site-header";
 import StatusNoticeDialog from "@/components/status-notice-dialog";
 import SEO from "@/components/seo";
 import Footer from "@/components/renewal-footer";
 import { Heart, ShieldCheck, ArrowLeft, CheckCircle2 } from "lucide-react";
-import logoPrimary from "@assets/wordshiper_logo_lockup_primary_E_1786117649532.svg";
 
 const CYAN = "#00B3E4";
 const PRESETS = [25, 50, 100, 250];
@@ -88,24 +88,17 @@ export default function DonatePage() {
     <div className="min-h-screen bg-white font-ui">
       <SEO title={`${brandAlt} — ${d.title}`} description={d.sub} />
 
-      <header className="fixed top-0 inset-x-0 z-50 bg-white/85 backdrop-blur-md border-b border-[#E6F7FC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center p-1 -m-1">
-            <img src={logoPrimary} alt={brandAlt} className="h-8 w-auto" width={180} height={40} />
-          </Link>
-          <div className="flex items-center gap-4">
-            <ExpandedLanguageSwitcher compact />
-            <Link
-              href="/"
-              className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#0090B8]"
-            >
-              <ArrowLeft className="w-4 h-4" /> {d.backHome}
-            </Link>
-          </div>
-        </div>
-      </header>
+      <SiteHeader>
+        <ExpandedLanguageSwitcher compact />
+        <Link
+          href="/"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#0090B8] whitespace-nowrap"
+        >
+          <ArrowLeft className="w-4 h-4 rtl:-scale-x-100" /> {d.backHome}
+        </Link>
+      </SiteHeader>
 
-      <main className="pt-28 pb-24">
+      <main className="pt-[calc(7rem+env(safe-area-inset-top))] pb-24">
         <section className="relative overflow-hidden">
           <div
             className="absolute inset-0 -z-10"

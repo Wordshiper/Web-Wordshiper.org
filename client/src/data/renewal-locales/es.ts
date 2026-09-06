@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "Qué lo hace diferente",
         title1: "No estás solo.",
         title2: "Así fluye el evangelio.",
-        body: "Canales basados en ubicación y comunidad te conectan con creyentes cercanos. Soporte dual/triple en 24 idiomas. Compartir, dar y los canales se vuelven caminos para el evangelio. Wordshiper no es una mera herramienta — es una plataforma para una vida centrada en la Palabra.",
+        body: "Canales basados en ubicación y comunidad te conectan con creyentes cercanos. Soporte dual/triple en 25 idiomas. Compartir, dar y los canales se vuelven caminos para el evangelio. Wordshiper no es una mera herramienta — es una plataforma para una vida centrada en la Palabra.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Canales basados en ubicación y comunidad te conectan con creyentes de tu zona. Inglés por defecto, con soporte dual/triple en 24 idiomas. La Escritura no se memoriza en solitario — se comparte y se mantiene viva juntos.",
+      "Canales basados en ubicación y comunidad te conectan con creyentes de tu zona. Inglés por defecto, con soporte dual/triple en 25 idiomas. La Escritura no se memoriza en solitario — se comparte y se mantiene viva juntos.",
     forWhom:
       "Compartir, donaciones y canales se vuelven “caminos para el evangelio”. Wordshiper no es una mera herramienta de app — es una plataforma para una vida centrada en la Palabra.",
   },
@@ -265,7 +265,7 @@ const locale: RenewalCopy = {
         d: "Pasa un versículo y nace una tarjeta — versículo, número de linaje, QR de voz.",
       },
       {
-        t: "24 idiomas",
+        t: "25 idiomas",
         d: "Memoriza en dos o tres idiomas junto a tu lengua materna.",
       },
     ],
@@ -309,7 +309,7 @@ const locale: RenewalCopy = {
         d: "Cristianos en el mundo\nel pueblo al que anhelamos servir",
       },
       {
-        n: "24",
+        n: "25",
         d: "Idiomas\nmemorización dual y triple",
       },
       {
