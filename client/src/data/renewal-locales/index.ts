@@ -21,6 +21,7 @@ import vi from "./vi";
 import yo from "./yo";
 import zh from "./zh";
 import zhTW from "./zh-TW";
+import he from "./he";
 
 /** Extra site locales beyond en/ko — full RenewalCopy packs. */
 export const extraRenewalLocales: Record<string, RenewalCopy> = {
@@ -46,4 +47,5 @@ export const extraRenewalLocales: Record<string, RenewalCopy> = {
   yo,
   zh,
   "zh-TW": zhTW,
+  he,
 };

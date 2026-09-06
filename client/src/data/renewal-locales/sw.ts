@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "Kinachofanya iwe tofauti",
         title1: "Si peke yako.",
         title2: "Hivi ndivyo injili inavyotiririka.",
-        body: "Vituo vinavyotegemea mahali na jamii vinakuunganisha na waumini wenzako karibu. Msaada wa lugha mbili au tatu kati ya lugha 24. Kushiriki, kutoa, na vituo vinakuwa njia za injili. Wordshiper si chombo tu — ni jukwaa la maisha yanayozingatia Neno.",
+        body: "Vituo vinavyotegemea mahali na jamii vinakuunganisha na waumini wenzako karibu. Msaada wa lugha mbili au tatu kati ya lugha 25. Kushiriki, kutoa, na vituo vinakuwa njia za injili. Wordshiper si chombo tu — ni jukwaa la maisha yanayozingatia Neno.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Vituo vinavyotegemea mahali na jamii vinakuunganisha na waumini wenzako katika eneo lako. Kiingereza kwa chaguo-msingi, na msaada wa lugha mbili au tatu kati ya lugha 24. Maandiko hayahifadhiwi peke yake — yanashirikiwa na kuwekwa hai pamoja.",
+      "Vituo vinavyotegemea mahali na jamii vinakuunganisha na waumini wenzako katika eneo lako. Kiingereza kwa chaguo-msingi, na msaada wa lugha mbili au tatu kati ya lugha 25. Maandiko hayahifadhiwi peke yake — yanashirikiwa na kuwekwa hai pamoja.",
     forWhom:
       "Kushiriki, michango, na vituo vinakuwa “njia za injili.” Wordshiper si chombo cha programu tu — ni jukwaa la maisha yanayozingatia Neno.",
   },
@@ -222,7 +222,7 @@ const locale: RenewalCopy = {
       { t: "Worvi — mwandani wa kiroho wa AI", d: "Haikuhukumu kamwe ratiba yako inapokatizwa; inakualika kurudi kwa Neno kwa neema." },
       { t: "Gurudumu la Jog — Maandiko katika sekunde 1.5", d: "Fikia Biblia katika sekunde 1.5, hata katikati ya ibada. Aya 31,112 nje ya mtandao." },
       { t: "Verse\u00A0Card — ungamo linalotiririka", d: "Pitisha aya na kadi inazaliwa — aya, nambari ya nasaba, QR ya sauti." },
-      { t: "Lugha 24", d: "Hifadhi katika lugha mbili au tatu pamoja na lugha yako mama." },
+      { t: "Lugha 25", d: "Hifadhi katika lugha mbili au tatu pamoja na lugha yako mama." },
     ],
     demoNote: "Skrini halisi za programu",
   },
@@ -247,7 +247,7 @@ const locale: RenewalCopy = {
     body: "Tunaota watu wanaokumbuka Neno kuwa Wordshipers wa kweli — wakifanya haki, wakipenda fadhili, na kutembea kwa unyenyekevu na Mungu pale walipo.",
     stats: [
       { n: "1.9B", d: "Wakristo duniani kote\nwatu tunaotamani kuwahudumia" },
-      { n: "24", d: "Lugha\nuhifadhi wa dual na triple" },
+      { n: "25", d: "Lugha\nuhifadhi wa dual na triple" },
       { n: "3", d: "Programu huru kwenye msingi mmoja\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:

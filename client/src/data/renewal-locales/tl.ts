@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "Ano ang nagpapakaiba",
         title1: "Hindi ka nag-iisa.",
         title2: "Ganito dumadaloy ang ebanghelyo.",
-        body: "Ang mga channel batay sa lokasyon at komunidad ay nag-uugnay sa iyo sa kapwa mananampalataya sa malapit. Suporta sa dalawa o tatlong wika mula sa 24 na wika. Ang pagbabahagi, pagbibigay, at mga channel ay nagiging landas para sa ebanghelyo. Ang Wordshiper ay hindi simpleng kasangkapan — ito ay plataporma para sa buhay na nakasentro sa Salita.",
+        body: "Ang mga channel batay sa lokasyon at komunidad ay nag-uugnay sa iyo sa kapwa mananampalataya sa malapit. Suporta sa dalawa o tatlong wika mula sa 25 na wika. Ang pagbabahagi, pagbibigay, at mga channel ay nagiging landas para sa ebanghelyo. Ang Wordshiper ay hindi simpleng kasangkapan — ito ay plataporma para sa buhay na nakasentro sa Salita.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Ang mga channel batay sa lokasyon at komunidad ay nag-uugnay sa iyo sa kapwa mananampalataya sa iyong lugar. Ingles bilang default, na may suporta sa dalawa o tatlong wika mula sa 24 na wika. Ang Kasulatan ay hindi inisaulo nang mag-isa — ito ay ibinabahagi at pinananatiling buhay nang sama-sama.",
+      "Ang mga channel batay sa lokasyon at komunidad ay nag-uugnay sa iyo sa kapwa mananampalataya sa iyong lugar. Ingles bilang default, na may suporta sa dalawa o tatlong wika mula sa 25 na wika. Ang Kasulatan ay hindi inisaulo nang mag-isa — ito ay ibinabahagi at pinananatiling buhay nang sama-sama.",
     forWhom:
       "Ang pagbabahagi, mga donasyon, at mga channel ay nagiging “mga landas para sa ebanghelyo.” Ang Wordshiper ay hindi simpleng kasangkapan ng app — ito ay plataporma para sa buhay na nakasentro sa Salita.",
   },
@@ -222,7 +222,7 @@ const locale: RenewalCopy = {
       { t: "Worvi — espirituwal na AI companion", d: "Hindi kailanman humahatol kapag naputol ang iyong araw-araw na gawi; inaanyayahan kang bumalik sa Salita nang may biyaya." },
       { t: "Gulong ng Jog — Kasulatan sa 1.5s", d: "Abutin ang Bibliya sa 1.5\u00A0segundo, kahit sa gitna ng pagsamba. 31,112 talata kahit walang internet." },
       { t: "Verse\u00A0Card — dumadaloy na pagpapahayag", d: "Lampasan ang isang talata at isisilang ang isang card — talata, numero sa angkan, QR ng tinig." },
-      { t: "24 na wika", d: "Isaulo sa dalawa o tatlong wika kasama ang iyong inang wika." },
+      { t: "25 na wika", d: "Isaulo sa dalawa o tatlong wika kasama ang iyong inang wika." },
     ],
     demoNote: "Tunay na mga screen ng app",
   },
@@ -247,7 +247,7 @@ const locale: RenewalCopy = {
     body: "Nangarap kami ng mga taong naaalala ang Salita na maging tunay na Wordshiper — gumagawa ng katarungan, umiibig sa kabaitan, at lumalakad nang mapagkumbaba kasama ang Diyos kung nasaan sila.",
     stats: [
       { n: "1.9B", d: "Mga Kristiyano sa buong mundo\nang mga taong nais naming paglingkuran" },
-      { n: "24", d: "Mga wika\ndual at triple na pagsasaulo" },
+      { n: "25", d: "Mga wika\ndual at triple na pagsasaulo" },
       { n: "3", d: "Malayang app sa iisang core\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:

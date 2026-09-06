@@ -1,5 +1,5 @@
 /**
- * Wordshiper 24-locale dual-font typography (web adaptation of app Spec v4.0).
+ * Wordshiper 25-locale dual-font typography (web adaptation of app Spec v4.0).
  *
  * Layers:
  *  - word  → scripture / slogan / lineage (classic serif / calligraphic)
@@ -8,6 +8,7 @@
  * Web notes vs app:
  *  - No iOS/Android fork — use web-legal stacks (Inter, system-ui, Noto, Pretendard).
  *  - Site language codes: `zh` = zh-Hans, `zh-TW` = zh-Hant.
+ *  - Hebrew (`he`) is Modern Israeli Hebrew; Biblical Hebrew is verse text later.
  */
 
 export type TypoScript =
@@ -16,6 +17,7 @@ export type TypoScript =
   | "cjk"
   | "devanagari"
   | "arabic"
+  | "hebrew"
   | "tamil"
   | "thai"
   | "ethiopic";
@@ -39,7 +41,9 @@ const ALIASES: Record<string, string> = {
   "zh-CN": "zh-Hans",
   "zh-TW": "zh-Hant",
   "zh-HK": "zh-Hant",
+  "zh-MO": "zh-Hant",
   fil: "tl",
+  iw: "he",
 };
 
 const LATIN_WORD = "EB Garamond";
@@ -59,7 +63,7 @@ function latin(id: string): LocaleTypography {
   };
 }
 
-/** Master table — 24 locales */
+/** Master table — 25 locales */
 export const TYPOGRAPHY_BY_LOCALE: Record<string, LocaleTypography> = {
   // Group 1 — Latin (13)
   en: latin("en"),
@@ -160,6 +164,17 @@ export const TYPOGRAPHY_BY_LOCALE: Record<string, LocaleTypography> = {
       "Cairo:wght@400;500;700",
     ],
   },
+  he: {
+    id: "he",
+    word: "Frank Ruhl Libre",
+    ui: "Assistant",
+    script: "hebrew",
+    dir: "rtl",
+    google: [
+      "Frank+Ruhl+Libre:wght@400;500;700",
+      "Assistant:wght@400;500;700",
+    ],
+  },
   ta: {
     id: "ta",
     word: "Noto Serif Tamil",
@@ -250,8 +265,9 @@ export function applyTypographyToDocument(languageCode: string) {
   // Align with site locale aliases (zh → zh-Hans, zh-TW → zh-Hant, fil → tl)
   let code = (languageCode || "en").trim();
   if (code === "zh" || code === "zh-CN") code = "zh-Hans";
-  if (code === "zh-TW" || code === "zh-HK") code = "zh-Hant";
+  if (code === "zh-TW" || code === "zh-HK" || code === "zh-MO") code = "zh-Hant";
   if (code === "fil") code = "tl";
+  if (code === "iw") code = "he";
 
   const typo = getTypography(code);
   ensureTypographyAssets(typo);

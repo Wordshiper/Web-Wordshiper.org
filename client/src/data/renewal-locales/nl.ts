@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "Wat het anders maakt",
         title1: "Je bent niet alleen.",
         title2: "Zo stroomt het evangelie.",
-        body: "Kanalen op basis van locatie en gemeenschap verbinden je met medegelovigen in de buurt. Dual/triple-ondersteuning in 24 talen. Delen, geven en kanalen worden paden voor het evangelie. Wordshiper is geen louter hulpmiddel — het is een platform voor een op het Woord gericht leven.",
+        body: "Kanalen op basis van locatie en gemeenschap verbinden je met medegelovigen in de buurt. Dual/triple-ondersteuning in 25 talen. Delen, geven en kanalen worden paden voor het evangelie. Wordshiper is geen louter hulpmiddel — het is een platform voor een op het Woord gericht leven.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Kanalen op basis van locatie en gemeenschap verbinden je met medegelovigen in jouw omgeving. Engels als standaard, met dual/triple-ondersteuning in 24 talen. Schrift wordt niet alleen gememoriseerd — het wordt gedeeld en samen levend gehouden.",
+      "Kanalen op basis van locatie en gemeenschap verbinden je met medegelovigen in jouw omgeving. Engels als standaard, met dual/triple-ondersteuning in 25 talen. Schrift wordt niet alleen gememoriseerd — het wordt gedeeld en samen levend gehouden.",
     forWhom:
       "Delen, donaties en kanalen worden “paden voor het evangelie.” Wordshiper is geen louter app-hulpmiddel — het is een platform voor een op het Woord gericht leven.",
   },
@@ -222,7 +222,7 @@ const locale: RenewalCopy = {
       { t: "Worvi — geestelijke AI-metgezel", d: "Veroordeelt je nooit als je routine wordt onderbroken; nodigt je genadig terug naar het Woord." },
       { t: "Jog-wiel — Schrift in 1,5s", d: "Bereik de Bijbel in 1,5\u00A0seconden, zelfs midden in de aanbidding. 31.112 verzen offline." },
       { t: "Verse\u00A0Card — een stromende belijdenis", d: "Haal een vers en een kaart wordt geboren — vers, geslachtslijnnummer, stem-QR." },
-      { t: "24 talen", d: "Memoriseer in twee of drie talen naast je moedertaal." },
+      { t: "25 talen", d: "Memoriseer in twee of drie talen naast je moedertaal." },
     ],
     demoNote: "Echte app-schermen",
   },
@@ -247,7 +247,7 @@ const locale: RenewalCopy = {
     body: "We dromen van mensen die het Woord gedenken en ware Wordshipers worden — die recht doen, goedheid liefhebben, en nederig met God wandelen waar ze staan.",
     stats: [
       { n: "1.9B", d: "Christenen wereldwijd\nde mensen die we verlangen te dienen" },
-      { n: "24", d: "Talen\ndual & triple memoriseren" },
+      { n: "25", d: "Talen\ndual & triple memoriseren" },
       { n: "3", d: "Onafhankelijke apps op één kern\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:

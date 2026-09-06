@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "Điều gì làm nên sự khác biệt",
         title1: "Bạn không đơn độc.",
         title2: "Đây là cách phúc âm chảy.",
-        body: "Các kênh theo địa điểm và cộng đồng kết nối bạn với các tín hữu gần bên. Hỗ trợ kép/ba ngôn ngữ trên 24 ngôn ngữ. Chia sẻ, dâng hiến và kênh trở thành đường đi của phúc âm. Wordshiper không chỉ là công cụ — đó là nền tảng cho đời sống lấy Lời làm trung tâm.",
+        body: "Các kênh theo địa điểm và cộng đồng kết nối bạn với các tín hữu gần bên. Hỗ trợ kép/ba ngôn ngữ trên 25 ngôn ngữ. Chia sẻ, dâng hiến và kênh trở thành đường đi của phúc âm. Wordshiper không chỉ là công cụ — đó là nền tảng cho đời sống lấy Lời làm trung tâm.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Các kênh theo địa điểm và cộng đồng kết nối bạn với các tín hữu trong khu vực. Tiếng Anh mặc định, với hỗ trợ kép/ba ngôn ngữ trên 24 ngôn ngữ. Kinh Thánh không thuộc lòng một mình — được chia sẻ và giữ sống cùng nhau.",
+      "Các kênh theo địa điểm và cộng đồng kết nối bạn với các tín hữu trong khu vực. Tiếng Anh mặc định, với hỗ trợ kép/ba ngôn ngữ trên 25 ngôn ngữ. Kinh Thánh không thuộc lòng một mình — được chia sẻ và giữ sống cùng nhau.",
     forWhom:
       "Chia sẻ, quyên góp và kênh trở thành «đường đi của phúc âm». Wordshiper không chỉ là công cụ ứng dụng — đó là nền tảng cho đời sống lấy Lời làm trung tâm.",
   },
@@ -232,7 +232,7 @@ const locale: RenewalCopy = {
         d: "Vượt một câu và một thẻ ra đời — câu, số dòng dõi, QR giọng nói.",
       },
       {
-        t: "24 ngôn ngữ",
+        t: "25 ngôn ngữ",
         d: "Thuộc lòng hai hoặc ba ngôn ngữ cùng tiếng mẹ đẻ.",
       },
     ],
@@ -271,7 +271,7 @@ const locale: RenewalCopy = {
     body: "Chúng tôi mơ về những người nhớ Lời trở thành Wordshipers thật — làm sự công bình, yêu thương sự nhân từ, và bước đi khiêm nhường với Đức Chúa Trời nơi họ đứng.",
     stats: [
       { n: "1.9B", d: "Cơ Đốc nhân trên thế giới\nnhững người chúng tôi khao khát phục vụ" },
-      { n: "24", d: "Ngôn ngữ\nthuộc lòng kép & ba" },
+      { n: "25", d: "Ngôn ngữ\nthuộc lòng kép & ba" },
       { n: "3", d: "Ứng dụng độc lập trên một lõi\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:

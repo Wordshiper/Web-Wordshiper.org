@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "Ce qui le rend différent",
         title1: "Vous n’êtes pas seul.",
         title2: "C’est ainsi que l’Évangile circule.",
-        body: "Des canaux fondés sur la localisation et la communauté vous relient à des croyants proches. Support dual/triple en 24 langues. Partage, don et canaux deviennent des chemins pour l’Évangile. Wordshiper n’est pas un simple outil — c’est une plateforme pour une vie centrée sur la Parole.",
+        body: "Des canaux fondés sur la localisation et la communauté vous relient à des croyants proches. Support dual/triple en 25 langues. Partage, don et canaux deviennent des chemins pour l’Évangile. Wordshiper n’est pas un simple outil — c’est une plateforme pour une vie centrée sur la Parole.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Des canaux fondés sur la localisation et la communauté vous relient aux croyants de votre région. Anglais par défaut, avec support dual/triple en 24 langues. L’Écriture n’est pas mémorisée seul — elle est partagée et tenue vivante ensemble.",
+      "Des canaux fondés sur la localisation et la communauté vous relient aux croyants de votre région. Anglais par défaut, avec support dual/triple en 25 langues. L’Écriture n’est pas mémorisée seul — elle est partagée et tenue vivante ensemble.",
     forWhom:
       "Partage, dons et canaux deviennent des « chemins pour l’Évangile ». Wordshiper n’est pas un simple outil d’application — c’est une plateforme pour une vie centrée sur la Parole.",
   },
@@ -265,7 +265,7 @@ const locale: RenewalCopy = {
         d: "Passez un verset et une carte naît — verset, numéro de lignée, QR vocal.",
       },
       {
-        t: "24 langues",
+        t: "25 langues",
         d: "Mémorisez en deux ou trois langues aux côtés de votre langue maternelle.",
       },
     ],
@@ -309,7 +309,7 @@ const locale: RenewalCopy = {
         d: "Chrétiens dans le monde\nle peuple que nous aspirons à servir",
       },
       {
-        n: "24",
+        n: "25",
         d: "Langues\nmémorisation duale et triple",
       },
       {

@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "Kí ló mú kí ó yàtọ̀",
         title1: "Ìwọ kò wà nìkan.",
         title2: "Báyìí ni ìhìnrere ṣe ń ṣàn.",
-        body: "Àwọn ikanni orí ibùdó àti àgbájọ ń so ọ́ pọ̀ mọ́ àwọn onígbàgbọ́ mìíràn tó wà nítòsí. Àtìlẹ́yìn èdè méjì tàbí mẹ́ta nínú èdè mẹ́rìnlélógún. Pípín, fífúnni, àti àwọn ikanni di ọ̀nà fún ìhìnrere. Wordshiper kì í ṣe ohun èlò lasan — ó jẹ́ pẹpẹ fún ìgbésí ayé tí Ọ̀rọ̀ jẹ́ àárín.",
+        body: "Àwọn ikanni orí ibùdó àti àgbájọ ń so ọ́ pọ̀ mọ́ àwọn onígbàgbọ́ mìíràn tó wà nítòsí. Àtìlẹ́yìn èdè méjì tàbí mẹ́ta nínú èdè àrùnlélógún. Pípín, fífúnni, àti àwọn ikanni di ọ̀nà fún ìhìnrere. Wordshiper kì í ṣe ohun èlò lasan — ó jẹ́ pẹpẹ fún ìgbésí ayé tí Ọ̀rọ̀ jẹ́ àárín.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Àwọn ikanni orí ibùdó àti àgbájọ ń so ọ́ pọ̀ mọ́ àwọn onígbàgbọ́ mìíràn ní agbègbè rẹ. Gẹ̀ẹ́sì ní ìpìlẹ̀, pẹ̀lú àtìlẹ́yìn èdè méjì tàbí mẹ́ta nínú èdè mẹ́rìnlélógún. A kì í fi Ìwé Mímọ́ sọ́kàn nìkan — a pín ín, a sì pa á mọ́ láàyè papọ̀.",
+      "Àwọn ikanni orí ibùdó àti àgbájọ ń so ọ́ pọ̀ mọ́ àwọn onígbàgbọ́ mìíràn ní agbègbè rẹ. Gẹ̀ẹ́sì ní ìpìlẹ̀, pẹ̀lú àtìlẹ́yìn èdè méjì tàbí mẹ́ta nínú èdè àrùnlélógún. A kì í fi Ìwé Mímọ́ sọ́kàn nìkan — a pín ín, a sì pa á mọ́ láàyè papọ̀.",
     forWhom:
       "Pípín, àwọn ẹ̀bùn, àti àwọn ikanni di “ọ̀nà fún ìhìnrere.” Wordshiper kì í ṣe ohun èlò áàpù lasan — ó jẹ́ pẹpẹ fún ìgbésí ayé tí Ọ̀rọ̀ jẹ́ àárín.",
   },
@@ -222,7 +222,7 @@ const locale: RenewalCopy = {
       { t: "Worvi — ẹlẹgbẹ́ AI ẹ̀mí", d: "Kì í dálẹ́bi nígbà tí ìṣe ojoojúmọ́ rẹ bá dá dúró; ó ń pe ọ padà sí Ọ̀rọ̀ pẹ̀lú oore-ọ̀fẹ́." },
       { t: "Kẹ̀kẹ́ Jog — Ìwé Mímọ́ ní 1.5s", d: "Dé Bíbéèlì ní ìṣẹ́jú-àáyá 1.5, àní ní àárín ìjọsìn. Ẹsẹ̀ 31,112 láìsí Íńtánẹ́ẹ̀tì." },
       { t: "Verse\u00A0Card — ìjẹ́wọ́ tó ń ṣàn", d: "Kọjá ẹsẹ̀ kan, káàdì a sì bíbí — ẹsẹ̀, nọ́mbà ìdílé, QR ohùn." },
-      { t: "Èdè mẹ́rìnlélógún", d: "Fi sọ́kàn ní èdè méjì tàbí mẹ́ta pẹ̀lú èdè abínibí rẹ." },
+      { t: "Èdè àrùnlélógún", d: "Fi sọ́kàn ní èdè méjì tàbí mẹ́ta pẹ̀lú èdè abínibí rẹ." },
     ],
     demoNote: "Àwọn ojú-ìwé áàpù gidi",
   },
@@ -247,7 +247,7 @@ const locale: RenewalCopy = {
     body: "A ń lá àlá pé àwọn tí ó ń rántí Ọ̀rọ̀ yóò di Wordshipers tòótọ́ — ṣíṣe òdodo, nífẹ̀ẹ́ àánú, àti rírá pẹ̀lú Ọlọ́run ní ìrẹ̀lẹ̀ níbi tí wọ́n wà.",
     stats: [
       { n: "1.9B", d: "Kristẹni káàkiri ayé\nàwọn ènìyàn tí a ń fẹ́ sìn" },
-      { n: "24", d: "Èdè\nìfi sọ́kàn dual àti triple" },
+      { n: "25", d: "Èdè\nìfi sọ́kàn dual àti triple" },
       { n: "3", d: "Áàpù òmìnira lórí ìpìlẹ̀ kan\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:

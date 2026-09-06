@@ -123,16 +123,16 @@ export const translations: Translations = {
   'hero.description': {
     'en': 'Even in your busy daily life, just 5 minutes in the morning, 5 minutes at lunch, and 5 minutes in the evening. Start a simple yet sustainable Word memorization that transforms you, your family, and the world through a life of mission.',
     'ko': '바쁜 일상 속에서도 아침 5분, 점심 5분, 저녁 5분. 단순하지만 지속가능한 말씀 암송으로 나와 가족, 그리고 세상을 변화시키는 선교의 삶을 시작하세요.',
-    'es': 'Transforma tu vida espiritual con solo 15 minutos diarios. Experimenta el poder de la memorización bíblica impulsada por IA en 24 idiomas, construyendo hábitos que fortalecen la fe y cambian vidas para siempre.',
-    'fr': 'Transformez votre vie spirituelle avec seulement 15 minutes par jour. Découvrez la puissance de la mémorisation biblique alimentée par IA dans 24 langues, en développant des habitudes qui renforcent la foi et changent la vie pour toujours.',
-    'de': 'Verwandeln Sie Ihr spirituelles Leben mit nur 15 Minuten täglich. Erleben Sie die Kraft der KI-gesteuerten Schriftauswendiglernung in 24 Sprachen und entwickeln Sie Gewohnheiten, die den Glauben stärken und das Leben für immer verändern.',
+    'es': 'Transforma tu vida espiritual con solo 15 minutos diarios. Experimenta el poder de la memorización bíblica impulsada por IA en 25 idiomas, construyendo hábitos que fortalecen la fe y cambian vidas para siempre.',
+    'fr': 'Transformez votre vie spirituelle avec seulement 15 minutes par jour. Découvrez la puissance de la mémorisation biblique alimentée par IA dans 25 langues, en développant des habitudes qui renforcent la foi et changent la vie pour toujours.',
+    'de': 'Verwandeln Sie Ihr spirituelles Leben mit nur 15 Minuten täglich. Erleben Sie die Kraft der KI-gesteuerten Schriftauswendiglernung in 25 Sprachen und entwickeln Sie Gewohnheiten, die den Glauben stärken und das Leben für immer verändern.',
     'ja': '毎日わずか15分で霊的な人生を変革しましょう。24言語でのAI駆動聖書暗記の力を体験し、信仰を強化し人生を永遠に変える習慣を築きましょう。',
     'zh': '每天仅用15分钟就能改变你的属灵生活。体验24种语言的AI驱动圣经记忆力量，培养坚固信仰、永远改变生命的习惯。',
-    'ar': 'حوّل حياتك الروحية بـ 15 دقيقة فقط يومياً. اختبر قوة حفظ الكتاب المقدس المدعوم بالذكاء الاصطناعي بـ 24 لغة، وابن عادات تقوي الإيمان وتغير الحياة إلى الأبد.',
-    'hi': 'दैनिक केवल 15 मिनट में अपने आध्यात्मिक जीवन को बदलें। 24 भाषाओं में AI-संचालित पवित्रशास्त्र स्मृति की शक्ति का अनुभव करें, ऐसी आदतें बनाएं जो विश्वास को मजबूत बनाती हैं और जीवन को हमेशा के लिए बदल देती हैं।',
-    'pt': 'Transforme sua vida espiritual com apenas 15 minutos diários. Experimente o poder da memorização bíblica impulsionada por IA em 24 idiomas, construindo hábitos que fortalecem a fé e mudam vidas para sempre.',
-    'ru': 'Преобразите свою духовную жизнь всего за 15 минут в день. Испытайте силу запоминания Писания с помощью ИИ на 24 языках, формируя привычки, которые укрепляют веру и навсегда меняют жизнь.',
-    'it': 'Trasforma la tua vita spirituale con soli 15 minuti al giorno. Sperimenta la potenza della memorizzazione biblica guidata dall\'IA in 24 lingue, costruendo abitudini che rafforzano la fede e cambiano la vita per sempre.'
+    'ar': 'حوّل حياتك الروحية بـ 15 دقيقة فقط يومياً. اختبر قوة حفظ الكتاب المقدس المدعوم بالذكاء الاصطناعي بـ 25 لغة، وابن عادات تقوي الإيمان وتغير الحياة إلى الأبد.',
+    'hi': 'दैनिक केवल 15 मिनट में अपने आध्यात्मिक जीवन को बदलें। 25 भाषाओं में AI-संचालित पवित्रशास्त्र स्मृति की शक्ति का अनुभव करें, ऐसी आदतें बनाएं जो विश्वास को मजबूत बनाती हैं और जीवन को हमेशा के लिए बदल देती हैं।',
+    'pt': 'Transforme sua vida espiritual com apenas 15 minutos diários. Experimente o poder da memorização bíblica impulsionada por IA em 25 idiomas, construindo hábitos que fortalecem a fé e mudam vidas para sempre.',
+    'ru': 'Преобразите свою духовную жизнь всего за 15 минут в день. Испытайте силу запоминания Писания с помощью ИИ на 25 языках, формируя привычки, которые укрепляют веру и навсегда меняют жизнь.',
+    'it': 'Trasforma la tua vita spirituale con soli 15 minuti al giorno. Sperimenta la potenza della memorizzazione biblica guidata dall\'IA in 25 lingue, costruendo abitudini che rafforzano la fede e cambiano la vita per sempre.'
   },
   'hero.tryDemo': {
     'en': 'Start 15-Minute Revolution',
@@ -467,18 +467,18 @@ export const translations: Translations = {
   },
 
   'tts.subtitle': {
-    'en': 'Experience accurate pronunciation and natural memorization anywhere with AI voice technology in 24 languages',
-    'ko': '24개 언어 AI 음성 기술로 어디서나 정확한 발음과 자연스러운 암송을 경험하세요',
-    'es': 'Experimenta pronunciación precisa y memorización natural en cualquier lugar con tecnología de voz IA en 24 idiomas',
-    'fr': 'Découvrez une prononciation précise et une mémorisation naturelle partout avec la technologie vocale IA dans 24 langues',
-    'de': 'Erleben Sie überall präzise Aussprache und natürliches Auswendiglernen mit KI-Sprachtechnologie in 24 Sprachen',
+    'en': 'Experience accurate pronunciation and natural memorization anywhere with AI voice technology in 25 languages',
+    'ko': '25개 언어 AI 음성 기술로 어디서나 정확한 발음과 자연스러운 암송을 경험하세요',
+    'es': 'Experimenta pronunciación precisa y memorización natural en cualquier lugar con tecnología de voz IA en 25 idiomas',
+    'fr': 'Découvrez une prononciation précise et une mémorisation naturelle partout avec la technologie vocale IA dans 25 langues',
+    'de': 'Erleben Sie überall präzise Aussprache und natürliches Auswendiglernen mit KI-Sprachtechnologie in 25 Sprachen',
     'ja': '24言語のAI音声技術でどこでも正確な発音と自然な暗記を体験してください',
     'zh': '使用24种语言的AI语音技术，随时随地体验准确的发音和自然的记忆',
-    'ar': 'اختبر النطق الدقيق والحفظ الطبيعي في أي مكان مع تقنية الصوت بالذكاء الاصطناعي في 24 لغة',
-    'hi': '24 भाषाओं में AI आवाज तकनीक के साथ कहीं भी सटीक उच्चारण और प्राकृतिक स्मरण का अनुभव करें',
-    'pt': 'Experimente pronúncia precisa e memorização natural em qualquer lugar com tecnologia de voz IA em 24 idiomas',
-    'ru': 'Испытайте точное произношение и естественное запоминание везде с технологией голоса ИИ на 24 языках',
-    'it': 'Sperimenta pronuncia precisa e memorizzazione naturale ovunque con la tecnologia vocale AI in 24 lingue'
+    'ar': 'اختبر النطق الدقيق والحفظ الطبيعي في أي مكان مع تقنية الصوت بالذكاء الاصطناعي في 25 لغة',
+    'hi': '25 भाषाओं में AI आवाज तकनीक के साथ कहीं भी सटीक उच्चारण और प्राकृतिक स्मरण का अनुभव करें',
+    'pt': 'Experimente pronúncia precisa e memorização natural em qualquer lugar com tecnologia de voz IA em 25 idiomas',
+    'ru': 'Испытайте точное произношение и естественное запоминание везде с технологией голоса ИИ на 25 языках',
+    'it': 'Sperimenta pronuncia precisa e memorizzazione naturale ovunque con la tecnologia vocale AI in 25 lingue'
   },
 
   // Mission Statement Section
@@ -1265,18 +1265,18 @@ export const translations: Translations = {
     'it': 'Sfide e condivisione della comunità globale'
   },
   'about.whoWeAre.feature4': {
-    'en': 'Available in 24 languages',
-    'ko': '24개 언어 지원',
-    'es': 'Disponible en 24 idiomas',
-    'fr': 'Disponible en 24 langues',
-    'de': 'Verfügbar in 24 Sprachen',
+    'en': 'Available in 25 languages',
+    'ko': '25개 언어 지원',
+    'es': 'Disponible en 25 idiomas',
+    'fr': 'Disponible en 25 langues',
+    'de': 'Verfügbar in 25 Sprachen',
     'ja': '24言語対応',
     'zh': '支持24种语言',
-    'ar': 'متوفر بـ 24 لغة',
-    'hi': '24 भाषाओं में उपलब्ध',
-    'pt': 'Disponível em 24 idiomas',
-    'ru': 'Доступно на 24 языках',
-    'it': 'Disponibile in 24 lingue'
+    'ar': 'متوفر بـ 25 لغة',
+    'hi': '25 भाषाओं में उपलब्ध',
+    'pt': 'Disponível em 25 idiomas',
+    'ru': 'Доступно на 25 языках',
+    'it': 'Disponibile in 25 lingue'
   },
   'about.leadership.title': {
     'en': 'Leadership',

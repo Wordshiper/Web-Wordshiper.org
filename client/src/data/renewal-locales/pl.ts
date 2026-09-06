@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "Co czyni ją wyjątkową",
         title1: "Nie jesteś sam.",
         title2: "Tak płynie Ewangelia.",
-        body: "Kanały oparte na lokalizacji i społeczności łączą Cię z wierzącymi w pobliżu. Dual/triple wsparcie w 24 językach. Dzielenie się, dawanie i kanały stają się ścieżkami Ewangelii. Wordshiper to nie zwykłe narzędzie — to platforma życia skoncentrowanego na Słowie.",
+        body: "Kanały oparte na lokalizacji i społeczności łączą Cię z wierzącymi w pobliżu. Dual/triple wsparcie w 25 językach. Dzielenie się, dawanie i kanały stają się ścieżkami Ewangelii. Wordshiper to nie zwykłe narzędzie — to platforma życia skoncentrowanego na Słowie.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Kanały oparte na lokalizacji i społeczności łączą Cię z wierzącymi w Twojej okolicy. Angielski domyślnie, z dual/triple wsparciem w 24 językach. Pisma nie zapamiętuje się w samotności — dzieli się nim i utrzymuje przy życiu razem.",
+      "Kanały oparte na lokalizacji i społeczności łączą Cię z wierzącymi w Twojej okolicy. Angielski domyślnie, z dual/triple wsparciem w 25 językach. Pisma nie zapamiętuje się w samotności — dzieli się nim i utrzymuje przy życiu razem.",
     forWhom:
       "Dzielenie się, darowizny i kanały stają się „ścieżkami Ewangelii”. Wordshiper to nie zwykłe narzędzie aplikacji — to platforma życia skoncentrowanego na Słowie.",
   },
@@ -222,7 +222,7 @@ const locale: RenewalCopy = {
       { t: "Worvi — duchowy towarzysz AI", d: "Nigdy nie potępia, gdy rutyna zostanie przerwana; z łaską zaprasza Cię z powrotem do Słowa." },
       { t: "Pokrętło jog — Pismo w 1,5s", d: "Sięgnij po Biblię w 1,5\u00A0sekundy, nawet w środku uwielbienia. 31 112 wersetów offline." },
       { t: "Verse\u00A0Card — płynące wyznanie", d: "Zaliczenie wersetu rodzi kartę — werset, numer w rodowodzie, QR głosu." },
-      { t: "24 języki", d: "Zapamiętuj w dwóch lub trzech językach obok języka ojczystego." },
+      { t: "25 języki", d: "Zapamiętuj w dwóch lub trzech językach obok języka ojczystego." },
     ],
     demoNote: "Rzeczywiste ekrany aplikacji",
   },
@@ -247,7 +247,7 @@ const locale: RenewalCopy = {
     body: "Marzymy o ludziach, którzy pamiętają Słowo i stają się prawdziwymi Wordshipers — czyniąc sprawiedliwość, miłując miłosierdzie i pokornie chodząc z Bogiem tam, gdzie stoją.",
     stats: [
       { n: "1.9B", d: "Chrześcijan na świecie\nludzie, którym pragniemy służyć" },
-      { n: "24", d: "Języki\ndual i triple zapamiętywanie" },
+      { n: "25", d: "Języki\ndual i triple zapamiętywanie" },
       { n: "3", d: "Niezależne aplikacje na jednym rdzeniu\nWordshiper · Verbum · Pasuk" },
     ],
     whitelabel:

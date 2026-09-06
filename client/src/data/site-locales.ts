@@ -1,39 +1,91 @@
 /**
  * Site locales with Spec v4.0 typography AND full renewal copy.
  * Language picker only exposes these — no silent English-only UI.
+ *
+ * Hebrew (`he`) is Modern Israeli Hebrew (ISO 639-1 / BCP-47 `he`, `he-IL`).
+ * UI copy is niqqud-less Ivrit. Biblical Hebrew belongs on verse text later,
+ * not as a site locale. Legacy ISO code `iw` maps here.
  */
 import { TYPOGRAPHY_BY_LOCALE, normalizeTypoLocale } from "@/data/typography";
 import { expandedLanguages, type Language } from "@/data/expanded-languages";
 
-/** Canonical site language codes (picker + copy registry). */
+/**
+ * Picker order:
+ * 1. English — site default
+ * 2. Spanish — largest Catholic-language community after English
+ * 3–25. Remaining locales by estimated Christian + Catholic speaker
+ *     population (Pew Research / World Christian Database-style totals).
+ */
 export const SITE_LOCALE_CODES = [
   "en",
-  "ko",
-  "zh",
-  "zh-TW",
-  "ja",
   "es",
+  "pt",
   "fr",
+  "tl",
+  "ru",
+  "zh",
   "de",
   "it",
-  "pt",
-  "ru",
-  "uk",
-  "ar",
-  "hi",
-  "th",
-  "vi",
-  "id",
-  "tl",
-  "nl",
   "pl",
-  "sw",
-  "ta",
+  "id",
+  "uk",
   "am",
+  "ko",
   "yo",
+  "sw",
+  "ar",
+  "vi",
+  "nl",
+  "zh-TW",
+  "ta",
+  "hi",
+  "ja",
+  "th",
+  "he",
 ] as const;
 
 export type SiteLocaleCode = (typeof SITE_LOCALE_CODES)[number];
+
+/**
+ * Language identification follows W3C i18n + Unicode CLDR + ISO 639-1 / BCP-47:
+ * the language is the code + endonym, not a flag. Flags are territorial hints
+ * only. Pluricentric languages (en, es, fr, pt, ar, sw, ta) show no single
+ * country flag. Traditional Chinese uses CLDR zh-Hant territories HK + TW.
+ */
+export interface SiteLocaleDisplay {
+  /** Territorial emoji cluster; empty when a single flag would mislead. */
+  flag: string;
+  /** Script / variety mark (简, 繁). */
+  scriptLabel?: string;
+}
+
+export const SITE_LOCALE_DISPLAY: Record<SiteLocaleCode, SiteLocaleDisplay> = {
+  en: { flag: "" },
+  es: { flag: "" },
+  pt: { flag: "" },
+  fr: { flag: "" },
+  tl: { flag: "🇵🇭" },
+  ru: { flag: "🇷🇺" },
+  zh: { flag: "", scriptLabel: "简" },
+  de: { flag: "🇩🇪" },
+  it: { flag: "🇮🇹" },
+  pl: { flag: "🇵🇱" },
+  id: { flag: "🇮🇩" },
+  uk: { flag: "🇺🇦" },
+  am: { flag: "🇪🇹" },
+  ko: { flag: "🇰🇷" },
+  yo: { flag: "🇳🇬" },
+  sw: { flag: "" },
+  ar: { flag: "" },
+  vi: { flag: "🇻🇳" },
+  nl: { flag: "🇳🇱" },
+  "zh-TW": { flag: "🇭🇰🇹🇼", scriptLabel: "繁" },
+  ta: { flag: "" },
+  hi: { flag: "🇮🇳" },
+  ja: { flag: "🇯🇵" },
+  th: { flag: "🇹🇭" },
+  he: { flag: "🇮🇱" },
+};
 
 const SITE_SET = new Set<string>(SITE_LOCALE_CODES);
 
@@ -41,12 +93,14 @@ const SITE_SET = new Set<string>(SITE_LOCALE_CODES);
 export function normalizeSiteLocale(code: string): SiteLocaleCode {
   const raw = (code || "en").trim();
   if (raw === "zh-CN" || raw === "zh-Hans") return "zh";
-  if (raw === "zh-HK" || raw === "zh-Hant") return "zh-TW";
+  if (raw === "zh-HK" || raw === "zh-Hant" || raw === "zh-MO") return "zh-TW";
   if (raw === "fil") return "tl";
+  if (raw === "iw") return "he";
   if (SITE_SET.has(raw)) return raw as SiteLocaleCode;
   const typo = normalizeTypoLocale(raw);
   if (typo === "zh-Hans") return "zh";
   if (typo === "zh-Hant") return "zh-TW";
+  if (typo === "he" || typo === "iw") return "he";
   if (SITE_SET.has(typo)) return typo as SiteLocaleCode;
   return "en";
 }
@@ -60,7 +114,9 @@ export function isSiteLocale(code: string): boolean {
     raw === "zh-Hans" ||
     raw === "zh-HK" ||
     raw === "zh-Hant" ||
-    raw === "fil"
+    raw === "zh-MO" ||
+    raw === "fil" ||
+    raw === "iw"
   );
 }
 
@@ -89,6 +145,7 @@ export function matchSiteLocale(tag: string): SiteLocaleCode | null {
   }
 
   if (primary === "fil" || primary === "tl") return "tl";
+  if (primary === "iw" || primary === "he") return "he";
   if (SITE_SET.has(primary)) return primary as SiteLocaleCode;
   return null;
 }
@@ -110,17 +167,26 @@ export function detectBrowserLocale(): SiteLocaleCode {
   return "en";
 }
 
-/** Languages shown in the site picker (metadata from expanded list). */
+export function getSiteLocaleDisplay(code: string): SiteLocaleDisplay {
+  const locale = normalizeSiteLocale(code);
+  return SITE_LOCALE_DISPLAY[locale];
+}
+
+/** Languages shown in the site picker, in SITE_LOCALE_CODES order. */
 export function getSiteLanguages(): Language[] {
   const byCode = new Map(expandedLanguages.map((l) => [l.code, l]));
   return SITE_LOCALE_CODES.map((code) => {
     const found = byCode.get(code);
-    if (found) return found;
+    const display = SITE_LOCALE_DISPLAY[code];
+    const flag = display.flag || display.scriptLabel || "";
+    if (found) {
+      return { ...found, flag };
+    }
     return {
       code,
       name: code,
       nativeName: code,
-      flag: "🌐",
+      flag,
       region: "Other",
     } satisfies Language;
   });

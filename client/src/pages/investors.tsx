@@ -4,36 +4,27 @@ import { useLanguage } from "@/hooks/use-language";
 import SEO from "@/components/seo";
 import Footer from "@/components/renewal-footer";
 import ExpandedLanguageSwitcher from "@/components/expanded-language-switcher";
+import SiteHeader from "@/components/site-header";
 import { ArrowLeft, Mail, ShieldCheck, Compass, Cpu, Layers } from "lucide-react";
 import { LEADERSHIP, getLeaderCopy } from "@/data/leadership";
-import { brandDisplayForLanguage } from "@/data/brand";
-import logoPrimary from "@assets/wordshiper_logo_lockup_primary_E_1786117649532.svg";
 
 const CYAN = "#00B3E4";
 
 export default function InvestorsPage() {
   const c = useCopy().investors;
   const { currentLanguage } = useLanguage();
-  const brandAlt = brandDisplayForLanguage(currentLanguage);
   const icons = [Compass, ShieldCheck, Cpu, Layers];
   return (
     <div className="min-h-screen bg-white font-ui">
       <SEO title="Wordshiper — Investors" description={c.sub} />
-      <header className="fixed top-0 inset-x-0 z-50 bg-white/85 backdrop-blur-md border-b border-[#E6F7FC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center p-1 -m-1" data-testid="link-logo-home">
-            <img src={logoPrimary} alt={brandAlt} className="h-8 w-auto" width={180} height={40} />
-          </Link>
-          <div className="flex items-center gap-4">
-            <ExpandedLanguageSwitcher compact />
-            <Link href="/" className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#0090B8]" data-testid="link-back-home">
-              <ArrowLeft className="w-4 h-4" /> {c.backHome}
-            </Link>
-          </div>
-        </div>
-      </header>
+      <SiteHeader>
+        <ExpandedLanguageSwitcher compact />
+        <Link href="/" className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-600 hover:text-[#0090B8] whitespace-nowrap" data-testid="link-back-home">
+          <ArrowLeft className="w-4 h-4 rtl:-scale-x-100" /> {c.backHome}
+        </Link>
+      </SiteHeader>
 
-      <main className="pt-28 pb-24">
+      <main className="pt-[calc(7rem+env(safe-area-inset-top))] pb-24">
         <section className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
           <span className="inline-block px-4 py-1.5 rounded-full text-sm font-semibold bg-[#E6F7FC] text-[#0090B8]">{c.navTitle}</span>
           <h1 className="font-scripture mt-6 text-3xl sm:text-5xl font-bold text-[#201E1F] leading-tight whitespace-pre-line ws-text-balance">{c.title}</h1>

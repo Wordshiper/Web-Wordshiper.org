@@ -58,7 +58,7 @@ const locale: RenewalCopy = {
         label: "Cosa lo rende diverso",
         title1: "Non sei solo.",
         title2: "Così scorre il Vangelo.",
-        body: "Canali basati su luogo e comunità ti collegano a credenti vicini. Supporto duale/triplo in 24 lingue. Condivisione, dono e canali diventano vie per il Vangelo. Wordshiper non è un semplice strumento — è una piattaforma per una vita centrata sulla Parola.",
+        body: "Canali basati su luogo e comunità ti collegano a credenti vicini. Supporto duale/triplo in 25 lingue. Condivisione, dono e canali diventano vie per il Vangelo. Wordshiper non è un semplice strumento — è una piattaforma per una vita centrata sulla Parola.",
         visual: "jog" as const,
       },
       {
@@ -126,7 +126,7 @@ const locale: RenewalCopy = {
       },
     ],
     notOnly:
-      "Canali basati su luogo e comunità ti collegano a credenti nella tua zona. Inglese per impostazione predefinita, con supporto duale/triplo in 24 lingue. La Scrittura non si memorizza da soli — si condivide e si tiene viva insieme.",
+      "Canali basati su luogo e comunità ti collegano a credenti nella tua zona. Inglese per impostazione predefinita, con supporto duale/triplo in 25 lingue. La Scrittura non si memorizza da soli — si condivide e si tiene viva insieme.",
     forWhom:
       "Condivisione, donazioni e canali diventano «vie per il Vangelo». Wordshiper non è un semplice strumento-app — è una piattaforma per una vita centrata sulla Parola.",
   },
@@ -265,7 +265,7 @@ const locale: RenewalCopy = {
         d: "Supera un versetto e nasce una card — versetto, numero di lignaggio, QR della voce.",
       },
       {
-        t: "24 lingue",
+        t: "25 lingue",
         d: "Memorizza in due o tre lingue insieme alla tua lingua madre.",
       },
     ],
@@ -309,7 +309,7 @@ const locale: RenewalCopy = {
         d: "Cristiani nel mondo\nle persone che desideriamo servire",
       },
       {
-        n: "24",
+        n: "25",
         d: "Lingue\nmemorizzazione duale e tripla",
       },
       {

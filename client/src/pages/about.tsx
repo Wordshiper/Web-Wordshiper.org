@@ -5,6 +5,7 @@ import { Heart, Users, BookOpen, Mail, MapPin, Award } from "lucide-react";
 import SEO from "@/components/seo";
 import Footer from "@/components/renewal-footer";
 import ExpandedLanguageSwitcher from "@/components/expanded-language-switcher";
+import SiteHeader from "@/components/site-header";
 import { useLanguage } from "@/hooks/use-language";
 import { useCopy } from "@/data/renewal-copy";
 import { LEADERSHIP, getLeaderCopy } from "@/data/leadership";
@@ -39,33 +40,26 @@ export default function AboutPage() {
         url="https://www.wordshiper.org/about"
       />
 
-      <header className="fixed top-0 inset-x-0 z-50 bg-white/85 backdrop-blur-md border-b border-[#E6F7FC]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center" data-testid="link-logo-home">
-            <img src={logoPrimary} alt={brandAlt} className="h-8 w-auto" width={180} height={40} />
-          </Link>
-          <div className="flex items-center gap-4">
-            <ExpandedLanguageSwitcher compact />
-            <Link
-              href="/"
-              className="hidden sm:inline-flex text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors"
-            >
-              {c.chrome.home}
-            </Link>
-            <a
-              href="/#preregister"
-              className="px-4 py-2 rounded-full text-sm font-semibold text-white shadow-md hover:opacity-90 transition-opacity"
-              style={{ background: CYAN }}
-            >
-              {nav.preregister}
-            </a>
-          </div>
-        </div>
-      </header>
+      <SiteHeader>
+        <ExpandedLanguageSwitcher compact />
+        <Link
+          href="/"
+          className="hidden sm:inline-flex text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors whitespace-nowrap"
+        >
+          {c.chrome.home}
+        </Link>
+        <a
+          href="/#preregister"
+          className="px-3 sm:px-4 py-2 rounded-full text-sm font-semibold text-white shadow-md hover:opacity-90 transition-opacity whitespace-nowrap"
+          style={{ background: CYAN }}
+        >
+          {nav.preregister}
+        </a>
+      </SiteHeader>
 
       {/* Hero */}
       <section
-        className="pt-32 pb-16 px-4"
+        className="pt-[calc(8rem+env(safe-area-inset-top))] pb-16 px-4"
         style={{ background: "linear-gradient(180deg,#F8FCFE 0%,#FFFFFF 100%)" }}
       >
         <div className="max-w-3xl mx-auto text-center">
