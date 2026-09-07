@@ -14,7 +14,8 @@ import { expandedLanguages, type Language } from "@/data/expanded-languages";
  * 1. English — site default
  * 2. Spanish — largest Catholic-language community after English
  * 3–25. Remaining locales by estimated Christian + Catholic speaker
- *     population (Pew Research / World Christian Database-style totals).
+ *     population (Pew Research / World Christian Database-style totals),
+ *     except Chinese variants stay together (zh, then zh-TW).
  */
 export const SITE_LOCALE_CODES = [
   "en",
@@ -24,6 +25,7 @@ export const SITE_LOCALE_CODES = [
   "tl",
   "ru",
   "zh",
+  "zh-TW",
   "de",
   "it",
   "pl",
@@ -36,7 +38,6 @@ export const SITE_LOCALE_CODES = [
   "ar",
   "vi",
   "nl",
-  "zh-TW",
   "ta",
   "hi",
   "ja",
