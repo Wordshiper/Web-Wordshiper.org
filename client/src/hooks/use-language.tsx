@@ -29,11 +29,8 @@ interface LanguageProviderProps {
 /**
  * Decision order on first paint:
  * 1. Saved picker choice (localStorage)
- * 2. Browser / OS language list (navigator.languages → navigator.language)
- * 3. English
- *
- * Windows, macOS, iOS, and Android all surface their UI language through
- * the browser's navigator APIs — there is no separate mobile-app bridge.
+ * 2. Device / browser UI language (navigator.language) — not country/geo
+ * 3. English, when that language is not one of the 25 site locales
  */
 function readInitialLanguage(): string {
   if (typeof window === "undefined") return "en";

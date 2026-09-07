@@ -121,6 +121,13 @@ html[dir="rtl"] body {
   text-align: start;
 }
 
+/* Language picker: keep native RTL names (Arabic, Hebrew) in the left column */
+.ws-lang-native {
+  direction: ltr;
+  text-align: left;
+  unicode-bidi: isolate;
+}
+
 html[dir="rtl"] .rtl\:-scale-x-100 {
   transform: scaleX(-1);
 }

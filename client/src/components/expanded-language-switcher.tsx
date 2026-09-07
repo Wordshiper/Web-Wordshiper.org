@@ -8,13 +8,13 @@ import { Check, ChevronDown, Globe, Search, X } from "lucide-react";
 import { getLanguageByCode, type Language } from "@/data/expanded-languages";
 import {
   getSiteLanguages,
-  getSiteLocaleDisplay,
   SITE_LOCALE_CODES,
 } from "@/data/site-locales";
 import { useLanguage, LanguageProvider } from "@/hooks/use-language";
 import { useCopy } from "@/data/renewal-copy";
 import { ensureTypographyAssets, getTypography } from "@/data/typography";
 import { typographyIdForSiteLocale } from "@/data/site-locales";
+import { LanguageFlags } from "@/components/language-flags";
 
 export { LanguageProvider };
 
@@ -39,23 +39,15 @@ function filterSiteLanguages(query: string): Language[] {
 function LanguageMark({
   code,
   size = "md",
+  maxFlags,
 }: {
   code: string;
   size?: "sm" | "md";
+  maxFlags?: number;
 }) {
-  const display = getSiteLocaleDisplay(code);
-  const visual = [display.scriptLabel, display.flag].filter(Boolean).join(" ");
   return (
-    <span
-      className={`inline-flex items-center gap-1.5 shrink-0 ${
-        size === "sm" ? "text-sm" : "text-base"
-      }`}
-    >
-      {visual ? (
-        <span className="leading-none" aria-hidden="true">
-          {visual}
-        </span>
-      ) : null}
+    <span className="inline-flex items-center gap-1.5 shrink-0">
+      <LanguageFlags locale={code} size={size} max={maxFlags} />
       <span className="font-semibold tracking-wide text-[11px] text-gray-700">
         {code.toUpperCase()}
       </span>
@@ -167,22 +159,26 @@ export default function ExpandedLanguageSwitcher({
   };
 
   const list = (
-    <div className="max-h-[min(28rem,55dvh)] overflow-y-auto space-y-1 overscroll-contain">
+    <div
+      className="max-h-[min(28rem,55dvh)] overflow-y-auto space-y-1 overscroll-contain"
+      dir="ltr"
+    >
       {filtered.map((lang) => (
         <button
           key={lang.code}
           type="button"
+          dir="ltr"
           onMouseEnter={() => prefetchLocaleFonts(lang.code)}
           onClick={() => handleLanguageSelect(lang.code)}
-          className={`w-full flex items-center gap-3 min-h-12 px-3 py-2.5 rounded-lg hover:bg-[#F8FCFE] transition-colors text-start touch-manipulation ${
+          className={`w-full flex items-center gap-3 min-h-12 px-3 py-2.5 rounded-lg hover:bg-[#F8FCFE] transition-colors text-left touch-manipulation ${
             currentLanguage === lang.code
               ? "bg-[#E6F7FC] border border-[#00B3E4]/40"
               : "border border-transparent"
           }`}
         >
           <LanguageMark code={lang.code} />
-          <div className="flex-1 min-w-0">
-            <div className="text-sm font-medium text-gray-900 truncate" dir="auto">
+          <div className="flex-1 min-w-0 text-left" dir="ltr">
+            <div className="ws-lang-native text-sm font-medium text-gray-900 truncate">
               {lang.nativeName}
             </div>
             <div className="text-xs text-gray-500 truncate">{lang.name}</div>
@@ -230,20 +226,15 @@ export default function ExpandedLanguageSwitcher({
         aria-haspopup="listbox"
         data-testid="button-language-switcher"
       >
-        <LanguageMark code={currentLanguage} size="sm" />
+        <LanguageMark code={currentLanguage} size="sm" maxFlags={2} />
         <ChevronDown className="w-3.5 h-3.5 shrink-0" />
       </Button>
     );
 
-    const panelDir =
-      typeof document !== "undefined"
-        ? document.documentElement.getAttribute("dir") || "ltr"
-        : "ltr";
-
     const desktopMenu = isOpen && !sheet && (
       <div
-        dir={panelDir}
-        className="absolute top-12 end-0 z-50 w-[min(22rem,calc(100vw-1.5rem))] bg-white border border-[#E6F7FC] rounded-xl shadow-xl font-ui"
+        dir="ltr"
+        className="absolute top-12 end-0 z-50 w-[min(24rem,calc(100vw-1.5rem))] bg-white border border-[#E6F7FC] rounded-xl shadow-xl font-ui"
         role="listbox"
         aria-label={chrome.chooseLanguage}
       >
@@ -264,7 +255,7 @@ export default function ExpandedLanguageSwitcher({
             onClick={() => setIsOpen(false)}
           />
           <div
-            dir={panelDir}
+            dir="ltr"
             role="dialog"
             aria-modal="true"
             aria-label={chrome.chooseLanguage}
@@ -290,7 +281,7 @@ export default function ExpandedLanguageSwitcher({
       );
 
     return (
-      <div className={`relative ${className}`} ref={rootRef}>
+      <div className={`relative ${className}`} ref={rootRef} dir="ltr">
         {trigger}
         {desktopMenu}
         {mobileSheet}
@@ -327,15 +318,16 @@ export default function ExpandedLanguageSwitcher({
                 type="button"
                 onMouseEnter={() => prefetchLocaleFonts(lang.code)}
                 onClick={() => handleLanguageSelect(lang.code)}
-                className={`flex items-center gap-3 p-3 min-h-14 rounded-lg border transition-all hover:shadow-sm text-start touch-manipulation ${
+                dir="ltr"
+                className={`flex items-center gap-3 p-3 min-h-14 rounded-lg border transition-all hover:shadow-sm text-left touch-manipulation ${
                   currentLanguage === lang.code
                     ? "border-[#00B3E4] bg-[#E6F7FC] shadow-sm"
                     : "border-gray-200 hover:border-[#00B3E4]/40"
                 }`}
               >
                 <LanguageMark code={lang.code} />
-                <div className="flex-1 min-w-0">
-                  <div className="font-medium text-gray-900 truncate" dir="auto">
+                <div className="flex-1 min-w-0 text-left" dir="ltr">
+                  <div className="ws-lang-native font-medium text-gray-900 truncate">
                     {lang.nativeName}
                   </div>
                   <div className="text-sm text-gray-600 truncate">{lang.name}</div>

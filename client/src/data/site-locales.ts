@@ -48,9 +48,9 @@ export type SiteLocaleCode = (typeof SITE_LOCALE_CODES)[number];
 
 /**
  * Language identification follows W3C i18n + Unicode CLDR + ISO 639-1 / BCP-47:
- * the language is the code + endonym, not a flag. Flags are territorial hints
- * only. Pluricentric languages (en, es, fr, pt, ar, sw, ta) show no single
- * country flag. Traditional Chinese uses CLDR zh-Hant territories HK + TW.
+ * the language is the code + endonym. Territorial flags are hints only.
+ * Pluricentric languages show several flags (see language-flag-sets.ts).
+ * Traditional Chinese uses CLDR zh-Hant territories HK + TW.
  */
 export interface SiteLocaleDisplay {
   /** Territorial emoji cluster; empty when a single flag would mislead. */
@@ -151,20 +151,14 @@ export function matchSiteLocale(tag: string): SiteLocaleCode | null {
 }
 
 /**
- * Prefer the visitor's browser/OS language list (navigator.languages),
- * then navigator.language. Falls back to English when unsupported.
+ * First load follows the device / browser UI language
+ * (`navigator.language`), not geo/IP country.
+ * Unsupported languages always fall back to English.
  */
 export function detectBrowserLocale(): SiteLocaleCode {
   if (typeof navigator === "undefined") return "en";
-  const candidates = [
-    ...(navigator.languages ?? []),
-    navigator.language,
-  ].filter(Boolean);
-  for (const tag of candidates) {
-    const matched = matchSiteLocale(tag);
-    if (matched) return matched;
-  }
-  return "en";
+  const primary = navigator.language || navigator.languages?.[0];
+  return matchSiteLocale(primary ?? "") ?? "en";
 }
 
 export function getSiteLocaleDisplay(code: string): SiteLocaleDisplay {
