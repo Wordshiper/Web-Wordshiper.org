@@ -269,8 +269,11 @@ export default function AboutPage() {
               return (
                 <Card key={leader.id} className="border border-[#E6F7FC] shadow-sm bg-white">
                   <CardContent className="p-6 sm:p-8">
-                    <div className="flex items-start gap-5 sm:gap-6">
-                      <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden ring-2 ring-[#E6F7FC] bg-[#E6F7FC]">
+                    <div className={`flex gap-5 sm:gap-6 ${pending ? "items-center" : "items-start"}`}>
+                      <div
+                        className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden ring-2 ring-[#E6F7FC] bg-[#E6F7FC]"
+                        aria-hidden={pending}
+                      >
                         {pending ? null : (
                           <img
                             src={leader.photo}
@@ -288,10 +291,14 @@ export default function AboutPage() {
                         )}
                       </div>
                       <div className="flex-1 min-w-0 pt-0.5">
-                        <h3 className="font-ui text-xl sm:text-2xl font-bold text-[#201E1F] min-h-[1.5em]">
-                          {pending ? "\u00A0" : copy.name}
-                        </h3>
-                        <p className="font-ui text-[#0090B8] font-medium mt-1">{copy.role}</p>
+                        {!pending && (
+                          <h3 className="font-ui text-xl sm:text-2xl font-bold text-[#201E1F]">
+                            {copy.name}
+                          </h3>
+                        )}
+                        <p className={`font-ui text-[#0090B8] font-medium ${pending ? "" : "mt-1"}`}>
+                          {copy.role}
+                        </p>
                         {!pending && (
                           <p className="font-ui text-gray-600 leading-relaxed mt-3 text-sm sm:text-base ws-text-pretty">
                             {copy.bio}

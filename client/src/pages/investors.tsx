@@ -54,7 +54,10 @@ export default function InvestorsPage() {
               const pending = !!leader.identityPending;
               return (
                 <div key={leader.id} className="p-6 rounded-2xl border border-[#E6F7FC] bg-white">
-                  <div className="w-20 h-20 mx-auto rounded-full overflow-hidden ring-2 ring-[#E6F7FC] bg-[#E6F7FC]">
+                  <div
+                    className="w-20 h-20 mx-auto rounded-full overflow-hidden ring-2 ring-[#E6F7FC] bg-[#E6F7FC]"
+                    aria-hidden={pending}
+                  >
                     {pending ? null : (
                       <img
                         src={leader.photo}
@@ -71,10 +74,10 @@ export default function InvestorsPage() {
                       />
                     )}
                   </div>
-                  <div className="mt-4 font-bold text-[#201E1F] min-h-[1.5em]">
-                    {pending ? "\u00A0" : copy.name}
-                  </div>
-                  <div className="text-sm text-[#0090B8] mt-1">{copy.role}</div>
+                  {!pending && (
+                    <div className="mt-4 font-bold text-[#201E1F]">{copy.name}</div>
+                  )}
+                  <div className={`text-sm text-[#0090B8] ${pending ? "mt-4" : "mt-1"}`}>{copy.role}</div>
                 </div>
               );
             })}
