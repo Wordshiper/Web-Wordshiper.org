@@ -51,25 +51,33 @@ export default function InvestorsPage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
             {LEADERSHIP.map((leader) => {
               const copy = getLeaderCopy(leader, currentLanguage);
+              const pending = !!leader.identityPending;
               return (
                 <div key={leader.id} className="p-6 rounded-2xl border border-[#E6F7FC] bg-white">
-                  <div className="w-20 h-20 mx-auto rounded-full overflow-hidden ring-2 ring-[#E6F7FC]">
-                    <img
-                      src={leader.photo}
-                      alt={copy.name}
-                      width={80}
-                      height={80}
-                      className="w-full h-full object-cover"
-                      style={{
-                        objectPosition: leader.objectPosition,
-                        transform: `scale(${leader.faceScale ?? 1})`,
-                        transformOrigin: "center 30%",
-                      }}
-                      loading="lazy"
-                    />
+                  <div
+                    className="w-20 h-20 mx-auto rounded-full overflow-hidden ring-2 ring-[#E6F7FC] bg-[#E6F7FC]"
+                    aria-hidden={pending}
+                  >
+                    {pending ? null : (
+                      <img
+                        src={leader.photo}
+                        alt={copy.name}
+                        width={80}
+                        height={80}
+                        className="w-full h-full object-cover"
+                        style={{
+                          objectPosition: leader.objectPosition,
+                          transform: `scale(${leader.faceScale ?? 1})`,
+                          transformOrigin: "center 30%",
+                        }}
+                        loading="lazy"
+                      />
+                    )}
                   </div>
-                  <div className="mt-4 font-bold text-[#201E1F]">{copy.name}</div>
-                  <div className="text-sm text-[#0090B8] mt-1">{copy.role}</div>
+                  {!pending && (
+                    <div className="mt-4 font-bold text-[#201E1F]">{copy.name}</div>
+                  )}
+                  <div className={`text-sm text-[#0090B8] ${pending ? "mt-4" : "mt-1"}`}>{copy.role}</div>
                 </div>
               );
             })}

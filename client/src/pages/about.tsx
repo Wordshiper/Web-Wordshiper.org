@@ -265,33 +265,45 @@ export default function AboutPage() {
           <div className="space-y-5">
             {LEADERSHIP.map((leader) => {
               const copy = getLeaderCopy(leader, currentLanguage);
+              const pending = !!leader.identityPending;
               return (
                 <Card key={leader.id} className="border border-[#E6F7FC] shadow-sm bg-white">
                   <CardContent className="p-6 sm:p-8">
-                    <div className="flex items-start gap-5 sm:gap-6">
-                      <div className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden ring-2 ring-[#E6F7FC] bg-[#E6F7FC]">
-                        <img
-                          src={leader.photo}
-                          alt={copy.name}
-                          width={96}
-                          height={96}
-                          className="w-full h-full object-cover"
-                          style={{
-                            objectPosition: leader.objectPosition,
-                            transform: `scale(${leader.faceScale ?? 1})`,
-                            transformOrigin: "center 30%",
-                          }}
-                          loading="lazy"
-                        />
+                    <div className={`flex gap-5 sm:gap-6 ${pending ? "items-center" : "items-start"}`}>
+                      <div
+                        className="flex-shrink-0 w-20 h-20 sm:w-24 sm:h-24 rounded-full overflow-hidden ring-2 ring-[#E6F7FC] bg-[#E6F7FC]"
+                        aria-hidden={pending}
+                      >
+                        {pending ? null : (
+                          <img
+                            src={leader.photo}
+                            alt={copy.name}
+                            width={96}
+                            height={96}
+                            className="w-full h-full object-cover"
+                            style={{
+                              objectPosition: leader.objectPosition,
+                              transform: `scale(${leader.faceScale ?? 1})`,
+                              transformOrigin: "center 30%",
+                            }}
+                            loading="lazy"
+                          />
+                        )}
                       </div>
                       <div className="flex-1 min-w-0 pt-0.5">
-                        <h3 className="font-ui text-xl sm:text-2xl font-bold text-[#201E1F]">
-                          {copy.name}
-                        </h3>
-                        <p className="font-ui text-[#0090B8] font-medium mt-1">{copy.role}</p>
-                        <p className="font-ui text-gray-600 leading-relaxed mt-3 text-sm sm:text-base ws-text-pretty">
-                          {copy.bio}
+                        {!pending && (
+                          <h3 className="font-ui text-xl sm:text-2xl font-bold text-[#201E1F]">
+                            {copy.name}
+                          </h3>
+                        )}
+                        <p className={`font-ui text-[#0090B8] font-medium ${pending ? "" : "mt-1"}`}>
+                          {copy.role}
                         </p>
+                        {!pending && (
+                          <p className="font-ui text-gray-600 leading-relaxed mt-3 text-sm sm:text-base ws-text-pretty">
+                            {copy.bio}
+                          </p>
+                        )}
                       </div>
                     </div>
                   </CardContent>
