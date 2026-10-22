@@ -12,6 +12,11 @@ export interface Leader {
   objectPosition: string;
   /** Zoom face to match tighter headshots (1 = no zoom) */
   faceScale?: number;
+  /**
+   * When true, hide photo + name + bio and keep the role only.
+   * Flip back to false after the person confirms they can be listed.
+   */
+  identityPending?: boolean;
   /** Locale → copy (falls back to en) */
   copy: Record<string, LeaderCopy>;
 }
@@ -168,6 +173,7 @@ export const LEADERSHIP: Leader[] = [
     photo: photoJeff,
     objectPosition: "center 28%",
     faceScale: 1,
+    identityPending: true,
     copy: {
       en: {
         name: "Jeff Chaus",
