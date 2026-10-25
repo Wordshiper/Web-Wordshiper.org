@@ -254,8 +254,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
       if (process.env.STRIPE_SECRET_KEY) {
         const params = new URLSearchParams();
         params.set("mode", type === "monthly" ? "subscription" : "payment");
-        params.set("success_url", `${site}/donate?success=1`);
-        params.set("cancel_url", `${site}/donate?canceled=1`);
+        params.set("success_url", `${site}/donation?success=1`);
+        params.set("cancel_url", `${site}/donation?canceled=1`);
         params.set("line_items[0][price_data][currency]", "usd");
         params.set(
           "line_items[0][price_data][product_data][name]",
@@ -301,9 +301,8 @@ export async function registerRoutes(app: Express): Promise<Server> {
         return res.json({ url: paymentLink });
       }
 
-      return res.status(503).json({
-        error: "Donation payments are not configured yet.",
-        mailto: "mailto:info@wordshiper.org?subject=Wordshiper%20Donation",
+      return res.json({
+        url: "https://givebutter.com/fund-scripture-tools-for-1000-people-sm1vce",
       });
     } catch (error) {
       console.error("Donation checkout error:", error);

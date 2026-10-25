@@ -86,7 +86,7 @@ function Header() {
               </a>
             ))}
             <Link href="/about" className="block text-gray-700 font-medium min-h-11 py-2.5">{c.nav.about}</Link>
-            <Link href="/donate" className="block text-gray-700 font-medium min-h-11 py-2.5">{c.nav.donate}</Link>
+            <Link href="/donation" className="block text-gray-700 font-medium min-h-11 py-2.5">{c.nav.donate}</Link>
             <Link href="/investors" className="block text-gray-700 font-medium min-h-11 py-2.5">{c.nav.investors}</Link>
             <a href="#preregister" onClick={() => setOpen(false)} className="block text-center px-4 py-3 rounded-full font-semibold text-white mt-2" style={{ background: CYAN }}>
               {c.nav.preregister}
@@ -104,7 +104,7 @@ function Header() {
         <Link href="/about" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors whitespace-nowrap">
           {c.nav.about}
         </Link>
-        <Link href="/donate" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors whitespace-nowrap" data-testid="link-donate">
+        <Link href="/donation" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors whitespace-nowrap" data-testid="link-donate">
           {c.nav.donate}
         </Link>
         <Link href="/investors" className="text-sm font-medium text-gray-600 hover:text-[#0090B8] transition-colors whitespace-nowrap" data-testid="link-investors">

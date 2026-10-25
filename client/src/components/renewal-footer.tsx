@@ -64,7 +64,7 @@ export default function RenewalFooter() {
           <Link href="/about" className="hover:text-[#0090B8] transition-colors">
             {c.nav.about}
           </Link>
-          <Link href="/donate" className="hover:text-[#0090B8] transition-colors">
+          <Link href="/donation" className="hover:text-[#0090B8] transition-colors">
             {c.nav.donate}
           </Link>
           <Link href="/investors" className="hover:text-[#0090B8] transition-colors">

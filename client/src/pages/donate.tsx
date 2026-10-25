@@ -1,92 +1,61 @@
 import { Link } from "wouter";
-import { useEffect, useState } from "react";
 import { useCopy } from "@/data/renewal-copy";
 import { useLanguage } from "@/hooks/use-language";
 import { brandDisplayForLanguage } from "@/data/brand";
+import {
+  CAMPAIGN_GOAL_USD,
+  GIVEBUTTER_CAMPAIGN_URL,
+  campaignPanels,
+} from "@/data/donation-campaign";
 import ExpandedLanguageSwitcher from "@/components/expanded-language-switcher";
 import SiteHeader from "@/components/site-header";
-import StatusNoticeDialog from "@/components/status-notice-dialog";
 import SEO from "@/components/seo";
 import Footer from "@/components/renewal-footer";
-import { Heart, ShieldCheck, ArrowLeft, CheckCircle2 } from "lucide-react";
+import { ArrowLeft, ExternalLink, Heart } from "lucide-react";
 
 const CYAN = "#00B3E4";
-const PRESETS = [25, 50, 100, 250];
 
-/** Flip to false when Stripe checkout is ready to accept live gifts. */
-const DONATE_PREPARING = true;
+function GiveLink({
+  label,
+  className,
+  testId,
+}: {
+  label: string;
+  className: string;
+  testId?: string;
+}) {
+  return (
+    <a
+      href={GIVEBUTTER_CAMPAIGN_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      dir="ltr"
+      className={className}
+      style={{ background: CYAN }}
+      data-testid={testId}
+    >
+      <Heart className="w-5 h-5" />
+      {label}
+      <ExternalLink className="w-4 h-4 opacity-80" />
+    </a>
+  );
+}
 
 export default function DonatePage() {
   const copy = useCopy();
   const d = copy.donate;
-  const chrome = copy.chrome;
   const { currentLanguage } = useLanguage();
   const brandAlt = brandDisplayForLanguage(currentLanguage);
-  const [amount, setAmount] = useState(50);
-  const [type, setType] = useState<"oneTime" | "monthly">("oneTime");
-  const [custom, setCustom] = useState("");
-  const [busy, setBusy] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-  const [success, setSuccess] = useState(false);
-  const [preparingOpen, setPreparingOpen] = useState(false);
-
-  useEffect(() => {
-    const q = new URLSearchParams(window.location.search);
-    if (q.get("success") === "1") setSuccess(true);
-  }, []);
-
-  const resolvedAmount = custom ? Math.max(1, Number(custom) || 0) : amount;
-
-  const startCheckout = async () => {
-    if (DONATE_PREPARING) {
-      setPreparingOpen(true);
-      return;
-    }
-
-    setBusy(true);
-    setError(null);
-    try {
-      // Client-configured Payment Link takes priority (no server needed)
-      const envLink = import.meta.env.VITE_DONATION_URL as string | undefined;
-      if (envLink) {
-        window.location.href = envLink;
-        return;
-      }
-
-      const res = await fetch("/api/donations/checkout", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ amount: resolvedAmount, type }),
-      });
-      const data = (await res.json()) as {
-        url?: string;
-        mailto?: string;
-        error?: string;
-        fallbackUrl?: string | null;
-      };
-      if (data.url) {
-        window.location.href = data.url;
-        return;
-      }
-      if (data.fallbackUrl) {
-        window.location.href = data.fallbackUrl;
-        return;
-      }
-      if (data.mailto) {
-        window.location.href = data.mailto;
-        return;
-      }
-      setError(data.error || d.error);
-    } catch {
-      setError(d.error);
-    } finally {
-      setBusy(false);
-    }
-  };
+  const story = campaignPanels(currentLanguage);
+  const ko = currentLanguage === "ko";
 
   return (
     <div className="min-h-screen bg-white font-ui">
-      <SEO title={`${brandAlt} — ${d.title}`} description={d.sub} />
+      <SEO
+        title={`${brandAlt} — ${d.title}`}
+        description={d.sub}
+        url="https://www.wordshiper.org/donation"
+      />
 
       <SiteHeader>
         <ExpandedLanguageSwitcher compact />
@@ -98,7 +67,7 @@ export default function DonatePage() {
         </Link>
       </SiteHeader>
 
-      <main className="pt-[calc(7rem+env(safe-area-inset-top))] pb-24">
+      <main className="pt-[calc(4.75rem+env(safe-area-inset-top))] pb-28">
         <section className="relative overflow-hidden">
           <div
             className="absolute inset-0 -z-10"
@@ -107,126 +76,100 @@ export default function DonatePage() {
                 "radial-gradient(ellipse 80% 60% at 50% 0%, #E6F7FC 0%, #FFFFFF 55%, #F8FCFE 100%)",
             }}
           />
-          <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 text-center">
             <p className="font-scripture-italic text-xl sm:text-2xl text-[#003D4F] ws-text-pretty">
               {d.eyebrow}
             </p>
             <h1 className="font-scripture mt-4 text-3xl sm:text-5xl font-bold text-[#201E1F] tracking-tight ws-text-balance">
               {d.title}
             </h1>
-            <p className="mt-5 text-lg text-gray-600 leading-relaxed ws-text-pretty">
-              {d.sub}
+            <p
+              className="mt-5 text-lg text-gray-600 leading-relaxed ws-text-pretty"
+              dir={ko ? undefined : "ltr"}
+            >
+              {ko
+                ? "말씀 암송·기도·나눔을 위한 앱을 함께 시작합니다. 개발 모금 목표는 12개월 US $70,000입니다."
+                : `Help launch Scripture tools for 1,000 people. Proposed 12-month goal: ${CAMPAIGN_GOAL_USD}.`}
+            </p>
+            <GiveLink
+              label={d.give}
+              testId="button-donate-submit"
+              className="mt-8 inline-flex items-center justify-center gap-2 px-8 py-4 min-h-12 rounded-full text-white font-bold text-lg shadow-lg hover:opacity-95 transition-opacity touch-manipulation"
+            />
+            <p className="mt-4 text-sm text-gray-500 ws-text-pretty" dir="auto">
+              {d.taxNote
+                .replace(/Stripe\./g, "\u2068Givebutter.\u2069")
+                .replace(/Stripe/g, "\u2068Givebutter\u2069")}
             </p>
           </div>
         </section>
 
-        <section className="mt-12 max-w-lg mx-auto px-4 sm:px-6">
-          {success ? (
-            <div className="rounded-3xl border border-[#99E0F5] bg-[#F8FCFE] p-10 text-center">
-              <CheckCircle2 className="w-12 h-12 mx-auto mb-4" style={{ color: CYAN }} />
-              <h2 className="text-2xl font-bold text-[#201E1F]">{d.successTitle}</h2>
-              <p className="mt-3 text-gray-600">{d.successSub}</p>
-              <Link
-                href="/"
-                className="mt-8 inline-flex px-6 py-3 rounded-full text-white font-semibold"
-                style={{ background: CYAN }}
+        <section className="mt-12 max-w-xl mx-auto px-4 sm:px-6">
+          <div
+            className="rounded-3xl border border-[#E6F7FC] bg-[#F8FCFE] p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6 text-center sm:text-start"
+            dir={ko ? undefined : "ltr"}
+          >
+            <img
+              src="/campaign/qr.png"
+              alt={ko ? "Givebutter 후원 QR" : "Givebutter donation QR code"}
+              width={160}
+              height={160}
+              className="w-36 h-36 sm:w-40 sm:h-40 bg-white rounded-xl p-2"
+            />
+            <div>
+              <p className="font-semibold text-[#201E1F]">
+                {ko ? "QR로 후원하기" : "Give with this QR"}
+              </p>
+              <a
+                href={GIVEBUTTER_CAMPAIGN_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-block text-sm text-[#0090B8] hover:underline"
               >
-                {d.backHome}
-              </Link>
+                {ko ? "Givebutter에서 후원 열기" : "Open the Givebutter campaign"}
+              </a>
             </div>
-          ) : (
-            <div className="rounded-3xl border border-[#E6F7FC] bg-white p-8 sm:p-10 shadow-[0_20px_60px_-40px_rgba(0,179,228,0.45)]">
-              <div className="flex gap-2 p-1 rounded-full bg-[#F8FCFE] mb-8">
-                {(["oneTime", "monthly"] as const).map((t) => (
-                  <button
-                    key={t}
-                    type="button"
-                    onClick={() => setType(t)}
-                    className={`flex-1 py-2.5 rounded-full text-sm font-semibold transition-colors ${
-                      type === t
-                        ? "bg-white text-[#0090B8] shadow-sm"
-                        : "text-gray-500"
-                    }`}
-                  >
-                    {t === "oneTime" ? d.oneTime : d.monthly}
-                  </button>
-                ))}
-              </div>
+          </div>
+        </section>
 
-              <div className="grid grid-cols-2 gap-3">
-                {PRESETS.map((p) => (
-                  <button
-                    key={p}
-                    type="button"
-                    onClick={() => {
-                      setAmount(p);
-                      setCustom("");
-                    }}
-                    className={`py-4 rounded-2xl text-lg font-bold border transition-all ${
-                      !custom && amount === p
-                        ? "border-[#00B3E4] bg-[#E6F7FC] text-[#003D4F]"
-                        : "border-[#E6F7FC] text-[#201E1F] hover:border-[#99E0F5]"
-                    }`}
-                  >
-                    ${p}
-                  </button>
-                ))}
-              </div>
-
-              <label className="block mt-5">
-                <span className="text-sm font-medium text-gray-500">{d.custom}</span>
-                <div className="mt-1.5 relative">
-                  <span className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400 font-semibold">
-                    $
-                  </span>
-                  <input
-                    type="number"
-                    min={1}
-                    value={custom}
-                    onChange={(e) => setCustom(e.target.value)}
-                    placeholder={d.customPlaceholder}
-                    className="w-full pl-8 pr-4 py-3.5 rounded-2xl border border-[#E6F7FC] focus:outline-none focus:ring-2 focus:ring-[#00B3E4]/40"
-                  />
-                </div>
-              </label>
-
-              {error && (
-                <p className="mt-4 text-sm text-red-600" role="alert">
-                  {error}
-                </p>
-              )}
-
-              <button
-                type="button"
-                disabled={busy || resolvedAmount < 1}
-                onClick={startCheckout}
-                className="mt-8 w-full inline-flex items-center justify-center gap-2 py-4 rounded-full text-white font-bold text-lg shadow-lg hover:opacity-95 disabled:opacity-60 transition-opacity"
-                style={{ background: CYAN }}
-                data-testid="button-donate-submit"
-              >
-                <Heart className="w-5 h-5" />
-                {busy ? d.processing : `${d.give} $${resolvedAmount}`}
-              </button>
-
-              <div className="mt-6 flex items-start gap-3 text-left text-sm text-gray-500">
-                <ShieldCheck className="w-5 h-5 shrink-0 text-[#00B3E4] mt-0.5" />
-                <p className="ws-text-pretty">{d.taxNote}</p>
-              </div>
-            </div>
+        <section className="mt-14 max-w-3xl mx-auto px-4 sm:px-6 space-y-8" aria-label={d.title}>
+          {story.hero && (
+            <img
+              src={story.hero.src}
+              alt={story.hero.alt}
+              className="w-full h-auto rounded-2xl shadow-sm"
+              loading="eager"
+            />
           )}
+          {story.panels.map((panel) => (
+            <img
+              key={panel.src}
+              src={panel.src}
+              alt={panel.alt}
+              className="w-full h-auto rounded-2xl shadow-sm mx-auto max-w-xl block"
+              loading="lazy"
+            />
+          ))}
         </section>
       </main>
 
-      <Footer />
+      <div
+        dir="ltr"
+        className="fixed inset-x-0 bottom-0 z-40 border-t border-[#E6F7FC] bg-white/95 backdrop-blur-md pb-[env(safe-area-inset-bottom)]"
+      >
+        <div className="max-w-3xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+          <p className="text-sm font-semibold text-[#003D4F] min-w-0">
+            {ko ? "개발 모금 목표" : "Development goal"}{" "}
+            <span className="text-[#0090B8]">{CAMPAIGN_GOAL_USD}</span>
+          </p>
+          <GiveLink
+            label={d.give}
+            className="shrink-0 inline-flex items-center justify-center gap-2 px-5 py-3 min-h-11 rounded-full text-white font-bold shadow-md hover:opacity-95 touch-manipulation"
+          />
+        </div>
+      </div>
 
-      <StatusNoticeDialog
-        open={preparingOpen}
-        onOpenChange={setPreparingOpen}
-        eyebrow={chrome.donatePreparingEyebrow}
-        title={chrome.donatePreparingTitle}
-        body={chrome.donatePreparingBody}
-        cta={chrome.donatePreparingCta}
-      />
+      <Footer />
     </div>
   );
 }

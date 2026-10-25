@@ -50,8 +50,8 @@ export const onRequestPost = async (context: {
     try {
       const params = new URLSearchParams();
       params.set("mode", type === "monthly" ? "subscription" : "payment");
-      params.set("success_url", `${site}/donate?success=1`);
-      params.set("cancel_url", `${site}/donate?canceled=1`);
+      params.set("success_url", `${site}/donation?success=1`);
+      params.set("cancel_url", `${site}/donation?canceled=1`);
       params.set(
         "line_items[0][price_data][currency]",
         "usd",
@@ -114,12 +114,7 @@ export const onRequestPost = async (context: {
     return json({ url: paymentLink });
   }
 
-  return json(
-    {
-      error:
-        "Donation payments are not configured yet. Set STRIPE_SECRET_KEY or DONATION_URL.",
-      mailto: "mailto:info@wordshiper.org?subject=Wordshiper%20Donation",
-    },
-    503,
-  );
+  return json({
+    url: "https://givebutter.com/fund-scripture-tools-for-1000-people-sm1vce",
+  });
 };

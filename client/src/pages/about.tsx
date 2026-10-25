@@ -336,15 +336,17 @@ export default function AboutPage() {
               </CardContent>
             </Card>
 
-            <Card className="text-center border border-[#E6F7FC] shadow-sm bg-white" data-testid="card-support-mission">
-              <CardContent className="p-8">
-                <Heart className="w-11 h-11 mx-auto mb-4" style={{ color: CYAN }} />
-                <h3 className="font-ui font-semibold text-lg mb-2 text-[#201E1F]">
-                  {t("about.supportMission.title")}
-                </h3>
-                <p className="font-ui text-gray-500 text-sm">{t("about.supportMission.subtitle")}</p>
-              </CardContent>
-            </Card>
+            <Link href="/donation" className="block" data-testid="card-support-mission">
+              <Card className="text-center border border-[#E6F7FC] shadow-sm bg-white h-full hover:border-[#00B3E4]/40 transition-colors">
+                <CardContent className="p-8">
+                  <Heart className="w-11 h-11 mx-auto mb-4" style={{ color: CYAN }} />
+                  <h3 className="font-ui font-semibold text-lg mb-2 text-[#201E1F]">
+                    {t("about.supportMission.title")}
+                  </h3>
+                  <p className="font-ui text-gray-500 text-sm">{t("about.supportMission.subtitle")}</p>
+                </CardContent>
+              </Card>
+            </Link>
 
             <Card className="text-center border border-[#E6F7FC] shadow-sm bg-white" data-testid="card-partner">
               <CardContent className="p-8">

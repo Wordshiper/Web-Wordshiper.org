@@ -17,6 +17,7 @@ function Router() {
       <Route path="/" component={HomeRenewal} />
       <Route path="/investors" component={InvestorsPage} />
       <Route path="/about" component={AboutPage} />
+      <Route path="/donation" component={DonatePage} />
       <Route path="/donate" component={DonatePage} />
       <Route component={NotFound} />
     </Switch>
