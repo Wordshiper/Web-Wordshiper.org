@@ -24,7 +24,7 @@ const EN_PANELS: CampaignPanel[] = [
   },
   {
     src: "/campaign/en/04-launch.jpg",
-    alt: "Help launch Wordshiper. Development goal $70,000. Jaedon and Eunhee.",
+    alt: "Help launch Wordshiper. Development goal $70,000. Jaedon and Eunhee. Checkout note: tips to Givebutter and processing fees are optional; select Other and enter $0 for no tip.",
   },
 ];
 
