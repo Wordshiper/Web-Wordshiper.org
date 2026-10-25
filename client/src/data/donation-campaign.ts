@@ -43,7 +43,7 @@ const KO_PANELS: CampaignPanel[] = [
   },
   {
     src: "/campaign/ko/04-launch.jpg",
-    alt: "워십퍼의 시작을 함께해 주세요. 개발 모금 목표 7만 달러. Jaedon과 Eunhee.",
+    alt: "워십퍼의 시작을 함께해 주세요. 개발 모금 목표 7만 달러. Jaedon과 Eunhee. 결제 안내: Givebutter 팁과 수수료 부담은 선택 사항이며, 팁을 원하지 않으시면 Other에서 0달러를 입력하세요.",
   },
 ];
 
