@@ -12,7 +12,7 @@ export interface CampaignPanel {
 const EN_PANELS: CampaignPanel[] = [
   {
     src: "/campaign/en/01-one-verse.jpg",
-    alt: "One verse can lift a weary heart. Isaiah 40:8.",
+    alt: "One verse can lift a weary heart. “The grass withers, the flower fades, but the word of our God will stand forever.” Isaiah 40:8 (ESV).",
   },
   {
     src: "/campaign/en/02-what-is.jpg",
@@ -31,7 +31,7 @@ const EN_PANELS: CampaignPanel[] = [
 const KO_PANELS: CampaignPanel[] = [
   {
     src: "/campaign/ko/01-one-verse.jpg",
-    alt: "말씀 한 구절이 지친 마음을 일으킵니다. 이사야 40:8. 영어 ESV 본문을 한국어로 옮김.",
+    alt: "말씀 한 구절이 지친 마음을 일으킵니다. “풀은 마르고 꽃은 시드나 우리 하나님의 말씀은 영원히 서리라 하라” 이사야 40:8 (개역개정).",
   },
   {
     src: "/campaign/ko/02-what-is.jpg",
